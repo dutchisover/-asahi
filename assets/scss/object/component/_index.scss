@@ -1,0 +1,9 @@
+// Component = 繰り返し使う部品
+
+@use '../../foundation/index' as *;
+
+@forward '../component/button';
+@forward '../component/section';
+@forward '../component/pagination';
+@forward '../component/breadcrumb';
+@forward '../component/form';

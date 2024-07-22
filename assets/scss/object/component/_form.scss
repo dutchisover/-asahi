@@ -1,0 +1,10 @@
+@use '../../foundation/index' as *;
+@use '../component/button' as *;
+
+// フォーム
+.page-form {
+  margin-top: 80rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 800rem;
+}

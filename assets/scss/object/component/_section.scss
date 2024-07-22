@@ -1,0 +1,25 @@
+@use '../../foundation/index' as *;
+
+// セクション
+.section {
+  position: relative;
+}
+
+.section__title {
+  color: var(--colorTitle);
+  font-weight: 300;
+  font-size: 70rem;
+  font-family: var(--fontTitle);
+  line-height: 1;
+
+  @include media() {
+    font-size: 53rem;
+  }
+}
+
+.page__main {
+  @include media() {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,134 @@
+@use '../../foundation/index' as *;
+
+.button__area {
+  margin: 0 auto;
+  width: 300rem;
+  height: 55rem;
+}
+
+.button__link {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  border-radius: 30rem;
+  background-color: var(--colorKey);
+  color: #fff;
+  font-size: 16rem;
+
+  place-items: center;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 30rem;
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    border: 2px solid #fff;
+    border-right: 0;
+    border-bottom: 0;
+    transform: rotate(135deg) skew(5deg, 5deg);
+  }
+}
+
+// .button {
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   padding-left: 30rem;
+//   width: 290rem;
+//   height: 64rem;
+//   border-radius: 6rem;
+//   background-color: #fff;
+//   box-shadow: 0 3rem 6rem rgba(0, 0, 0, .16);
+//   color: var(--colorKey);
+//   text-decoration: none;
+//   font-weight: 700;
+//   font-size: 18rem;
+
+//   @include media() {
+//     padding-left: 25rem;
+//     width: 240rem;
+//     height: 50rem;
+//     font-size: 16rem;
+//   }
+
+//   &::after {
+//     content: '';
+//     position: absolute;
+//     top: 50%;
+//     right: 20rem;
+//     display: block;
+//     width: 30rem;
+//     height: 30rem;
+//     background-image: url(../image/arrow_button.svg);
+//     background-position: center;
+//     background-size: 100% 100%;
+//     background-repeat: no-repeat;
+//     transform: translateY(-50%);
+
+//     @include media() {
+//       right: 15rem;
+//       width: 22rem;
+//       height: 22rem;
+//     }
+//   }
+// }
+
+// .button--primary {
+//   @extend .button;
+
+//   & {
+//     background-color: #006eb8;
+//     box-shadow: none;
+//     color: #fff;
+
+//     &::after {
+//       background-image: url(../image/arrow_button-primary.svg);
+//     }
+//   }
+// }
+
+// .button__return {
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: 290rem;
+//   height: 65rem;
+//   border: 1px solid;
+//   border-radius: 6rem;
+//   background-color: #fff;
+//   color: #2e6eb3;
+//   text-decoration: none;
+//   font-weight: 700;
+//   font-size: 18rem;
+
+//   @include media() {
+//     width: 240rem;
+//     height: 50rem;
+//     font-size: 16rem;
+//   }
+
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     top: 50%;
+//     left: 20rem;
+//     display: block;
+//     width: 16rem;
+//     height: 12rem;
+//     background-image: url(../image/arrow_button_left.svg);
+//     background-position: center;
+//     background-size: 100% 100%;
+//     background-repeat: no-repeat;
+//     transform: translateY(-50%);
+
+//     @include media() {
+//       left: 15rem;
+//       width: 12rem;
+//       height: 9rem;
+//     }
+//   }
+// }

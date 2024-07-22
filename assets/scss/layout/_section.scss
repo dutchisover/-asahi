@@ -1,0 +1,43 @@
+@use '../foundation/index' as *;
+
+.section__title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 16rem;
+  color: var(--colorKey);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-weight: var(--weightMedium);
+  font-size: 40rem;
+  font-family: var(--fontEnglish);
+
+  em {
+    font-style: normal;
+  }
+
+  span {
+    font-size: 18rem;
+    font-family: var(--fontGothic);
+  }
+
+  & + .section__text {
+    margin-top: 36rem;
+  }
+}
+
+.section__subtitle {
+  display: block;
+  color: var(--colorKey);
+  font-weight: var(--weightRegular);
+  font-style: normal;
+  font-size: 20rem;
+  line-height: 2.5;
+}
+
+.section__text {
+  letter-spacing: .02em;
+  font-weight: var(--weightLight);
+  font-size: 16rem;
+  line-height: 1.875;
+}

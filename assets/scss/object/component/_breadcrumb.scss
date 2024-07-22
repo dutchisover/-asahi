@@ -1,0 +1,41 @@
+@use '../../foundation/index' as *;
+
+
+/* パンくずリスト */
+.breadcrumb {
+  margin-top: 10rem;
+  font-size: 11rem;
+  line-height: 1.45454545;
+
+  @extend %wrapper;
+  @include media() {
+    order: 999;
+    margin-top: 100rem;
+    width: 335rem;
+  }
+
+  .page-examination & {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include media() {
+      position: static;
+      transform: none;
+    }
+  }
+}
+
+.breadcrumb__inner {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.breadcrumb__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.breadcrumb__current {
+  color: #777;
+}

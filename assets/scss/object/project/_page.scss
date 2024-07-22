@@ -1,0 +1,33 @@
+@use '../../foundation/index' as *;
+
+.section {
+  @extend %block;
+}
+
+.page__title-area {
+  display: grid;
+  height: 519rem;
+  background-color: var(--colorBase);
+
+  place-items: center;
+}
+
+.page__title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--colorKey);
+  text-transform: uppercase;
+
+  & em {
+    letter-spacing: .05em;
+    font-style: normal;
+    font-size: 55rem;
+    font-family: var(--fontEnglish);
+  }
+
+  & span {
+    font-size: 14rem;
+    font-family: var(--fontGothic);
+  }
+}

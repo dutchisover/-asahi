@@ -1,0 +1,59 @@
+@use '../foundation/index' as *;
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 120rem;
+}
+
+.header__logo {
+  padding-top: 64rem;
+  width: 373rem;
+}
+
+.header__contact {
+  display: flex;
+  gap: 43rem;
+  padding-top: 30rem;
+  padding-right: 74rem;
+}
+
+a.header__contact-tel {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 10rem;
+  color: var(--colorKey);
+  font-size: 30rem;
+  line-height: 1;
+
+  span {
+    font-size: 14rem;
+  }
+}
+
+.header__contact-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1px;
+  min-width: 188rem;
+  height: 55rem;
+  border-radius: 100rem;
+  background-color: var(--colorKey);
+  color: #fff;
+  line-height: 1;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 114rem;
+  font-weight: var(--weightMedium);
+  font-size: 18rem;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 55rem;
+}

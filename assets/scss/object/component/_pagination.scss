@@ -1,0 +1,51 @@
+@use '../../foundation/index' as *;
+
+/* ページネーション */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 60rem;
+}
+
+.page-numbers {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-numbers li {
+  margin: 0 6rem;
+
+  @include media() {
+    margin: 0 3rem;
+  }
+}
+
+.page-numbers a,
+.page-numbers span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40rem;
+  height: 40rem;
+  border: 1px solid;
+  border-radius: 3rem;
+  color: #006eb8;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: var(--fontTitle);
+}
+
+.page-numbers a:hover {
+  background-color: #e9ecef;
+}
+
+.page-numbers .current {
+  background-color: #006eb8;
+  color: #fff;
+}
+
+.page-numbers .next {
+  padding: .5rem .75rem;
+}
