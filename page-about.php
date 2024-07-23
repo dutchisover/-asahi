@@ -7,9 +7,8 @@ $slug = $post->post_name;
 ?>
 
 <main class="main page__main">
-	<div class="page__title-area">
-		<h1 class="page__title"><em><?php the_title(); ?></em><span>新着情報 一覧</span></h1>
-	</div>
+	<h1 class=" page__title"><?php the_title(); ?></h1>
+
 	<div class="breadcrumb">
 		<div class="breadcrumb__inner">
 			<a href="<?php echo home_url(); ?>" class="breadcrumb__link">TOP</a> &gt;

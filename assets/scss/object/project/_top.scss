@@ -5,90 +5,92 @@
 // ============
 
 // MV用のスライダー
-#mv__swiper.swiper {
-  position: relative;
-  overflow: hidden;
-  margin-right: 0;
-  // margin-left: 120rem;
-  width: 1800rem;
-  border-radius: 80rem 0 0 80rem;
+.mv {
+  & .swiper {
+    position: relative;
+    overflow: hidden;
+    margin-right: 0;
+    width: 1800rem;
+    border-radius: 80rem 0 0 80rem;
 
-  @media (min-width: 1920px) {
-    width: 93.75vw;
-  }
-}
-
-#mv__swiper .swiper-slide {
-  width: 100%;
-}
-
-#mv__swiper .swiper-slide img {
-  width: 100%;
-  aspect-ratio: 1800/823;
-  object-fit: cover;
-}
-
-#mv__swiper.swiper-horizontal > .swiper-pagination-bullets.swiper-pagination {
-  position: absolute;
-  top: 246rem;
-  right: 50rem;
-  bottom: auto;
-  left: auto;
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-  gap: 48rem;
-  width: auto;
-  color: #fff;
-  font-weight: var(--weightMedium);
-  font-size: 14rem;
-  font-family: var(--fontEnglish);
-}
-
-#mv__swiper .swiper-pagination-bullet {
-  max-width: none;
-  background: transparent;
-  color: #fff;
-  text-align: center;
-  letter-spacing: .1em;
-  font-size: 14rem;
-  opacity: 1;
-
-  & span {
-    font-size: 10rem;
+    @media (min-width: 1920px) {
+      width: 93.75vw;
+    }
   }
 
-  &::before {
-    content: '';
+  & .swiper-slide {
+    width: 100%;
+  }
+
+  & .swiper-slide img {
+    width: 100%;
+    // aspect-ratio: 1800/823;
+    object-fit: cover;
+  }
+
+  & .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination {
     position: absolute;
-    top: 13rem;
-    left: -35rem;
-    display: block;
-    width: 22rem;
-    height: 1px;
-    background-color: #fff;
-    opacity: 0;
+    top: 50%;
+    right: 50rem;
+    bottom: auto;
+    left: auto;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 48rem;
+    width: auto;
+    color: #fff;
+    font-weight: var(--weightMedium);
+    font-size: 14rem;
+    font-family: var(--fontEnglish);
+    transform: translateY(calc(-50% - 40rem));
   }
-}
 
-#mv__swiper .swiper-pagination-bullet-active {
-  position: relative;
-  align-items: center;
-  // gap: 5rem;
-  background: transparent;
-  color: #fff;
-
-  &::before {
-    // content: '';
-    // position: absolute;
-    // top: 13rem;
-    // left: -35rem;
-    // display: block;
-    // width: 22rem;
-    // height: 1px;
-    // background-color: #fff;
+  & .swiper-pagination-bullet {
+    max-width: none;
+    background: transparent;
+    color: #fff;
+    text-align: center;
+    letter-spacing: .1em;
+    font-size: 14rem;
     opacity: 1;
-    transition: opacity 1s;
+
+    & span {
+      font-size: 10rem;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 13rem;
+      left: -35rem;
+      display: block;
+      width: 22rem;
+      height: 1px;
+      background-color: #fff;
+      opacity: 0;
+    }
+  }
+
+  & .swiper-pagination-bullet-active {
+    position: relative;
+    align-items: center;
+    // gap: 5rem;
+    background: transparent;
+    color: #fff;
+
+    &::before {
+      // content: '';
+      // position: absolute;
+      // top: 13rem;
+      // left: -35rem;
+      // display: block;
+      // width: 22rem;
+      // height: 1px;
+      // background-color: #fff;
+      opacity: 1;
+      transition: opacity 1s;
+    }
   }
 }
 
@@ -137,9 +139,6 @@
 
 .mv-topics {
   position: absolute;
-  //   可変次第ではみ出す
-  //   left: 50%;
-  //   left: calc(50% + 312rem);
   right: 32rem;
   bottom: 32rem;
   z-index: 10;
@@ -268,22 +267,9 @@
 .top-message__title {
   color: var(--colorText);
   letter-spacing: .1em;
-  font-size: 30rem;
+  font-size: r(30);
   font-family: var(--fontMincho);
   line-height: 1.83;
-}
-
-.section__text {
-  margin-top: 58rem;
-  color: var(--colorText);
-  letter-spacing: .02em;
-  font-size: 16rem;
-  font-family: var(--fontGothic);
-  line-height: 1.875;
-
-  & + & {
-    margin-top: 30rem;
-  }
 }
 
 .top-message__lawyer {
@@ -296,13 +282,13 @@
   align-self: flex-end;
   color: var(--colorKey);
   letter-spacing: .05em;
-  font-size: 16rem;
+  font-size: r(16);
   font-family: var(--fontGothic);
 }
 
 .top-message__lawyer-name {
   letter-spacing: .2em;
-  font-size: 24rem;
+  font-size: r(24);
   font-family: var(--fontMincho);
 }
 
@@ -349,19 +335,19 @@
   align-items: center;
   margin-top: 10rem;
   color: var(--colorText);
-  font-size: 18rem;
+  font-size: r(18);
   font-family: var(--fontGothic);
 
 
   & span {
     align-self: baseline;
     color: var(--colorKey);
-    font-size: 12rem;
+    font-size: r(12);
   }
 
   & span.top-features__item-number {
     margin-right: 30rem;
-    font-size: 26rem;
+    font-size: r(26);
   }
 }
 
@@ -438,7 +424,6 @@
   aspect-ratio: 423 / 236;
   object-fit: cover;
   border-radius: 18rem;
-  ;
 }
 
 .top-service__item-title {
@@ -446,13 +431,13 @@
   margin-top: 24rem;
   border-bottom: 1px solid var(--colorKey);
   color: var(--colorKey);
-  font-size: 20rem;
+  font-size: r(20);
 }
 
 .top-service__item-text {
   margin-top: 15rem;
   letter-spacing: .02em;
-  font-size: 14rem;
+  font-size: r(14);
   line-height: 1.785;
 }
 
@@ -486,7 +471,7 @@
   gap: 30rem;
   color: var(--colorKey);
   font-weight: var(--weightMedium);
-  font-size: 18rem;
+  font-size: r(18);
 
   &::before {
     content: '';
@@ -582,7 +567,7 @@
   display: inline;
   color: #868686;
   letter-spacing: .08em;
-  font-size: 12rem;
+  font-size: r(12);
   font-family: var(--fontGothic);
 }
 
@@ -596,7 +581,7 @@
   text-align: center;
   letter-spacing: .05em;
   font-weight: var(--weightMedium);
-  font-size: 10rem;
+  font-size: r(10);
   font-family: var(--fontGothic);
 }
 
@@ -604,7 +589,7 @@
   margin-top: 10rem;
   letter-spacing: .08em;
   font-weight: var(--weightMedium);
-  font-size: 18rem;
+  font-size: r(18);
   font-family: var(--fontGothic);
 }
 
@@ -612,7 +597,7 @@
   margin-top: 16rem;
   letter-spacing: .03em;
   font-weight: var(--weightMedium);
-  font-size: 12rem;
+  font-size: r(12);
   font-family: var(--fontGothic);
 }
 
@@ -653,7 +638,7 @@
   gap: 9rem;
   color: var(--colorKey);
   text-align: center;
-  font-size: 28rem;
+  font-size: r(28);
   font-family: var(--fontEnglish);
 
   & em {

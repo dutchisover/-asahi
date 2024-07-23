@@ -9,16 +9,25 @@
   text-transform: uppercase;
   letter-spacing: .05em;
   font-weight: var(--weightMedium);
-  font-size: 40rem;
+  font-size: r(40);
   font-family: var(--fontEnglish);
+
+  @include media() {
+    font-size: r(56);
+  }
 
   em {
     font-style: normal;
   }
 
   span {
-    font-size: 18rem;
+    // font-size: 18rem;
+    font-size: r(18);
     font-family: var(--fontGothic);
+
+    @include media() {
+      font-size: r(24);
+    }
   }
 
   & + .section__text {
@@ -36,8 +45,20 @@
 }
 
 .section__text {
+  margin-top: 58rem;
+  color: var(--colorText);
   letter-spacing: .02em;
   font-weight: var(--weightLight);
-  font-size: 16rem;
+  font-size: r(16);
+  font-family: var(--fontGothic);
   line-height: 1.875;
+
+  @include media() {
+    font-size: r(24);
+    line-height: 2;
+  }
+
+  & + & {
+    margin-top: 30rem;
+  }
 }

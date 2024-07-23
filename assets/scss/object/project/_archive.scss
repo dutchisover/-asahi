@@ -3,3 +3,122 @@
 .post_main {
   @extend %block;
 }
+
+.taxonomy-news {
+  background-color: orange;
+}
+
+.taxonomy-other {
+  background-color: gray;
+}
+
+.topics {
+  position: relative;
+  // margin: -210rem auto 0;
+  margin: 0 auto;
+  padding: 317rem 0 198rem;
+  min-height: 2000rem;
+  // margin-right: 6.25%;
+  width: 1680rem;
+  border-radius: 0 50rem 50rem 0;
+  background-color: var(--colorBase);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    display: block;
+    width: calc(50vw - 50%);
+    height: 100%;
+    background-color: var(--colorBase);
+  }
+
+  &::after {
+    content: 'NEWS & COLUMN';
+    position: absolute;
+    top: 345rem;
+    right: -60rem;
+    color: #d9c8b9;
+    letter-spacing: .05em;
+    font-weight: var(--weightMedium);
+    font-size: 120rem;
+    font-family: var(--fontEnglish);
+    line-height: 1;
+
+    writing-mode: vertical-rl;
+  }
+}
+
+.archive__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  margin-top: 90rem;
+  width: 1020rem;
+}
+
+.archive__item {
+  overflow: hidden;
+  border-radius: 20rem;
+}
+
+
+.archive__item-link {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 23rem 80rem 23rem 30rem;
+  background-color: #fff;
+}
+
+.archive__item-image {
+  overflow: hidden;
+  width: 241rem;
+  height: 159rem;
+  object-fit: cover;
+  border-radius: 10rem;
+
+  & img {
+    width: 100%;
+  }
+}
+
+.archive__item-content {
+  width: 620rem;
+}
+
+.archive__item-date {
+  color: #8e8e8e;
+  letter-spacing: .08em;
+  font-weight: var(--weightMedium);
+  font-size: r(12);
+  font-family: var(--fontGothic);
+}
+
+.archive__item-taxonomy {
+  margin-left: 20rem;
+  padding: 3rem 10rem;
+  border-radius: 12rem;
+  color: #fff;
+  letter-spacing: .05em;
+  font-weight: var(--weightMedium);
+  font-family: var(--fontGothic);
+}
+
+.archive__item-title {
+  margin-top: 16rem;
+  color: var(--colorText);
+  letter-spacing: .08em;
+  letter-spacing: 1.3888;
+  font-weight: var(--weightMedium);
+  font-size: r(18);
+}
+
+.archive__item-text {
+  margin-top: 18rem;
+  color: #333;
+  letter-spacing: .03em;
+  font-size: r(12);
+  line-height: 1.666;
+}

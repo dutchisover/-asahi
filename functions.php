@@ -245,3 +245,7 @@ function include_service_child_template($template)
 // }
 // add_filter('wpcf7_validate_email*', 'custom_email_validation_filter', 20, 2);
 // add_filter('wpcf7_validate_email', 'custom_email_validation_filter', 20, 2);
+
+
+////////////////// TOPICS カテゴリー該当なしの非表示 //////////////////
+add_filter("radio_buttons_for_taxonomies_no_term_topics_taxonomy", "__return_FALSE");

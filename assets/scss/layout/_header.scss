@@ -1,21 +1,106 @@
 @use '../foundation/index' as *;
 
+.header {
+  @include media() {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+  }
+}
+
+// 説明文
+.header__description {
+  display: flex;
+  align-items: center;
+  padding-left: 42rem;
+  width: 100%;
+  height: 48rem;
+  background-color: #d9c8b9;
+  color: #fff;
+  font-size: r(20, 10);
+}
+
+// ヘッダー上部
 .header__inner {
   display: flex;
   justify-content: space-between;
   padding-left: 120rem;
+
+  @include media() {
+    position: relative;
+    padding-left: 0;
+  }
 }
 
+// ロゴ
 .header__logo {
-  padding-top: 64rem;
-  width: 373rem;
+  padding-top: 32rem;
+  // padding-bottom: 36rem;
+  width: r(348, 200);
+
+  @include media() {
+    position: relative;
+    z-index: 15;
+    margin-left: 39rem;
+    // margin-top: 48rem;
+    padding-top: 19rem;
+    padding-bottom: 24rem;
+    width: 418rem;
+
+    img {
+      .is-open & {
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+}
+
+// 上部右（スマホ時はナビ）
+.header__container {
+  @include media() {
+    position: fixed;
+    top: 48rem;
+    left: 0;
+    z-index: 10;
+    // display: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 43rem;
+    margin-top: 0;
+    padding: 0;
+    padding-top: 100rem;
+    width: 100vw;
+    height: calc(100vh - 48rem);
+    height: calc(100dvh - 48rem);
+    background-color: rgba(239, 141, 55, .96);
+    opacity: 0;
+    transition: .4s;
+    pointer-events: none;
+
+    .is-open & {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
 }
 
 .header__contact {
   display: flex;
+  justify-content: flex-end;
   gap: 43rem;
-  padding-top: 30rem;
-  padding-right: 74rem;
+  padding-top: 16rem;
+  padding-right: 23rem;
+
+  @include media() {
+    flex-direction: column;
+    gap: 28rem;
+    padding: 0;
+    width: 600rem;
+  }
 }
 
 a.header__contact-tel {
@@ -24,11 +109,52 @@ a.header__contact-tel {
   flex-direction: column;
   gap: 10rem;
   color: var(--colorKey);
-  font-size: 30rem;
+  font-size: r(30, 20);
+  font-family: var(--fontEnglish);
   line-height: 1;
 
+  @include media() {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 136rem;
+    border: 2rem solid;
+    border-radius: 20rem;
+    color: #fff;
+    letter-spacing: .02em;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 60rem;
+      display: block;
+      width: 14rem;
+      height: 14rem;
+      border: 1px solid;
+      border-top: 0;
+      border-left: 0;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+
   span {
-    font-size: 14rem;
+    margin-right: r(25);
+    font-weight: var(--weightMedium);
+    font-size: r(20);
+  }
+
+  em {
+    color: #a7927d;
+    font-style: normal;
+    font-size: r(12, 10);
+
+    @include media() {
+      color: inherit;
+      font-size: r(20);
+    }
   }
 }
 
@@ -36,24 +162,157 @@ a.header__contact-tel {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 1px;
-  min-width: 188rem;
-  height: 55rem;
+  // padding-top: 1px;
+  padding: 1px r(40) 0;
+  min-width: r(188);
+  height: r(55, 30);
   border-radius: 100rem;
   background-color: var(--colorKey);
   color: #fff;
   line-height: 1;
+
+  @include media() {
+    position: relative;
+    height: 136rem;
+    border-radius: 20rem;
+    background-color: #fff;
+    color: var(--colorKey);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 60rem;
+      display: block;
+      width: 14rem;
+      height: 14rem;
+      border: 1px solid;
+      border-top: 0;
+      border-left: 0;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
 }
 
+// ナビ
 .header__nav {
   display: flex;
   justify-content: flex-end;
-  padding-right: 114rem;
-  font-weight: var(--weightMedium);
-  font-size: 18rem;
+  margin-top: 20rem;
+  // padding-top: 20rem;
+  padding-right: 68rem;
+  padding-bottom: 20rem;
+
+  @include media() {
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: var(--colorText);
+    font-weight: var(--weightBold);
+
+    @include media() {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: .65em 0;
+      padding-left: 18rem;
+      border-bottom: 2rem solid;
+      color: #fff;
+      font-weight: var(--weightRegular);
+      font-size: r(30);
+      line-height: 1.4;
+
+      &::before {
+        content: attr(data-subtitle);
+        display: block;
+        margin-left: .2em;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        font-size: r(14, 8);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 35rem;
+        display: block;
+        width: 14rem;
+        height: 14rem;
+        border: 1px solid;
+        border-top: 0;
+        border-left: 0;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+  }
 }
 
 .header__nav-list {
   display: flex;
   gap: 55rem;
+
+  @include media() {
+    flex-direction: column;
+    gap: 0;
+    width: 590rem;
+  }
+}
+
+.header__nav-item {
+  @include media() {
+    &:nth-child(5) {
+      order: 6;
+    }
+  }
+}
+
+
+
+// ボタン
+.header__nav-button-area {
+  position: absolute;
+  top: 48rem;
+  right: 0;
+  z-index: 20;
+}
+
+.header__nav-button {
+  width: 115rem;
+
+  .is-open & {
+    display: none;
+  }
+}
+
+.header__nav-button-close {
+  display: none;
+
+  .is-open & {
+    display: block;
+  }
+}
+
+.header__contact-address {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+
+  span {
+    font-size: r(20);
+  }
+
+  em {
+    font-style: normal;
+    font-size: r(22);
+  }
+
+  a {
+    padding-top: .5em;
+    text-decoration: underline;
+    font-size: r(20);
+  }
 }

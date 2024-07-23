@@ -18,8 +18,8 @@ const createMvSwiper = () => {
       renderBullet: function (index, className) {
         const formattedIndex = (index + 1).toString().padStart(2, '0');
         return `<span class="${className}"><span>#</span>${formattedIndex}</span>`;
-      },
-    },
+      }
+    }
   });
 };
 
@@ -30,12 +30,12 @@ const createFeaturesSwiper = () => {
     speed: 1500,
     autoplay: {
       delay: 1000,
-      disableOnInteraction: false,
+      disableOnInteraction: false
     },
     pagination: {
       el: '#features__swiper .swiper-pagination',
-      clickable: true,
-    },
+      clickable: true
+    }
   });
 };
 
@@ -60,15 +60,16 @@ const handleFeaturesResize = () => {
   }
 };
 
-window.addEventListener('load', () => {
-  createMvSwiper();
-  handleFeaturesResize();
-}, false);
+window.addEventListener(
+  'load',
+  () => {
+    createMvSwiper();
+    handleFeaturesResize();
+  },
+  false
+);
 
 window.addEventListener('resize', handleFeaturesResize, false);
-
-
-
 
 // const swiper = new Swiper("#mv__swiper", {
 //   autoplay: true, // 自動再生
@@ -85,8 +86,6 @@ window.addEventListener('resize', handleFeaturesResize, false);
 //     },
 //   },
 // });
-
-
 
 ////////////////// URLを取得し、ナビをカレントにする //////////////////
 document.addEventListener('DOMContentLoaded', () => {
@@ -108,8 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 ////////////////// スマホナビをクリックで開きボディにオーバーフローを付与 //////////////////
 document.addEventListener('DOMContentLoaded', () => {
-  const menuButton = document.querySelector('.header__menu');
-  const closeButton = document.querySelector('.header__menu-close');
+  const menuButton = document.querySelector('.header__nav-button');
+  const closeButton = document.querySelector('.header__nav-button-close');
 
   if (menuButton) {
     menuButton.addEventListener('click', () => {
@@ -132,16 +131,62 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-////////////////// アコーディオンをトグルする //////////////////
-document.addEventListener('DOMContentLoaded', () => {
-  const accordions = document.querySelectorAll('.js_accordion');
+////////////////// アコーディオンの開閉 //////////////////
 
-  accordions.forEach(accordion => {
-    accordion.addEventListener('click', () => {
-      accordion.classList.toggle('is-open');
+document.addEventListener('DOMContentLoaded', () => {
+  const accordions = document.querySelectorAll('.js-accordion');
+
+  const updateAccordionHeight = (accordion) => {
+    const content = accordion.querySelector('.js-accordion__content');
+    const height = content.scrollHeight;
+    content.style.setProperty('--max-height', height + 'px');
+  };
+
+  const initializeAccordion = (accordion) => {
+    const header = accordion.querySelector('.js-accordion__header');
+    const content = accordion.querySelector('.js-accordion__content');
+
+    // 初期化
+    updateAccordionHeight(accordion);
+
+    // aria-expandedの初期値を設定
+    header.setAttribute('aria-expanded', 'false');
+
+    const toggleAccordion = () => {
+      const isOpen = accordion.classList.toggle('is-open');
+      header.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    };
+
+    // クリックイベントリスナーを追加
+    header.addEventListener('click', toggleAccordion);
+
+    // キーボード操作のためのイベントリスナーを追加
+    header.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        toggleAccordion();
+      }
     });
+  };
+
+  accordions.forEach(initializeAccordion);
+
+  // 画面幅が変わったときの高さを再計算
+  window.addEventListener('resize', () => {
+    accordions.forEach(updateAccordionHeight);
   });
 });
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const accordions = document.querySelectorAll('.js_accordion');
+
+//   accordions.forEach(accordion => {
+//     accordion.addEventListener('click', () => {
+//       accordion.classList.toggle('is-open');
+//     });
+//   });
+// });
 
 ////////////////// aタグのスムーズスクロール //////////////////
 document.addEventListener('DOMContentLoaded', () => {
