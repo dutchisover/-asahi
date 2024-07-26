@@ -1,0 +1,17 @@
+.contact-top {
+
+	&__content {}
+
+	&__content-inner {
+		margin-top: 80rem;
+		padding: 43rem 73rem;
+		width: 100%;
+		border-radius: 20rem;
+		background-color: #fff;
+		color: #393939;
+		letter-spacing: 0.02em;
+		font-weight: var(--weightLight);
+		font-size: clamp(10px, 10vw / var(--board) * 10 * 16, 16px);
+		line-height: 1.875;
+	}
+}

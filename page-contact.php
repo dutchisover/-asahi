@@ -1,3 +1,13 @@
+<?php
+function kuniki_files()
+{
+    $cache = 1.0;
+    wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/add.css', "", $cache);
+}
+
+add_action('wp_enqueue_scripts', 'kuniki_files');
+?>
+
 <?php get_header(); ?>
 
 <?php
@@ -36,20 +46,26 @@ $slug = $post->post_name;
 
     <section class="section" data-section-title="contact">
 
-        <p>初回30分 相談無料</p>
-        <p>お気軽にご相談ください！</p>
+        <h2 class="section__title">
+            <em>初回30分 相談無料</em>
+            <span>お気軽にご相談ください！</span>
+        </h2>
+
         <p class="section__copy">
-            法務に関わるご相談・お問い合わせは、お電話またはメールにて承っています。
-            法律相談をご希望される場合は、初めに「法律相談を希望します」とお伝えください。
+            法務に関わるご相談・お問い合わせは、お電話またはメールにて承っています。<br>
+            法律相談をご希望される場合は、初めに「法律相談を希望します」とお伝えください。<br>
             コンタクトフォームでのお問い合わせは24時間年中お受けしております。
         </p>
 
-        <div class="contact__content">
-            <div>お電話でのお問い合わせ</div>
-            <div>
-                <div>072-627-0101</div>
-                <div>受付時間 9 : 00 - 18:00 (土日祝休)</div>
+        <div class="contact-top__content">
+            <div class="contact-top__contant-inner">
+                <div>お電話でのお問い合わせ</div>
+                <div>
+                    <div>072-627-0101</div>
+                    <div>受付時間 9 : 00 - 18:00 (土日祝休)</div>
+                </div>
             </div>
+
         </div>
 
     </section>
@@ -62,8 +78,8 @@ $slug = $post->post_name;
         </h2>
 
         <p class="section__copy">
-            48時間以内に連絡がない場合、メールがブロックされている恐れがありますので、
-            072-627-0101まで直接お電話いただくか、
+            48時間以内に連絡がない場合、メールがブロックされている恐れがありますので、<br>
+            072-627-0101まで直接お電話いただくか、<br>
             info@ibarakiasahilaw.comへ直接メールにてご連絡をお願いいたします。
         </p>
         <p class="section__copy">
