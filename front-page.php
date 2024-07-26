@@ -45,71 +45,76 @@
 				</div>
 
 			</div>
-			<div class="swiper-pagination"></div>
+			<div class="swiper-pagination sp-none"></div>
 			<div class="mv__container">
 				<h2 class="mv__title">BRIGHTEN<br>YOUR FUTURE.</h2>
-				<p class="mv__copy">より丁寧に、より迅速に、 ご依頼者様一人一人に寄り添う</p>
+				<p class="mv__copy">より丁寧に、より迅速に、<br class="pc-none">ご依頼者様一人一人に寄り添う</p>
 				<p class="mv__text">初回30分 相談料無料</p>
 			</div>
-			<div class="mv-topics">
-				<p class="mv-topics__title">new topics</p>
-				<?php
-				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-				$args = array(
-					'post_type' => 'topics',
-					'posts_per_page' => 1,
-					'paged' => $paged,
-					'orderby' => 'date', // 日付で並び替え
-					'order' => 'DESC',   // 降順で最新の投稿から取得
-				);
-				$topics_query = new WP_Query($args);
-				if ($topics_query->have_posts()) :
-					while ($topics_query->have_posts()) : $topics_query->the_post();
-
-						// カスタムタクソノミーの取得
-						$terms = get_the_terms(get_the_ID(), 'topics_taxonomy');
-
-						// タクソノミーの選択がない場合は "お知らせ" を表示
-						$taxonomy_name = 'お知らせ'; // デフォルトは "お知らせ"
-						$taxonomy_class = 'taxonomy-news'; // デフォルトの背景色クラス
-
-						if ($terms && !is_wp_error($terms)) {
-							$term = array_shift($terms); // 最初のタームを取得
-							$taxonomy_name = $term->name;
-							if ($term->slug === 'news') {
-								$taxonomy_class = 'taxonomy-news';
-							} else {
-								$taxonomy_class = 'taxonomy-other';
-							}
-						}
-						// 投稿本文を取得し、HTMLタグを削除
-						$content = get_the_content();
-						$content = wp_strip_all_tags($content);
-
-						// 10文字まで切り取る
-						if (mb_strlen($content) > 16) {
-							$content = mb_substr($content, 0, 16) . '...';
-						}
-				?>
-						<a href="<?php the_permalink(); ?>" class="mv-topics__container">
-							<p class="mv-topics__date">
-								<time datetime="<?php echo get_the_date('c'); ?>"><?php echo get_the_date('Y年n月d日'); ?></time>
-							</p>
-							<p class="mv-topics__taxonomy <?php echo esc_attr($taxonomy_class); ?>">
-								<?php echo esc_html($taxonomy_name); ?>
-							</p>
-							<p class="mv-topics__text sp-none"><?php echo esc_html($content); ?></p>
-						</a>
-						<!-- /.archive__item -->
-					<?php endwhile; ?>
-				<?php
-					wp_reset_postdata();
-				else :
-				?>
-					<p>お知らせはありません。</p>
-				<?php endif; ?>
-			</div>
 		</div>
+		<div class="mv-topics">
+			<p class="mv-topics__title sp-none">new topics</p>
+			<img src="<?= get_template_directory_uri(); ?>/assets/image/text_mv-topics_sp.svg" alt="New" class="pc-none mv-topics__title" width="73" height="89">
+			<?php
+			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+			$args = array(
+				'post_type' => 'topics',
+				'posts_per_page' => 1,
+				'paged' => $paged,
+				'orderby' => 'date', // 日付で並び替え
+				'order' => 'DESC',   // 降順で最新の投稿から取得
+			);
+			$topics_query = new WP_Query($args);
+			if ($topics_query->have_posts()) :
+				while ($topics_query->have_posts()) : $topics_query->the_post();
+
+					// カスタムタクソノミーの取得
+					$terms = get_the_terms(get_the_ID(), 'topics_taxonomy');
+
+					// タクソノミーの選択がない場合は "お知らせ" を表示
+					$taxonomy_name = 'お知らせ'; // デフォルトは "お知らせ"
+					$taxonomy_class = 'taxonomy-news'; // デフォルトの背景色クラス
+
+					if ($terms && !is_wp_error($terms)) {
+						$term = array_shift($terms); // 最初のタームを取得
+						$taxonomy_name = $term->name;
+						if ($term->slug === 'news') {
+							$taxonomy_class = 'taxonomy-news';
+						} else {
+							$taxonomy_class = 'taxonomy-other';
+						}
+					}
+					// 投稿本文を取得し、HTMLタグを削除
+					$content = get_the_content();
+					$content = wp_strip_all_tags($content);
+
+					// 10文字まで切り取る
+					if (mb_strlen($content) > 16) {
+						$content = mb_substr($content, 0, 16) . '...';
+					}
+			?>
+					<a href="<?php the_permalink(); ?>" class="mv-topics__container">
+						<p class="mv-topics__date sp-none">
+							<time datetime="<?php echo get_the_date('c'); ?>"><?php echo get_the_date('Y年n月d日'); ?></time>
+						</p>
+						<p class="mv-topics__date pc-none">
+							<time datetime="<?php echo get_the_date('c'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
+						</p>
+						<p class="mv-topics__taxonomy <?php echo esc_attr($taxonomy_class); ?>">
+							<?php echo esc_html($taxonomy_name); ?>
+						</p>
+						<p class="mv-topics__text"><?php echo esc_html($content); ?></p>
+					</a>
+					<!-- /.archive__item -->
+				<?php endwhile; ?>
+			<?php
+				wp_reset_postdata();
+			else :
+			?>
+				<p>お知らせはありません。</p>
+			<?php endif; ?>
+		</div>
+
 	</section>
 	<!-- /.mv -->
 
@@ -123,7 +128,7 @@
 			<div class="top-message__container">
 				<div class="top-message__photo">
 					<picture>
-						<source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_top-message_sp.jpg" media="(max-width: 767px)" />
+						<source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_top-message_sp.jpg" media="(max-width: 768px)" />
 						<img src="<?= get_template_directory_uri(); ?>/assets/image/photo_top-message.jpg" class="top-message__photo-image" alt="ご依頼者様一人一人に寄り添い全力でサポートいたします。" />
 					</picture>
 				</div>

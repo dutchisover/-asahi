@@ -6,6 +6,8 @@
 
 // MV用のスライダー
 .mv {
+  position: relative;
+
   & .swiper {
     position: relative;
     overflow: hidden;
@@ -99,14 +101,16 @@
   }
 }
 
-// MV用のスライダー
-
-
 .mv__container {
   position: absolute;
   top: 211rem;
   left: 118rem;
   z-index: 10;
+
+  @include media() {
+    top: 242rem;
+    left: 53rem;
+  }
 }
 
 .mv__title {
@@ -117,6 +121,10 @@
   // font-family: var(--fontEnglish);
   font-family: 'TT Norms', sans-serif;
   line-height: 1.2545;
+
+  @include media() {
+    line-height: 1.4285;
+  }
 }
 
 .mv__copy {
@@ -125,6 +133,10 @@
   font-weight: var(--weightRegular);
   font-size: r(26);
   font-family: var(--fontGothic);
+
+  @include media() {
+    margin-top: 53rem;
+  }
 }
 
 .mv__text {
@@ -140,6 +152,12 @@
   font-family: var(--fontGothic);
 
   place-items: center;
+  @include media() {
+    margin-top: 150rem;
+    width: 340rem;
+    height: 96rem;
+    border-radius: 50rem;
+  }
 }
 
 .mv-topics {
@@ -148,6 +166,21 @@
   bottom: 32rem;
   z-index: 10;
   min-width: 662rem;
+
+  @include media() {
+    right: 50%;
+    bottom: -198rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26rem 50rem 26rem 70rem;
+    max-width: none;
+    width: 690rem;
+    border-radius: 20rem;
+    background-color: #fff;
+    filter: drop-shadow(0 3rem 6rem rgba(0, 0, 0, .16));
+    transform: translateX(50%);
+  }
 }
 
 .mv-topics__title {
@@ -157,6 +190,11 @@
   font-weight: var(--weightMedium);
   font-size: r(18);
   font-family: var(--fontEnglish);
+
+  @include media() {
+    width: 73rem;
+    height: 89rem;
+  }
 }
 
 .mv-topics__container {
@@ -174,10 +212,28 @@
   font-weight: var(--weightMedium);
   font-size: r(16);
   font-family: var(--fontGothic);
+
+  @include media() {
+    flex-wrap: wrap;
+    gap: 10rem 15rem;
+    margin-top: 0;
+    padding: 0;
+    width: 446rem;
+    height: auto;
+    border: none;
+  }
 }
 
 .mv-topics__date {
   color: var(--colorText);
+
+  @include media() {
+    order: 2;
+    color: #9f968c;
+    font-weight: var(--weightRegular);
+    font-size: r(20);
+    font-family: var(--fontEnglish);
+  }
 }
 
 .mv-topics__taxonomy {
@@ -191,12 +247,25 @@
   line-height: 1;
 
   place-items: center;
+  @include media() {
+    order: 1;
+    padding: 0 1em;
+    border: 1px solid var(--colorKey);
+    background-color: #fff;
+    color: var(--colorKey);
+    font-size: r(20);
+  }
 }
 
 
 .mv-topics__text {
   color: var(--colorText);
   font-size: r(14);
+
+  @include media() {
+    order: 3;
+    font-size: r(24);
+  }
 }
 
 
@@ -213,6 +282,11 @@
   border-radius: 0 50rem 50rem 0;
   background-color: var(--colorBase);
 
+  @include media() {
+    overflow: hidden;
+    margin-top: 0;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -222,6 +296,10 @@
     width: calc(50vw - 50%);
     height: 100%;
     background-color: var(--colorBase);
+
+    @include media() {
+      display: none;
+    }
   }
 
   &::after {
@@ -237,12 +315,25 @@
     line-height: 1;
 
     writing-mode: vertical-rl;
+    @include media() {
+      top: 535rem;
+      right: -38rem;
+      z-index: 1;
+      color: #e8ded3;
+      font-size: 200rem;
+    }
   }
 }
 
 .top-message__inner {
   margin: 0 auto;
   width: 1200rem;
+
+  @include media() {
+    position: relative;
+    z-index: 2;
+    width: 630rem;
+  }
 }
 
 .top-message__container {
@@ -251,17 +342,28 @@
   justify-content: space-between;
   // gap: 150rem;
   margin-top: 70rem;
+
+  @include media() {
+    flex-direction: column;
+    margin-top: 40rem;
+  }
 }
 
 .top-message__photo {
+  overflow: hidden;
   width: 420rem;
+  border-radius: 16rem;
+
+  @include media() {
+    width: 100%;
+    border-radius: 30rem;
+  }
 }
 
 .top-message__photo-image {
   width: 100%;
-  aspect-ratio: 420/470;
+  // aspect-ratio: 420/470;
   object-fit: cover;
-  border-radius: 16rem;
 }
 
 .top-message__content {
@@ -269,6 +371,11 @@
   flex-direction: column;
   justify-content: flex-start;
   width: 603rem;
+
+  @include media() {
+    margin-top: 92rem;
+    width: 100%;
+  }
 }
 
 .top-message__title {
@@ -277,6 +384,13 @@
   font-size: r(30);
   font-family: var(--fontMincho);
   line-height: 1.83;
+
+  @include media() {
+    font-weight: var(--weightRegular);
+    font-size: r(36);
+    font-family: var(--fontGothic);
+    line-height: 2.2222;
+  }
 }
 
 .top-message__lawyer {

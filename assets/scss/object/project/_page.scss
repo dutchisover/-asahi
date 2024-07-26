@@ -17,6 +17,7 @@
     left: 0;
     z-index: 1;
     width: 93.75%;
+    width: calc((100vw - 1680rem) / 2 + 1680rem);
     height: 370rem;
     background-color: var(--colorBase);
 
