@@ -5,20 +5,26 @@
   display: flex;
   justify-content: center;
   margin-top: 60rem;
+
+  @include media() {
+    margin: 60rem auto 0;
+    width: 690rem;
+  }
 }
 
-.page-numbers {
+ul.page-numbers {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18rem;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .page-numbers li {
-  margin: 0 6rem;
-
-  @include media() {
-    margin: 0 3rem;
+  &::before {
+    display: none;
   }
 }
 
@@ -27,25 +33,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40rem;
-  height: 40rem;
-  border: 1px solid;
+  width: 76rem;
+  height: 47rem;
+  border: 1px solid #8e8e8e;
   border-radius: 3rem;
-  color: #006eb8;
+  border-radius: 40rem;
+  color: #8e8e8e;
   text-decoration: none;
-  font-weight: 700;
-  font-family: var(--fontTitle);
-}
-
-.page-numbers a:hover {
-  background-color: #e9ecef;
+  font-size: r(18);
+  font-family: var(--fontEnglish);
 }
 
 .page-numbers .current {
-  background-color: #006eb8;
+  border-color: var(--colorKey);
+  background-color: var(--colorKey);
   color: #fff;
 }
 
 .page-numbers .next {
   padding: .5rem .75rem;
+}
+
+.page-numbers.dots {
+  margin: 0 auto;
+  border: none;
 }

@@ -10,7 +10,7 @@
 
 	<!-- mv -->
 	<section class="mv">
-		<!-- <div class="mv__inner"> -->
+		<!-- mv__swiper -->
 		<div class="swiper" id="mv__swiper">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
@@ -53,15 +53,62 @@
 			</div>
 			<div class="mv-topics">
 				<p class="mv-topics__title">new topics</p>
-				<div class="mv-topics__container">
-					<p class="mv-topics__date"><time datetime="2023-07-23">2023年7月23日</p>
-					<p class="mv-topics__taxonomy">ニュース</p>
-					<p class="mv-topics__text">8月のお得なキャンペーン…</p>
-					<!-- テキスト文字数制限あり？ -->
-				</div>
-			</div>
-			<!-- </div> -->
+				<?php
+				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+				$args = array(
+					'post_type' => 'topics',
+					'posts_per_page' => 1,
+					'paged' => $paged,
+					'orderby' => 'date', // 日付で並び替え
+					'order' => 'DESC',   // 降順で最新の投稿から取得
+				);
+				$topics_query = new WP_Query($args);
+				if ($topics_query->have_posts()) :
+					while ($topics_query->have_posts()) : $topics_query->the_post();
 
+						// カスタムタクソノミーの取得
+						$terms = get_the_terms(get_the_ID(), 'topics_taxonomy');
+
+						// タクソノミーの選択がない場合は "お知らせ" を表示
+						$taxonomy_name = 'お知らせ'; // デフォルトは "お知らせ"
+						$taxonomy_class = 'taxonomy-news'; // デフォルトの背景色クラス
+
+						if ($terms && !is_wp_error($terms)) {
+							$term = array_shift($terms); // 最初のタームを取得
+							$taxonomy_name = $term->name;
+							if ($term->slug === 'news') {
+								$taxonomy_class = 'taxonomy-news';
+							} else {
+								$taxonomy_class = 'taxonomy-other';
+							}
+						}
+						// 投稿本文を取得し、HTMLタグを削除
+						$content = get_the_content();
+						$content = wp_strip_all_tags($content);
+
+						// 10文字まで切り取る
+						if (mb_strlen($content) > 16) {
+							$content = mb_substr($content, 0, 16) . '...';
+						}
+				?>
+						<a href="<?php the_permalink(); ?>" class="mv-topics__container">
+							<p class="mv-topics__date">
+								<time datetime="<?php echo get_the_date('c'); ?>"><?php echo get_the_date('Y年n月d日'); ?></time>
+							</p>
+							<p class="mv-topics__taxonomy <?php echo esc_attr($taxonomy_class); ?>">
+								<?php echo esc_html($taxonomy_name); ?>
+							</p>
+							<p class="mv-topics__text sp-none"><?php echo esc_html($content); ?></p>
+						</a>
+						<!-- /.archive__item -->
+					<?php endwhile; ?>
+				<?php
+					wp_reset_postdata();
+				else :
+				?>
+					<p>お知らせはありません。</p>
+				<?php endif; ?>
+			</div>
 		</div>
 	</section>
 	<!-- /.mv -->
@@ -93,7 +140,7 @@
 			</div>
 		</div>
 	</section>
-	<!-- /MESSAGE ご挨拶 -->
+	<!-- /.top-message -->
 
 	<!-- OUR FEATURES 私たちが選ばれる理由 -->
 	<section class="top-features">
@@ -103,7 +150,6 @@
 				<span>私たちが選ばれる理由</span>
 			</h2>
 			<div class="top-features__container">
-
 				<div class="swiper" id="features__swiper">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
@@ -129,13 +175,11 @@
 						</div>
 					</div>
 					<div class="swiper-pagination"></div>
-
-					<!-- </div> -->
-
 				</div>
-				<div class="button__area"><a href="" class="button__link">私たちについて</a></div>
+				<div class="button__area"><a href="<?php echo esc_url(home_url('/about-us/')); ?>" class="button__link">私たちについて</a></div>
 			</div>
 	</section>
+	<!-- /.top-features -->
 
 	<!-- SERVICE 取り扱い業務 -->
 	<section class="top-service">
@@ -219,12 +263,11 @@
 							<h3 class="top-service__subitem-title">法人破産・会社解散</h3>
 						</a>
 					</li>
-
 				</ul>
-
-				<div class="button__area"><a href="" class="button__link">取り扱い業務 一覧へ</a></div>
+				<div class="button__area"><a href="<?php echo esc_url(home_url('/service/')); ?>" class="button__link">取り扱い業務 一覧へ</a></div>
 			</div>
 	</section>
+	<!-- /.top-service -->
 
 	<!-- TOPICS 新着情報 -->
 	<section class="top-topics">
@@ -235,44 +278,82 @@
 			</h2>
 			<div class="top-topics__container">
 				<ul class="top-topics__list">
-					<!-- ループ文字数制限 -->
-					<li class="top-topics__item">
-						<a href="" class="top-topics__item-link">
-							<img src="" alt="" class="top-topics__item-image">
-							<div class="top-topics__item-content">
-								<p class=" top-topics__item-date"><time datetime="2023-07-23">2023-07-23</p>
-								<p class="top-topics__item-taxonomy">NEWS</p>
-								<p class="top-topics__item-title">冬期休業のお知らせ</p>
-								<p class="top-topics__item-text">休業期間中に頂いたお問合せにつきましては、営業開始日以降に順次回答させて頂きます。<br> 皆様には大変ご不便をお掛け致しますが、何卒ご理解頂けますようお願い申し上げます。</p>
-							</div>
-						</a>
-					</li>
-					<li class="top-topics__item">
-						<a href="" class="top-topics__item-link">
-							<img src="" alt="" class="top-topics__item-image">
-							<div class="top-topics__item-content">
-								<p class="top-topics__item-date"><time datetime="2023-07-23">2023-07-23</p>
-								<p class="top-topics__item-taxonomy">コラム</p>
-								<p class="top-topics__item-title">定年後再雇用の際の同一労働同一賃金に関する最高裁判所の判断について</p>
-								<p class="top-topics__item-text">高年齢者等の雇用の安定等に関する法律第9条では、65歳未満の定年を定めている事業主に対し、①65歳まで定年年齢の引き上げる、②65歳までの継続雇用制度の導入、③定年制の廃止のいずれかの措置を講ずることを義務付けており…</p>
-							</div>
-						</a>
-					</li>
-					<li class="top-topics__item">
-						<a href="" class="top-topics__item-link">
-							<img src="" alt="" class="top-topics__item-image">
-							<div class="top-topics__item-content">
-								<p class="top-topics__item-date"><time datetime="2023-07-23">2023-07-23</p>
-								<p class="top-topics__item-taxonomy">コラム</p>
-								<p class="top-topics__item-title">固定残業代を支給する際に注意するべきこと【企業向け】</p>
-								<p class="top-topics__item-text">残業代（時間外手当、休日手当、深夜手当）は、残業時間に応じて支給するのが原則ですが、業務の性質上、一定の残業が見込まれる業種では、固定残業代を設定することが一般的であり、当事務所の顧問先企業でも固定残業代を支給している…</p>
-							</div>
-						</a>
-					</li>
+					<?php
+					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+					$args = array(
+						'post_type' => 'topics',
+						'posts_per_page' => 3,
+						'paged' => $paged,
+						'orderby' => 'date', // 日付で並び替え
+						'order' => 'DESC',   // 降順で最新の投稿から取得
+					);
+					$topics_query = new WP_Query($args);
+					if ($topics_query->have_posts()) :
+						while ($topics_query->have_posts()) : $topics_query->the_post();
+
+							// カスタムタクソノミーの取得
+							$terms = get_the_terms(get_the_ID(), 'topics_taxonomy');
+
+							// アイキャッチ画像の取得
+							$archive_image = '';
+							if (has_post_thumbnail()) {
+								$archive_image = get_the_post_thumbnail($post->ID, 'fullsize', ['alt' => get_the_title()]);
+							} else {
+								$archive_image = '<img src="' . esc_url(get_template_directory_uri()) . '/assets/image/logo_footer_sp.svg" alt="" class="top-topics__item-noimage">';
+							}
+
+							// タクソノミーの選択がない場合は "お知らせ" を表示
+							$taxonomy_name = 'お知らせ'; // デフォルトは "お知らせ"
+							$taxonomy_class = 'taxonomy-news'; // デフォルトの背景色クラス
+
+							if ($terms && !is_wp_error($terms)) {
+								$term = array_shift($terms); // 最初のタームを取得
+								$taxonomy_name = $term->name;
+								if ($term->slug === 'news') {
+									$taxonomy_class = 'taxonomy-news';
+								} else {
+									$taxonomy_class = 'taxonomy-other';
+								}
+							}
+							// 投稿本文を取得し、HTMLタグを削除
+							$content = get_the_content();
+							$content = wp_strip_all_tags($content);
+
+							// 110文字まで切り取る
+							if (mb_strlen($content) > 110) {
+								$content = mb_substr($content, 0, 110) . '...';
+							}
+					?>
+							<li class="top-topics__item">
+								<a href="<?php the_permalink(); ?>" class="top-topics__item-link">
+									<div class="top-topics__item-image">
+										<?php echo $archive_image; ?>
+									</div>
+									<div class="top-topics__item-content">
+										<p class="top-topics__item-date">
+											<time datetime="<?php echo get_the_date('c'); ?>"><?php the_time('Y-m-d'); ?></time>
+											<span class="top-topics__item-taxonomy <?php echo esc_attr($taxonomy_class); ?>">
+												<?php echo esc_html($taxonomy_name); ?>
+											</span>
+										</p>
+										<h3 class="top-topics__item-title"><?php the_title(); ?></h3>
+										<p class="top-topics__item-text sp-none"><?php echo esc_html($content); ?></p>
+									</div>
+								</a>
+							</li>
+							<!-- /.archive__item -->
+						<?php endwhile; ?>
 				</ul>
+			<?php
+						wp_reset_postdata();
+					else :
+			?>
+				<p class="is-center">お知らせはありません。</p>
+			<?php endif; ?>
 			</div>
-			<div class="button__area"><a href="" class="button__link">新着情報 一覧へ</a></div>
+			<div class="button__area"><a href="<?php echo esc_url(home_url('/topics/')); ?>" class="button__link">新着情報 一覧へ</a></div>
 	</section>
+	<!-- /.top-topics -->
 
 	<!-- OTHER -->
 	<section class="top-other">
@@ -282,11 +363,11 @@
 					<li class="top-other__item">
 						<h2 class="top-other__item-title">
 							<em>price</em>
-							<span>新着情報</span>
+							<span>料金</span>
 						</h2>
-						<img src="" alt="" class="top-other__item-image">
+						<img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/image/photo_top-other_price.jpg" alt="料金" class="top-other__item-image">
 						<div class="button__area">
-							<a href="" class="button__link">もっと詳しく</a>
+							<a href="<?php echo esc_url(home_url('/price/')); ?>" class="button__link">詳しく見る</a>
 						</div>
 					</li>
 					<li class="top-other__item">
@@ -294,9 +375,9 @@
 							<em>flow</em>
 							<span>ご相談の流れ</span>
 						</h2>
-						<img src="" alt="" class="top-other__item-image">
+						<img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/image/photo_top-other_flow.jpg" alt="ご相談の流れ" class="top-other__item-image">
 						<div class="button__area">
-							<a href="" class="button__link">もっと詳しく</a>
+							<a href="<?php echo esc_url(home_url('/service#anc-flow/')); ?>" class="button__link">詳しく見る</a>
 						</div>
 					</li>
 					<li class="top-other__item">
@@ -304,26 +385,16 @@
 							<em>office</em>
 							<span>事務所概要</span>
 						</h2>
-						<img src="" alt="" class="top-other__item-image">
+						<img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/image/photo_top-other_office.jpg" alt="事務所概要" class="top-other__item-image">
 						<div class="button__area">
-							<a href="" class="button__link">もっと詳しく</a>
+							<a href="<?php echo esc_url(home_url('/office/')); ?>" class="button__link">詳しく見る</a>
 						</div>
-
 					</li>
 				</ul>
 			</div>
 		</div>
 	</section>
-
-	<!-- <?php
-			echo '<div class="page-' . esc_attr($slug) . '">';
-			if (have_posts()) :
-				while (have_posts()) : the_post();
-					the_content();
-				endwhile;
-			endif;
-			echo '</div>';
-			?> -->
+	<!-- /.top-other -->
 
 </main>
 <!-- /.main -->

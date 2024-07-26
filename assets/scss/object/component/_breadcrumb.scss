@@ -3,15 +3,22 @@
 
 /* パンくずリスト */
 .breadcrumb {
-  margin-top: 10rem;
-  font-size: 11rem;
+  position: relative;
+  z-index: 2;
+  margin-top: 40rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1548rem;
+  color: var(--colorKey);
+  font-size: r(12, 12);
   line-height: 1.45454545;
 
   @extend %wrapper;
   @include media() {
     order: 999;
-    margin-top: 100rem;
-    width: 335rem;
+    margin-top: 30rem;
+    width: 630rem;
+    font-size: r(20);
   }
 
   .page-examination & {
@@ -27,8 +34,16 @@
 }
 
 .breadcrumb__inner {
-  margin: 0 auto;
-  max-width: 1200px;
+  & > * {
+    &::after {
+      content: '/';
+      margin: 0 10rem;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
 }
 
 .breadcrumb__link {
@@ -37,5 +52,5 @@
 }
 
 .breadcrumb__current {
-  color: #777;
+  color: inherit;
 }

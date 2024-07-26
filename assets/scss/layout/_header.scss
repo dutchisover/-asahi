@@ -43,13 +43,16 @@
   @include media() {
     position: relative;
     z-index: 15;
-    margin-left: 39rem;
     // margin-top: 48rem;
-    padding-top: 19rem;
-    padding-bottom: 24rem;
-    width: 418rem;
+    margin-top: 19rem;
+    margin-bottom: 24rem;
+    margin-left: 39rem;
+    padding: 0;
 
     img {
+      width: auto;
+      height: 72rem;
+
       .is-open & {
         filter: brightness(0) invert(1);
       }
@@ -280,7 +283,13 @@ a.header__contact-tel {
 }
 
 .header__nav-button {
-  width: 115rem;
+  height: 100%;
+
+  img {
+    max-width: none;
+    width: auto;
+    height: 15.33333333vw;
+  }
 
   .is-open & {
     display: none;

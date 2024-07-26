@@ -27,7 +27,7 @@
 					<h1 class="header__logo">
 						<a href="<?= home_url(); ?>">
 							<picture>
-								<source media=" (max-width:800px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/logo_sp.svg">
+								<source media=" (max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/logo_sp.svg">
 								<img src="<?= get_template_directory_uri(); ?>/assets/image/logo.svg" alt="茨木あさひ法律事務所 - Ibawaki Asahi Law Offices" class="header__logo-image" width="348" height="67">
 							</picture>
 						</a>
@@ -36,7 +36,7 @@
 					<div class="header__logo">
 						<a href="<?= home_url(); ?>">
 							<picture>
-								<source media=" (max-width:800px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/logo_sp.svg">
+								<source media=" (max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/logo_sp.svg">
 								<img src="<?= get_template_directory_uri(); ?>/assets/image/logo.svg" alt="茨木あさひ法律事務所 - Ibawaki Asahi Law Offices" class="header__logo-image" width="348" height="67">
 							</picture>
 						</a>

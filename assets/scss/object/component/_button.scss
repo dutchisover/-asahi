@@ -14,7 +14,7 @@
   border-radius: 30rem;
   background-color: var(--colorKey);
   color: #fff;
-  font-size: 16rem;
+  font-size: r(16);
 
   place-items: center;
 
@@ -25,110 +25,52 @@
     display: block;
     width: 10rem;
     height: 10rem;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     border-right: 0;
     border-bottom: 0;
-    transform: rotate(135deg) skew(5deg, 5deg);
+    transform: rotate(135deg);
+    // transform: rotate(135deg) skew(5deg, 5deg);
+
+    @include media() {
+      border-width: 1px;
+    }
   }
 }
 
-// .button {
-//   position: relative;
-//   display: flex;
-//   align-items: center;
-//   padding-left: 30rem;
-//   width: 290rem;
-//   height: 64rem;
-//   border-radius: 6rem;
-//   background-color: #fff;
-//   box-shadow: 0 3rem 6rem rgba(0, 0, 0, .16);
-//   color: var(--colorKey);
-//   text-decoration: none;
-//   font-weight: 700;
-//   font-size: 18rem;
+.button__area.cta__button {
+  margin-top: 55rem;
+  width: 100%;
+  height: auto;
 
-//   @include media() {
-//     padding-left: 25rem;
-//     width: 240rem;
-//     height: 50rem;
-//     font-size: 16rem;
-//   }
+  @include media() {
+    margin-top: 70rem;
+  }
 
-//   &::after {
-//     content: '';
-//     position: absolute;
-//     top: 50%;
-//     right: 20rem;
-//     display: block;
-//     width: 30rem;
-//     height: 30rem;
-//     background-image: url(../image/arrow_button.svg);
-//     background-position: center;
-//     background-size: 100% 100%;
-//     background-repeat: no-repeat;
-//     transform: translateY(-50%);
 
-//     @include media() {
-//       right: 15rem;
-//       width: 22rem;
-//       height: 22rem;
-//     }
-//   }
-// }
+  & .button__link {
+    padding: 40rem 0;
+    border-radius: 10rem;
+    letter-spacing: .05em;
+    font-size: r(26);
 
-// .button--primary {
-//   @extend .button;
+    @include media() {
+      font-size: r(32);
+    }
 
-//   & {
-//     background-color: #006eb8;
-//     box-shadow: none;
-//     color: #fff;
+    &::after {
+      @include media() {
+        right: 70rem;
+        width: 15rem;
+        height: 15rem;
+      }
+    }
 
-//     &::after {
-//       background-image: url(../image/arrow_button-primary.svg);
-//     }
-//   }
-// }
+    & span {
+      font-size: r(14);
 
-// .button__return {
-//   position: relative;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   width: 290rem;
-//   height: 65rem;
-//   border: 1px solid;
-//   border-radius: 6rem;
-//   background-color: #fff;
-//   color: #2e6eb3;
-//   text-decoration: none;
-//   font-weight: 700;
-//   font-size: 18rem;
-
-//   @include media() {
-//     width: 240rem;
-//     height: 50rem;
-//     font-size: 16rem;
-//   }
-
-//   &::before {
-//     content: '';
-//     position: absolute;
-//     top: 50%;
-//     left: 20rem;
-//     display: block;
-//     width: 16rem;
-//     height: 12rem;
-//     background-image: url(../image/arrow_button_left.svg);
-//     background-position: center;
-//     background-size: 100% 100%;
-//     background-repeat: no-repeat;
-//     transform: translateY(-50%);
-
-//     @include media() {
-//       left: 15rem;
-//       width: 12rem;
-//       height: 9rem;
-//     }
-//   }
-// }
+      @include media() {
+        font-size: r(20);
+      }
+    }
+  }
+}

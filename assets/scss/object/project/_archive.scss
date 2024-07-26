@@ -4,49 +4,47 @@
   @extend %block;
 }
 
-.taxonomy-news {
-  background-color: orange;
+.topics__content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 40rem auto 0;
+  width: 1360rem;
+
+  @include media() {
+    flex-direction: column;
+  }
 }
 
-.taxonomy-other {
-  background-color: gray;
-}
+.archive-topics {
+  & .section {
+    min-height: 1300rem;
 
-.topics {
-  position: relative;
-  // margin: -210rem auto 0;
-  margin: 0 auto;
-  padding: 317rem 0 198rem;
-  min-height: 2000rem;
-  // margin-right: 6.25%;
-  width: 1680rem;
-  border-radius: 0 50rem 50rem 0;
-  background-color: var(--colorBase);
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 100%;
-    display: block;
-    width: calc(50vw - 50%);
-    height: 100%;
-    background-color: var(--colorBase);
+    @include media() {
+      padding-bottom: 0;
+      min-height: auto;
+    }
   }
 
-  &::after {
-    content: 'NEWS & COLUMN';
-    position: absolute;
-    top: 345rem;
-    right: -60rem;
-    color: #d9c8b9;
-    letter-spacing: .05em;
-    font-weight: var(--weightMedium);
-    font-size: 120rem;
-    font-family: var(--fontEnglish);
-    line-height: 1;
+  & .section__copy {
+    @include media() {
+      width: 630rem;
+    }
+  }
 
-    writing-mode: vertical-rl;
+  & .topics__content {
+    margin-top: 90rem;
+  }
+}
+
+.archive__container {
+  width: 1020rem;
+
+  @include media() {
+    margin-top: 90rem;
+    padding: 50rem 0 105rem;
+    border-radius: 30rem 30rem 0 0;
+    background-color: #e8ded3;
   }
 }
 
@@ -54,38 +52,97 @@
   display: flex;
   flex-direction: column;
   gap: 10rem;
-  margin-top: 90rem;
-  width: 1020rem;
+  margin-top: 0;
+
+  @include media() {
+    gap: 26rem;
+    margin: 0 auto;
+    width: 690rem;
+  }
+}
+
+.section ul.archive__list {
+  margin-top: 0;
 }
 
 .archive__item {
   overflow: hidden;
   border-radius: 20rem;
+
+  &::before {
+    display: none;
+  }
 }
 
-
 .archive__item-link {
+  position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 23rem 80rem 23rem 30rem;
+  padding: 23rem 80rem 25rem 30rem;
   background-color: #fff;
+
+  @include media() {
+    align-items: stretch;
+    padding: 40rem 28rem 40rem 45rem;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 35rem;
+    display: block;
+    width: 13rem;
+    height: 13rem;
+    border: 1px solid var(--colorKey);
+    border-right: 0;
+    border-bottom: 0;
+    transform: rotate(135deg) translateX(-50%);
+
+    @include media() {
+      display: none;
+    }
+  }
 }
 
 .archive__item-image {
+  display: grid;
   overflow: hidden;
   width: 241rem;
   height: 159rem;
   object-fit: cover;
   border-radius: 10rem;
 
+  place-items: center;
+  @include media() {
+    width: 172rem;
+    height: 160rem;
+  }
+
   & img {
     width: 100%;
+  }
+
+  & .archive__item-noimage {
+    width: 70%;
+  }
+
+  &:has(.archive__item-noimage) {
+    background-color: var(--colorBase);
   }
 }
 
 .archive__item-content {
+  display: flex;
+  flex-direction: column;
   width: 620rem;
+
+  @include media() {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    width: 410rem;
+  }
 }
 
 .archive__item-date {
@@ -94,6 +151,18 @@
   font-weight: var(--weightMedium);
   font-size: r(12);
   font-family: var(--fontGothic);
+
+  @include media() {
+    font-size: r(20);
+  }
+}
+
+.taxonomy-news {
+  background-color: var(--colorKey);
+}
+
+.taxonomy-other {
+  background-color: #b27538;
 }
 
 .archive__item-taxonomy {
@@ -104,15 +173,29 @@
   letter-spacing: .05em;
   font-weight: var(--weightMedium);
   font-family: var(--fontGothic);
+
+  @include media() {
+    padding: 7rem 20rem;
+    border-radius: 20rem;
+    line-height: 1;
+  }
 }
 
 .archive__item-title {
   margin-top: 16rem;
+  width: 513rem;
   color: var(--colorText);
   letter-spacing: .08em;
-  letter-spacing: 1.3888;
   font-weight: var(--weightMedium);
   font-size: r(18);
+  line-height: 1.3888;
+
+  @include media() {
+    margin-top: 0;
+    width: 100%;
+    letter-spacing: .03em;
+    font-size: r(26);
+  }
 }
 
 .archive__item-text {

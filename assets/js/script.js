@@ -15,7 +15,7 @@ const createMvSwiper = () => {
     pagination: {
       el: '#mv__swiper .swiper-pagination',
       clickable: true,
-      renderBullet: function (index, className) {
+      renderBullet: function(index, className) {
         const formattedIndex = (index + 1).toString().padStart(2, '0');
         return `<span class="${className}"><span>#</span>${formattedIndex}</span>`;
       }
@@ -136,13 +136,13 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const accordions = document.querySelectorAll('.js-accordion');
 
-  const updateAccordionHeight = (accordion) => {
+  const updateAccordionHeight = accordion => {
     const content = accordion.querySelector('.js-accordion__content');
     const height = content.scrollHeight;
     content.style.setProperty('--max-height', height + 'px');
   };
 
-  const initializeAccordion = (accordion) => {
+  const initializeAccordion = accordion => {
     const header = accordion.querySelector('.js-accordion__header');
     const content = accordion.querySelector('.js-accordion__content');
 
@@ -176,7 +176,6 @@ document.addEventListener('DOMContentLoaded', () => {
     accordions.forEach(updateAccordionHeight);
   });
 });
-
 
 // document.addEventListener('DOMContentLoaded', () => {
 //   const accordions = document.querySelectorAll('.js_accordion');
@@ -243,3 +242,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+////////////////// .service__price-title の処理 //////////////////
+
+// .service__price-title の要素を全て取得
+const priceTitles = document.querySelectorAll('.service__price-title');
+
+// .service__price-title が存在する場合の処理
+if (priceTitles.length > 0) {
+  // 親要素 .service__price-box を取得
+  const priceBoxes = document.querySelectorAll('.service__price-box');
+
+  // それぞれの .service__price-title em のテキストを取得し、親要素の順番を取得
+  priceTitles.forEach((title, index) => {
+    const emElement = title.querySelector('em');
+    if (emElement) {
+      const textContent = emElement.textContent;
+      const parentIndex = Array.from(priceBoxes).indexOf(
+        title.closest('.service__price-box')
+      );
+
+      // 出力用のa要素を作成
+      const linkElement = document.createElement('a');
+      linkElement.className = 'service__price-nav-link';
+      linkElement.href = `#anc-price-${String(index + 1).padStart(2, '0')}`;
+      linkElement.textContent = textContent;
+
+      // .service__price-nav にa要素を追加
+      const navElement = document.querySelector('.service__price-nav');
+      if (navElement) {
+        navElement.appendChild(linkElement);
+      }
+    }
+  });
+}

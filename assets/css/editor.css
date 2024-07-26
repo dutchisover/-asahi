@@ -154,7 +154,7 @@ html.interface-interface-skeleton__html-container {
   font-size: 20rem;
   line-height: 2;
 }
-@media (max-width: 800px){
+@media (max-width: 820px){
   :root {
     --board: 750;
   }

@@ -19,3 +19,15 @@
 .is-center {
   text-align: center !important;
 }
+
+
+// アコーディオン
+.js-accordion__content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .6s;
+}
+
+.is-open .js-accordion__content {
+  max-height: var(--max-height);
+}

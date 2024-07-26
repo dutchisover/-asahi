@@ -1,6 +1,7 @@
 @use '../foundation/index' as *;
 
 .footer {
+  margin-top: 120rem;
   background-color: var(--colorBase);
 }
 
@@ -293,5 +294,12 @@
     @include media() {
       color: #fff;
     }
+  }
+}
+
+// アーカイブページの位置調整
+.page__main:has(.archive-topics) + .footer {
+  @include media() {
+    margin-top: 0;
   }
 }

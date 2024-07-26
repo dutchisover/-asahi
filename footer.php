@@ -26,7 +26,7 @@
 		<div class="footer__address">
 			<a href="<?= home_url(); ?>" class="footer__logo">
 				<picture>
-					<source media=" (max-width:768px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/logo_footer_sp.svg">
+					<source media=" (max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/logo_footer_sp.svg">
 					<img src="<?= get_template_directory_uri(); ?>/assets/image/logo.svg" alt="茨木あさひ法律事務所 - Ibawaki Asahi Law Offices" class="footer__logo-image" width="348" height="67">
 				</picture>
 			</a>
