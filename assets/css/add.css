@@ -90,6 +90,33 @@
   --speed: .4s;
 }
 
+@media (max-width: 820px) {
+  .page-service .section {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0;
+    padding-left: 0;
+    width: 690rem;
+  }
+}
+.page-service .section:nth-of-type(2n) {
+  border-radius: 50rem 0 0 50rem;
+}
+@media (max-width: 820px) {
+  .page-service .section:nth-of-type(2n) {
+    padding-bottom: 100rem;
+    width: 100%;
+    border-radius: 30rem;
+  }
+}
+.page-service .section:nth-of-type(2n)::after {
+  content: "";
+  right: 1px;
+  left: auto;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
 .service__content {
   position: relative;
   display: -webkit-box;
@@ -318,6 +345,9 @@
 }
 @media (max-width: 820px) {
   .service__item-photo {
+    width: 100%;
+  }
+  .service__item-photo img {
     width: 100%;
   }
 }
@@ -585,58 +615,6 @@
     padding-top: 40rem;
   }
 }
-.page__parent-service .section {
-  position: relative;
-  margin-right: auto;
-  margin-left: auto;
-  width: 1680rem;
-}
-@media (max-width: 820px) {
-  .page__parent-service .section {
-    padding-right: 60rem;
-    padding-left: 60rem;
-    width: 100%;
-    border-radius: 30rem 30rem 0 0;
-  }
-}
-.page__parent-service .section::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 1px;
-  z-index: 0;
-  display: block;
-  width: calc(50vw - 50% + 1px);
-  height: 100%;
-  background-color: var(--colorBase);
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
-@media (max-width: 820px) {
-  .page__parent-service .section::after {
-    content: none;
-  }
-}
-@media (max-width: 820px) {
-  .page__parent-service .section:nth-of-type(2n) {
-    margin-top: -30rem;
-    padding-bottom: 140rem;
-    background-color: #e8ded3;
-  }
-}
-.page__parent-service .section:nth-of-type(2n)::after {
-  content: none;
-}
-@media (max-width: 820px) {
-  .page__parent-service .section:nth-of-type(2n+1) {
-    margin-top: -30rem;
-  }
-}
-@media (max-width: 820px) {
-  .page__parent-service .section + .section {
-    padding-top: 100rem;
-  }
-}
 
 .service__example {
   display: -webkit-box;
@@ -833,6 +811,14 @@
   margin-right: auto;
   margin-left: auto;
   width: 1200rem;
+}
+@media (max-width: 820px) {
+  .service__field-list {
+    margin-right: 0;
+    margin-left: calc(50% - 50vw + 30rem);
+    max-width: none;
+    width: 690rem;
+  }
 }
 
 .service__field-item {
@@ -1219,7 +1205,7 @@
 @media (max-width: 820px) {
   .service__price-table th,
   .service__price-table td {
-    padding: 30rem 20rem;
+    padding: 27rem 20rem;
     border: 2px solid var(--colorBase);
     font-size: clamp(10px, 10vw / var(--board) * 10 * 23, 23px);
   }
