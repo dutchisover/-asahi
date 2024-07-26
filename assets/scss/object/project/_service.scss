@@ -1,5 +1,34 @@
 @use '../../foundation/index' as *;
 
+.page-service {
+  .section {
+    @include media() {
+      margin-right: auto;
+      margin-left: auto;
+      padding-right: 0;
+      padding-left: 0;
+      width: 690rem;
+    }
+
+    &:nth-of-type(2n) {
+      border-radius: 50rem 0 0 50rem;
+
+      @include media() {
+        padding-bottom: 100rem;
+        width: 100%;
+        border-radius: 30rem;
+      }
+
+      &::after {
+        content: '';
+        right: 1px;
+        left: auto;
+        transform: translateX(100%);
+      }
+    }
+  }
+}
+
 .service__content {
   position: relative;
   display: flex;
@@ -177,6 +206,10 @@
 
   @include media() {
     width: 100%;
+
+    img {
+      width: 100%;
+    }
   }
 }
 
@@ -411,61 +444,6 @@
   @include media() {
     padding-top: 40rem;
   }
-
-  .section {
-    position: relative;
-    margin-right: auto;
-    margin-left: auto;
-    width: 1680rem;
-
-    @include media() {
-      padding-right: 60rem;
-      padding-left: 60rem;
-      width: 100%;
-      border-radius: 30rem 30rem 0 0;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 1px;
-      z-index: 0;
-      display: block;
-      width: calc(50vw - 50% + 1px);
-      height: 100%;
-      background-color: var(--colorBase);
-      transform: translateX(-100%);
-
-      @include media() {
-        content: none;
-      }
-    }
-
-    &:nth-of-type(2n) {
-      @include media() {
-        margin-top: -30rem;
-        padding-bottom: 140rem;
-        background-color: #e8ded3;
-      }
-
-      &::after {
-        content: none;
-      }
-    }
-
-    &:nth-of-type(2n+1) {
-      @include media() {
-        margin-top: -30rem;
-      }
-    }
-
-    & + .section {
-      @include media() {
-        padding-top: 100rem;
-      }
-    }
-  }
 }
 
 .service__example {
@@ -630,6 +608,13 @@
   margin-right: auto;
   margin-left: auto;
   width: 1200rem;
+
+  @include media() {
+    margin-right: 0;
+    margin-left: calc(50% - 50vw + 30rem);
+    max-width: none;
+    width: 690rem;
+  }
 }
 
 .service__field-item {
@@ -957,7 +942,7 @@
     border: 2px solid #fff;
 
     @include media() {
-      padding: 30rem 20rem;
+      padding: 27rem 20rem;
       border: 2px solid var(--colorBase);
       font-size: r(23);
     }
