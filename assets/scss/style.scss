@@ -23,6 +23,10 @@
 @use './object/project/page404';
 @use './object/project/service';
 @use './object/project/contact';
+@use './object/project/about';
+@use './object/project/price';
+@use './object/project/office';
+@use './object/project/privacy';
 
 
 // 強制的に上書き

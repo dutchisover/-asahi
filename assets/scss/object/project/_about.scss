@@ -1,0 +1,472 @@
+@use '../../foundation/index' as *;
+
+.page-about-us {
+  @include media() {
+    margin-top: 80rem;
+  }
+}
+
+.section.about__philosophy {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 160rem;
+
+  &::before {
+    top: -80rem;
+  }
+}
+
+.about__philosophy-copy {
+  color: var(--colorText);
+  letter-spacing: .02em;
+  font-size: r(26);
+  font-family: var(--fontMincho);
+
+  @include media() {
+    text-align: center;
+    font-size: r(28);
+    font-family: var(--fontGothic);
+    line-height: 2.35714286;
+  }
+}
+
+.about__philosophy-image {
+  display: block;
+  margin: 72rem auto 0;
+  width: 1104rem;
+  border-radius: 30rem;
+}
+
+.about__feature {
+  @include media() {
+    z-index: 2;
+    padding-right: 30rem;
+    padding-left: 30rem;
+    border-radius: 50rem 50rem 0 0 !important;
+  }
+}
+
+.about__feature-container {
+  counter-reset: number 0;
+  margin-top: 70rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1200rem;
+}
+
+.about__feature-box {
+  counter-increment: number 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 56rem 120rem 56rem 112rem;
+  border-radius: 30rem;
+  background-color: #e8ded3;
+
+  @include media() {
+    flex-direction: column-reverse;
+    gap: 40rem;
+    padding: 47rem 45rem 80rem;
+    background-color: var(--colorBase);
+  }
+
+  & + & {
+    margin-top: 30rem;
+  }
+
+  &:nth-of-type(2n) {
+    flex-direction: row-reverse;
+
+    @include media() {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+.about__feature-info {
+  width: 428rem;
+
+  @include media() {
+    width: 100%;
+  }
+}
+
+.about__feature-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rem;
+  color: #7b594b;
+  font-weight: var(--weightMedium);
+  font-size: r(24);
+
+  @include media() {
+    font-size: r(30);
+  }
+
+  &::before {
+    content: '#'counter(number, decimal-leading-zero);
+    display: block;
+    margin-right: 18rem;
+    color: var(--colorKey);
+    font-size: r(40);
+    font-family: var(--fontEnglish);
+
+    @include media() {
+      content: counter(number, decimal-leading-zero);
+      margin-right: 40rem;
+      padding-left: .4em;
+      font-size: r(63);
+      font-family: var(--fontGothic);
+    }
+  }
+
+  &::after {
+    content: 'Feature';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--colorKey);
+    text-transform: uppercase;
+    font-size: r(10, 1);
+    font-family: var(--fontEnglish);
+    transform: translateY(-50%);
+
+    @include media() {
+      content: '#';
+      font-size: r(29);
+      transform: translateY(80%);
+    }
+  }
+}
+
+.about__feature-text {
+  @include media() {
+    color: var(--colorText);
+    font-size: r(26);
+    line-height: 2;
+  }
+
+  em {
+    color: var(--colorKey);
+    font-style: normal;
+  }
+}
+
+.about__feature-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30rem;
+  min-width: 242rem;
+  width: fit-content;
+  height: 55rem;
+  border-radius: 100rem;
+  background-color: var(--colorKey);
+  color: #fff;
+
+  @include media() {
+    margin-top: 50rem;
+    min-width: 404rem;
+    height: 93rem;
+    font-size: r(26);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 20rem;
+    display: block;
+    width: .5em;
+    height: .5em;
+    border: 1px solid;
+    border-top: 0;
+    border-left: 0;
+    transform: translateY(-50%) rotate(-45deg);
+
+    @include media() {
+      right: 40rem;
+    }
+  }
+}
+
+.about__feature-photo {
+  width: 430rem;
+
+  @include media() {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 18rem;
+  }
+}
+
+.about__lawyer {
+  @include media() {
+    z-index: 2;
+    padding-right: 30rem;
+    padding-bottom: 0 !important;
+    padding-left: 30rem;
+  }
+}
+
+.about__lawyer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 70rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 105rem 128rem 115rem;
+  width: 1360rem;
+  border-radius: 37rem;
+  background-color: #e8ded3;
+
+  @include media() {
+    padding: 45rem;
+  }
+}
+
+.about__lawyer-photo {
+  width: 385rem;
+
+  @include media() {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 20rem;
+
+    @include media() {
+      height: 637rem;
+      object-fit: cover;
+      object-position: top center;
+    }
+  }
+}
+
+.about__lawyer-info {
+  width: 597rem;
+
+  @include media() {
+    margin-top: 60rem;
+    width: 600rem;
+  }
+}
+
+.about__lawyer-name {
+  padding-bottom: 30rem;
+  border-bottom: 1px solid #7e6d66;
+  font-size: r(30);
+
+  @include media() {
+    font-size: r(38);
+  }
+
+  strong {
+    display: block;
+    margin-bottom: 30rem;
+    color: var(--colorKey);
+    letter-spacing: .05em;
+    font-size: r(14);
+
+    @include media() {
+      margin-bottom: 0;
+      font-size: r(22);
+    }
+  }
+
+  em {
+    display: flex;
+    align-items: center;
+    letter-spacing: .25em;
+    font-style: normal;
+  }
+
+  span {
+    margin-left: 40rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-size: r(12);
+
+    @include media() {
+      font-size: r(20);
+    }
+  }
+}
+
+.about__lawyer-text {
+  margin-top: 50rem;
+  color: #7b594b;
+
+  @include media() {
+    margin-top: 80rem;
+  }
+
+  h4 {
+    letter-spacing: .05em;
+    font-size: r(20);
+
+    @include media() {
+      font-size: r(34);
+    }
+
+    + p {
+      margin-top: 20rem;
+
+      @include media() {
+        margin-top: 30rem;
+      }
+    }
+  }
+
+  p {
+    letter-spacing: .02em;
+    font-weight: var(--weightLight);
+    line-height: 1.875;
+
+    + h4 {
+      margin-top: 50rem;
+    }
+  }
+}
+
+.about__lawyer-history {
+  margin-top: 24rem;
+  width: 100%;
+
+  @include media() {
+    margin-top: 90rem;
+  }
+}
+
+.about__lawyer-title {
+  color: var(--colorKey);
+  font-weight: var(--weightMedium);
+  font-size: r(24);
+
+  @include media() {
+    padding: 60rem 0;
+    border-top: 1px solid #7e6d66;
+    color: #7b594b;
+    text-align: center;
+    letter-spacing: .05em;
+    font-size: r(36);
+  }
+
+  em {
+    letter-spacing: .05em;
+    font-style: normal;
+    font-family: var(--fontEnglish);
+  }
+
+  span {
+    margin-left: 20rem;
+    font-size: r(12);
+
+    @include media() {
+      display: block;
+      margin-left: 0;
+      font-size: r(24);
+    }
+
+    &::before {
+      content: '/';
+      margin-right: 15rem;
+
+      @include media() {
+        content: none;
+      }
+    }
+  }
+}
+
+.about__lawyer-data {
+  margin-top: 30rem;
+  padding: 50rem 80rem;
+  width: 100%;
+  border-radius: 30rem;
+  background-color: var(--colorBase);
+  column-count: 2;
+
+  @include media() {
+    margin-top: 0;
+    padding: 0;
+    background-color: transparent;
+    font-size: r(24);
+    column-count: auto;
+  }
+
+  dl {
+    display: flex;
+    align-items: baseline;
+    width: 436rem;
+
+    @include media() {
+      align-items: stretch;
+      padding: 36rem 0;
+      width: 100%;
+      border-top: 1px solid #7e6d66;
+
+      &:last-of-type {
+        dt {
+          justify-content: flex-start;
+        }
+      }
+    }
+
+    + dl {
+      margin-top: 30rem;
+
+      @include media() {
+        margin-top: 0;
+      }
+    }
+  }
+
+  dt {
+    width: 100rem;
+    color: #7b594b;
+    font-weight: normal;
+
+    @include media() {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 174rem;
+    }
+  }
+
+  dd {
+    width: 336rem;
+
+    @include media() {
+      width: calc(100% - 174rem);
+    }
+
+    em {
+      display: block;
+      color: #7b594b;
+      font-style: normal;
+      font-size: r(20);
+    }
+
+    span {
+      display: block;
+      margin: 10rem 0;
+      color: #716c6c;
+      letter-spacing: .02em;
+      font-weight: var(--weightLight);
+      font-size: r(12);
+
+      @include media() {
+        margin-bottom: 40rem;
+        font-size: r(20);
+      }
+    }
+  }
+}

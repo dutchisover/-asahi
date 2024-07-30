@@ -26,7 +26,7 @@
 
 <main class="main page__main">
 	<div class="archive-topics">
-		<section class="section" data-section-title="News & Column">
+		<section class="archive__section section" data-section-title="News & Column">
 			<p class="section__copy">大阪・鶴見区のフォトスタジオ「ECRU（エクリュ）」のスタッフブログです。<br>
 				ECRUの最新情報をお届けいたします。</p>
 			<div class="topics__content">

@@ -11,12 +11,12 @@
 		</p>
 
 		<div class="footer__button-area">
-			<a href="" class="footer__button is-tel">
+			<a href="tel:072-627-0101" class="footer__button is-tel">
 				<p><em>TEL</em>072-627-0101</p>
 				<span>受付時間 9 : 00 - 18:00 (土日祝休)</span>
 			</a>
 
-			<a href="" class="footer__button is-mail">
+			<a href="<?= home_url(); ?>/contact" class="footer__button is-mail">
 				<p><em>メールでのお問い合わせはこちら</em></p>
 			</a>
 		</div>
@@ -61,7 +61,7 @@
 					<a href="<?= home_url(); ?>/topics">新着情報</a>
 				</li>
 				<li class="footer__nav-item">
-					<a href="<?= home_url(); ?>/privacy">サイトポリシー</a>
+					<a href="<?= home_url(); ?>/privacy#anc-site">サイトポリシー</a>
 				</li>
 				<li class="footer__nav-item">
 					<a href="<?= home_url(); ?>/price">料金</a>
@@ -70,7 +70,7 @@
 					<a href="<?= home_url(); ?>/office">事務所概要</a>
 				</li>
 				<li class="footer__nav-item">
-					<a href="<?= home_url(); ?>/privacy">プライバシーポリシー</a>
+					<a href="<?= home_url(); ?>/privacy#anc-privacy">プライバシーポリシー</a>
 				</li>
 			</ul>
 		</div>

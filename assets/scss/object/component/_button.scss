@@ -44,6 +44,9 @@
 
   @include media() {
     margin-top: 70rem;
+    margin-left: calc(50% - 50vw + 30rem);
+    max-width: none;
+    width: 690rem;
   }
 
 

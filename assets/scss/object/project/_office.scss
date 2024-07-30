@@ -1,0 +1,263 @@
+@use '../../foundation/index' as *;
+
+.page-office .section:first-child {
+  padding-top: 50rem;
+
+  @include media() {
+    padding-bottom: 150rem;
+  }
+}
+
+.office__container {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 76rem 230rem 156rem;
+  width: 1360rem;
+  border-radius: 37rem;
+  background-color: #e8ded3;
+
+  @include media() {
+    padding: 0;
+    width: 600rem;
+    background-color: var(--colorBase);
+  }
+}
+
+// スライダー
+.office__container {
+  & .swiper {
+    margin-top: 56rem;
+    padding-bottom: 46rem;
+
+    @include media() {
+      margin-top: 60rem;
+      padding-bottom: 78rem;
+    }
+  }
+
+  & .swiper-pagination {
+    top: auto;
+    bottom: 0;
+  }
+
+  & .swiper-pagination-bullet {
+    top: auto;
+    bottom: 0;
+    width: 11rem;
+    height: 11rem;
+    border: 1px solid #707070;
+    border-radius: 18rem;
+    background-color: #fff;
+    opacity: 1;
+
+    @include media() {
+      margin: 0 13rem !important;
+      width: 18rem;
+      height: 18rem;
+      background-color: transparent;
+    }
+
+
+    &.swiper-pagination-bullet-active {
+      background-color: #808080;
+
+      @include media() {
+        background-color: var(--colorKey);
+      }
+    }
+  }
+}
+
+.office__item {
+  overflow: hidden;
+  border-radius: 20rem;
+}
+
+.office__item-image {
+  width: 900rem;
+  height: 374rem;
+  object-fit: cover;
+
+  @include media() {
+    width: 602rem;
+    height: 362rem;
+  }
+}
+
+.office__data-list {
+  margin-top: 80rem;
+}
+
+.office__data-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 24rem 0;
+  border-bottom: 1px solid #707070;
+
+  @include media() {
+    padding: 36rem 0;
+  }
+
+  &:first-child {
+    @include media() {
+      border-top: 1px solid #707070;
+    }
+  }
+}
+
+.office__data-title {
+  width: 200rem;
+  color: var(--colorKey);
+  font-weight: var(--weightMedium);
+  font-size: r(18);
+
+  @include media() {
+    width: 175rem;
+    color: var(--colorText);
+    font-size: r(26);
+  }
+}
+
+.office__data-content {
+  width: 700rem;
+  letter-spacing: .02em;
+  font-size: r(16);
+  line-height: 1.5625;
+
+  @include media() {
+    width: 425rem;
+    font-size: r(26);
+  }
+
+  & a {
+    color: var(--colorKey);
+    text-decoration: underline;
+  }
+}
+
+
+.page-office .section + .section {
+  @include media() {
+    padding-bottom: 70rem;
+    border-radius: 50rem 50rem 0 0;
+  }
+
+  & .section__copy {
+    @include media() {
+      text-align: center;
+    }
+  }
+}
+
+.access__container {
+  margin-top: 100rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 100rem 105rem 108rem;
+  width: 1360rem;
+  border-radius: 37rem;
+  background-color: #e8ded3;
+
+  @include media() {
+    margin-right: 0;
+    margin-left: calc(50% - 50vw + 30rem);
+    padding: 30rem 30rem 100rem 30rem;
+    max-width: none;
+    width: 690rem;
+    background-color: var(--colorBase);
+  }
+}
+
+.access__map {
+  overflow: hidden;
+  border-radius: 20rem;
+
+  & iframe {
+    width: 1152rem;
+    height: 468rem;
+    object-fit: cover;
+
+    @include media() {
+      width: 630rem;
+      height: 486rem;
+    }
+  }
+}
+
+.access__container {
+  & .section__title {
+    margin-top: 80rem;
+    font-size: r(26);
+
+    @include media() {
+      font-size: r(30);
+    }
+
+    & span {
+      font-size: r(16);
+
+      @include media() {
+        font-size: r(20);
+      }
+    }
+  }
+}
+
+.access__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 58rem;
+
+  row-gap: 60rem
+}
+
+.access__item {
+  display: flex;
+  flex-direction: column;
+  gap: 25rem;
+  width: 350rem;
+
+  @include media() {
+    gap: 33rem;
+    width: 100%;
+  }
+}
+
+.access__item-image {
+  width: 350rem;
+  height: 251rem;
+  object-fit: cover;
+  border-radius: 20rem;
+
+  @include media() {
+    width: 614rem;
+    height: 288rem;
+  }
+}
+
+.access__item-title {
+  color: var(--colorKey);
+  text-transform: uppercase;
+  font-weight: var(--weightMedium);
+  font-size: r(16);
+  font-family: var(--fontEnglish);
+  line-height: 1;
+
+  @include media() {
+    font-size: r(26);
+  }
+}
+
+.access__item-text {
+  letter-spacing: .02em;
+  font-size: r(16);
+  line-height: 1.75;
+
+  @include media() {
+    color: var(--colorText);
+    font-size: r(24);
+    line-height: 1.666;
+  }
+}
