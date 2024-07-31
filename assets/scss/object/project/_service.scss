@@ -90,6 +90,7 @@
 .service__sidebar-link {
   display: flex;
   align-items: center;
+  width: fit-content;
 
   @include media() {
     position: relative;
@@ -117,6 +118,23 @@
       border-top: 0;
       border-left: 0;
       transform: translateY(-50%) rotate(45deg);
+    }
+  }
+
+  &.is-current,
+  &:hover {
+    position: relative;
+    opacity: 1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: var(--colorKey);
     }
   }
 
@@ -282,11 +300,15 @@
     line-height: 2;
 
     & {
-      display: -webkit-box; /* 必須 */
-      overflow: hidden; /* はみ出た部分を非表示 */
-      -webkit-box-orient: vertical; /* 必須 */
+      display: -webkit-box;
+      /* 必須 */
+      overflow: hidden;
+      /* はみ出た部分を非表示 */
+      -webkit-box-orient: vertical;
+      /* 必須 */
 
-      -webkit-line-clamp: 4; /* 行数を制限 */
+      -webkit-line-clamp: 4;
+      /* 行数を制限 */
     }
   }
 }
@@ -326,6 +348,10 @@
     border-top: 0;
     border-left: 0;
     transform: translateY(-50%) rotate(-45deg);
+
+    @include media() {
+      right: 40rem;
+    }
   }
 }
 
@@ -620,7 +646,7 @@
 .service__field-item {
   display: flex;
   justify-content: space-between;
-  padding: 60rem 68rem 60rem 87rem;
+  padding: 40rem 68rem 40rem 87rem;
   border-radius: 20rem;
   background-color: #e8ded3;
 
@@ -636,6 +662,7 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  justify-content: center;
   color: var(--colorKey);
   font-size: r(22);
 
@@ -973,7 +1000,7 @@ ul.service__price-list {
   margin-top: 40rem;
   letter-spacing: .02em;
   font-weight: var(--weightLight);
-  font-size: r(14 , 12);
+  font-size: r(14, 12);
 
   @include media() {
     margin-top: 50rem;

@@ -63,7 +63,13 @@
   height: 131rem;
   border-radius: 20rem;
   background-color: #7e6d66;
+  transition: .4s;
 
+  @include hover {
+    // filter: brightness(1.2);
+    background-color: #b69f96;
+    opacity: 1;
+  }
   @include media() {
     height: 154rem;
     font-size: r(26);
@@ -101,6 +107,10 @@
 
   &.is-tel {
     background-color: var(--colorKey);
+
+    @include hover {
+      background-color: #f1ad72;
+    }
 
     em,
     p {
@@ -297,8 +307,11 @@
   }
 }
 
-// アーカイブページの位置調整
-.page__main:has(.archive-topics) + .footer {
+// アーカイブページ、トップページのフッター位置調整
+.page__main:has(.archive-topics) + .footer,
+.page__main:has(.page-price) + .footer,
+.page__main:has(.page-office) + .footer,
+.home .footer {
   @include media() {
     margin-top: 0;
   }

@@ -88,7 +88,7 @@
 												アトム法律事務所では、全国24時間、無料相談窓口を設けておりますので、お困りごとがあればいつでもご連絡ください。</p>
 
 											<div class="button__area">
-												<a href="" class="button__link">無料相談はこちら</a>
+												<a href="<?php echo esc_url(home_url()); ?>/contact" class="button__link">無料相談はこちら</a>
 											</div>
 										</div>
 									</dd>

@@ -307,7 +307,7 @@ $slug = $post->post_name;
 
 	</section>
 
-	<section class="section" data-section-title="Price of Service">
+	<section class="section" data-section-title="Price of Service" id="anc-price">
 		<h2 class="section__title">
 			<em>price</em>
 			<span>遺産相続・遺言の弁護士費用 (全て税込表記)</span>

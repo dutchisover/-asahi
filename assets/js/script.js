@@ -2,6 +2,7 @@
 
 let featuresSwiper;
 let mvSwiper;
+let officeSwiper;
 let featuresSwiperBool = false;
 const featuresBreakPoint = 768; // ブレークポイントを設定
 
@@ -10,12 +11,15 @@ const createMvSwiper = () => {
     autoplay: true,
     loop: true,
     effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
     slidesPerView: 1,
-    speed: 1500,
+    speed: 1000,
     pagination: {
       el: '#mv__swiper .swiper-pagination',
       clickable: true,
-      renderBullet: function(index, className) {
+      renderBullet: function (index, className) {
         const formattedIndex = (index + 1).toString().padStart(2, '0');
         return `<span class="${className}"><span>#</span>${formattedIndex}</span>`;
       }
@@ -27,11 +31,13 @@ const createFeaturesSwiper = () => {
   featuresSwiper = new Swiper('#features__swiper', {
     loop: true,
     slidesPerView: 1,
-    speed: 1500,
-    autoplay: {
-      delay: 1000,
-      disableOnInteraction: false
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
     },
+    speed: 800,
+    autoplay: true,
+
     pagination: {
       el: '#features__swiper .swiper-pagination',
       clickable: true
@@ -60,11 +66,29 @@ const handleFeaturesResize = () => {
   }
 };
 
+const createOfficeSwiper = () => {
+  officeSwiper = new Swiper('#office__swiper', {
+    autoplay: true,
+    loop: true,
+    slidesPerView: 1,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    speed: 800,
+    pagination: {
+      el: '#office__swiper .swiper-pagination',
+      clickable: true
+    }
+  });
+};
+
 window.addEventListener(
   'load',
   () => {
     createMvSwiper();
     handleFeaturesResize();
+    createOfficeSwiper();
   },
   false
 );
@@ -177,15 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   const accordions = document.querySelectorAll('.js_accordion');
 
-//   accordions.forEach(accordion => {
-//     accordion.addEventListener('click', () => {
-//       accordion.classList.toggle('is-open');
-//     });
-//   });
-// });
 
 ////////////////// aタグのスムーズスクロール //////////////////
 document.addEventListener('DOMContentLoaded', () => {
@@ -276,3 +292,32 @@ if (priceTitles.length > 0) {
     }
   });
 }
+
+
+////////////////// サービスのサイドバーカレント機能 //////////////////
+// GSAPライブラリの読み込み
+gsap.registerPlugin(ScrollTrigger);
+
+document.addEventListener('DOMContentLoaded', function () {
+  // 各 .service__item に ScrollTrigger を設定
+  const items = gsap.utils.toArray('.service__item');
+  const links = document.querySelectorAll('.service__sidebar-link');
+  const topOffset = '-100rem'; // ここでオプションのトップからの距離を調整
+
+  items.forEach((item, index) => {
+    ScrollTrigger.create({
+      trigger: item,
+      start: `${topOffset}px top`, // トリガーの要素のトップがビューポートのトップからオフセットされた位置に達したとき
+      end: 'bottom top',
+      onEnter: () => updateSidebarLink(index),
+      onLeaveBack: () => updateSidebarLink(index - 1)
+    });
+  });
+
+  function updateSidebarLink(index) {
+    links.forEach(link => link.classList.remove('is-current'));
+    if (index >= 0 && index < links.length) {
+      links[index].classList.add('is-current');
+    }
+  }
+});

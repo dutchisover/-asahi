@@ -37,12 +37,22 @@
   }
 }
 
+.archive__section {
+  @include media() {
+    padding-right: 30rem;
+    padding-left: 30rem;
+  }
+}
+
 .archive__container {
   width: 1020rem;
 
   @include media() {
     margin-top: 90rem;
+    margin-left: calc(50% - 50vw);
     padding: 50rem 0 105rem;
+    max-width: none;
+    width: 100vw;
     border-radius: 30rem 30rem 0 0;
     background-color: #e8ded3;
   }
@@ -153,6 +163,9 @@
   font-family: var(--fontGothic);
 
   @include media() {
+    display: flex;
+    align-items: center;
+    gap: 20rem;
     font-size: r(20);
   }
 }
@@ -175,6 +188,7 @@
   font-family: var(--fontGothic);
 
   @include media() {
+    margin-left: 0;
     padding: 7rem 20rem;
     border-radius: 20rem;
     line-height: 1;
