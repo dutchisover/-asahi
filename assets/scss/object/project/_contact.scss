@@ -1,11 +1,17 @@
 .contact-top {
 
-	&__content {}
+	&__content {
+		margin-top: 90rem;
+		margin-right: auto;
+		margin-left: auto;
+		width: 975rem;
+	}
 
 	&__content-inner {
 		margin-top: 80rem;
 		padding: 43rem 73rem;
 		width: 100%;
+		max-width: 975rem;
 		border-radius: 20rem;
 		background-color: #fff;
 		color: #393939;
@@ -13,5 +19,33 @@
 		font-weight: var(--weightLight);
 		font-size: clamp(10px, 10vw / var(--board) * 10 * 16, 16px);
 		line-height: 1.875;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
+
+	&__header {
+		flex: 1 1 50%;
+		font-size: r(22, 16);
+		color: var(--colorKey);
+		font-weight: var(--weightMedium);
+	}
+
+	&__body {
+		flex: 1 1 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&-tel {
+
+			font-family: var(--fontEnglish);
+		}
+
+		&-text {}
+
+	}
+
+
+
 }

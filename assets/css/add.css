@@ -1277,10 +1277,17 @@ ul.service__price-list li li::before {
   clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
 
+.contact-top__content {
+  margin-top: 90rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 975rem;
+}
 .contact-top__content-inner {
   margin-top: 80rem;
   padding: 43rem 73rem;
   width: 100%;
+  max-width: 975rem;
   border-radius: 20rem;
   background-color: #fff;
   color: #393939;

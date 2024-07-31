@@ -2,7 +2,7 @@
 function kuniki_files()
 {
     $cache = 1.0;
-    wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/add.css', "", $cache);
+    wp_enqueue_style('add_style', get_template_directory_uri() . '/assets/css/add.css', "", $cache);
 }
 
 add_action('wp_enqueue_scripts', 'kuniki_files');
@@ -58,11 +58,11 @@ $slug = $post->post_name;
         </p>
 
         <div class="contact-top__content">
-            <div class="contact-top__contant-inner">
-                <div>お電話でのお問い合わせ</div>
-                <div>
-                    <div>072-627-0101</div>
-                    <div>受付時間 9 : 00 - 18:00 (土日祝休)</div>
+            <div class="contact-top__content-inner">
+                <div class="contact-top__header">お電話でのお問い合わせ</div>
+                <div class="contact-top__body">
+                    <div class="contact-top__body-tel">072-627-0101</div>
+                    <div class="contact-top__body-text">受付時間 9 : 00 - 18:00 (土日祝休)</div>
                 </div>
             </div>
 
