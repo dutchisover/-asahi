@@ -24,8 +24,8 @@ $slug = $post->post_name;
         </h1>
 
         <picture>
-            <source media=" (max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/bg_page-mv-service_sp.jpg">
-            <img src="<?= get_template_directory_uri(); ?>/assets/image/bg_page-mv-service.jpg" alt="" class="page__mv-bg" width="1800" height="502">
+            <source media=" (max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/bg_page-mv-contact_sp.jpg">
+            <img src="<?= get_template_directory_uri(); ?>/assets/image/bg_page-mv-contact.jpg" alt="" class="page__mv-bg" width="1800" height="502">
         </picture>
     </div>
     <!-- /.page__mv -->

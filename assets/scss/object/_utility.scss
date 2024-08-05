@@ -4,30 +4,51 @@
 
 
 .pc-none {
-  @include media(pc_only) {
-    display: none !important;
-  }
+	@include media(pc_only) {
+		display: none !important;
+	}
 }
 
 .sp-none {
-  @include media() {
-    display: none !important;
-  }
+	@include media() {
+		display: none !important;
+	}
 }
 
 
 .is-center {
-  text-align: center !important;
+	text-align: center !important;
 }
 
 
 // アコーディオン
 .js-accordion__content {
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height .6s;
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height .6s;
 }
 
 .is-open .js-accordion__content {
-  max-height: var(--max-height);
+	max-height: var(--max-height);
+}
+
+.fw-light {
+	font-weight: var(--weightLight);
+}
+
+.fw-regular {
+	font-weight: var(--weightRegular);
+}
+
+.fw-medium {
+	font-weight: var(--weightMedium);
+}
+
+.fw-bold {
+	font-weight: var(--weightBold);
+	font-family: "A1ゴシック B", 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+}
+
+.text-sm {
+	font-size: r(14);
 }

@@ -1,515 +1,387 @@
 <?php
+
+/**
+ * Template Name: 労働問題
+ * slug: labor
+ */
+
+$file_path = get_template_directory() . '/assets/inc/inc-service-parts.php';
+if (file_exists($file_path)) {
+    include($file_path);
+}
+
 // ページのスラッグを取得
 global $post;
 $slug = $post->post_name;
 ?>
 
 <div class="page__header">
-	<div class="page__mv">
-		<h1 class=" page__title">
-			<em><?= get_the_title(); ?></em>
-			<span><?= get_field("page-sub-title") ?></span>
-		</h1>
+    <div class="page__mv">
+        <h1 class=" page__title">
+            <?php
+            /**
+             * タイトルを取得して、全角「（」以降を除去
+             */
+            $title = get_the_title();
+            $title = preg_replace('/（.*/u', '', $title);
+            ?>
+            <em class="font-gothic"><?= $title; ?></em>
+            <span class="font-en"><?= get_field("page-sub-title") ?></span>
+        </h1>
 
-		<picture>
-			<source media=" (max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/bg_page-mv-service-family_sp.jpg">
-			<img src="<?= get_template_directory_uri(); ?>/assets/image/bg_page-mv-service-family.jpg" alt="" class="page__mv-bg" width="1800" height="502">
-		</picture>
-	</div>
-	<!-- /.page__mv -->
+        <picture>
+            <source media=" (max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/bg_page-mv-service-labor_sp.jpg">
+            <img src="<?= get_template_directory_uri(); ?>/assets/image/bg_page-mv-service-labor.jpg" alt="" class="page__mv-bg" width="1800" height="502">
+        </picture>
+    </div>
+    <!-- /.page__mv -->
 
-	<div class="breadcrumb">
-		<div class="breadcrumb__inner">
-			<a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
-			<a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取り扱い業務一覧</a>
-			<span class="breadcrumb__current"><?= get_the_title(); ?>について</span>
-		</div>
-	</div>
-	<!-- /.breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb__inner">
+            <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
+            <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取り扱い業務一覧</a>
+            <span class="breadcrumb__current"><?= get_the_title(); ?>について</span>
+        </div>
+    </div>
+    <!-- /.breadcrumb -->
 </div>
 
 <main class="main page__main page__parent-service">
-	<?php
-	echo '<div class="page-' . esc_attr($slug) . '">';
-	?>
+    <?php
+    echo '<div class="page-' . esc_attr($slug) . '">';
+    ?>
 
-	<section class="section" data-section-title="Service 01">
+    <section class="section" data-section-title="Service 01">
 
-		<p class="service__copy"><em>遺産相続</em>にまつわる問題は<br class="pc-none">当事務所へお任せ下さい。<br><span>多数の解決実績に基づき、全力でサポートいたします。</span></p>
+        <p class="service__copy"><em>労務問題</em>にまつわる問題は<br class="pc-none">当事務所へお任せ下さい。<br><span>多数の解決実績に基づき、全力でサポートいたします。</span></p>
 
-		<div class="service__example">
-			<div class="service__example-photo">
-				<picture>
-					<source media=" (max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-01_sp.jpg">
-					<img src="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-01.jpg" alt="" width="519" height="335">
-				</picture>
-			</div>
+        <div class="service__example">
+            <div class="service__example-photo">
+                <picture>
+                    <source media=" (max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-labor-01_sp.jpg">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-labor-01.jpg" alt="" width="519" height="335">
+                </picture>
+            </div>
 
-			<div class="service__example-info">
-				<h2 class="service__example-title">
-					<em>Examples</em>
-					<span>お悩み事例</span>
-				</h2>
-				<ul class="service__example-list">
-					<li>身内が亡くなり相続問題をどう進めるべきかわからない</li>
-					<li>遺産分割の協議がまとまらない（特別受益、寄与分、葬儀費用等）</li>
-					<li>他の相続人の連絡先が分からず遺産分割協議ができない</li>
-					<li>遺産を独り占めする相続人がおり、遺留分が侵害されている</li>
-					<li>遺産である預金を使い込んでいる相続人がいる</li>
-					<li>遺産である不動産の分割方法／評価額で揉めている</li>
-				</ul>
-				<a href="#anc-price" class="service__example-button">料金表はこちら</a>
-			</div>
+            <div class="service__example-info">
+                <h2 class="service__example-title">
+                    <em>Examples</em>
+                    <span>お悩み事例</span>
+                </h2>
+                <ul class="service__example-list">
+                    <li>サービス残業を強いられている</li>
+                    <li>固定残業代制で適切に残業代の支払いがされているか不安</li>
+                    <li>突然解雇をされてしまった</li>
+                    <li>拒否しているのに執拗に退職勧奨を受けている</li>
+                    <li>会社の指示どおりに作業する中で怪我をしてしまった</li>
+                    <li>労災保険では賄われない損害を会社に請求したい</li>
+                </ul>
+                <a href="#anc-price" class="service__example-button">料金表はこちら</a>
+            </div>
 
-			<div class="service__example-desc">
-				<p>かつて所属していた葛飾総合法律事務所は、都内２３区内で高齢者人口が上位の葛飾区に位置しており、遺産相続問題に注力しておりました。一癖も二つ癖もある遺産分割協議・調停、遺留分の請求／減額交渉、遺言書の作成、遺言執行等、多数の遺産相続問題を解決してきました。ご依頼者様の状況を詳しくお伺いし、密に連絡をとりご要望をお伺いしながら、丁寧・スピーディに対応いたします。</p>
-			</div>
-		</div>
+            <div class="service__example-desc">
+                <p>都内の総合法津事務所で多数の労働問題を解決した経験から、当事務所は特に<b class="fw-bold">残業代請求・不当解雇・労災</b>に注力しております。<br>ご依頼者様の状況を詳しくお伺いし、密に連絡をとりご要望をお伺いしながら、丁寧・スピーディに対応いたします。</p>
+            </div>
+        </div>
 
-	</section>
+    </section>
 
-	<section class="section" data-section-title="field of Service">
-		<h2 class="section__title">
-			<em>Field</em>
-			<span>遺産相続・遺言の取扱い業務</span>
-		</h2>
+    <section class="section" data-section-title="field of Service">
+        <h2 class="section__title">
+            <em>Field</em>
+            <span>労働問題の取扱業務</span>
+        </h2>
 
-		<p class="section__copy">当事務所では、遺言、遺産分割、遺留分侵害額請求のほか、相続に関する各種問題を取り扱っております。<br>些細なことでも結構ですので、お気軽にお問い合わせ頂ければと思います。</p>
+        <p class="section__copy">当事務所では、労働に関する各種問題を取り扱っております。<br>
+            下記に列挙した取扱業務はその一例となります。</p>
 
-		<div class="service__field-list">
-			<div class="service__field-item">
-				<h3 class="service__field-title">
-					<span>Field 01</span>
-					<em>遺産分割手続</em>
-				</h3>
-				<p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
-			</div>
+        <div class="service__field-list">
+            <div class="service__field-item">
+                <h3 class="service__field-title">
+                    <span>Field 01</span>
+                    <em>残業代請求</em>
+                </h3>
+                <p class="service__field-text">「1日8時間、1週40時間」（法定労働時間）を超える労働、法定休日における労働（休日労働）、22時から5時までの深夜労働時間帯の労働（深夜労働）には残業代（割増賃金）を請求することができます。この残業代を適切に計算し、会社に請求を行います。</p>
+            </div>
 
-			<div class="service__field-item">
-				<h3 class="service__field-title">
-					<span>Field 02</span>
-					<em>遺産分割手続</em>
-				</h3>
-				<p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
-			</div>
+            <div class="service__field-item">
+                <h3 class="service__field-title">
+                    <span>Field 02</span>
+                    <em>不当解雇・雇止め</em>
+                </h3>
+                <p class="service__field-text">解雇されてしまった場合は、解雇理由に応じて取るべき対応が異なります。解雇が無効であれば原則として職場復帰を前提とした交渉を行いますが、実際には会社に解雇を撤回してもらった上で、金銭の補償を受けて合意退職するという解決もあり、ご希望に応じた対応が可能です。</p>
+            </div>
 
-			<div class="service__field-item">
-				<h3 class="service__field-title">
-					<span>Field 03</span>
-					<em>遺産分割手続</em>
-				</h3>
-				<p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
-			</div>
+            <div class="service__field-item">
+                <h3 class="service__field-title">
+                    <span>Field 03</span>
+                    <em>労災</em>
+                </h3>
+                <p class="service__field-text">劣悪な労働環境により、労働者が怪我をしたり、過労自殺をしてしまった場合、その原因が会社の業務にあるときには、労災（業務上災害）となり、労災保険法の適用を受けます。<br>
+                    加えて、労働者のこれらの傷病へのり患が、会社の安全配慮義務違反に基づく場合は、労災保険では保障されない慰謝料等を請求することができます。</p>
+            </div>
 
-			<div class="service__field-item">
-				<h3 class="service__field-title">
-					<span>Field 04</span>
-					<em>遺産分割手続</em>
-				</h3>
-				<p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
-			</div>
+        </div>
+    </section>
 
-			<div class="service__field-item">
-				<h3 class="service__field-title">
-					<span>Field 05</span>
-					<em>遺産分割手続</em>
-				</h3>
-				<p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
-			</div>
+    <section class="section" data-section-title="case study">
+        <h2 class="section__title">
+            <em>case study</em>
+            <span>労働問題に関する事例や記事</span>
+        </h2>
 
-			<div class="service__field-item">
-				<h3 class="service__field-title">
-					<span>Field 06</span>
-					<em>遺産分割手続</em>
-				</h3>
-				<p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
-			</div>
-		</div>
-	</section>
+        <div class="service__case">
+            <div class="archive__container">
+                <ul class="archive__list">
+                    <?php
+                    if (wp_is_mobile()) {
+                        //スマホ・タブレットの時
+                        $num = 3;
+                    } else {
+                        //PCの時
+                        $num = 3;
+                    }
+                    // ページのスラッグを取得
+                    $slug = get_post_field('post_name', get_post());
+                    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                    $args = array(
+                        'post_type' => 'topics',
+                        'posts_per_page' => $num,
+                        'paged' => $paged,
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'topics_taxonomy',
+                                'field' => 'slug',
+                                'terms' => $slug,
+                            ),
+                        ),
+                    );
+                    $topics_query = new WP_Query($args);
+                    if ($topics_query->have_posts()) :
+                        while ($topics_query->have_posts()) : $topics_query->the_post();
 
-	<section class="section" data-section-title="case study">
-		<h2 class="section__title">
-			<em>case study</em>
-			<span>遺産相続・遺言に関する事例や記事</span>
-		</h2>
+                            // カスタムタクソノミーの取得
+                            $terms = get_the_terms(get_the_ID(), 'topics_taxonomy');
 
-		<div class="service__case">
-			<div class="archive__container">
-				<ul class="archive__list">
-					<?php
-					if (wp_is_mobile()) {
-						//スマホ・タブレットの時
-						$num = 3;
-					} else {
-						//PCの時
-						$num = 3;
-					}
-					// ページのスラッグを取得
-					$slug = get_post_field('post_name', get_post());
-					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-					$args = array(
-						'post_type' => 'topics',
-						'posts_per_page' => $num,
-						'paged' => $paged,
-						'tax_query' => array(
-							array(
-								'taxonomy' => 'topics_taxonomy',
-								'field' => 'slug',
-								'terms' => $slug,
-							),
-						),
-					);
-					$topics_query = new WP_Query($args);
-					if ($topics_query->have_posts()) :
-						while ($topics_query->have_posts()) : $topics_query->the_post();
+                            // アイキャッチ画像の取得
+                            $archive_image = '';
+                            if (has_post_thumbnail()) {
+                                $archive_image = get_the_post_thumbnail($post->ID, 'fullsize', ['alt' => get_the_title()]);
+                            } else {
+                                $archive_image = '<img src="' . esc_url(get_template_directory_uri()) . '/assets/image/logo_footer_sp.svg" alt="" class="archive__item-noimage">';
+                            }
 
-							// カスタムタクソノミーの取得
-							$terms = get_the_terms(get_the_ID(), 'topics_taxonomy');
+                            // タクソノミーの選択がない場合は "お知らせ" を表示
+                            $taxonomy_name = 'お知らせ'; // デフォルトは "お知らせ"
+                            $taxonomy_class = 'taxonomy-news'; // デフォルトの背景色クラス
 
-							// アイキャッチ画像の取得
-							$archive_image = '';
-							if (has_post_thumbnail()) {
-								$archive_image = get_the_post_thumbnail($post->ID, 'fullsize', ['alt' => get_the_title()]);
-							} else {
-								$archive_image = '<img src="' . esc_url(get_template_directory_uri()) . '/assets/image/logo_footer_sp.svg" alt="" class="archive__item-noimage">';
-							}
+                            if ($terms && !is_wp_error($terms)) {
+                                $term = array_shift($terms); // 最初のタームを取得
+                                $taxonomy_name = $term->name;
+                                if ($term->slug === 'news') {
+                                    $taxonomy_class = 'taxonomy-news';
+                                } else {
+                                    $taxonomy_class = 'taxonomy-other';
+                                }
+                            }
+                            // 投稿本文を取得し、HTMLタグを削除
+                            $content = get_the_content();
+                            $content = wp_strip_all_tags($content);
 
-							// タクソノミーの選択がない場合は "お知らせ" を表示
-							$taxonomy_name = 'お知らせ'; // デフォルトは "お知らせ"
-							$taxonomy_class = 'taxonomy-news'; // デフォルトの背景色クラス
+                            // 110文字まで切り取る
+                            if (mb_strlen($content) > 110) {
+                                $content = mb_substr($content, 0, 110) . '...';
+                            }
+                    ?>
+                            <li class="archive__item">
+                                <a href="<?php the_permalink(); ?>" class="archive__item-link no-arrow">
+                                    <div class="archive__item-image">
+                                        <?php echo $archive_image; ?>
+                                    </div>
+                                    <div class="archive__item-content">
+                                        <p class="archive__item-date">
+                                            <time datetime="<?php echo get_the_date('c'); ?>"><?php the_time('Y-m-d'); ?></time>
+                                            <span class="archive__item-taxonomy <?php echo esc_attr($taxonomy_class); ?>">
+                                                <?php echo esc_html($taxonomy_name); ?>
+                                            </span>
 
-							if ($terms && !is_wp_error($terms)) {
-								$term = array_shift($terms); // 最初のタームを取得
-								$taxonomy_name = $term->name;
-								if ($term->slug === 'news') {
-									$taxonomy_class = 'taxonomy-news';
-								} else {
-									$taxonomy_class = 'taxonomy-other';
-								}
-							}
-							// 投稿本文を取得し、HTMLタグを削除
-							$content = get_the_content();
-							$content = wp_strip_all_tags($content);
+                                        </p>
 
-							// 110文字まで切り取る
-							if (mb_strlen($content) > 110) {
-								$content = mb_substr($content, 0, 110) . '...';
-							}
-					?>
-							<li class="archive__item">
-								<a href="<?php the_permalink(); ?>" class="archive__item-link">
-									<div class="archive__item-image">
-										<?php echo $archive_image; ?>
-									</div>
-									<div class="archive__item-content">
-										<p class="archive__item-date">
-											<time datetime="<?php echo get_the_date('c'); ?>"><?php the_time('Y-m-d'); ?></time>
-											<span class="archive__item-taxonomy <?php echo esc_attr($taxonomy_class); ?>">
-												<?php echo esc_html($taxonomy_name); ?>
-											</span>
+                                        <h2 class="archive__item-title"><?php the_title(); ?></h2>
 
-										</p>
+                                        <p class="archive__item-text sp-none"><?php echo esc_html($content); ?></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- /.archive__item -->
+                        <?php endwhile; ?>
+                </ul>
+                <!-- /.archive__list -->
+            <?php
+                        wp_reset_postdata();
+                    else :
+            ?>
+                <p>お知らせはありません。</p>
+            <?php endif; ?>
+            </div>
+        </div>
 
-										<h2 class="archive__item-title"><?php the_title(); ?></h2>
+        <?php
+        // カスタムタクソノミーの一覧ページへのリンクを表示
+        $taxonomy_link = get_term_link($slug, 'topics_taxonomy');
+        if (!is_wp_error($taxonomy_link)) :
+        ?>
+            <div class="service__case-button">
+                <a href="<?php echo esc_url($taxonomy_link); ?>">関連記事を見る</a>
+            </div>
+        <?php
+        endif;
+        ?>
 
-										<p class="archive__item-text sp-none"><?php echo esc_html($content); ?></p>
-									</div>
-								</a>
-							</li>
-							<!-- /.archive__item -->
-						<?php endwhile; ?>
-				</ul>
-				<!-- /.archive__list -->
-			<?php
-						wp_reset_postdata();
-					else :
-			?>
-				<p>お知らせはありません。</p>
-			<?php endif; ?>
-			</div>
-		</div>
+    </section>
 
-		<!-- <div class="service__case">
-			<?php
-			// ページのスラッグを取得
-			$slug = get_post_field('post_name', get_post());
+    <section class="section" data-section-title="Price of Service">
+        <h2 class="section__title">
+            <em>price</em>
+            <span>労働問題の弁護士費用 (全て税込表記)</span>
+        </h2>
 
-			// クエリの引数を設定
-			$args = array(
-				'post_type' => 'topics',
-				'posts_per_page' => 3,
-				'tax_query' => array(
-					array(
-						'taxonomy' => 'topics_taxonomy',
-						'field' => 'slug',
-						'terms' => $slug,
-					),
-				),
-			);
+        <div class="service__price-nav">
+            <!-- <a href="" class="service__price-nav-link"></a> -->
+        </div>
 
-			// カスタムクエリを実行
-			$query = new WP_Query($args);
+        <div class="service__price-container">
 
-			// 記事が存在する場合
-			if ($query->have_posts()) :
-				echo '<div class="archive__container">';
-				while ($query->have_posts()) : $query->the_post();
-			?>
-					<div class="archive__list">
-						<a href="" class="archive__item-link">
-							<?php if (has_post_thumbnail()) : ?>
-								<div class="archive__item-image">
-									<?php the_post_thumbnail('medium'); ?>
-								</div>
-							<?php endif; ?>
+            <!-- 01:相談料 -->
+            <div class="service__price-box" id="anc-price-01">
+                <?php service_price_title('相談料'); ?>
+                <?php price_table_2col([
+                    ['時間', '相談料'],
+                    ['初回最初の30分', '0円'],
+                    ['以後30分ごと', '5,500円'],
+                ]); ?>
+            </div>
 
-							<div class="archive__item-content">
-								<p class="archive__item-date">
-									<time datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y-m-d'); ?></time>
-									<span class="archive__item-taxonomy taxonomy-other">
-										<?php
-										$terms = get_the_terms(get_the_ID(), 'topics_taxonomy');
-										if ($terms && !is_wp_error($terms)) :
-											$term_names = wp_list_pluck($terms, 'name');
-											echo implode(', ', $term_names);
-										endif;
-										?>
-									</span>
-								</p>
-								<p class="archive__item-title"><?php the_title(); ?></p>
-								<div class="archive__item-text">
-									<?php the_excerpt(); ?>
-								</div>
-							</div>
-						</a>
-					</div>
-			<?php
-				endwhile;
-				echo '</div>';
-				wp_reset_postdata();
-			else :
-				echo '<p>関連する記事は見つかりませんでした。</p>';
-			endif;
-			?>
-		</div> -->
+            <!-- 02:残業代請求 -->
+            <div class="service__price-box" id="anc-price-02">
+                <?php service_price_title('残業代請求'); ?>
+                <?php price_table_3col([
+                    ['解決手段', '着手金', '報酬金'],
+                    ['交渉', '0円', '33万円＋認容額の19.8％'],
+                    ['労働審判', '22万円', '22万円＋認容額の26.4％'],
+                    ['訴訟', '33万円<span>（労働審判から移行する場合は22万円）</span>', '認容額の33％<span>（最低44万円）</span>'],
+                ]); ?>
+                <ul class="service__price-list">
+                    <li>着手金は月額5万5000円の分割払プランもご用意しております。</li>
+                    <li>「認容額」とは、和解や認容判決等で最終的に認められた相手方の支払額をいいます。</li>
+                </ul>
+            </div>
 
-		<?php
-		// カスタムタクソノミーの一覧ページへのリンクを表示
-		$taxonomy_link = get_term_link($slug, 'topics_taxonomy');
-		if (!is_wp_error($taxonomy_link)) :
-		?>
-			<div class="service__case-button">
-				<a href="<?php echo esc_url($taxonomy_link); ?>">関連記事を見る</a>
-			</div>
-		<?php
-		endif;
-		?>
+            <!-- 03:解雇・雇止め -->
+            <div class="service__price-box" id="anc-price-03">
+                <?php service_price_title('解雇・雇止め'); ?>
+                <?php price_table_3col([
+                    ['解決手段', '着手金', '報酬金'],
+                    ['交渉', '22万円', '33万円＋認容額の19.8％'],
+                    ['労働審判', '33万円<span>（交渉から移行する場合は22万円）', '22万円＋認容額の26.4％'],
+                    ['訴訟', '44万円<span>（交渉から移行する場合は33万円、労働審判から移行する場合は22万円）</span>', '認容額の33％<span>（最低44万円）</span>'],
+                ]); ?>
+                <ul class="service__price-list">
+                    <li>着手金は月額5万5000円の分割払プランもご用意しております。</li>
+                    <li>「認容額」とは、和解や認容判決等で最終的に認められた相手方の支払額をいいます。</li>
+                </ul>
+                <h4 class="service__price-subtitle">金銭換算できない場合の報酬金</h4>
+                <?php price_table_1col([
+                    '①交渉により復職することになった場合',
+                    '給与支給月額の2か月分（年俸制の場合は年俸の6分の1）＋33万円<br>※相手方が解雇を撤回した場合、解雇の意思表示を否定した場合を含みます。
+',
+                ]); ?>
+                <?php price_table_1col([
+                    '②金銭の支払いなく合意退職扱いとする方法で和解した場合',
+                    '44万円',
+                ]); ?>
+                <?php price_table_1col([
+                    '③労働審判・訴訟により復職することになった場合または地位確認請求が認容された場合',
+                    '給与支給月額の3か月分（年俸制の場合は年俸の4分の1）＋11万円<br>※相手方が解雇を撤回した場合、解雇の意思表示を否定した場合を含みます。',
+                ]); ?>
+            </div>
 
-	</section>
+            <!-- 04:労働災害 -->
+            <div class="service__price-box" id="anc-price-04">
+                <?php service_price_title('労働災害'); ?>
+                <h4 class="service__price-subtitle">着手金</h4>
+                <?php price_table_2col([
+                    ['解決手段', '料金'],
+                    ['交渉', '原則0円'],
+                    ['労働審判', '33万円<span>（交渉から移行する場合は22万円）'],
+                    ['訴訟', '44万円<span>（交渉から移行する場合は33万円、労働審判から移行する場合は22万円）</span>'],
+                ]); ?>
+                <ul class="service__price-list">
+                    <li>着手金は月額5万5000円の分割払プランもご用意しております。</li>
+                    <li>交渉は原則として0円ですが、元受会社に対して請求を行う場合、保有個人情報開示請求を行う場合など困難な事案は22万円を上限として着手金を頂戴いたします。</li>
+                </ul>
 
-	<section class="section" data-section-title="Price of Service">
-		<h2 class="section__title">
-			<em>price</em>
-			<span>遺産相続・遺言の弁護士費用 (全て税込表記)</span>
-		</h2>
+                <h4 class="service__price-subtitle">報酬金：会社に対して請求する場合</h4>
+                <?php price_table_2col([
+                    ['認容額', '料金'],
+                    ['300万円以下', '認容額の22％（最低44万円）'],
+                    ['300万円を超え3000万円以下', '認容額の19.8％＋6万6000円'],
+                    ['3000万円を超える場合', '認容額の16.5％＋105万6000円'],
+                ]); ?>
+                <ul class="service__price-list">
+                    <li>「認容額」とは、和解や認容判決等で最終的に認められた相手方の支払額をいいます。</li>
+                </ul>
 
-		<div class="service__price-nav">
-			<!-- <a href="" class="service__price-nav-link"></a> -->
-		</div>
+                <h4 class="service__price-subtitle">報酬金：労災保険から回収した場合</h4>
+                <?php price_table_2col([
+                    ['労災保険給付の種類', '料金'],
+                    ['障害補償給付<br>（障害等級8～14級に認定された場合）', '給付額の2.2％（最低3万3000円）'],
+                    ['障害補償給付<br>（障害等級1～7級に認定された場合）', '55万円'],
+                    ['遺族補償給付（年金・一時金）<br>傷病補償年金', '55万円'],
+                    ['その他の労災保険給付', '給付額の2.2％（最低3万3000円）'],
+                ]); ?>
+            </div>
 
-		<div class="service__price-container">
-			<div class="service__price-box" id="anc-price-01">
-				<h3 class="service__price-title">
-					<span class="sp-none">Price - </span>
-					<span class="pc-none">#</span>
-					<em>相談料</em>
-				</h3>
+            <!-- 退職勧奨への対応 -->
+            <div class="service__price-box" id="anc-price-05">
+                <?php service_price_title('退職勧奨への対応'); ?>
+                <?php price_table_1col([
+                    '着手金',
+                    '22万円',
+                ]); ?>
+                <ul class="service__price-list">
+                    <li>着手金は月額5万5000円の分割払プランもご用意しております。</li>
+                </ul>
+                <br>
+                <?php price_table_1col([
+                    '報酬金',
+                    '1, 最後の退職勧奨から半年間退職勧奨がされなかった場合、給与支給月額の1か月分相当額（最低22万円）',
+                    '2, 退職勧奨受け入れ金銭解決をした場合、和解額の19.8%（最低22万円）',
+                ]); ?>
 
-				<table class="service__price-table">
-					<thead>
-						<tr>
-							<th>解決手段</th>
-							<th>料金</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>協議（交渉）</td>
-							<td>22円</td>
-						</tr>
-						<tr>
-							<td>調停・審判</td>
-							<td>33万円<span>（協議から移行する場合は22万円）</span></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
+            </div>
 
-			<div class="service__price-box" id="anc-price-02">
-				<h3 class="service__price-title">
-					<span class="sp-none">Price - </span>
-					<span class="pc-none">#</span>
-					<em>遺産分割</em>
-				</h3>
+            <!-- 退職代行（代理） -->
+            <div class="service__price-box" id="anc-price-06">
+                <?php service_price_title('退職代行（代理）'); ?>
+                <?php price_table_1col([
+                    '着手金',
+                    '5万5000円',
+                ]); ?>
+                <?php price_table_1col([
+                    '報酬金',
+                    '1, 退職ができた場合、11万円',
+                    '2, 300万円以下の経済的利益を得た場合、経済的利益の22％',
+                    '3, 300万円を超える経済的利益を得た場合、経済的利益の16.5％＋16万6000円',
+                ]); ?>
+            </div>
+        </div>
 
-				<p class="service__price-text">日本弁護士連合会（旧）報酬基準や多くの法律事務所では、着手金が遺産の額に応じて設定されております。<br>そのため、遺産に不動産が含まれる場合などは着手金が非常に高額になる場合や、遺産が確定するまで着手金も確定しない場合があります。<br>そこで、当事務所では着手金の額を固定とすることで、ご依頼いただきやすい料金設定となっております。</p>
+    </section>
 
-				<h4 class="service__price-subtitle">着手金</h4>
-
-				<table class="service__price-table">
-					<thead>
-						<tr>
-							<th>解決手段</th>
-							<th>料金</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>協議（交渉）</td>
-							<td>22円</td>
-						</tr>
-						<tr>
-							<td>調停・審判</td>
-							<td>33万円<span>（協議から移行する場合は22万円）</span></td>
-						</tr>
-					</tbody>
-				</table>
-
-				<table class="service__price-table is-text-left">
-					<thead>
-						<tr>
-							<th>解決手段</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>協議（交渉）</td>
-						</tr>
-					</tbody>
-				</table>
-
-				<table class="service__price-table">
-					<thead>
-						<tr>
-							<th>解決手段</th>
-							<th>料金</th>
-							<th>料金</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>協議（交渉）</td>
-							<td>22円</td>
-							<td>22円</td>
-						</tr>
-						<tr>
-							<td>調停・審判</td>
-							<td>33万円<span>（協議から移行する場合は22万円）</span></td>
-							<td>33万円<span>（協議から移行する場合は22万円）</span></td>
-						</tr>
-					</tbody>
-				</table>
-
-				<ul class="service__price-list">
-					<li>着手金は月額5万5000円の分割払プランもご用意しております。</li>
-					<li>遺産分割は、前提問題として、相続人・遺産範囲等の確認訴訟の提起を要する場合があります。その場合の弁護士費用は、着手金33万円、基礎報酬33万円を基本とし、経済的利益が発生した場合は遺産分割の報酬基準に準じて決定します。</li>
-					<li>
-						相続財産の調査のみは、着手金11万円、報酬金０円となります。
-						<ul>
-							<li>最終取得遺産額が１億円以下の場合：同額の3.3％（最低66万円）</li>
-							<li>最終取得遺産額が１億円を超える場合：同額の2.2％</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-
-			<div class="service__price-box" id="anc-price-03">
-				<h3 class="service__price-title">
-					<span class="sp-none">Price - </span>
-					<span class="pc-none">#</span>
-					<em>不当利得返還請求（請求側・被請求側）</em>
-				</h3>
-
-				<table class="service__price-table">
-					<thead>
-						<tr>
-							<th>遺留分侵害額請求（遺留分減殺請求）</th>
-							<th>料金</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>協議（交渉）</td>
-							<td>22円</td>
-						</tr>
-						<tr>
-							<td>調停・審判</td>
-							<td>33万円<span>（協議から移行する場合は22万円）</span></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-
-			<div class="service__price-box" id="anc-price-04">
-				<h3 class="service__price-title">
-					<span class="sp-none">Price - </span>
-					<span class="pc-none">#</span>
-					<em>遺言無効確認（確認する側・確認される側）</em>
-				</h3>
-
-				<table class="service__price-table">
-					<thead>
-						<tr>
-							<th>遺留分侵害額請求（遺留分減殺請求）</th>
-							<th>料金</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>協議（交渉）</td>
-							<td>22円</td>
-						</tr>
-						<tr>
-							<td>調停・審判</td>
-							<td>33万円<span>（協議から移行する場合は22万円）</span></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-
-			<div class="service__price-box" id="anc-price-05">
-				<h3 class="service__price-title">
-					<span class="sp-none">Price - </span>
-					<span class="pc-none">#</span>
-					<em>相続放棄</em>
-				</h3>
-
-				<table class="service__price-table">
-					<thead>
-						<tr>
-							<th>遺留分侵害額請求（遺留分減殺請求）</th>
-							<th>料金</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>協議（交渉）</td>
-							<td>22円</td>
-						</tr>
-						<tr>
-							<td>調停・審判</td>
-							<td>33万円<span>（協議から移行する場合は22万円）</span></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-
-	</section>
-
-	<?php
-	echo '</div>';
-	?>
+    <?php
+    echo '</div>';
+    ?>
 
 </main>
 <!-- /.main -->

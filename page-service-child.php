@@ -13,9 +13,9 @@ $file_path = get_template_directory() . '/assets/inc/service-' . $slug . '.php';
 
 // ファイルが存在するか確認してインクルード
 if (file_exists($file_path)) {
-	include($file_path);
+    include($file_path);
 } else {
-	echo '<p>該当するサービスページが見つかりません。</p>';
+    echo '<p>該当するサービスページが見つかりません。</p>';
 }
 
 ?>

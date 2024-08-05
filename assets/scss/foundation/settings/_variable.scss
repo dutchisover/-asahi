@@ -6,71 +6,72 @@
 
 // 色
 :root {
-  --colorBlack: #172b40;
-  --colorBg: #fff;
-  --colorKey: #ef8c37;
-  --colorText: #7b594b;
-  --colorBase: #f8eee2;
-  --colorCurrent: #c7c7c7;
+	--colorBlack: #172b40;
+	--colorBg: #fff;
+	--colorKey: #ef8c37;
+	--colorText: #7b594b;
+	--colorBase: #f8eee2;
+	--colorCurrent: #c7c7c7;
 }
 
 // フォント
 :root {
-  --fontGothic: 'A1 Gothic', 'A P-OTF A1Gothic StdN', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
-  --fontMincho: 'Hannari Mincho','HannariMincho', '游明朝体', 'Yu Mincho', YuMincho, 'ヒラギノ明朝 Pro', 'Hiragino Mincho Pro', 'MS P明朝', 'MS PMincho', serif;
-  --fontEnglish: 'TT Norms', sans-serif;
-  // --fontMaru: 'Zen Maru Gothic', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+	--fontGothic: "A1ゴシック R", "A1ゴシック M", "A1ゴシック B", 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+	--fontMincho: 'Hannari Mincho', 'HannariMincho', '游明朝体', 'Yu Mincho', YuMincho, 'ヒラギノ明朝 Pro', 'Hiragino Mincho Pro', 'MS P明朝', 'MS PMincho', serif;
+	--fontEnglish: 'TT Norms', sans-serif;
+	// --fontMaru: 'Zen Maru Gothic', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
 }
 
 // ウェイト
 :root {
-  --weightLight: 300;
-  --weightRegular: 400;
-  --weightMedium: 500;
-  --weightBold: 700;
+	--weightLight: 300;
+	--weightRegular: 400;
+	--weightMedium: 500;
+	--weightBold: 700;
 }
 
 // 標準のフォント設定
 :root {
-  --fontSize: #{r(16)};
-  // 標準の文字間
-  --letterSpacing: 0;
-  // 標準の行間
-  --lineHeight: 1.75;
-  // カーニング（font-feature-settings： "palt"）
-  --kerning: unset;
+	--fontSize: #{r(16)};
+	// 標準の文字間
+	--letterSpacing: 0;
+	// 標準の行間
+	--lineHeight: 1.75;
+	// カーニング（font-feature-settings： "palt"）
+	--kerning: unset;
 }
 
 // その他設定
 :root {
-  // bodyの背景色
-  --bodyBg: var(--colorBg);
-  // アニメーション速度
-  --speed: .4s;
+	// bodyの背景色
+	--bodyBg: var(--colorBg);
+	// アニメーション速度
+	--speed: .4s;
 }
 
 
 // html・body のひな形
 %html {
-  font-size: clamp(calc(6.25% * .25), calc(10vw / $board * 10), 6.25%);
+	font-size: clamp(calc(6.25% * .25), calc(10vw / $board * 10), 6.25%);
 
-  @include media() {
-    font-size: vw(10);
-  }
+	@include media() {
+		font-size: vw(10);
+	}
 }
 
 %body {
-  background-color: var(--bodyBg);
-  color: var(--colorBlack);
-  letter-spacing: var(--letterSpacing);
-  font-weight: var(--weightRegular);
-  font-size: var(--fontSize);
-  font-family: var(--fontGothic);
-  line-height: var(--lineHeight);
+	background-color: var(--bodyBg);
+	color: var(--colorBlack);
+	letter-spacing: var(--letterSpacing);
+	font-weight: var(--weightRegular);
+	font-size: var(--fontSize);
+	font-family: var(--fontGothic);
+	line-height: var(--lineHeight);
 
-  font-feature-settings: var(--kerning);
-  @include media() {
-    background-color: var(--colorBase);
-    font-size: r(26, 10);
-  }
+	font-feature-settings: var(--kerning);
+
+	@include media() {
+		background-color: var(--colorBase);
+		font-size: r(26, 10);
+	}
 }
