@@ -86,9 +86,9 @@ $slug = $post->post_name;
                     echo '<div class="service__item" id="' . esc_attr($anchor_id) . '">';
                     echo '<div class="service__item-photo">';
                     echo '<picture>';
-                    echo '<source media="(max-width:820px)" srcset="' . esc_url($page_mv_sp['url']) . '">';
-                    echo '<img src="' . esc_url($page_mv_pc['url']) . '" alt="' . get_the_title() . '" class="service__item-image">';
-                    echo '</picture>';
+                    // echo '<source media="(max-width:820px)" srcset="' . esc_url($page_mv_sp['url']) . '">';
+                    // echo '<img src="' . esc_url($page_mv_pc['url']) . '" alt="' . get_the_title() . '" class="service__item-image">';
+                    // echo '</picture>';
                     echo '</div>';
 
                     echo '<div class="service__item-info">';

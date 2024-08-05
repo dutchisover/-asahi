@@ -282,7 +282,7 @@
 
 .mv-topics__taxonomy {
   display: grid;
-  padding: 0 1.5em;
+  padding: 1px 1.5em 0;
   height: 30rem;
   border-radius: 16rem;
   background-color: var(--colorKey);
@@ -773,8 +773,12 @@
 
   & span {
     @include media() {
+      display: block;
       letter-spacing: 0;
+      letter-spacing: .05em;
       font-size: r(20);
+
+      font-feature-settings: 'palt';
     }
   }
 
@@ -1037,6 +1041,7 @@
   display: inline-block;
   margin-left: 30rem;
   padding: 0 20rem;
+  padding-top: 1px;
   width: auto;
   border-radius: 40rem;
   background-color: var(--colorKey);

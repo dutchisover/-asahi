@@ -42,16 +42,19 @@ if ($current_taxonomy == 'topics_taxonomy' && $current_term_slug != 'news') {
 ?>
 
 <div class="topics__sidebar-content">
-    <?php if (!is_single()) : ?>
-        <a class="topics__sidebar-button <?php if (is_post_type_archive('topics')) echo 'current'; ?>" href="<?php home_url() ?>/topics/">すべて</a>
-    <?php endif; ?>
-    <a class="topics__sidebar-button <?php echo $news_active; ?>" href="<?php echo esc_url($news_link); ?>">お知らせ</a>
+    <?php // if (!is_single()) :
+    ?>
+    <a class="topics__sidebar-button <?php if (is_post_type_archive('topics')) echo 'current'; ?> <?php echo $news_active; ?>" href="<?php home_url() ?>/topics/">すべて</a>
+    <?php // endif;
+    ?>
+    <!-- <a class="topics__sidebar-button <?php echo $news_active; ?>" href="<?php echo esc_url($news_link); ?>">お知らせ</a> -->
+    <a class="topics__sidebar-button" href="<?php echo esc_url($news_link); ?>">お知らせ</a>
     <div class="topics__sidebar-button topics__sidebar-button-column <?php echo $taxonomy_current; ?>">業務別コラム</div>
 
     <?php if (!empty($topics_terms) && !is_wp_error($topics_terms)) : ?>
         <div class="topics__sidebar-taxonomy">
             <?php foreach ($topics_terms as $term) : ?>
-                <?php if ($term->slug !== 'news') : // newsを除外 
+                <?php if ($term->slug !== 'news') : // newsを除外
                 ?>
                     <?php $active_class = ($current_taxonomy == 'topics_taxonomy' && $current_term_slug == $term->slug) ? 'current' : ''; ?>
 

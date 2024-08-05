@@ -26,7 +26,8 @@
 .header__inner {
   display: flex;
   justify-content: space-between;
-  padding-left: 120rem;
+  // padding-left: 120rem;
+  padding-left: 4.66666667vw;
 
   @include media() {
     position: relative;

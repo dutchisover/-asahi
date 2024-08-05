@@ -399,28 +399,6 @@ $slug = $post->post_name;
                     </tbody>
                 </table>
 
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>解決手段</th>
-                            <th>料金</th>
-                            <th>料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
-                            <td>22円</td>
-                        </tr>
-                        <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-
                 <ul class="service__price-list">
                     <li>着手金は月額5万5000円の分割払プランもご用意しております。</li>
                     <li>遺産分割は、前提問題として、相続人・遺産範囲等の確認訴訟の提起を要する場合があります。その場合の弁護士費用は、着手金33万円、基礎報酬33万円を基本とし、経済的利益が発生した場合は遺産分割の報酬基準に準じて決定します。</li>
@@ -432,6 +410,173 @@ $slug = $post->post_name;
                         </ul>
                     </li>
                 </ul>
+
+                <h4 class="service__price-subtitle">追加レイアウト</h4>
+
+                <div class="service__price-switch">
+                    <div class="service__price-switch-pc">
+                        <table class="service__price-table">
+                            <thead>
+                                <tr>
+                                    <th>解決手段</th>
+                                    <th>着出金</th>
+                                    <th>料金</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>協議（交渉）</td>
+                                    <td>22円</td>
+                                    <td>22円</td>
+                                </tr>
+                                <tr>
+                                    <td>調停・審判</td>
+                                    <td>33万円<span>（協議から移行する場合は22万円）</span></td>
+                                    <td>33万円<span>（協議から移行する場合は22万円）</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="service__price-switch-sp">
+                        <div class="service__price-switch-section">
+                            <p class="service__price-switch-title">
+                                <span>解決手段</span>
+                                <em>協議（交渉）</em>
+                            </p>
+                            <table class="service__price-table">
+                                <thead>
+                                    <tr>
+                                        <th>着出金</th>
+                                        <th>料金</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>22円</td>
+                                        <td>22円</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="service__price-switch-section">
+                            <p class="service__price-switch-title">
+                                <span>解決手段</span>
+                                <em>調停・審判</em>
+                            </p>
+                            <table class="service__price-table">
+                                <thead>
+                                    <tr>
+                                        <th>着出金</th>
+                                        <th>料金</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>33万円<span>（協議から移行する場合は22万円）</span></td>
+                                        <td>33万円<span>（協議から移行する場合は22万円）</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="service__price-switch">
+                    <div class="service__price-switch-pc">
+                        <table class="service__price-table is-special">
+                            <thead>
+                                <tr>
+                                    <th>オプション</th>
+                                    <th colspan="2">報酬金</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="2">親権<span>（１名ごと）</span></td>
+                                    <th>獲得した場合</th>
+                                    <th>獲得を阻止した場合</th>
+                                </tr>
+                                <tr>
+                                    <td>22万円<span>（調査官調査を経た場合は、22万円を加算）</span></td>
+                                    <td>22万円<span>（調査官調査を経た場合は、22万円を加算）</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td rowspan="2">面会交流<span>（１名ごと）</span></td>
+                                    <th>獲得した場合</th>
+                                    <th>獲得を阻止した場合</th>
+                                </tr>
+                                <tr>
+                                    <td>22万円<span>（調査官調査を経た場合は、22万円を加算）</span></td>
+                                    <td>22万円<span>（調査官調査を経た場合は、22万円を加算）</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="service__price-switch-sp">
+                        <div class="service__price-switch-section">
+                            <p class="service__price-switch-title">
+                                <span>オプション</span>
+                                <em>親権（１名ごと）</em>
+                            </p>
+                            <table class="service__price-table is-special">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">報酬金</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>獲得した場合</th>
+                                        <th>獲得を阻止した場合</th>
+                                    </tr>
+                                    <tr>
+                                        <td>22万円<span>（調査官調査を経た場合は、22万円を加算）</span></td>
+                                        <td>22万円<span>（調査官調査を経た場合は、22万円を加算）</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="service__price-switch-section">
+                            <p class="service__price-switch-title">
+                                <span>オプション</span>
+                                <em>面会交流（１名ごと）</em>
+                            </p>
+                            <table class="service__price-table is-special">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">報酬金</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>獲得した場合</th>
+                                        <th>獲得を阻止した場合</th>
+                                    </tr>
+                                    <tr>
+                                        <td>22万円<span>（調査官調査を経た場合は、22万円を加算）</span></td>
+                                        <td>22万円<span>（調査官調査を経た場合は、22万円を加算）</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service__price-faq">
+                    <div class="service__price-faq-image">
+                        <img src="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-trafficaccident-02.jpg" alt="" class="" width="368" height="230">
+                    </div>
+                    <dl class="service__price-faq-body">
+                        <dt class="service__price-faq-title">Q.弁護士費用特約とは？</dt>
+                        <dd class="service__price-faq-text">主に自動車保険に付帯しているオプションです。交通事故について弁護士に依頼する際、弁護士費用の全部又は一部の補償を受ける事ができます。</dd>
+                        </di>
+                </div>
             </div>
 
             <div class="service__price-box" id="anc-price-03">

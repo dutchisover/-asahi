@@ -47,7 +47,7 @@ $slug = $post->post_name;
 
     <section class="section" data-section-title="Service 01">
 
-        <p class="service__copy"><em>遺産相続</em>にまつわる問題は<br class="pc-none">当事務所へお任せ下さい。<br><span>多数の解決実績に基づき、全力でサポートいたします。</span></p>
+        <p class="service__copy"><em>離婚・男女問題</em>は<br class="pc-none">当事務所にお任せ下さい。<br><span>有利な条件で解決できるよう全力でサポートいたします。</span></p>
 
         <div class="service__example">
             <div class="service__example-photo">
@@ -63,18 +63,18 @@ $slug = $post->post_name;
                     <span>お悩み事例</span>
                 </h2>
                 <ul class="service__example-list">
-                    <li>身内が亡くなり相続問題をどう進めるべきかわからない</li>
-                    <li>遺産分割の協議がまとまらない（特別受益、寄与分、葬儀費用等）</li>
-                    <li>他の相続人の連絡先が分からず遺産分割協議ができない</li>
-                    <li>遺産を独り占めする相続人がおり、遺留分が侵害されている</li>
-                    <li>遺産である預金を使い込んでいる相続人がいる</li>
-                    <li>遺産である不動産の分割方法／評価額で揉めている</li>
+                    <li>不倫の慰謝料請求をしたい／された</li>
+                    <li>離婚の話合いを自分だけで進められるか不安</li>
+                    <li>離婚後に養育費がきちんと支払われるか不安</li>
+                    <li>住宅ローンがある場合の財産分与のやり方が分からない</li>
+                    <li>別居中の子供と面会交流がしたい</li>
+                    <li>調停で約束した婚姻費用・養育費の支払いがされない</li>
                 </ul>
                 <a href="#anc-price" class="service__example-button">料金表はこちら</a>
             </div>
 
             <div class="service__example-desc">
-                <p>かつて所属していた葛飾総合法律事務所は、都内２３区内で高齢者人口が上位の葛飾区に位置しており、遺産相続問題に注力しておりました。一癖も二つ癖もある遺産分割協議・調停、遺留分の請求／減額交渉、遺言書の作成、遺言執行等、多数の遺産相続問題を解決してきました。ご依頼者様の状況を詳しくお伺いし、密に連絡をとりご要望をお伺いしながら、丁寧・スピーディに対応いたします。</p>
+                <p>当事務所は、離婚・不貞慰謝料（請求側／被請求側）・婚姻費用・養育費・財産分与・面会交流・養育費等の不払いによる給与の差押え等、男女問題に幅広く対応しております。ご依頼者様の状況を詳しくお伺いし、密に連絡をとりご要望をお伺いしながら、丁寧・スピーディに対応いたします。</p>
             </div>
         </div>
 
@@ -83,11 +83,10 @@ $slug = $post->post_name;
     <section class="section" data-section-title="field of Service">
         <h2 class="section__title">
             <em>Field</em>
-            <span>遺産相続・遺言の取扱い業務</span>
+            <span>離婚・男女問題の取扱業務</span>
         </h2>
 
-        <p class="section__copy">当事務所では、遺言、遺産分割、遺留分侵害額請求のほか、相続に関する各種問題を取り扱っております。<br>些細なことでも結構ですので、お気軽にお問い合わせ頂ければと思います。</p>
-
+        <p class="section__copy">当事務所では、離婚・男女問題を取り扱っております。<br>下記に列挙した取扱業務はその一例となります。</p>
         <div class="service__field-list">
             <div class="service__field-item">
                 <h3 class="service__field-title">

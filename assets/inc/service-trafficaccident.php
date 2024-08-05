@@ -264,7 +264,7 @@ $slug = $post->post_name;
 
                 <div class="service__price-faq">
                     <div class="service__price-faq-image">
-
+                        <img src="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-trafficaccident-02.jpg" alt="" class="" width="368" height="230">
                     </div>
                     <dl class="service__price-faq-body">
                         <dt class="service__price-faq-title">Q.弁護士費用特約とは？</dt>

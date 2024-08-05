@@ -124,6 +124,7 @@
 }
 
 .topics__sidebar-link {
+  white-space: nowrap;
   font-size: r(16);
 
   font-feature-settings: 'palt';
@@ -139,6 +140,7 @@
     border: 1px solid var(--colorKey);
     border-radius: 7rem;
     color: var(--colorKey);
+    white-space: inherit;
     font-size: r(24);
     line-height: 1.4;
   }

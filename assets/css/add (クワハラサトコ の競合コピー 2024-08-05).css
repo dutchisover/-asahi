@@ -772,9 +772,6 @@
   border-radius: 10rem;
   background-color: #fff;
 }
-.service__price-faq:last-child {
-  margin-bottom: 0;
-}
 
 .service__price-faq-image {
   width: 184rem;
@@ -827,17 +824,6 @@
   display: block;
   font-size: 0.75em;
 }
-.service__price-table.is-special tbody th {
-  background-color: #c1c1c1 !important;
-  color: var(--colorBlack);
-}
-.service__price-table.is-special td {
-  padding: 20rem 0;
-  background-color: #e6e6e6;
-}
-.service__price-table.is-special td[rowspan="2"] {
-  vertical-align: middle;
-}
 
 ul.service__price-list {
   margin-top: 40rem;
@@ -885,19 +871,12 @@ ul.service__price-list li li::before {
   margin-top: 30rem;
 }
 
-.service__price-switch-section {
-  padding: 60rem 0;
-  border-bottom: 1px solid #b5aaa1;
-}
-
 .service__price-switch-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 26rem;
   width: 100%;
   height: 70rem;
-  border: 2px solid var(--colorBase);
 }
 .service__price-switch-title span {
   display: -webkit-box;
@@ -920,9 +899,8 @@ ul.service__price-list li li::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
