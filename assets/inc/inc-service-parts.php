@@ -67,29 +67,94 @@ function price_table_2col($array)
     echo '</table>';
 }
 
-function price_table_3col($array)
+function price_table_3col($data)
 {
-    echo '<table class="service__price-table">';
-    foreach ($array as $i => $item) {
-        if ($i == 0) {
-            echo '<thead>';
-            echo '<tr>';
-            foreach ($item as $th) {
-                echo '<th>' . $th . '</th>';
-            }
-            echo '</tr>';
-            echo '</thead>';
-            echo '<tbody>';
-        } else {
-            echo '<tr>';
-            foreach ($item as $td) {
-                echo '<td>' . $td . '</td>';
-            }
-            echo '</tr>';
-        }
-        if ($i == count($array) - 1) {
-            echo '</tbody>';
-        }
+    $output = '<div class="service__price-switch">';
+
+    // PC版テーブル
+    $output .= '<div class="service__price-switch-pc">';
+    $output .= '<table class="service__price-table"><thead><tr>';
+    $output .= '<th>' . $data[0][0] . '</th><th>' . $data[0][1] . '</th><th>料金</th>';
+    $output .= '</tr></thead><tbody>';
+
+    foreach ($data as $row) {
+        $output .= '<tr>';
+        $output .= '<td>' . $row[0] . '</td>';
+        $output .= '<td>' . $row[1] . '</td>';
+        $output .= '<td>' . $row[2] . '</td>';
+        $output .= '</tr>';
     }
-    echo '</table>';
+
+    $output .= '</tbody></table></div>';
+
+    // SP版テーブル
+    $output .= '<div class="service__price-switch-sp">';
+
+    foreach ($data as $row) {
+        $output .= '<div class="service__price-switch-section">';
+        $output .= '<p class="service__price-switch-title">';
+        $output .= '<span>' . $data[0][0] . '</span>';
+        $output .= '<em>' . $row[0] . '</em>';
+        $output .= '</p>';
+        $output .= '<table class="service__price-table"><thead><tr>';
+        $output .= '<th>' . $data[0][1] . '</th><th>料金</th>';
+        $output .= '</tr></thead><tbody><tr>';
+        $output .= '<td>' . $row[1] . '</td>';
+        $output .= '<td>' . $row[2] . '</td>';
+        $output .= '</tr></tbody></table>';
+        $output .= '</div>';
+    }
+
+    $output .= '</div></div>';
+
+    echo $output;
+}
+
+function price_table_5col($data)
+{
+    $output = '<div class="service__price-switch">';
+
+    // PC版テーブル
+    $output .= '<div class="service__price-switch-pc">';
+    $output .= '<table class="service__price-table is-special"><thead><tr>';
+    $output .= '<th>' . $data[0][0] . '</th><th colspan="2">' . $data[0][1] . '</th>';
+    $output .= '</tr></thead><tbody>';
+
+    foreach (array_slice($data, 1) as $row) {
+        $output .= '<tr>';
+        $output .= '<td rowspan="2">' . $row[0] . '</td>';
+        $output .= '<th>' . $row[1] . '</th>';
+        $output .= '<th>' . $row[2] . '</th>';
+        $output .= '</tr><tr>';
+        $output .= '<td>' . $row[3] . '</td>';
+        $output .= '<td>' . $row[4] . '</td>';
+        $output .= '</tr>';
+    }
+
+    $output .= '</tbody></table></div>';
+
+    // SP版テーブル
+    $output .= '<div class="service__price-switch-sp">';
+
+    foreach (array_slice($data, 1) as $row) {
+        $output .= '<div class="service__price-switch-section">';
+        $output .= '<p class="service__price-switch-title">';
+        $output .= '<span>' . $data[0][0] . '</span>';
+        $output .= '<em>' . $row[0] . '</em>';
+        $output .= '</p>';
+        $output .= '<table class="service__price-table is-special"><thead><tr>';
+        $output .= '<th colspan="2">' . $data[0][1] . '</th>';
+        $output .= '</tr></thead><tbody><tr>';
+        $output .= '<th>' . $row[1] . '</th>';
+        $output .= '<th>' . $row[2] . '</th>';
+        $output .= '</tr><tr>';
+        $output .= '<td>' . $row[3] . '</td>';
+        $output .= '<td>' . $row[4] . '</td>';
+        $output .= '</tr></tbody></table>';
+        $output .= '</div>';
+    }
+
+    $output .= '</div></div>';
+
+    echo $output;
 }
