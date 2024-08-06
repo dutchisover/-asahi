@@ -132,7 +132,7 @@ $slug = $post->post_name;
     <section class="section" data-section-title="case study">
         <h2 class="section__title">
             <em>case study</em>
-            <span>遺産相続・遺言に関する事例や記事</span>
+            <span>交通事故に関する事例や記事</span>
         </h2>
 
         <div class="service__case">
@@ -251,8 +251,10 @@ $slug = $post->post_name;
             <span>交通事故の弁護士費用 (全て税込表記)</span>
         </h2>
 
-        <div class="service__price-nav">
-            <!-- <a href="" class="service__price-nav-link"></a> -->
+        <!-- <div class="service__price-nav"></div> -->
+        <div class="service__price-tab">
+            <a href="#anc-price-01" class="service__price-tab-primary">弁護士費用特約に加入されている方</a>
+            <a href="#anc-price-02" class="service__price-tab-secondary">弁護士費用特約に加入されていない方</a>
         </div>
 
         <div class="service__price-container">

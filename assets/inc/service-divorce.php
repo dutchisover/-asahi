@@ -4,6 +4,12 @@
  * Template Name: 離婚・男女問題
  * slug: divorce
  */
+
+$file_path = get_template_directory() . '/assets/inc/inc-service-parts.php';
+if (file_exists($file_path)) {
+    include($file_path);
+}
+
 // ページのスラッグを取得
 global $post;
 $slug = $post->post_name;
@@ -91,7 +97,7 @@ $slug = $post->post_name;
             <div class="service__field-item">
                 <h3 class="service__field-title">
                     <span>Field 01</span>
-                    <em>不貞慰謝料（請求側／被請求側）</em>
+                    <em>不貞慰謝料<br><span>（請求側／被請求側）</span></em>
                 </h3>
                 <p class="service__field-text">不貞とは、夫婦関係にある男女が、その貞操義務に違反して他の男女と性的行為に及ぶことです。不貞によって配偶者の被った精神的苦痛は、慰謝料請求の対象となります。<br>不貞慰謝料のご相談は、請求側からはもちろんのこと、請求をされた側（被請求側）にも対応しています。</p>
             </div>
@@ -107,7 +113,7 @@ $slug = $post->post_name;
             <div class="service__field-item">
                 <h3 class="service__field-title">
                     <span>Field 03</span>
-                    <em>子どもに関する争い<br>（親権・養育費・面会交流）</em>
+                    <em>子どもに関する争い<br><span>（親権・養育費・面会交流）</span></em>
                 </h3>
                 <p class="service__field-text">夫婦間に未成年の子がいる場合、子どもに関する争いがとても重要となります。主要な争点は、親権・育費・面会交流です。全ての争点についてサポート可能です。</p>
             </div>
@@ -126,7 +132,7 @@ $slug = $post->post_name;
     <section class="section" data-section-title="case study">
         <h2 class="section__title">
             <em>case study</em>
-            <span>遺産相続・遺言に関する事例や記事</span>
+            <span>離婚・男女問題に関する事例や記事</span>
         </h2>
 
         <div class="service__case">
@@ -314,191 +320,179 @@ $slug = $post->post_name;
         </div>
 
         <div class="service__price-container">
-            <div class="service__price-box" id="anc-price-01">
-                <h3 class="service__price-title">
-                    <span class="sp-none">Price - </span>
-                    <span class="pc-none">#</span>
-                    <em>相談料</em>
-                </h3>
 
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>時間</th>
-                            <th>相談料</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>初回最初の30分</td>
-                            <td>0円</td>
-                        </tr>
-                        <tr>
-                            <td>以後30分ごと</td>
-                            <td>5,500円</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <!-- 01:相談料 -->
+            <div class="service__price-box">
+                <?php service_price_title('相談料'); ?>
+                <?php price_table_2col([
+                    ['時間', '相談料'],
+                    ['初回最初の30分', '0円'],
+                    ['以後30分ごと', '5,500円'],
+                ]); ?>
             </div>
 
-            <div class="service__price-box" id="anc-price-02">
-                <h3 class="service__price-title">
-                    <span class="sp-none">Price - </span>
-                    <span class="pc-none">#</span>
-                    <em>離婚</em>
-                </h3>
-
-                <p class="service__price-text">日本弁護士連合会（旧）報酬基準や多くの法律事務所では、着手金が遺産の額に応じて設定されております。<br>そのため、遺産に不動産が含まれる場合などは着手金が非常に高額になる場合や、遺産が確定するまで着手金も確定しない場合があります。<br>そこで、当事務所では着手金の額を固定とすることで、ご依頼いただきやすい料金設定となっております。</p>
-
-                <h4 class="service__price-subtitle">着手金</h4>
-
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>解決手段</th>
-                            <th>料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
-                        </tr>
-                        <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <table class="service__price-table is-text-left">
-                    <thead>
-                        <tr>
-                            <th>解決手段</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>解決手段</th>
-                            <th>料金</th>
-                            <th>料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
-                            <td>22円</td>
-                        </tr>
-                        <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-
+            <!-- 02:離婚 -->
+            <div class="service__price-box">
+                <?php service_price_title('離婚'); ?>
+                <?php price_table_3col([
+                    ['解決手段', '着出金', '基礎報酬金'],
+                    ['交渉', '22万円', '33万円'],
+                    ['調停', '33万円<span>（交渉から移行した場合は22万円）</span>', '38万5000円'],
+                    ['訴訟', '44万円<span>(調停から移行する場合は33万円)</span><span>（慰謝料請求、財産分与を訴訟で取扱う場合は各5万5000円を加算）</span>', '44万円'],
+                ]); ?>
                 <ul class="service__price-list">
                     <li>着手金は月額5万5000円の分割払プランもご用意しております。</li>
-                    <li>遺産分割は、前提問題として、相続人・遺産範囲等の確認訴訟の提起を要する場合があります。その場合の弁護士費用は、着手金33万円、基礎報酬33万円を基本とし、経済的利益が発生した場合は遺産分割の報酬基準に準じて決定します。</li>
-                    <li>
-                        相続財産の調査のみは、着手金11万円、報酬金０円となります。
-                        <ul>
-                            <li>最終取得遺産額が１億円以下の場合：同額の3.3％（最低66万円）</li>
-                            <li>最終取得遺産額が１億円を超える場合：同額の2.2％</li>
-                        </ul>
-                    </li>
+                    <li>当事務所では、交渉・調停の場合は、離婚の他に親権・面会交流・婚姻費用・養育費・財産分与・慰謝料・年金分割の問題が付随した場合でも追加着手金は頂戴しておりません。</li>
+                    <li>離婚のご依頼はなく、親権・面会交流・婚姻費用・養育費・財産分与・年金分割のみのご依頼の場合の着手金は、上記着手金と同額となります。</li>
+                    <li>子の氏の変更許可申立を行う場合は、3万3000円で承ります（離婚をしたとしても子の氏は当然には親権者の氏とはなりません。そのため、氏の変更を希望する場合は家庭裁判所に対し申立を行う必要があります。）</li>
                 </ul>
             </div>
 
-            <div class="service__price-box" id="anc-price-03">
-                <h3 class="service__price-title">
-                    <span class="sp-none">Price - </span>
-                    <span class="pc-none">#</span>
-                    <em>不当利得返還請求（請求側・被請求側）</em>
-                </h3>
+            <!-- 03:離婚問題のオプション -->
+            <div class="service__price-box">
+                <?php service_price_title('離婚問題のオプション'); ?>
+                <?php price_table_5col([
+                    ['オプション', '報酬金'],
+                    ['親権<span>（１名ごと）</span>', '獲得した場合', '獲得を阻止した場合', '22万円<span>（調査官調査を経た場合は、22万円を加算）</span>', '22万円<span>（調査官調査を経た場合は、22万円を加算）</span>'],
+                    ['面会交流<span>（１名ごと）</span>', '達成した場合', '条件向上が実現した場合', '22万円<span>（調査官調査を経た場合は、11万円を加算）</span>', '22万円<span>（調査官調査を経た場合は、11万円を加算）</span>'],
+                    ['婚姻費用', '得られた場合', '減額した場合', '得られた額の2年分（現実の受領が2年を超える場合は受領期間分）の11％<span>（最低22万円）</span>', '減額した額の2年分の11％<span>（最低22万円）</span>'],
+                    ['養育費', '得られた場合', '減額した場合', '得られた額の5年分の11％<span>（最低22万円）</span>', '減額した額の5年分の11％<span>（最低22万円）</span>'],
+                    ['財産分与', '得られた場合', '減額した場合', '得られた額の11％<span>（最低22万円）</span>', '減額した額の11％<span>（最低22万円）</span>'],
+                    ['慰謝料・解決金', '得られた場合', '減額した場合', '得られた額の11％<span>（最低22万円）</span>', '減額した額の11％<span>（最低22万円）</span>'],
+                    ['年金分割', '得られた場合', '減額した場合', '11万円', '減額した額の22％</span>'],
+                ]); ?>
+                <ul class="service__price-list">
+                    <li>面会交流の「達成」・「条件向上」は、現状との比較により条件が向上した場合を含みます。</li>
+                </ul>
+            </div>
 
-                <table class="service__price-table">
+            <!-- 04:不貞慰謝料 -->
+            <div class="service__price-box">
+                <?php service_price_title('不貞慰謝料'); ?>
+                <h4 class="service__price-subtitle">請求側</h4>
+                <?php price_table_3col([
+                    ['解決手段', '着出金', '報酬金'],
+                    ['交渉', '22万円', '認容額の22％<span>（最低33万円）</span>'],
+                    ['訴訟', '33万円<span>（交渉から移行する場合は22万円）</span>', '認容額の22％<span>（最低44万円）</span>'],
+                ]); ?>
+                <ul class="service__price-list">
+                    <li>着手金は月額5万5000円の分割払プランもご用意しております。</li>
+                    <li>「認容額」とは、和解や認容判決等で最終的に認められた相手方の支払額をいいます。</li>
+                </ul>
+
+                <h4 class="service__price-subtitle">被請求側 : 着手金</h4>
+                <?php price_table_2col([
+                    ['解決手段', '料金'],
+                    ['交渉', '22万円'],
+                    ['訴訟', '33万円<span>（交渉から移行する場合は22万円）</span>'],
+                ]); ?>
+                <ul class="service__price-list">
+                    <li>着手金は月額5万5000円の分割払プランもご用意しております。</li>
+                </ul>
+
+                <h4 class="service__price-subtitle">被請求側 : 報酬金</h4>
+                <?php price_table_2col([
+                    ['減額額', '料金'],
+                    ['300万円以下', '減額額の22％<span>（交渉の場合は最低33万円）</span><span>（訴訟の場合は最低44万円）</span>'],
+                    ['300万円を超え3000万円以下', '減額額の11％＋44万円'],
+                    ['3000万円を超える場合', '減額額の6.6％＋165万円 '],
+                    ['3億円を超える場合', '減額額の4.4％＋825万円'],
+                ]); ?>
+
+            </div>
+
+            <!-- 05:監護者指定・子の引渡し・審判前の保全処分 -->
+            <div class="service__price-box">
+                <?php service_price_title('監護者指定・子の引渡し・審判前の保全処分'); ?>
+
+                <?php price_table_2col([
+                    ['着手金', '報酬金'],
+                    ['55万円', '【基礎報酬】<br>33万円<br><br>【成功報酬】<br>55万円'],
+                ]); ?>
+
+                <!-- <table class="service__price-table">
                     <thead>
                         <tr>
-                            <th>遺留分侵害額請求（遺留分減殺請求）</th>
-                            <th>料金</th>
+                            <th colspan="2">報酬金</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
+                            <td>基礎報酬</td>
+                            <td>33万円</td>
                         </tr>
                         <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
+                            <td>成功報酬</td>
+                            <td>55万円</td>
                         </tr>
                     </tbody>
-                </table>
+                </table> -->
+                <ul class="service__price-list">
+                    <li>着手金は月額5万5000円の分割払プランもご用意しております。</li>
+                </ul>
+
             </div>
 
-            <div class="service__price-box" id="anc-price-04">
-                <h3 class="service__price-title">
-                    <span class="sp-none">Price - </span>
-                    <span class="pc-none">#</span>
-                    <em>遺言無効確認（確認する側・確認される側）</em>
-                </h3>
+            <!-- 06:強制執行 -->
+            <div class="service__price-box">
+                <?php service_price_title('強制執行'); ?>
+                <h4 class="service__price-subtitle">履行勧告（内容証明郵便）</h4>
+                <?php price_table_2col([
+                    ['着手金', '報酬金'],
+                    ['5万5000円', '0万円'],
+                ]); ?>
+
+                <h4 class="service__price-subtitle">強制執行（給与差押え等） : 着手金</h4>
+                <?php price_table_2col([
+                    ['請求金額', '料金'],
+                    ['300万円以下', '請求額の4.4％,<span>（最低11万円）</span>'],
+                    ['300万円を超え3000万円以下', '請求額の2.75%＋5万5000円'],
+                    ['3000万円を超え3億円以下', '請求額の1.65%＋38万5000円'],
+                    ['3億円を超える場合', '請求額の1.1%＋203万5000円'],
+                ]); ?>
+                <ul class="service__price-list">
+                    <li>着手金は月額5万5000円の分割払プランもご用意しております。</li>
+                    <li>上記料金プランは、交渉、調停、訴訟等を当事務所にご依頼いただいたお客様の料金となりますので、執行のみでご依頼のお客様は別途料金となります。</li>
+                </ul>
+
+                <h4 class="service__price-subtitle">強制執行（給与差押え等） : 報酬金</h4>
+                <?php price_table_2col([
+                    ['回収金額', '料金'],
+                    ['300万円以下', '回収金額の8.8％,<span>（最低22万円）</span>'],
+                    ['300万円を超え3000万円以下', '回収金額の5.5%＋9万9000円'],
+                    ['3000万円を超え3億円以下', '回収金額の3.3%＋75万9000円'],
+                    ['3億円を超える場合', '回収金額の2.2%＋405万9000円'],
+                ]); ?>
+
+            </div>
+
+
+
+            <div class="service__price-box">
+                <?php service_price_title('離婚協議書の作成'); ?>
 
                 <table class="service__price-table">
                     <thead>
                         <tr>
-                            <th>遺留分侵害額請求（遺留分減殺請求）</th>
-                            <th>料金</th>
+                            <th>着手金</th>
+                            <th>報酬金</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
+                            <td>【公正証書の場合】<br>16万5000円</td>
+                            <td rowspan="2" class="is-middle">0円
+                            </td>
                         </tr>
                         <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
+                            <td>【公正証書以外の場合】<br>11万円</td>
                         </tr>
                     </tbody>
                 </table>
+
             </div>
 
-            <div class="service__price-box" id="anc-price-05">
-                <h3 class="service__price-title">
-                    <span class="sp-none">Price - </span>
-                    <span class="pc-none">#</span>
-                    <em>相続放棄</em>
-                </h3>
 
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>遺留分侵害額請求（遺留分減殺請求）</th>
-                            <th>料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
-                        </tr>
-                        <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
         </div>
 
     </section>

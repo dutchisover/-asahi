@@ -74,10 +74,14 @@ function price_table_3col($data)
     // PC版テーブル
     $output .= '<div class="service__price-switch-pc">';
     $output .= '<table class="service__price-table"><thead><tr>';
-    $output .= '<th>' . $data[0][0] . '</th><th>' . $data[0][1] . '</th><th>料金</th>';
+    $output .= '<th>' . $data[0][0] . '</th><th>' . $data[0][1] . '</th><th>' . $data[0][2] . '</th>';
     $output .= '</tr></thead><tbody>';
 
-    foreach ($data as $row) {
+    foreach ($data as $index => $row) {
+        // 最初の行（見出し）を飛ばす
+        if ($index === 0) {
+            continue;
+        }
         $output .= '<tr>';
         $output .= '<td>' . $row[0] . '</td>';
         $output .= '<td>' . $row[1] . '</td>';
@@ -90,14 +94,18 @@ function price_table_3col($data)
     // SP版テーブル
     $output .= '<div class="service__price-switch-sp">';
 
-    foreach ($data as $row) {
+    foreach ($data as $index => $row) {
+        // 最初の行（見出し）を飛ばす
+        if ($index === 0) {
+            continue;
+        }
         $output .= '<div class="service__price-switch-section">';
         $output .= '<p class="service__price-switch-title">';
         $output .= '<span>' . $data[0][0] . '</span>';
         $output .= '<em>' . $row[0] . '</em>';
         $output .= '</p>';
         $output .= '<table class="service__price-table"><thead><tr>';
-        $output .= '<th>' . $data[0][1] . '</th><th>料金</th>';
+        $output .= '<th>' . $data[0][1] . '</th><th>' . $data[0][2] . '</th>';
         $output .= '</tr></thead><tbody><tr>';
         $output .= '<td>' . $row[1] . '</td>';
         $output .= '<td>' . $row[2] . '</td>';

@@ -4,6 +4,12 @@
  * Template Name: 刑事事件
  * slug: criminal-case
  */
+
+$file_path = get_template_directory() . '/assets/inc/inc-service-parts.php';
+if (file_exists($file_path)) {
+    include($file_path);
+}
+
 // ページのスラッグを取得
 global $post;
 $slug = $post->post_name;
@@ -47,7 +53,9 @@ $slug = $post->post_name;
 
     <section class="section" data-section-title="Service 01">
 
-        <p class="service__copy"><em>遺産相続</em>にまつわる問題は<br class="pc-none">当事務所へお任せ下さい。<br><span>多数の解決実績に基づき、全力でサポートいたします。</span></p>
+        <p class="service__copy"><em>刑事事件</em>は当事務所へ<br class="pc-none">お任せ下さい。<br>
+            <span>多数の解決実績に基づき、全力でサポートいたします。</span>
+        </p>
 
         <div class="service__example">
             <div class="service__example-photo">
@@ -63,18 +71,21 @@ $slug = $post->post_name;
                     <span>お悩み事例</span>
                 </h2>
                 <ul class="service__example-list">
-                    <li>身内が亡くなり相続問題をどう進めるべきかわからない</li>
-                    <li>遺産分割の協議がまとまらない（特別受益、寄与分、葬儀費用等）</li>
-                    <li>他の相続人の連絡先が分からず遺産分割協議ができない</li>
-                    <li>遺産を独り占めする相続人がおり、遺留分が侵害されている</li>
-                    <li>遺産である預金を使い込んでいる相続人がいる</li>
-                    <li>遺産である不動産の分割方法／評価額で揉めている</li>
+                    <li>身内が逮捕されてしまい連絡がとれない</li>
+                    <li>示談交渉をしてほしい</li>
+                    <li>不起訴にしてほしい</li>
+                    <li>身柄を早く解放してほしい</li>
+                    <li>職場／学校に知られたくない</li>
+                    <li>前科をつけたくない</li>
                 </ul>
                 <a href="#anc-price" class="service__example-button">料金表はこちら</a>
             </div>
 
             <div class="service__example-desc">
-                <p>かつて所属していた葛飾総合法律事務所は、都内２３区内で高齢者人口が上位の葛飾区に位置しており、遺産相続問題に注力しておりました。一癖も二つ癖もある遺産分割協議・調停、遺留分の請求／減額交渉、遺言書の作成、遺言執行等、多数の遺産相続問題を解決してきました。ご依頼者様の状況を詳しくお伺いし、密に連絡をとりご要望をお伺いしながら、丁寧・スピーディに対応いたします。</p>
+                <p>当事務所は、不起訴を目指す弁護活動を得意としております。
+                    窃盗事件、傷害事件、性犯罪など多数の事件で示談を成功させ、不起訴を獲得してきた実績があります。
+                    刑事弁護はスピードが命になりますので、一人で悩まずにまずはご相談ください。
+                    ご依頼者様に寄り添い、丁寧・スピーディに対応いたします。</p>
             </div>
         </div>
 
@@ -83,58 +94,51 @@ $slug = $post->post_name;
     <section class="section" data-section-title="field of Service">
         <h2 class="section__title">
             <em>Field</em>
-            <span>遺産相続・遺言の取扱い業務</span>
+            <span>刑事事件の取扱い業務</span>
         </h2>
 
-        <p class="section__copy">当事務所では、遺言、遺産分割、遺留分侵害額請求のほか、相続に関する各種問題を取り扱っております。<br>些細なことでも結構ですので、お気軽にお問い合わせ頂ければと思います。</p>
+        <p class="section__copy">当事務所では、刑事事件に関する各種問題を取り扱っております。<br>下記に列挙した取扱業務はその一例となります。</p>
 
         <div class="service__field-list">
             <div class="service__field-item">
                 <h3 class="service__field-title">
                     <span>Field 01</span>
-                    <em>遺産分割手続</em>
+                    <em>接見（面会）</em>
                 </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
+                <p class="service__field-text">接見とは、身柄拘束を受けてしまった被疑者の話を聞くために、拘置所や、警察署等で面会を行うことをいいます。<br>
+                    当事務所では、依頼を受けたら即座に接見を行い、被疑者とともに、親身になって弁護活動の方針を決め、速やかに弁護活動に着手します。</p>
             </div>
 
             <div class="service__field-item">
                 <h3 class="service__field-title">
                     <span>Field 02</span>
-                    <em>遺産分割手続</em>
+                    <em>身柄拘束からの解放</em>
                 </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
+                <p class="service__field-text">被疑者が身柄拘束を受けると、身体拘束期間中、警察署などで厳しい監視をされ、過酷な環境に置かれます。当事務所では、」このような被疑者、被告人の置かれる過酷な環境を理解し、早期釈放に向けてサポートします。</p>
             </div>
 
             <div class="service__field-item">
                 <h3 class="service__field-title">
                     <span>Field 03</span>
-                    <em>遺産分割手続</em>
+                    <em>示談活動</em>
                 </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
+                <p class="service__field-text">当事務所が最も得意としているのは示談活動です。被害者との示談活動は、早期の身柄釈放に有用であることはもちろん、不起訴となって刑事罰を受ける可能性をなくしたり、仮に起訴されてしまったとしてもより軽微な罰にとどめるために非常に重要です。</p>
             </div>
 
             <div class="service__field-item">
                 <h3 class="service__field-title">
                     <span>Field 04</span>
-                    <em>遺産分割手続</em>
+                    <em>保釈</em>
                 </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
+                <p class="service__field-text">保釈とは、起訴後に認められている身体拘束からの解放の手続です。当事務所では、裁判所に起訴状が受理されたら、直ちに保釈請求をできるよう準備を進めます。</p>
             </div>
 
             <div class="service__field-item">
                 <h3 class="service__field-title">
                     <span>Field 05</span>
-                    <em>遺産分割手続</em>
+                    <em>少年事件</em>
                 </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
-            </div>
-
-            <div class="service__field-item">
-                <h3 class="service__field-title">
-                    <span>Field 06</span>
-                    <em>遺産分割手続</em>
-                </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
+                <p class="service__field-text">少年事件は、重大犯罪などで検察官送致をされる例を除いて、家庭裁判所で行われる少年審判という、少年事件に固有の手続きに付されることとなります。当事務所は、少年事件のサポートも行っています。</p>
             </div>
         </div>
     </section>
@@ -142,7 +146,7 @@ $slug = $post->post_name;
     <section class="section" data-section-title="case study">
         <h2 class="section__title">
             <em>case study</em>
-            <span>遺産相続・遺言に関する事例や記事</span>
+            <span>刑事事件に関する事例や記事</span>
         </h2>
 
         <div class="service__case">
@@ -322,7 +326,7 @@ $slug = $post->post_name;
     <section class="section" data-section-title="Price of Service" id="anc-price">
         <h2 class="section__title">
             <em>price</em>
-            <span>遺産相続・遺言の弁護士費用 (全て税込表記)</span>
+            <span>刑事事件の弁護士費用 (全て税込表記)</span>
         </h2>
 
         <div class="service__price-nav">
@@ -330,190 +334,156 @@ $slug = $post->post_name;
         </div>
 
         <div class="service__price-container">
-            <div class="service__price-box" id="anc-price-01">
-                <h3 class="service__price-title">
-                    <span class="sp-none">Price - </span>
-                    <span class="pc-none">#</span>
-                    <em>相談料</em>
-                </h3>
 
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>解決手段</th>
-                            <th>料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
-                        </tr>
-                        <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="service__price-box">
+                <?php service_price_title('相談料'); ?>
+                <?php price_table_2col([
+                    ['時間', '相談料'],
+                    ['初回最初の30分', '0円'],
+                    ['以後30分ごと', '5,500円'],
+                ]); ?>
             </div>
 
-            <div class="service__price-box" id="anc-price-02">
-                <h3 class="service__price-title">
-                    <span class="sp-none">Price - </span>
-                    <span class="pc-none">#</span>
-                    <em>遺産分割</em>
-                </h3>
 
-                <p class="service__price-text">日本弁護士連合会（旧）報酬基準や多くの法律事務所では、着手金が遺産の額に応じて設定されております。<br>そのため、遺産に不動産が含まれる場合などは着手金が非常に高額になる場合や、遺産が確定するまで着手金も確定しない場合があります。<br>そこで、当事務所では着手金の額を固定とすることで、ご依頼いただきやすい料金設定となっております。</p>
+            <div class="service__price-box">
+                <?php service_price_title('初回接見料'); ?>
+                <?php price_table_2col([
+                    ['通常時の接見', '午後6時以降の接見'],
+                    ['3万3000円', '6万6000円'],
+                ]); ?>
+            </div>
 
-                <h4 class="service__price-subtitle">着手金</h4>
 
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>解決手段</th>
-                            <th>料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
-                        </tr>
-                        <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="service__price-box">
+                <?php service_price_title('成年刑事事件<span>（捜査弁護・公判弁護）</span>'); ?>
 
-                <table class="service__price-table is-text-left">
-                    <thead>
-                        <tr>
-                            <th>解決手段</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>解決手段</th>
-                            <th>料金</th>
-                            <th>料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
-                            <td>22円</td>
-                        </tr>
-                        <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-
+                <h4 class="service__price-subtitle">捜査弁護<span>（起訴されるまでの弁護活動）</span>：着手金</h4>
+                <?php price_table_2col([
+                    ['内容', '料金'],
+                    ['身柄拘束されていない場合', '33万円'],
+                    ['身柄拘束されている場合', '44万円'],
+                    ['否認事件、裁判員裁判対象事件、複雑な事件の場合', '追加22万円'],
+                ]); ?>
                 <ul class="service__price-list">
-                    <li>着手金は月額5万5000円の分割払プランもご用意しております。</li>
-                    <li>遺産分割は、前提問題として、相続人・遺産範囲等の確認訴訟の提起を要する場合があります。その場合の弁護士費用は、着手金33万円、基礎報酬33万円を基本とし、経済的利益が発生した場合は遺産分割の報酬基準に準じて決定します。</li>
-                    <li>
-                        相続財産の調査のみは、着手金11万円、報酬金０円となります。
-                        <ul>
-                            <li>最終取得遺産額が１億円以下の場合：同額の3.3％（最低66万円）</li>
-                            <li>最終取得遺産額が１億円を超える場合：同額の2.2％</li>
-                        </ul>
+                    <li>当事務所では、示談交渉を行う場合に追加の費用はいただいておりません。</li>
+                    <li>示談交渉を行う場合の示談金は、別途ご負担いただきます（金額は事案によります）。</li>
+                </ul>
+
+                <h4 class="service__price-subtitle">捜査弁護<span>（起訴されるまでの弁護活動）</span>：報酬金</h4>
+                <?php price_table_2col([
+                    ['内容', '料金'],
+                    ['不起訴', '49万5000円<br>（否認事件、裁判員裁判対象事件、複雑な事件の場合は71万5000円）'],
+                    ['略式起訴', '38万5000円<br>（否認事件、裁判員裁判対象事件、複雑な事件の場合は60万5000円）'],
+                    ['逮捕から4日以内の身柄解放', '33万円'],
+                    ['逮捕から5日以降の身柄解放', '22万円'],
+                    ['接見禁止の一部解除', '11万円'],
+                ]); ?>
+
+                <h4 class="service__price-subtitle">公判弁護<span>（起訴された以降の弁護活動）</span>：着手金</h4>
+                <?php price_table_2col([
+                    ['内容', '料金'],
+                    ['罪を認めている事件', '44万円'],
+                    ['否認事件、複雑な事件', '追加22万円'],
+                    ['裁判員裁判対象事件', '追加44万円'],
+                ]); ?>
+                <ul class="service__price-list">
+                    <li>保釈請求は3回までは料金をいただいておりません。4回目以降については、11万円／3回で承ります。
                     </li>
                 </ul>
+
+                <h4 class="service__price-subtitle">公判弁護<span>（起訴された以降の弁護活動）</span>：報酬金</h4>
+                <?php price_table_2col([
+                    ['内容', '料金'],
+                    ['保釈が認められた場合', '22万円'],
+                    ['執行猶予・罰金刑の場合', '44万円<br>（否認事件の場合は追加11万円）<br>（裁判員裁判で執行猶予となった場合は追加22万円）'],
+                    ['実刑で求刑の80％以下に減刑した場合', '33万円'],
+                    ['無罪判決の場合', '110万円'],
+                ]); ?>
             </div>
 
-            <div class="service__price-box" id="anc-price-03">
-                <h3 class="service__price-title">
-                    <span class="sp-none">Price - </span>
-                    <span class="pc-none">#</span>
-                    <em>不当利得返還請求（請求側・被請求側）</em>
-                </h3>
 
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>遺留分侵害額請求（遺留分減殺請求）</th>
-                            <th>料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
-                        </tr>
-                        <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="service__price-box">
+                <?php service_price_title('少年事件<span>（家庭裁判所送致前・送致後）</span>'); ?>
+
+                <h4 class="service__price-subtitle">家庭裁判所送致前：着手金</h4>
+                <?php price_table_2col([
+                    ['内容', '料金'],
+                    ['身柄拘束されていない場合', '33万円'],
+                    ['身柄拘束されている場合', '44万円'],
+                    ['否認事件、裁判員裁判対象事件、複雑な事件の場合', '追加22万円'],
+                ]); ?>
+                <ul class="service__price-list">
+                    <li>当事務所では、示談交渉を行う場合に追加の費用はいただいておりません。</li>
+                    <li>示談交渉を行う場合の示談金は、別途ご負担いただきます（金額は事案によります）。</li>
+                </ul>
+
+                <h4 class="service__price-subtitle">家庭裁判所送致前：報酬金</h4>
+                <?php price_table_2col([
+                    ['内容', '料金'],
+                    ['家庭裁判所に送致されなかった場合', '49万5000円<br>（否認事件、裁判員裁判対象事件など複雑な事件の場合は71万5000円）'],
+                    ['逮捕から4日以内の身柄解放', '33万円'],
+                    ['逮捕から5日以降の身柄解放', '22万円'],
+                    ['接見禁止の一部解除', '11万円'],
+                ]); ?>
+
+                <h4 class="service__price-subtitle">家庭裁判所送致後：着手金</h4>
+                <?php price_table_2col([
+                    ['内容', '料金'],
+                    ['罪を認めている事件', '44万円'],
+                    ['否認事件、複雑な事件', '追加22万円'],
+                    ['裁判員裁判対象事件', '追加44万円'],
+                ]); ?>
+                <ul class="service__price-list">
+                    <li>保釈請求は3回までは料金をいただいておりません。４回目以降については、11万円／3回で承ります。</li>
+                </ul>
+
+                <h4 class="service__price-subtitle">家庭裁判所送致後：報酬金</h4>
+                <?php price_table_2col([
+                    ['内容', '料金'],
+                    ['監護措置（少年鑑別所）からの身柄解放', '22万円'],
+                    ['審判不開始又は不処分', '49万5000円<br>（否認事件の場合は追加33万円）<br>（裁判員裁判対象事件の場合は追加22万円）'],
+                    ['保護観察', '38.5万円'],
+                    ['少年院送致又は少年院以外の施設送致', '33万円'],
+                    ['非行事実の一部について認定されなかったとき又は非行事実とされていた罪名よりも法定刑の軽い非行事実が認定されたとき', '22万円'],
+                    ['検察官逆送回避', '77万円'],
+                ]); ?>
             </div>
 
-            <div class="service__price-box" id="anc-price-04">
-                <h3 class="service__price-title">
-                    <span class="sp-none">Price - </span>
-                    <span class="pc-none">#</span>
-                    <em>遺言無効確認（確認する側・確認される側）</em>
-                </h3>
 
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>遺留分侵害額請求（遺留分減殺請求）</th>
-                            <th>料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
-                        </tr>
-                        <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="service__price-box">
+                <?php service_price_title('上訴する場合'); ?>
+                <h4 class="service__price-subtitle">着手金</h4>
+                <?php price_table_1col([
+                    '着手金',
+                    '55万円',
+                ]); ?>
+
+                <h4 class="service__price-subtitle">報酬金</h4>
+                <?php price_table_2col([
+                    ['内容', '料金'],
+                    ['無罪判決の場合', '110万円'],
+                    ['事実関係を争い、原審判決よりも軽い刑が言い渡された場合', '55万円'],
+                    ['量刑を争い、原審判決よりも軽い刑が言い渡された場合', '33万円'],
+                    ['上記以外で原審判決が破棄された場合', '22万円'],
+                    ['保釈が認められた場合', '22万円'],
+                ]); ?>
             </div>
 
-            <div class="service__price-box" id="anc-price-05">
-                <h3 class="service__price-title">
-                    <span class="sp-none">Price - </span>
-                    <span class="pc-none">#</span>
-                    <em>相続放棄</em>
-                </h3>
 
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>遺留分侵害額請求（遺留分減殺請求）</th>
-                            <th>料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
-                        </tr>
-                        <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="service__price-box">
+                <?php service_price_title('捜査・逮捕前契約'); ?>
+
+                <p class="service__price-text">捜査・逮捕前契約とは、まだ事件化していない状態で、今後捜査が開始し、あるいは逮捕される可能性がある場合に、ご契約後期間中（3か月間）必要に応じてアドバイスを行う契約です。<br>ご契約いただくことで捜査開始後に迅速な対応が可能となり、ご契約期間中に万が一逮捕されてしまった場合は、弁護士が警察署に急行し、接見をいたします。</p>
+
+                <?php price_table_2col([
+                    ['着手金', '報酬金'],
+                    ['13万2000円／3か月<br>（接見1回分の費用を含む）', '0円'],
+                ]); ?>
+
+                <ul class="service__price-list">
+                    <li>捜査・逮捕前契約は、まだ事件化していない状態が対象となり、既に警察から事情聴取を受けている、あるいは任意出頭の連絡を受けている場合は、通常の成年刑事事件・少年事件でのご依頼となります。</li>
+                    <li>ご契約期間中は、着手金に接見1回分の費用が含まれております。なお、ご契約期間の終了後に逮捕された場合の初回接見は、上記の「初回接見料」記載の金額にて承ります。</li>
+                </ul>
             </div>
         </div>
 

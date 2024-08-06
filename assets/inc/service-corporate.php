@@ -4,6 +4,12 @@
  * Template Name: 企業法務：顧問
  * slug: corporate
  */
+
+$file_path = get_template_directory() . '/assets/inc/inc-service-parts.php';
+if (file_exists($file_path)) {
+    include($file_path);
+}
+
 // ページのスラッグを取得
 global $post;
 $slug = $post->post_name;
@@ -47,7 +53,9 @@ $slug = $post->post_name;
 
     <section class="section" data-section-title="Service 01">
 
-        <p class="service__copy"><em>遺産相続</em>にまつわる問題は<br class="pc-none">当事務所へお任せ下さい。<br><span>多数の解決実績に基づき、全力でサポートいたします。</span></p>
+
+        <p class="service__copy"><em>企業法務・顧問</em>は<br class="pc-none">当事務所にお任せ下さい。<br><span>素早いレスポンスと丁寧な対応でサポートいたします。</span>
+        </p>
 
         <div class="service__example">
             <div class="service__example-photo">
@@ -63,18 +71,17 @@ $slug = $post->post_name;
                     <span>お悩み事例</span>
                 </h2>
                 <ul class="service__example-list">
-                    <li>身内が亡くなり相続問題をどう進めるべきかわからない</li>
-                    <li>遺産分割の協議がまとまらない（特別受益、寄与分、葬儀費用等）</li>
-                    <li>他の相続人の連絡先が分からず遺産分割協議ができない</li>
-                    <li>遺産を独り占めする相続人がおり、遺留分が侵害されている</li>
-                    <li>遺産である預金を使い込んでいる相続人がいる</li>
-                    <li>遺産である不動産の分割方法／評価額で揉めている</li>
+                    <li>日常的に起きる法律問題を気軽に相談できる弁護士がほしい</li>
+                    <li>トラブル対応、契約書チェック等にすぐ対応してほしい</li>
+                    <li>自社のビジネスを理解した法的アドバイスが欲しい</li>
+                    <li>経営者やその家族の個人的な問題や従業員の相談にのってもらいたい</li>
+                    <li>法務部のアウトソーシングをしたい</li>
                 </ul>
                 <a href="#anc-price" class="service__example-button">料金表はこちら</a>
             </div>
 
             <div class="service__example-desc">
-                <p>かつて所属していた葛飾総合法律事務所は、都内２３区内で高齢者人口が上位の葛飾区に位置しており、遺産相続問題に注力しておりました。一癖も二つ癖もある遺産分割協議・調停、遺留分の請求／減額交渉、遺言書の作成、遺言執行等、多数の遺産相続問題を解決してきました。ご依頼者様の状況を詳しくお伺いし、密に連絡をとりご要望をお伺いしながら、丁寧・スピーディに対応いたします。</p>
+                <p>当事務所では、契約書の作成・チェック、債権回収、就業規則の改定、労務問題、株主総会対応など、企業が直面する様々な法律問題について、丁寧・迅速に対応しています。</p>
             </div>
         </div>
 
@@ -83,58 +90,42 @@ $slug = $post->post_name;
     <section class="section" data-section-title="field of Service">
         <h2 class="section__title">
             <em>Field</em>
-            <span>遺産相続・遺言の取扱い業務</span>
+            <span>企業法務・顧問の取扱い業務</span>
         </h2>
 
-        <p class="section__copy">当事務所では、遺言、遺産分割、遺留分侵害額請求のほか、相続に関する各種問題を取り扱っております。<br>些細なことでも結構ですので、お気軽にお問い合わせ頂ければと思います。</p>
+        <p class="section__copy">当事務所では、企業に関する各種法律問題を取り扱っております。<br>些細なことでも結構ですので、お気軽にお問合せいただければと思います。</p>
 
         <div class="service__field-list">
             <div class="service__field-item">
                 <h3 class="service__field-title">
                     <span>Field 01</span>
-                    <em>遺産分割手続</em>
+                    <em>契約書のチェック・確認</em>
                 </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
+                <p class="service__field-text">契約書はビジネスの根幹をなすものです。ビジネスを成功に導くためには、潜在化したリスクに注意しながら、自らの希望に沿った契約をすることが重要です。<br>当事務所は、単なる契約文言の分析や修正に留まらず、ご依頼者様の経営目的に合致した結果が実現されるよう、きめ細かなサービスを提供しています。</p>
             </div>
 
             <div class="service__field-item">
                 <h3 class="service__field-title">
                     <span>Field 02</span>
-                    <em>遺産分割手続</em>
+                    <em>人事労務</em>
                 </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
+                <p class="service__field-text">残業代請求や解雇無効請求等、紛争化してしまった案件の処理のみならず、予防法務にも力をいれています。就業規則、雇用契約書等の作成・チェック、労務管理の方法など経営全般に関するサポートが可能です。</p>
             </div>
 
             <div class="service__field-item">
                 <h3 class="service__field-title">
                     <span>Field 03</span>
-                    <em>遺産分割手続</em>
+                    <em>取引関係紛争</em>
                 </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
+                <p class="service__field-text">代金の支払いをしない取引先等に対する債権回収の交渉、訴訟の代理等を行います。<br>相手方との紛争が訴訟に発展した場合にも、迅速な解決、円満な解決、徹底抗戦など、ご要望に応じて対応します。</p>
             </div>
 
             <div class="service__field-item">
                 <h3 class="service__field-title">
                     <span>Field 04</span>
-                    <em>遺産分割手続</em>
+                    <em>会社組織の運営<br><span>（株主総会、取締役会）</span></em>
                 </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
-            </div>
-
-            <div class="service__field-item">
-                <h3 class="service__field-title">
-                    <span>Field 05</span>
-                    <em>遺産分割手続</em>
-                </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
-            </div>
-
-            <div class="service__field-item">
-                <h3 class="service__field-title">
-                    <span>Field 06</span>
-                    <em>遺産分割手続</em>
-                </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
+                <p class="service__field-text">取締役会における法的アドバイスから議事録作成までサポートいたします。また、株主総会対策として、招集手続から、想定問答集の作成、リハーサル、当日の会議の運営までサポートいたします。社外監査役等への就任についてもご相談に応じます。</p>
             </div>
         </div>
     </section>
@@ -142,7 +133,7 @@ $slug = $post->post_name;
     <section class="section" data-section-title="case study">
         <h2 class="section__title">
             <em>case study</em>
-            <span>遺産相続・遺言に関する事例や記事</span>
+            <span>企業法務・顧問に関する事例や記事</span>
         </h2>
 
         <div class="service__case">
@@ -322,7 +313,7 @@ $slug = $post->post_name;
     <section class="section" data-section-title="Price of Service" id="anc-price">
         <h2 class="section__title">
             <em>price</em>
-            <span>遺産相続・遺言の弁護士費用 (全て税込表記)</span>
+            <span>企業法務・顧問の弁護士費用 (全て税込表記)</span>
         </h2>
 
         <div class="service__price-nav">
@@ -330,190 +321,34 @@ $slug = $post->post_name;
         </div>
 
         <div class="service__price-container">
-            <div class="service__price-box" id="anc-price-01">
-                <h3 class="service__price-title">
-                    <span class="sp-none">Price - </span>
-                    <span class="pc-none">#</span>
-                    <em>相談料</em>
-                </h3>
-
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>解決手段</th>
-                            <th>料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
-                        </tr>
-                        <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="service__price-box">
+                <?php service_price_title('顧問契約'); ?>
+                <?php price_table_1col([
+                    '月額',
+                    '5.5万円（原則）',
+                ]); ?>
             </div>
 
-            <div class="service__price-box" id="anc-price-02">
-                <h3 class="service__price-title">
-                    <span class="sp-none">Price - </span>
-                    <span class="pc-none">#</span>
-                    <em>遺産分割</em>
-                </h3>
 
-                <p class="service__price-text">日本弁護士連合会（旧）報酬基準や多くの法律事務所では、着手金が遺産の額に応じて設定されております。<br>そのため、遺産に不動産が含まれる場合などは着手金が非常に高額になる場合や、遺産が確定するまで着手金も確定しない場合があります。<br>そこで、当事務所では着手金の額を固定とすることで、ご依頼いただきやすい料金設定となっております。</p>
-
-                <h4 class="service__price-subtitle">着手金</h4>
-
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>解決手段</th>
-                            <th>料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
-                        </tr>
-                        <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <table class="service__price-table is-text-left">
-                    <thead>
-                        <tr>
-                            <th>解決手段</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>解決手段</th>
-                            <th>料金</th>
-                            <th>料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
-                            <td>22円</td>
-                        </tr>
-                        <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-
+            <div class="service__price-box">
+                <?php service_price_title('顧問契約の内容'); ?>
+                <?php price_table_3col([
+                    ['業務内容', '料金', '通常料金（参考）'],
+                    ['HPへの顧問弁護士表示', '0円', '非対応'],
+                    ['対面相談', '0円', '1万1000円／30分'],
+                    ['電話相談', '0円', '非対応'],
+                    ['メール・チャット相談', '0円', '非対応'],
+                    ['従業員・家族の相談', '0円', '非対応'],
+                    ['契約書チェック', '0円<br>（月3通）', '１通5.5万円～'],
+                    ['契約書の作成・大幅な修正', '原則5.5万円／1通', '1通11万円～'],
+                    ['簡易な通知文書の作成<br>(弁護士名義は非表示)', '０円<br>（月1通）', '１通11万円～'],
+                    ['就業規則の確認・修正', '11万円', '22万円～'],
+                    ['就業規則の作成', '16.5万円', '33万円～'],
+                    ['専門家紹介', '0円', '非対応'],
+                ]); ?>
                 <ul class="service__price-list">
-                    <li>着手金は月額5万5000円の分割払プランもご用意しております。</li>
-                    <li>遺産分割は、前提問題として、相続人・遺産範囲等の確認訴訟の提起を要する場合があります。その場合の弁護士費用は、着手金33万円、基礎報酬33万円を基本とし、経済的利益が発生した場合は遺産分割の報酬基準に準じて決定します。</li>
-                    <li>
-                        相続財産の調査のみは、着手金11万円、報酬金０円となります。
-                        <ul>
-                            <li>最終取得遺産額が１億円以下の場合：同額の3.3％（最低66万円）</li>
-                            <li>最終取得遺産額が１億円を超える場合：同額の2.2％</li>
-                        </ul>
-                    </li>
+                    <li>顧問契約に含まれないご相談については、個別に対応させていただきます。</li>
                 </ul>
-            </div>
-
-            <div class="service__price-box" id="anc-price-03">
-                <h3 class="service__price-title">
-                    <span class="sp-none">Price - </span>
-                    <span class="pc-none">#</span>
-                    <em>不当利得返還請求（請求側・被請求側）</em>
-                </h3>
-
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>遺留分侵害額請求（遺留分減殺請求）</th>
-                            <th>料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
-                        </tr>
-                        <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="service__price-box" id="anc-price-04">
-                <h3 class="service__price-title">
-                    <span class="sp-none">Price - </span>
-                    <span class="pc-none">#</span>
-                    <em>遺言無効確認（確認する側・確認される側）</em>
-                </h3>
-
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>遺留分侵害額請求（遺留分減殺請求）</th>
-                            <th>料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
-                        </tr>
-                        <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="service__price-box" id="anc-price-05">
-                <h3 class="service__price-title">
-                    <span class="sp-none">Price - </span>
-                    <span class="pc-none">#</span>
-                    <em>相続放棄</em>
-                </h3>
-
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>遺留分侵害額請求（遺留分減殺請求）</th>
-                            <th>料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
-                        </tr>
-                        <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
 

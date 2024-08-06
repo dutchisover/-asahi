@@ -1,41 +1,43 @@
 //テキストのカウントアップ+バーの設定
-var bar = new ProgressBar.Line(splash_text, {
-  //id名を指定
-  easing: 'easeInOut', //アニメーション効果linear、easeIn、easeOut、easeInOutが指定可能
-  duration: 2000, //時間指定(1000＝1秒)
-  strokeWidth: 0.2, //進捗ゲージの太さ
-  color: '#fff', //進捗ゲージのカラー
-  trailWidth: 0.2, //ゲージベースの線の太さ
-  trailColor: '#EF8C37', //ゲージベースの線のカラー
-  text: {
-    //テキストの形状を直接指定
-    style: {
-      //天地中央に配置
-      position: 'absolute',
-      left: '50%',
-      top: 'calc(50% + 123rem)',
-      padding: '0',
-      margin: '32rem 0 0 0', //バーより上に配置
-      transform: 'translate(-50%,-50%)',
-      'font-size': '16rem',
-      color: '#fff'
+if ($('.home').length > 0) {
+  var bar = new ProgressBar.Line(splash_text, {
+    //id名を指定
+    easing: 'easeInOut', //アニメーション効果linear、easeIn、easeOut、easeInOutが指定可能
+    duration: 2000, //時間指定(1000＝1秒)
+    strokeWidth: 0.2, //進捗ゲージの太さ
+    color: '#fff', //進捗ゲージのカラー
+    trailWidth: 0.2, //ゲージベースの線の太さ
+    trailColor: '#EF8C37', //ゲージベースの線のカラー
+    text: {
+      //テキストの形状を直接指定
+      style: {
+        //天地中央に配置
+        position: 'absolute',
+        left: '50%',
+        top: 'calc(50% + 123rem)',
+        padding: '0',
+        margin: '32rem 0 0 0', //バーより上に配置
+        transform: 'translate(-50%,-50%)',
+        'font-size': '16rem',
+        color: '#fff'
+      },
+      autoStyleContainer: false //自動付与のスタイルを切る
     },
-    autoStyleContainer: false //自動付与のスタイルを切る
-  },
-  step: function(state, bar) {
-    bar.setText(Math.round(bar.value() * 100) + ' %'); //テキストの数値
-  }
-});
-
-//アニメーションスタート
-bar.animate(1.0, function() {
-  //バーを描画する割合を指定します 1.0 なら100%まで描画します
-  // $("#splash").delay(500).fadeOut(800); //アニメーションが終わったら#splashエリアをフェードアウト
-  $('#splash').delay(500).fadeOut(800, function() {
-    // フェードアウトが完了したらbodyに.is-loadedを追加
-    $('body').addClass('is-loaded');
+    step: function(state, bar) {
+      bar.setText(Math.round(bar.value() * 100) + ' %'); //テキストの数値
+    }
   });
-});
+
+  //アニメーションスタート
+  bar.animate(1.0, function() {
+    //バーを描画する割合を指定します 1.0 なら100%まで描画します
+    // $("#splash").delay(500).fadeOut(800); //アニメーションが終わったら#splashエリアをフェードアウト
+    $('#splash').delay(500).fadeOut(800, function() {
+      // フェードアウトが完了したらbodyに.is-loadedを追加
+      $('body').addClass('is-loaded');
+    });
+  });
+}
 
 ////////////////// SWIPER //////////////////
 
@@ -303,26 +305,32 @@ const priceTitles = document.querySelectorAll(
   '.service__price-title:not(.no-navi)'
 );
 
-//const priceTitles = document.querySelectorAll('.service__price-title');
-
 // .service__price-title が存在する場合の処理
 if (priceTitles.length > 0) {
   // 親要素 .service__price-box を取得
   const priceBoxes = document.querySelectorAll('.service__price-box');
+
+  // それぞれの .service__price-box にIDを連番で付与
+  priceBoxes.forEach((box, index) => {
+    const id = `anc-price-${String(index + 1).padStart(2, '0')}`;
+    box.id = id; // 既存のIDがあっても上書き
+  });
 
   // それぞれの .service__price-title em のテキストを取得し、親要素の順番を取得
   priceTitles.forEach((title, index) => {
     const emElement = title.querySelector('em');
     if (emElement) {
       const textContent = emElement.textContent;
-      const parentIndex = Array.from(priceBoxes).indexOf(
-        title.closest('.service__price-box')
-      );
+      const parentBox = title.closest('.service__price-box');
+      const parentIndex = Array.from(priceBoxes).indexOf(parentBox);
 
       // 出力用のa要素を作成
       const linkElement = document.createElement('a');
       linkElement.className = 'service__price-nav-link';
-      linkElement.href = `#anc-price-${String(index + 1).padStart(2, '0')}`;
+      linkElement.href = `#anc-price-${String(parentIndex + 1).padStart(
+        2,
+        '0'
+      )}`;
       linkElement.textContent = textContent;
 
       // .service__price-nav にa要素を追加

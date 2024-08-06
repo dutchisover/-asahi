@@ -72,12 +72,19 @@ $slug = $post->post_name;
 
                     // ACFフィールドから画像を取得
                     $page_mv_pc = get_field('page-mv-pc', $post_id);
+            ?>
+                    <!-- <pre><?php var_dump($page_mv_pc['url']); ?></pre> -->
+            <?php
                     if (empty($page_mv_pc)) {
                         $page_mv_pc = get_template_directory_uri() . '/assets/image/no-image.jpg';
+                    } else {
+                        $page_mv_pc = $page_mv_pc['url'];
                     }
                     $page_mv_sp = get_field('page-mv-sp', $post_id);
                     if (empty($page_mv_sp)) {
                         $page_mv_sp = get_template_directory_uri() . '/assets/image/no-image_sp.jpg';
+                    } else {
+                        $page_mv_sp = $page_mv_sp['url'];
                     }
                     $description = get_field('page-description', $post_id);
                     // アンカーリンクIDを生成
@@ -86,9 +93,9 @@ $slug = $post->post_name;
                     echo '<div class="service__item" id="' . esc_attr($anchor_id) . '">';
                     echo '<div class="service__item-photo">';
                     echo '<picture>';
-                    // echo '<source media="(max-width:820px)" srcset="' . esc_url($page_mv_sp['url']) . '">';
-                    // echo '<img src="' . esc_url($page_mv_pc['url']) . '" alt="' . get_the_title() . '" class="service__item-image">';
-                    // echo '</picture>';
+                    echo '<source media="(max-width:820px)" srcset="' . $page_mv_sp . '">';
+                    echo '<img src="' . $page_mv_pc . '" alt="' . get_the_title() . '" class="service__item-image">';
+                    echo '</picture>';
                     echo '</div>';
 
                     echo '<div class="service__item-info">';

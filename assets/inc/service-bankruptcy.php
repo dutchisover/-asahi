@@ -4,6 +4,12 @@
  * Template Name: 法人破産・会社解散
  * slug: bankruptcy
  */
+
+$file_path = get_template_directory() . '/assets/inc/inc-service-parts.php';
+if (file_exists($file_path)) {
+    include($file_path);
+}
+
 // ページのスラッグを取得
 global $post;
 $slug = $post->post_name;
@@ -47,7 +53,7 @@ $slug = $post->post_name;
 
     <section class="section" data-section-title="Service 01">
 
-        <p class="service__copy"><em>遺産相続</em>にまつわる問題は<br class="pc-none">当事務所へお任せ下さい。<br><span>多数の解決実績に基づき、全力でサポートいたします。</span></p>
+        <p class="service__copy"><em>法人破産・会社解散</em>に<br class="pc-none">まつわる問題は<br class="pc-none">当事務所へお任せ下さい。<br><span>多数の解決実績に基づき、全力でサポートいたします。</span></p>
 
         <div class="service__example">
             <div class="service__example-photo">
@@ -63,18 +69,17 @@ $slug = $post->post_name;
                     <span>お悩み事例</span>
                 </h2>
                 <ul class="service__example-list">
-                    <li>身内が亡くなり相続問題をどう進めるべきかわからない</li>
-                    <li>遺産分割の協議がまとまらない（特別受益、寄与分、葬儀費用等）</li>
-                    <li>他の相続人の連絡先が分からず遺産分割協議ができない</li>
-                    <li>遺産を独り占めする相続人がおり、遺留分が侵害されている</li>
-                    <li>遺産である預金を使い込んでいる相続人がいる</li>
-                    <li>遺産である不動産の分割方法／評価額で揉めている</li>
+                    <li>資金繰りが悪化して取引先への支払いが困難</li>
+                    <li>従業員への給料の支払いができない</li>
+                    <li>経営状態はよくないが本当に破産すべきか判断できない</li>
+                    <li>会社の連帯保証人になっており法人破産をするのが怖い</li>
+                    <li>債務超過ではないが、もう会社を畳んでリタイヤしたい</li>
                 </ul>
                 <a href="#anc-price" class="service__example-button">料金表はこちら</a>
             </div>
 
             <div class="service__example-desc">
-                <p>かつて所属していた葛飾総合法律事務所は、都内２３区内で高齢者人口が上位の葛飾区に位置しており、遺産相続問題に注力しておりました。一癖も二つ癖もある遺産分割協議・調停、遺留分の請求／減額交渉、遺言書の作成、遺言執行等、多数の遺産相続問題を解決してきました。ご依頼者様の状況を詳しくお伺いし、密に連絡をとりご要望をお伺いしながら、丁寧・スピーディに対応いたします。</p>
+                <p>当事務所は、法人破産／経営者の自己破産／経営者保証ガイドラインによる債務整理／会社解散等、法人・経営者の債務整理に対応しております。ご依頼者様の状況を詳しくお伺いし、それぞれの解決手段のメリット・デメリットを踏まえて、丁寧・スピーディに対応いたします。</p>
             </div>
         </div>
 
@@ -83,58 +88,34 @@ $slug = $post->post_name;
     <section class="section" data-section-title="field of Service">
         <h2 class="section__title">
             <em>Field</em>
-            <span>遺産相続・遺言の取扱い業務</span>
+            <span>法人破産・会社解散の取扱い業務</span>
         </h2>
 
-        <p class="section__copy">当事務所では、遺言、遺産分割、遺留分侵害額請求のほか、相続に関する各種問題を取り扱っております。<br>些細なことでも結構ですので、お気軽にお問い合わせ頂ければと思います。</p>
+        <p class="section__copy">当事務所では、法人破産・会社解散に関する各種問題を取り扱っております。<br>些細なことでも結構ですので、お気軽にお問合せいただければと思います。</p>
 
         <div class="service__field-list">
             <div class="service__field-item">
                 <h3 class="service__field-title">
                     <span>Field 01</span>
-                    <em>遺産分割手続</em>
+                    <em>法人破産</em>
                 </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
+                <p class="service__field-text">負債が会社の資産を上回っている場合（債務超過）や支払不能の場合に、裁判所を通じて事業を清算する手続です。<br>法人破産の大きな流れは、①申立て準備、②申立て、③財産の換価処分・配当、④終了となります。</p>
             </div>
 
             <div class="service__field-item">
                 <h3 class="service__field-title">
                     <span>Field 02</span>
-                    <em>遺産分割手続</em>
+                    <em>会社解散</em>
                 </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
+                <p class="service__field-text">裁判所を通さない廃業手続で、資産と負債を整理し会社を解散・清算する制度です。会社の資産が負債を上回っている場合に利用できます。</p>
             </div>
 
             <div class="service__field-item">
                 <h3 class="service__field-title">
                     <span>Field 03</span>
-                    <em>遺産分割手続</em>
+                    <em>経営者保証ガイドラインに<br>基づく任意整理</em>
                 </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
-            </div>
-
-            <div class="service__field-item">
-                <h3 class="service__field-title">
-                    <span>Field 04</span>
-                    <em>遺産分割手続</em>
-                </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
-            </div>
-
-            <div class="service__field-item">
-                <h3 class="service__field-title">
-                    <span>Field 05</span>
-                    <em>遺産分割手続</em>
-                </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
-            </div>
-
-            <div class="service__field-item">
-                <h3 class="service__field-title">
-                    <span>Field 06</span>
-                    <em>遺産分割手続</em>
-                </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
+                <p class="service__field-text">経営者が会社の債務の連帯保証人になっている場合、会社が破産する場合は経営者個人も破産することになるのが原則です。しかし、経営者保証ガイドラインを利用することにより、破産の場合と比べてより多くの資産を手元に残しながら債務整理を行うことができる場合があります。</p>
             </div>
         </div>
     </section>
@@ -142,7 +123,7 @@ $slug = $post->post_name;
     <section class="section" data-section-title="case study">
         <h2 class="section__title">
             <em>case study</em>
-            <span>遺産相続・遺言に関する事例や記事</span>
+            <span>法人破産・会社解散に関する事例や記事</span>
         </h2>
 
         <div class="service__case">
@@ -322,7 +303,7 @@ $slug = $post->post_name;
     <section class="section" data-section-title="Price of Service" id="anc-price">
         <h2 class="section__title">
             <em>price</em>
-            <span>遺産相続・遺言の弁護士費用 (全て税込表記)</span>
+            <span>法人破産・会社解散の弁護士費用 (全て税込表記)</span>
         </h2>
 
         <div class="service__price-nav">
@@ -330,190 +311,93 @@ $slug = $post->post_name;
         </div>
 
         <div class="service__price-container">
-            <div class="service__price-box" id="anc-price-01">
-                <h3 class="service__price-title">
-                    <span class="sp-none">Price - </span>
-                    <span class="pc-none">#</span>
-                    <em>相談料</em>
-                </h3>
-
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>解決手段</th>
-                            <th>料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
-                        </tr>
-                        <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <!-- 01:相談料 -->
+            <div class="service__price-box">
+                <?php service_price_title('相談料'); ?>
+                <?php price_table_2col([
+                    ['時間', '相談料'],
+                    ['初回最初の30分', '0円'],
+                    ['以後30分ごと', '5,500円'],
+                ]); ?>
             </div>
 
-            <div class="service__price-box" id="anc-price-02">
-                <h3 class="service__price-title">
-                    <span class="sp-none">Price - </span>
-                    <span class="pc-none">#</span>
-                    <em>遺産分割</em>
-                </h3>
 
-                <p class="service__price-text">日本弁護士連合会（旧）報酬基準や多くの法律事務所では、着手金が遺産の額に応じて設定されております。<br>そのため、遺産に不動産が含まれる場合などは着手金が非常に高額になる場合や、遺産が確定するまで着手金も確定しない場合があります。<br>そこで、当事務所では着手金の額を固定とすることで、ご依頼いただきやすい料金設定となっております。</p>
+            <!-- 02:法人破産 -->
+            <div class="service__price-box">
+                <?php service_price_title('法人破産'); ?>
 
-                <h4 class="service__price-subtitle">着手金</h4>
-
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>解決手段</th>
-                            <th>料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
-                        </tr>
-                        <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <table class="service__price-table is-text-left">
-                    <thead>
-                        <tr>
-                            <th>解決手段</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>解決手段</th>
-                            <th>料金</th>
-                            <th>料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
-                            <td>22円</td>
-                        </tr>
-                        <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-
+                <h4 class="service__price-subtitle">負債額が3000万円以下の場合：着手金</h4>
+                <?php price_table_2col([
+                    ['債権者数', '着手金'],
+                    ['1～4', '66万円'],
+                    ['5～14', '88万円'],
+                    ['15～29', '121万円'],
+                    ['30～49', '165万円'],
+                    ['50～', '220万円'],
+                ]); ?>
+                <h4 class="service__price-subtitle">負債額が3000万円を超え1億円以下の場合：着手金</h4>
+                <?php price_table_2col([
+                    ['債権者数', '着手金'],
+                    ['1～4', '77万円'],
+                    ['5～14', '99万円'],
+                    ['15～29', '132万円'],
+                    ['30～49', '176万円'],
+                    ['50～', '231万円'],
+                ]); ?>
+                <h4 class="service__price-subtitle">負債額が1億円を超え2億円以下の場合：着手金</h4>
+                <?php price_table_2col([
+                    ['債権者数', '着手金'],
+                    ['1～4', '88万円'],
+                    ['5～14', '121万円'],
+                    ['15～29', '154万円'],
+                    ['30～49', '198万円'],
+                    ['50～', '264万円'],
+                ]); ?>
+                <h4 class="service__price-subtitle">負債額が2億円を超え3億円以下の場合：着手金</h4>
+                <?php price_table_2col([
+                    ['債権者数', '着手金'],
+                    ['1～4', '110万円～'],
+                    ['5～14', '143万円～'],
+                    ['15～29', '176万円'],
+                    ['30～49', '220万円～'],
+                    ['50～', '308万円～'],
+                ]); ?>
                 <ul class="service__price-list">
-                    <li>着手金は月額5万5000円の分割払プランもご用意しております。</li>
-                    <li>遺産分割は、前提問題として、相続人・遺産範囲等の確認訴訟の提起を要する場合があります。その場合の弁護士費用は、着手金33万円、基礎報酬33万円を基本とし、経済的利益が発生した場合は遺産分割の報酬基準に準じて決定します。</li>
+                    <li>報酬金はございません。</li>
+                    <li>上記の他に別途裁判所費用として最低20万円が必要となります。</li>
+                    <li>個人債権者（消費者）等が数多くいる場合等は応相談となります。</li>
                     <li>
-                        相続財産の調査のみは、着手金11万円、報酬金０円となります。
+                        以下のいずれかの場合は、上限を55万円として増額させていただくことがございます。
                         <ul>
-                            <li>最終取得遺産額が１億円以下の場合：同額の3.3％（最低66万円）</li>
-                            <li>最終取得遺産額が１億円を超える場合：同額の2.2％</li>
+                            <li>明渡しが完了していない賃借事業所・店舗・倉庫・工場等がある場合</li>
+                            <li>事業設備、機材、在庫、什器等の資産の保全が必要な場合</li>
+                            <li>売掛金等の債権回収、保全が必要な場合</li>
+                            <li>解雇していない従業員がいる場合</li>
+                            <li>その他緊急に処理しなければならない事情がある場合</li>
                         </ul>
                     </li>
                 </ul>
             </div>
 
-            <div class="service__price-box" id="anc-price-03">
-                <h3 class="service__price-title">
-                    <span class="sp-none">Price - </span>
-                    <span class="pc-none">#</span>
-                    <em>不当利得返還請求（請求側・被請求側）</em>
-                </h3>
 
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>遺留分侵害額請求（遺留分減殺請求）</th>
-                            <th>料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
-                        </tr>
-                        <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <!-- 03:会社解散 -->
+            <div class="service__price-box">
+                <?php service_price_title('会社解散'); ?>
+                <h4 class="service__price-subtitle">着手金</h4>
 
-            <div class="service__price-box" id="anc-price-04">
-                <h3 class="service__price-title">
-                    <span class="sp-none">Price - </span>
-                    <span class="pc-none">#</span>
-                    <em>遺言無効確認（確認する側・確認される側）</em>
-                </h3>
+                <?php price_table_2col([
+                    ['項目', '料金'],
+                    ['基本着手金', '88万円'],
+                    ['営業所・店舗等の明渡し対応が必要となる場合', '明渡し未了の営業所等1か所につき追加16.5万円'],
+                    ['従業員の退職・解雇対応が必要となる場合', '①従業員10名までの場合は、追加11万円<br>②従業員10名を超える場合は、①に加え、追加10名ごとに11万円'],
+                    ['債権者数が20名を超える場合', '①債権者数が20名を超え40名までの場合は、追加11万円<br>②債権者数が40名を超える場合は、①に加え、10名ごとに追加6.5万円'],
+                ]); ?>
 
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>遺留分侵害額請求（遺留分減殺請求）</th>
-                            <th>料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
-                        </tr>
-                        <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="service__price-box" id="anc-price-05">
-                <h3 class="service__price-title">
-                    <span class="sp-none">Price - </span>
-                    <span class="pc-none">#</span>
-                    <em>相続放棄</em>
-                </h3>
-
-                <table class="service__price-table">
-                    <thead>
-                        <tr>
-                            <th>遺留分侵害額請求（遺留分減殺請求）</th>
-                            <th>料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
-                        </tr>
-                        <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <ul class="service__price-list">
+                    <li>報酬金はございません。</li>
+                    <li>債権回収のために訴訟等を提起する場合は別途弁護士費用が発生します。</li>
+                    <li>会社解散の登録免許税、清算人選任の登録免許税、官報広告費、司法書士に登記を依頼する場合のその司法書士費用、解散時における税務申告等を税理士に依頼する場合の税理士費用は別途ご負担いただきます。</li>
+                </ul>
             </div>
         </div>
 
