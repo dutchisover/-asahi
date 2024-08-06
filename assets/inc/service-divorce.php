@@ -91,50 +91,35 @@ $slug = $post->post_name;
             <div class="service__field-item">
                 <h3 class="service__field-title">
                     <span>Field 01</span>
-                    <em>遺産分割手続</em>
+                    <em>不貞慰謝料（請求側／被請求側）</em>
                 </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
+                <p class="service__field-text">不貞とは、夫婦関係にある男女が、その貞操義務に違反して他の男女と性的行為に及ぶことです。不貞によって配偶者の被った精神的苦痛は、慰謝料請求の対象となります。<br>不貞慰謝料のご相談は、請求側からはもちろんのこと、請求をされた側（被請求側）にも対応しています。</p>
             </div>
 
             <div class="service__field-item">
                 <h3 class="service__field-title">
                     <span>Field 02</span>
-                    <em>遺産分割手続</em>
+                    <em>離婚手続の代理</em>
                 </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
+                <p class="service__field-text">離婚をする方法には、主に、協議離婚、調停離婚、裁判離婚の３種類があります。離婚手続は、「調停前置主義」という考え方がとられているため、離婚訴訟をする前に必ず離婚調停の申立てをしなければなりません。つまり、離婚の争いは「協議→調停→訴訟」という流れで進みます。</p>
             </div>
 
             <div class="service__field-item">
                 <h3 class="service__field-title">
                     <span>Field 03</span>
-                    <em>遺産分割手続</em>
+                    <em>子どもに関する争い<br>（親権・養育費・面会交流）</em>
                 </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
+                <p class="service__field-text">夫婦間に未成年の子がいる場合、子どもに関する争いがとても重要となります。主要な争点は、親権・育費・面会交流です。全ての争点についてサポート可能です。</p>
             </div>
 
             <div class="service__field-item">
                 <h3 class="service__field-title">
                     <span>Field 04</span>
-                    <em>遺産分割手続</em>
+                    <em>財産分与</em>
                 </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
+                <p class="service__field-text">財産分与とは、離婚した相手に対して財産の分与を請求することです。財産分与の対象となる財産には、不動産、預貯金、生命保険、子ども名義の学資保険、株式などがあります。不動産や非上場株式のように客観的な評価が難しい財産がある場合でもサポート可能です。</p>
             </div>
 
-            <div class="service__field-item">
-                <h3 class="service__field-title">
-                    <span>Field 05</span>
-                    <em>遺産分割手続</em>
-                </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
-            </div>
-
-            <div class="service__field-item">
-                <h3 class="service__field-title">
-                    <span>Field 06</span>
-                    <em>遺産分割手続</em>
-                </h3>
-                <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
-            </div>
         </div>
     </section>
 
@@ -321,7 +306,7 @@ $slug = $post->post_name;
     <section class="section" data-section-title="Price of Service" id="anc-price">
         <h2 class="section__title">
             <em>price</em>
-            <span>遺産相続・遺言の弁護士費用 (全て税込表記)</span>
+            <span>離婚・男女問題の弁護士費用 (全て税込表記)</span>
         </h2>
 
         <div class="service__price-nav">
@@ -339,18 +324,18 @@ $slug = $post->post_name;
                 <table class="service__price-table">
                     <thead>
                         <tr>
-                            <th>解決手段</th>
-                            <th>料金</th>
+                            <th>時間</th>
+                            <th>相談料</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>協議（交渉）</td>
-                            <td>22円</td>
+                            <td>初回最初の30分</td>
+                            <td>0円</td>
                         </tr>
                         <tr>
-                            <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
+                            <td>以後30分ごと</td>
+                            <td>5,500円</td>
                         </tr>
                     </tbody>
                 </table>
@@ -360,7 +345,7 @@ $slug = $post->post_name;
                 <h3 class="service__price-title">
                     <span class="sp-none">Price - </span>
                     <span class="pc-none">#</span>
-                    <em>遺産分割</em>
+                    <em>離婚</em>
                 </h3>
 
                 <p class="service__price-text">日本弁護士連合会（旧）報酬基準や多くの法律事務所では、着手金が遺産の額に応じて設定されております。<br>そのため、遺産に不動産が含まれる場合などは着手金が非常に高額になる場合や、遺産が確定するまで着手金も確定しない場合があります。<br>そこで、当事務所では着手金の額を固定とすることで、ご依頼いただきやすい料金設定となっております。</p>

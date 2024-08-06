@@ -36,6 +36,11 @@ function add_files()
 	wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js', array(), '3.10.4', true);
 	wp_enqueue_script('gsap-scrolltrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js', array('gsap'), '3.10.4', true);
 
+	//
+	if (is_home() || is_front_page()) :
+		wp_enqueue_script('progressbar', 'https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js', array('jquery'), '', true);
+	endif;
+
 
 	// MicroModal
 	// wp_enqueue_script('micromodal', 'https://cdn.jsdelivr.net/npm/micromodal@0.4.10/dist/micromodal.min.js', array(), '0.4.10', true);

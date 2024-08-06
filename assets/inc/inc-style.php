@@ -1,75 +1,31 @@
 <!-- ローディング -->
 <style>
-	.loading {
+	/* Loading背景画面設定　*/
+
+	#splash {
+		/*fixedで全面に固定*/
 		position: fixed;
-		z-index: 99999;
-		top: 0;
-		left: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100vw;
-		height: 100vh;
-		transition: .4s .1s;
-		background-color: #fff;
+		z-index: 999;
+		width: 100%;
+		height: 100%;
+		background: #333;
+		color: #fff;
+		text-align: center;
 	}
 
-	.loading.hide {
-		visibility: hidden;
-		opacity: 0;
+	/* Loadingバー中央配置　*/
+	#splash_text {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 999;
+		width: 100%;
+		color: #fff;
+		transform: translate(-50%, -50%);
 	}
 
-	.loader,
-	.loader:after {
-		width: 40px;
-		height: 40px;
-		border-radius: 50%;
-	}
-
-	.loader {
-		position: relative;
-		margin: 60px auto;
-		font-size: 4px;
-		transform: translateZ(0);
-		animation: load8 1.1s infinite linear;
-		text-indent: -9999em;
-		border-top: 4px solid rgba(200, 200, 200, .2);
-		border-right: 4px solid rgba(200, 200, 200, .2);
-		border-bottom: 4px solid rgba(200, 200, 200, .2);
-		border-left: 4px solid #fff;
-	}
-
-	@keyframes load8 {
-		0% {
-			transform: rotate(0deg);
-		}
-
-		100% {
-			transform: rotate(360deg);
-		}
-	}
-
-	@media all and (-ms-high-contrast: none) {
-		.loading {
-			display: none !important;
-		}
-
-		.loader {
-			transform: none;
-			animation: none;
-		}
+	/*IE11対策用バーの線の高さ※対応しなければ削除してください*/
+	#splash_text svg {
+		height: 2px;
 	}
 </style>
-
-<noscript>
-	<style>
-		.loading {
-			display: none;
-		}
-
-		.loader {
-			transform: none;
-			animation: none;
-		}
-	</style>
-</noscript>

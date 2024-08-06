@@ -82,7 +82,12 @@
 </footer>
 
 
+<?php if (is_home() || is_front_page()) : ?>
+    <!-- <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script> -->
+<?php endif; ?>
+
 <?php wp_footer(); ?>
+
 </body>
 
 </html>

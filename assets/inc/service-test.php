@@ -3,6 +3,12 @@
 /**
  * Template Name: 労働問題
  */
+
+$file_path = get_template_directory() . '/assets/inc/inc-service-parts.php';
+if (file_exists($file_path)) {
+    include($file_path);
+}
+
 // ページのスラッグを取得
 global $post;
 $slug = $post->post_name;
@@ -328,6 +334,11 @@ $slug = $post->post_name;
             <!-- <a href="" class="service__price-nav-link"></a> -->
         </div>
 
+        <div class="service__price-tab">
+            <a href="#anc-price-01" class="service__price-tab-primary">弁護士費用特約に加入されている方</a>
+            <a href="#anc-price-02" class="service__price-tab-secondary">弁護士費用特約に加入されていない方</a>
+        </div>
+
         <div class="service__price-container">
             <div class="service__price-box" id="anc-price-01">
                 <h3 class="service__price-title">
@@ -577,6 +588,13 @@ $slug = $post->post_name;
                         <dd class="service__price-faq-text">主に自動車保険に付帯しているオプションです。交通事故について弁護士に依頼する際、弁護士費用の全部又は一部の補償を受ける事ができます。</dd>
                         </di>
                 </div>
+
+
+                <?php price_table_5col([
+                    ['オプション', '報酬金'],
+                    ['親権<span>（１名ごと）</span>', '獲得した場合', '獲得を阻止した場合', '22万円<span>（調査官調査を経た場合は、22万円を加算）</span>', '22万円<span>（調査官調査を経た場合は、22万円を加算）</span>'],
+                    ['面会交流<span>（１名ごと）</span>', '獲得した場合', '獲得を阻止した場合', '22万円<span>（調査官調査を経た場合は、22万円を加算）</span>', '22万円<span>（調査官調査を経た場合は、22万円を加算）</span>'],
+                ]); ?>
             </div>
 
             <div class="service__price-box" id="anc-price-03">
