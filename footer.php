@@ -57,12 +57,14 @@
                 <li class="footer__nav-item">
                     <a href="<?= home_url(); ?>/service">取扱業務 一覧</a>
                 </li>
+                <?php /*
                 <li class="footer__nav-item">
                     <a href="<?= home_url(); ?>/topics">新着情報</a>
                 </li>
                 <li class="footer__nav-item">
                     <a href="<?= home_url(); ?>/privacy#anc-site">サイトポリシー</a>
                 </li>
+                */ ?>
                 <li class="footer__nav-item">
                     <a href="<?= home_url(); ?>/price">料金</a>
                 </li>

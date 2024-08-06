@@ -55,6 +55,11 @@
 :root {
   --board: 1920;
 }
+@media (max-width: 820px) {
+  :root {
+    --board: 750;
+  }
+}
 
 :root {
   --colorBlack: #172b40;
@@ -66,7 +71,7 @@
 }
 
 :root {
-  --fontGothic: "A1ゴシック R", "A1ゴシック M", "A1ゴシック B", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+  --fontGothic: "A1ゴシック R", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
   --fontMincho: "Hannari Mincho", "HannariMincho", "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
   --fontEnglish: "TT Norms", sans-serif;
 }
@@ -79,7 +84,7 @@
 }
 
 :root {
-  --fontSize: clamp(10px, 10vw / var(--board) * 10 * 16, 16px);
+  --fontSize: clamp(14px, 10vw / var(--board) * 10 * 16, 16px);
   --letterSpacing: 0;
   --lineHeight: 1.75;
   --kerning: unset;
@@ -93,6 +98,11 @@
 html.interface-interface-skeleton__html-container {
   font-size: clamp(1.5625%, 0.0520833333vw, 6.25%);
 }
+@media (max-width: 820px) {
+  html.interface-interface-skeleton__html-container {
+    font-size: 0.1333333333vw;
+  }
+}
 
 .editor-styles-wrapper {
   background-color: var(--bodyBg);
@@ -104,6 +114,12 @@ html.interface-interface-skeleton__html-container {
   line-height: var(--lineHeight);
   -webkit-font-feature-settings: var(--kerning);
           font-feature-settings: var(--kerning);
+}
+@media (max-width: 820px) {
+  .editor-styles-wrapper {
+    background-color: var(--colorBase);
+    font-size: clamp(10px, 10vw / var(--board) * 10 * 26, 26px);
+  }
 }
 
 #editor .button_area {
@@ -125,11 +141,28 @@ html.interface-interface-skeleton__html-container {
 #editor .wp-block-table {
   font-size: 18rem;
 }
+@media (max-width: 820px) {
+  #editor .wp-block-table {
+    font-size: 12rem;
+  }
+}
 #editor .wp-block-table * {
   border: 0;
 }
 #editor .wp-block-table tr {
   border-bottom: 1px solid #c7c7c7;
+}
+@media (max-width: 820px) {
+  #editor .wp-block-table tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 40rem 0 30rem;
+  }
 }
 #editor .wp-block-table tr:first-child {
   padding-top: 0;
@@ -137,11 +170,26 @@ html.interface-interface-skeleton__html-container {
 #editor .wp-block-table td {
   padding: 50rem 0;
 }
+@media (max-width: 820px) {
+  #editor .wp-block-table td {
+    display: block;
+    padding: 0;
+    width: 100%;
+  }
+  #editor .wp-block-table td + td {
+    margin-top: 15rem;
+  }
+}
 #editor .wp-block-table td:first-child {
   width: 280rem;
 }
 #editor .wp-block-table + .wp-block-buttons {
   margin-top: 150rem;
+}
+@media (max-width: 820px) {
+  #editor .wp-block-table + .wp-block-buttons {
+    margin-top: 80rem;
+  }
 }
 #editor ul {
   margin-top: 1em;
@@ -153,50 +201,18 @@ html.interface-interface-skeleton__html-container {
   font-size: 30rem;
   line-height: 2.5;
 }
+@media (max-width: 820px) {
+  #editor h3.wp-block-heading {
+    font-size: 15rem;
+  }
+}
 #editor .wp-block-column p {
   margin-top: 25rem;
   font-weight: var(--weightRegular);
   font-size: 20rem;
   line-height: 2;
 }
-@media (max-width: 820px){
-  :root {
-    --board: 750;
-  }
-  html.interface-interface-skeleton__html-container {
-    font-size: 0.1333333333vw;
-  }
-  .editor-styles-wrapper {
-    background-color: var(--colorBase);
-    font-size: clamp(10px, 10vw / var(--board) * 10 * 26, 26px);
-  }
-  #editor .wp-block-table {
-    font-size: 12rem;
-  }
-  #editor .wp-block-table tr {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 40rem 0 30rem;
-  }
-  #editor .wp-block-table td {
-    display: block;
-    padding: 0;
-    width: 100%;
-  }
-  #editor .wp-block-table td + td {
-    margin-top: 15rem;
-  }
-  #editor .wp-block-table + .wp-block-buttons {
-    margin-top: 80rem;
-  }
-  #editor h3.wp-block-heading {
-    font-size: 15rem;
-  }
+@media (max-width: 820px) {
   #editor .wp-block-column p {
     font-size: 13rem;
   }

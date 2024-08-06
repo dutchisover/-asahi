@@ -53,21 +53,22 @@
                 <a class="mv__text" href="<?php echo esc_url(home_url()); ?>/contact">初回30分 相談無料</a>
             </div>
         </div>
-        <div class="mv-topics">
-            <p class="mv-topics__title sp-none">new topics</p>
-            <img src="<?= get_template_directory_uri(); ?>/assets/image/text_mv-topics_sp.svg" alt="New" class="pc-none mv-topics__title" width="73" height="89">
-            <div class="mv-topics__container">
-                <?php
-                $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                $args = array(
-                    'post_type' => 'topics',
-                    'posts_per_page' => 1,
-                    'paged' => $paged,
-                    'orderby' => 'date', // 日付で並び替え
-                    'order' => 'DESC',   // 降順で最新の投稿から取得
-                );
-                $topics_query = new WP_Query($args);
-                if ($topics_query->have_posts()) :
+        <?php
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        $args = array(
+            'post_type' => 'topics',
+            'posts_per_page' => 1,
+            'paged' => $paged,
+            'orderby' => 'date', // 日付で並び替え
+            'order' => 'DESC',   // 降順で最新の投稿から取得
+        );
+        $topics_query = new WP_Query($args);
+        if ($topics_query->have_posts()) : ?>
+            <div class="mv-topics">
+                <p class="mv-topics__title sp-none">new topics</p>
+                <img src="<?= get_template_directory_uri(); ?>/assets/image/text_mv-topics_sp.svg" alt="New" class="pc-none mv-topics__title" width="73" height="89">
+                <div class="mv-topics__container">
+                    <?php
                     while ($topics_query->have_posts()) : $topics_query->the_post();
 
                         // カスタムタクソノミーの取得
@@ -94,7 +95,7 @@
                         if (mb_strlen($content) > 16) {
                             $content = mb_substr($content, 0, 16) . '...';
                         }
-                ?>
+                    ?>
                         <a href="<?php the_permalink(); ?>" class="mv-topics__link">
                             <p class="mv-topics__date sp-none">
                                 <time datetime="<?php echo get_the_date('c'); ?>"><?php echo get_the_date('Y年n月d日'); ?></time>
@@ -109,14 +110,11 @@
                         </a>
                         <!-- /.archive__item -->
                     <?php endwhile; ?>
-                <?php
-                    wp_reset_postdata();
-                else :
-                ?>
-                    <p>お知らせはありません。</p>
-                <?php endif; ?>
+
+                </div>
             </div>
-        </div>
+            <?php wp_reset_postdata(); ?>
+        <?php endif; ?>
 
     </section>
     <!-- /.mv -->
@@ -283,25 +281,26 @@
     <!-- /.top-service -->
 
     <!-- TOPICS 新着情報 -->
-    <section class="top-topics">
-        <div class="top-topics__inner">
-            <h2 class="section__title">
-                <em>topics</em>
-                <span>新着情報</span>
-            </h2>
-            <div class="top-topics__container">
-                <ul class="top-topics__list">
-                    <?php
-                    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                    $args = array(
-                        'post_type' => 'topics',
-                        'posts_per_page' => 3,
-                        'paged' => $paged,
-                        'orderby' => 'date', // 日付で並び替え
-                        'order' => 'DESC',   // 降順で最新の投稿から取得
-                    );
-                    $topics_query = new WP_Query($args);
-                    if ($topics_query->have_posts()) :
+    <?php
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    $args = array(
+        'post_type' => 'topics',
+        'posts_per_page' => 3,
+        'paged' => $paged,
+        'orderby' => 'date', // 日付で並び替え
+        'order' => 'DESC',   // 降順で最新の投稿から取得
+    );
+    $topics_query = new WP_Query($args);
+    if ($topics_query->have_posts()) : ?>
+        <section class="top-topics">
+            <div class="top-topics__inner">
+                <h2 class="section__title">
+                    <em>topics</em>
+                    <span>新着情報</span>
+                </h2>
+                <div class="top-topics__container">
+                    <ul class="top-topics__list">
+                        <?php
                         while ($topics_query->have_posts()) : $topics_query->the_post();
 
                             // カスタムタクソノミーの取得
@@ -336,7 +335,7 @@
                             if (mb_strlen($content) > 110) {
                                 $content = mb_substr($content, 0, 110) . '...';
                             }
-                    ?>
+                        ?>
                             <li class="top-topics__item">
                                 <a href="<?php the_permalink(); ?>" class="top-topics__item-link">
                                     <div class="top-topics__item-image">
@@ -356,17 +355,15 @@
                             </li>
                             <!-- /.archive__item -->
                         <?php endwhile; ?>
-                </ul>
-            <?php
-                        wp_reset_postdata();
-                    else :
-            ?>
-                <p class="is-center">お知らせはありません。</p>
-            <?php endif; ?>
+                    </ul>
+
+                </div>
+                <div class="button__area"><a href="<?php echo esc_url(home_url()); ?>/topics" class="button__link">新着情報 一覧へ</a></div>
             </div>
-            <div class="button__area"><a href="<?php echo esc_url(home_url()); ?>/topics" class="button__link">新着情報 一覧へ</a></div>
-        </div>
-    </section>
+        </section>
+        <?php wp_reset_postdata(); ?>
+
+    <?php endif; ?>
     <!-- /.top-topics -->
 
     <!-- OTHER -->

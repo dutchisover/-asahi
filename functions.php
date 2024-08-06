@@ -1,6 +1,5 @@
 <?php
 
-
 // SSLリダイレクト
 // if (empty($_SERVER['HTTPS'])) {
 // 	header("HTTP/1.1 301 Moved Permanently");
@@ -8,54 +7,47 @@
 // 	exit;
 // }
 
-
-
 ////////////////// JS・CSSファイルを読み込む //////////////////
 function add_files()
 {
-	//キャッシュ無効（開発時はこちらをコメント解除）
-	// $cache = date('YmdHis');
-	//キャッシュ有効（公開後はこちらをコメント解除）
-	$cache = 1.0;
+    //キャッシュ無効（開発時はこちらをコメント解除）
+    // $cache = date('YmdHis');
+    //キャッシュ有効（公開後はこちらをコメント解除）
+    $cache = 1.0;
 
-	// WordPress提供のjquery.jsを読み込まない
-	wp_deregister_script('jquery');
-	// jQueryの読み込み
-	wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', "", $cache, false);
+    // WordPress提供のjquery.jsを読み込まない
+    wp_deregister_script('jquery');
+    // jQueryの読み込み
+    wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', "", $cache, false);
 
-	// Swiper読み込み（CSS、JS）
-	wp_enqueue_style('swiper', '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', "", $cache);
-	wp_enqueue_script('swiper', '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), $cache, true);
-
-
-	// スクロール固定読み込み
-	// wp_enqueue_script('bodyScrollLock', get_template_directory_uri() . '/js/bodyScrollLock.min.js', array(), $cache, true);
+    // Swiper読み込み（CSS、JS）
+    wp_enqueue_style('swiper', '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', "", $cache);
+    wp_enqueue_script('swiper', '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), $cache, true);
 
 
-	// GSAP
-	wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js', array(), '3.10.4', true);
-	wp_enqueue_script('gsap-scrolltrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js', array('gsap'), '3.10.4', true);
-
-	//
-	if (is_home() || is_front_page()) :
-		wp_enqueue_script('progressbar', 'https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js', array('jquery'), '', true);
-	endif;
+    // スクロール固定読み込み
+    // wp_enqueue_script('bodyScrollLock', get_template_directory_uri() . '/js/bodyScrollLock.min.js', array(), $cache, true);
 
 
-	// MicroModal
-	// wp_enqueue_script('micromodal', 'https://cdn.jsdelivr.net/npm/micromodal@0.4.10/dist/micromodal.min.js', array(), '0.4.10', true);
+    // GSAP
+    wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js', array(), '3.10.4', true);
+    wp_enqueue_script('gsap-scrolltrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js', array('gsap'), '3.10.4', true);
+
+    //
+    if (is_home() || is_front_page()) :
+        wp_enqueue_script('progressbar', 'https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js', array('jquery'), '', true);
+    endif;
 
 
-	// サイト共通（CSS、JS）
-	wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/style.css', "", $cache);
-	wp_enqueue_script('main-script', get_template_directory_uri() . '/assets/js/script.js', array(), $cache, true);
+    // MicroModal
+    // wp_enqueue_script('micromodal', 'https://cdn.jsdelivr.net/npm/micromodal@0.4.10/dist/micromodal.min.js', array(), '0.4.10', true);
+
+
+    // サイト共通（CSS、JS）
+    wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/style.css', "", $cache);
+    wp_enqueue_script('main-script', get_template_directory_uri() . '/assets/js/script.js', array(), $cache, true);
 }
 add_action('wp_enqueue_scripts', 'add_files');
-
-
-
-
-
 
 ////////////////// 【表示カスタマイズ】 //////////////////
 
@@ -67,9 +59,6 @@ add_theme_support('custom-line-height');
 
 // 画像カバーで単位追加
 add_theme_support('custom-units', 'px', 'em', 'rem', 'vh', 'vw');
-
-
-
 
 ////////////////// カスタム投稿タイプのURLを「日付-記事ID」に変更 //////////////////
 // function customize_news_permalink($post_link, $post)
@@ -93,32 +82,22 @@ add_theme_support('custom-units', 'px', 'em', 'rem', 'vh', 'vw');
 // }
 // add_action('init', 'news_rewrite_rules');
 
-
-
-
-
-
 ////////////////// ページネーション関数 //////////////////
 function custom_pagination($max_num_pages, $range = 2, $paged)
 {
-	$big = 3; // need an unlikely integer
-	echo paginate_links(array(
-		'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
-		'format' => '?paged=%#%',
-		'current' => max(1, $paged),
-		'total' => $max_num_pages,
-		'prev_text' => __('←'),
-		'next_text' => __('→'),
-		'type' => 'list',
-		'end_size' => 3,
-		'mid_size' => $range
-	));
+    $big = 3; // need an unlikely integer
+    echo paginate_links(array(
+        'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+        'format' => '?paged=%#%',
+        'current' => max(1, $paged),
+        'total' => $max_num_pages,
+        'prev_text' => __('←'),
+        'next_text' => __('→'),
+        'type' => 'list',
+        'end_size' => 3,
+        'mid_size' => $range
+    ));
 }
-
-
-
-
-
 
 ////////////////// ACFプロ用 オプションページ //////////////////
 // acf_add_options_page(
@@ -132,10 +111,6 @@ function custom_pagination($max_num_pages, $range = 2, $paged)
 // 		'icon_url' => 'dashicons-welcome-write-blog'
 // 	)
 // );
-
-
-
-
 
 ////////////////// ACFプロ用 カスタムブロック //////////////////
 // function register_custom_image_block()
@@ -159,22 +134,17 @@ function custom_pagination($max_num_pages, $range = 2, $paged)
 
 // add_action('acf/init', 'register_custom_image_block');
 
-
-
-
-
-
 ////////////////// SVGファイルをアップロード可能にする //////////////////
 function add_svg_to_upload_mimes($mimes)
 {
-	$mimes['svg'] = 'image/svg+xml';
-	return $mimes;
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
 }
 add_filter('upload_mimes', 'add_svg_to_upload_mimes');
 
 function fix_svg()
 {
-	echo '<style>
+    echo '<style>
         .attachment-266x266, .thumbnail img {
             width: 100% !important;
             height: auto !important;
@@ -185,15 +155,13 @@ add_action('admin_head', 'fix_svg');
 
 function check_for_svg($file)
 {
-	$filetype = wp_check_filetype($file['name']);
-	if ($filetype['ext'] === 'svg') {
-		$file['type'] = 'image/svg+xml';
-	}
-	return $file;
+    $filetype = wp_check_filetype($file['name']);
+    if ($filetype['ext'] === 'svg') {
+        $file['type'] = 'image/svg+xml';
+    }
+    return $file;
 }
 add_filter('wp_check_filetype_and_ext', 'check_for_svg', 10, 4);
-
-
 
 ////////////////// 親ページのスラッグが「service」の場合は「page-service-child.php」をインクルードする //////////////////
 
@@ -201,25 +169,20 @@ add_filter('template_include', 'include_service_child_template');
 
 function include_service_child_template($template)
 {
-	if (is_page() && $post = get_post()) {
-		$parent_id = wp_get_post_parent_id($post->ID);
-		if ($parent_id) {
-			$parent_post = get_post($parent_id);
-			if ($parent_post && $parent_post->post_name === 'service') {
-				$child_template = locate_template('page-service-child.php');
-				if ($child_template) {
-					return $child_template;
-				}
-			}
-		}
-	}
-	return $template;
+    if (is_page() && $post = get_post()) {
+        $parent_id = wp_get_post_parent_id($post->ID);
+        if ($parent_id) {
+            $parent_post = get_post($parent_id);
+            if ($parent_post && $parent_post->post_name === 'service') {
+                $child_template = locate_template('page-service-child.php');
+                if ($child_template) {
+                    return $child_template;
+                }
+            }
+        }
+    }
+    return $template;
 }
-
-
-
-
-
 
 // 投稿画面にCSSを当てる
 // function add_admin_style()
@@ -230,10 +193,6 @@ function include_service_child_template($template)
 // wp_enqueue_script('admin_script', $path_css);
 // }
 // add_action('admin_enqueue_scripts', 'add_admin_style');
-
-
-
-
 
 ////////////////// メールの確認inputチェック //////////////////
 // function custom_email_validation_filter($result, $tag)
@@ -251,6 +210,17 @@ function include_service_child_template($template)
 // add_filter('wpcf7_validate_email*', 'custom_email_validation_filter', 20, 2);
 // add_filter('wpcf7_validate_email', 'custom_email_validation_filter', 20, 2);
 
-
 ////////////////// TOPICS カテゴリー該当なしの非表示 //////////////////
 add_filter("radio_buttons_for_taxonomies_no_term_topics_taxonomy", "__return_FALSE");
+
+// Contact Form 7の自動pタグ無効
+add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
+function wpcf7_autop_return_false()
+{
+    return false;
+}
+
+//Contact Form 7 Multi-Step Formsプラグインにセッションの使用を強制
+add_filter('cf7msm_force_session', function () {
+    return true;
+});

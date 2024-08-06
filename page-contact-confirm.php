@@ -46,41 +46,19 @@ $slug = $post->post_name;
 
     <section class="section" data-section-title="contact">
 
-        <div class="contact-top">
-            <h2 class="section__title">
-                <em class="font-gothic">初回30分 相談無料</em>
-                <span>お気軽にご相談ください！</span>
-            </h2>
 
-            <p class="section__copy">
-                法務に関わるご相談・お問い合わせは、お電話またはメールにて承っています。<br>
-                法律相談をご希望される場合は、初めに「法律相談を希望します」とお伝えください。<br>
-                コンタクトフォームでのお問い合わせは24時間年中お受けしております。
-            </p>
-
-            <div class="contact-top__content">
-                <div class="contact-top__content-inner">
-                    <div class="contact-top__header">お電話でのお問い合わせ</div>
-                    <div class="contact-top__body">
-                        <div class="contact-top__body-tel">072-627-0101</div>
-                        <div class="contact-top__body-text">受付時間 9 : 00 - 18:00 (土日祝休)</div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <section class="section" data-section-title="Flow" id="anc-flow">
         <h2 class="section__title">
-            <em>contact form</em>
-            <span>お問い合わせフォームはこちら</span>
+            <em>ご入力内容のご確認</em>
         </h2>
 
         <p class="section__copy">
-            ２営業日以内に連絡がない場合、メールがブロックされている恐れがありまので、<br>072-627-0101まで直接お電話をお願いいたします。
+            以下の内容でお間違いがなければ、「送信する」ボタンを押してください。
         </p>
-        <div class="contact__form">
-            <?php echo do_shortcode('[contact-form-7 id="8bbf352" title="お問い合わせフォーム"]'); ?>
+        <div class="contact-confirm">
+            <?php echo do_shortcode('[contact-form-7 id="a6e1bb6" title="確認画面"]'); ?>
         </div>
 
     </section>

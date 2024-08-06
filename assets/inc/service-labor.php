@@ -25,8 +25,8 @@ $slug = $post->post_name;
             $title = get_the_title();
             $title = preg_replace('/（.*/u', '', $title);
             ?>
-            <em class="font-gothic"><?= $title; ?></em>
-            <span class="font-en"><?= get_field("page-sub-title") ?></span>
+            <em class="font-gothic-medium"><?= $title; ?></em>
+            <span class="font-gothic-medium"><?= get_field("page-sub-title") ?></span>
         </h1>
 
         <picture>
@@ -124,40 +124,41 @@ $slug = $post->post_name;
         </div>
     </section>
 
-    <section class="section" data-section-title="case study">
-        <h2 class="section__title">
-            <em>case study</em>
-            <span>労働問題に関する事例や記事</span>
-        </h2>
+    <?php
+    if (wp_is_mobile()) {
+        //スマホ・タブレットの時
+        $num = 3;
+    } else {
+        //PCの時
+        $num = 3;
+    }
+    // ページのスラッグを取得
+    $slug = get_post_field('post_name', get_post());
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    $args = array(
+        'post_type' => 'topics',
+        'posts_per_page' => $num,
+        'paged' => $paged,
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'topics_taxonomy',
+                'field' => 'slug',
+                'terms' => $slug,
+            ),
+        ),
+    );
+    $topics_query = new WP_Query($args);
+    if ($topics_query->have_posts()) : ?>
+        <section class="section" data-section-title="case study">
+            <h2 class="section__title">
+                <em>case study</em>
+                <span>労働問題に関する事例や記事</span>
+            </h2>
 
-        <div class="service__case">
-            <div class="archive__container">
-                <ul class="archive__list">
-                    <?php
-                    if (wp_is_mobile()) {
-                        //スマホ・タブレットの時
-                        $num = 3;
-                    } else {
-                        //PCの時
-                        $num = 3;
-                    }
-                    // ページのスラッグを取得
-                    $slug = get_post_field('post_name', get_post());
-                    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                    $args = array(
-                        'post_type' => 'topics',
-                        'posts_per_page' => $num,
-                        'paged' => $paged,
-                        'tax_query' => array(
-                            array(
-                                'taxonomy' => 'topics_taxonomy',
-                                'field' => 'slug',
-                                'terms' => $slug,
-                            ),
-                        ),
-                    );
-                    $topics_query = new WP_Query($args);
-                    if ($topics_query->have_posts()) :
+            <div class="service__case">
+                <div class="archive__container">
+                    <ul class="archive__list">
+                        <?php
                         while ($topics_query->have_posts()) : $topics_query->the_post();
 
                             // カスタムタクソノミーの取得
@@ -192,7 +193,7 @@ $slug = $post->post_name;
                             if (mb_strlen($content) > 110) {
                                 $content = mb_substr($content, 0, 110) . '...';
                             }
-                    ?>
+                        ?>
                             <li class="archive__item">
                                 <a href="<?php the_permalink(); ?>" class="archive__item-link no-arrow">
                                     <div class="archive__item-image">
@@ -215,30 +216,28 @@ $slug = $post->post_name;
                             </li>
                             <!-- /.archive__item -->
                         <?php endwhile; ?>
-                </ul>
-                <!-- /.archive__list -->
+                    </ul>
+                    <!-- /.archive__list -->
+
+                </div>
+            </div>
+
             <?php
-                        wp_reset_postdata();
-                    else :
+            // カスタムタクソノミーの一覧ページへのリンクを表示
+            $taxonomy_link = get_term_link($slug, 'topics_taxonomy');
+            if (!is_wp_error($taxonomy_link)) :
             ?>
-                <p>お知らせはありません。</p>
-            <?php endif; ?>
-            </div>
-        </div>
+                <div class="service__case-button">
+                    <a href="<?php echo esc_url($taxonomy_link); ?>">関連記事を見る</a>
+                </div>
+            <?php
+            endif;
+            ?>
 
-        <?php
-        // カスタムタクソノミーの一覧ページへのリンクを表示
-        $taxonomy_link = get_term_link($slug, 'topics_taxonomy');
-        if (!is_wp_error($taxonomy_link)) :
-        ?>
-            <div class="service__case-button">
-                <a href="<?php echo esc_url($taxonomy_link); ?>">関連記事を見る</a>
-            </div>
-        <?php
-        endif;
-        ?>
+        </section>
+        <?php wp_reset_postdata(); ?>
 
-    </section>
+    <?php endif; ?>
 
     <section class="section" data-section-title="Price of Service" id="anc-price">
         <h2 class="section__title">

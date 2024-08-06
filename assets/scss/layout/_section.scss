@@ -109,6 +109,7 @@
 		font-family: var(--fontEnglish);
 		line-height: 1;
 		transform: translateX(50%);
+		z-index: 10;
 
 		writing-mode: vertical-rl; // 縦書きに設定
 		text-orientation: sideways; // 文字の向きを適切に調整
@@ -207,7 +208,8 @@
 		color: var(--colorText);
 		text-align: justify;
 		letter-spacing: .02em;
-		font-size: r(26);
+		//font-size: r(26);
+		font-size: 13px;
 		line-height: 2;
 	}
 

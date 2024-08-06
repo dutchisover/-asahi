@@ -2,7 +2,6 @@
 
 @use '../foundation/index' as *;
 
-
 .pc-none {
 	@include media(pc_only) {
 		display: none !important;
@@ -15,11 +14,9 @@
 	}
 }
 
-
 .is-center {
 	text-align: center !important;
 }
-
 
 // アコーディオン
 .js-accordion__content {
@@ -47,6 +44,30 @@
 .fw-bold {
 	font-weight: var(--weightBold);
 	font-family: "A1ゴシック B", 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+}
+
+.font-english {
+	font-family: var(--fontEnglish);
+}
+
+.font-gothic-light {
+	font-family: "A1ゴシック L", 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif !important;
+	font-weight: var(--weightLight);
+}
+
+.font-gothic-regular {
+	font-family: "A1ゴシック R", 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif !important;
+	font-weight: var(--weightRegular);
+}
+
+.font-gothic-medium {
+	font-family: "A1ゴシック M", 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif !important;
+	font-weight: var(--weightMedium);
+}
+
+.font-gothic-bold {
+	font-family: "A1ゴシック B", 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif !important;
+	font-weight: var(--weightBold);
 }
 
 .text-sm {
