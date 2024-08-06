@@ -113,52 +113,52 @@ $slug = $post->post_name;
             <div class="price-category__container">
                 <ul class="price-category__list">
                     <li class="price-category__item">
-                        <a href="<?php echo home_url(); ?>/service/family#anc-price" class="price-category__item-link">
+                        <a href="<?php echo esc_url(home_url('inheritance')); ?>#anc-price" class="price-category__item-link">
                             <h3 class="price-category__item-title">遺産相続・遺言</h3>
                         </a>
                     </li>
                     <li class="price-category__item">
-                        <a href="<?php echo home_url(); ?>/service/labor#anc-price" class="price-category__item-link">
-                            <h3 class="price-category__item-title">労働<span class="sp-none">（残業代請求・解雇・労災）</span></h3>
+                        <a href="<?php echo esc_url(home_url('labor')); ?>#anc-price" class="price-category__item-link">
+                            <h3 class="price-category__item-title">労働問題<span class="sp-none">（残業代請求・不当解雇・労災）</span></h3>
                         </a>
                     </li>
                     <li class=" price-category__item">
-                        <a href="<?php echo home_url(); ?>/service/traffic-accident#anc-price" class="price-category__item-link">
+                        <a href="<?php echo esc_url(home_url('trafficaccident')); ?>#anc-price" class="price-category__item-link">
                             <h3 class="price-category__item-title">交通事故<span>（被害者側）</span></h3>
                         </a>
                     </li>
                     <li class="price-category__item">
-                        <a href="<?php echo home_url(); ?>/service/divorce#anc-price" class="price-category__item-link">
+                        <a href="<?php echo esc_url(home_url('divorce')); ?>#anc-price" class="price-category__item-link">
                             <h3 class="price-category__item-title">離婚・男女問題</h3>
                         </a>
                     </li>
                     <li class="price-category__item">
-                        <a href="<?php echo home_url(); ?>/service/corporate-adviser#anc-price" class="price-category__item-link">
-                            <h3 class="price-category__item-title">会社顧問</h3>
+                        <a href="<?php echo esc_url(home_url('corporate')); ?>#anc-price" class="price-category__item-link">
+                            <h3 class="price-category__item-title">企業法務・顧問</h3>
                         </a>
                     </li>
                     <li class="price-category__item">
-                        <a href="<?php echo home_url(); ?>/service/realestate#anc-price" class="price-category__item-link">
+                        <a href="<?php echo esc_url(home_url('realestate')); ?>#anc-price" class="price-category__item-link">
                             <h3 class="price-category__item-title">不動産</h3>
                         </a>
                     </li>
                     <li class="price-category__item">
-                        <a href="<?php echo home_url(); ?>/service/debt#anc-price" class="price-category__item-link">
+                        <a href="<?php echo esc_url(home_url('debt-consolidation')); ?>#anc-price" class="price-category__item-link">
                             <h3 class="price-category__item-title">借金・債務整理</h3>
                         </a>
                     </li>
                     <li class="price-category__item">
-                        <a href="<?php echo home_url(); ?>/service/money#anc-price" class="price-category__item-link">
+                        <a href="<?php echo esc_url(home_url('collection-of-claim')); ?>#anc-price" class="price-category__item-link">
                             <h3 class="price-category__item-title">金銭トラブル<br class="pc-none"><span class="sp-none">（請求側／被請求側）</span><span class="pc-none">請求側／被請求側</span></h3>
                         </a>
                     </li>
                     <li class="price-category__item">
-                        <a href="<?php echo home_url(); ?>/service/detective#anc-price" class="price-category__item-link">
-                            <h3 class="price-category__item-title">刑事</h3>
+                        <a href="<?php echo esc_url(home_url('criminal-case')); ?>#anc-price" class="price-category__item-link">
+                            <h3 class="price-category__item-title">刑事事件</h3>
                         </a>
                     </li>
                     <li class="price-category__item">
-                        <a href="<?php echo home_url(); ?>/service/company#anc-price" class="price-category__item-link">
+                        <a href="<?php echo esc_url(home_url('bankruptcy')); ?>#anc-price" class="price-category__item-link">
                             <h3 class="price-category__item-title">法人破産・会社解散</h3>
                         </a>
                     </li>

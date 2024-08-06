@@ -203,7 +203,7 @@
             <div class="top-service__container">
                 <ul class="top-service__list">
                     <li class="top-service__item">
-                        <a href="<?php echo esc_url(home_url()); ?>/service/family" class="top-service__item-link">
+                        <a href="<?php echo esc_url(home_url('inheritance')); ?>" class="top-service__item-link">
                             <picture>
                                 <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_top-service_01_sp.jpg" media="(max-width: 820px)" />
                                 <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_top-service_01.jpg" alt="遺産相続／遺言" width="423" height="236" class="top-service__item-image" />
@@ -214,7 +214,7 @@
                         </a>
                     </li>
                     <li class="top-service__item">
-                        <a href="<?php echo esc_url(home_url()); ?>/service/labor" class="top-service__item-link">
+                        <a href="<?php echo esc_url(home_url('labor')); ?>" class="top-service__item-link">
                             <picture>
                                 <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_top-service_02_sp.jpg" media="(max-width: 820px)" />
                                 <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_top-service_02.jpg" alt="労働（残業代請求・解雇・労災）" width="423" height="236" class="top-service__item-image" />
@@ -224,7 +224,7 @@
                         </a>
                     </li>
                     <li class="top-service__item">
-                        <a href="<?php echo esc_url(home_url()); ?>/service/traffic-accident" class="top-service__item-link">
+                        <a href="<?php echo esc_url(home_url('trafficaccident')); ?>" class="top-service__item-link">
                             <picture>
                                 <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_top-service_03_sp.jpg" media="(max-width: 820px)" />
                                 <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_top-service_03.jpg" alt="交通事故（被害者側）" width="423" height="236" class="top-service__item-image" />
@@ -234,7 +234,7 @@
                         </a>
                     </li>
                     <li class="top-service__item">
-                        <a href="<?php echo esc_url(home_url()); ?>/service/divorce" class="top-service__item-link">
+                        <a href="<?php echo esc_url(home_url('divorce')); ?>" class="top-service__item-link">
                             <picture>
                                 <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_top-service_04_sp.jpg" media="(max-width: 820px)" />
                                 <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_top-service_04.jpg" alt="離婚・男女問題" width="423" height="236" class="top-service__item-image" />
@@ -246,32 +246,32 @@
                 </ul>
                 <ul class="top-service__sublist">
                     <li class="top-service__subitem">
-                        <a href="<?php echo esc_url(home_url()); ?>/service/corporate-adviser" class="top-service__subitem-link">
+                        <a href="<?php echo esc_url(home_url('corporate')); ?>" class="top-service__subitem-link">
                             <h3 class="top-service__subitem-title">企業法務・顧問</h3>
                         </a>
                     </li>
                     <li class="top-service__subitem">
-                        <a href="<?php echo esc_url(home_url()); ?>/service/realestate" class="top-service__subitem-link">
+                        <a href="<?php echo esc_url(home_url('realestate')); ?>" class="top-service__subitem-link">
                             <h3 class="top-service__subitem-title">不動産</h3>
                         </a>
                     </li>
                     <li class="top-service__subitem">
-                        <a href="<?php echo esc_url(home_url()); ?>/service/debt" class="top-service__subitem-link">
+                        <a href="<?php echo esc_url(home_url('debt-consolidation')); ?>" class="top-service__subitem-link">
                             <h3 class="top-service__subitem-title">借金・債務整理</h3>
                         </a>
                     </li>
                     <li class="top-service__subitem">
-                        <a href="<?php echo esc_url(home_url()); ?>/service/money" class="top-service__subitem-link">
+                        <a href="<?php echo esc_url(home_url('collection-of-claim')); ?>" class="top-service__subitem-link">
                             <h3 class="top-service__subitem-title">金銭トラブル（請求側／被請求側）</h3>
                         </a>
                     </li>
                     <li class="top-service__subitem">
-                        <a href="<?php echo esc_url(home_url()); ?>/service/detective" class="top-service__subitem-link">
+                        <a href="<?php echo esc_url(home_url('criminal-case')); ?>" class="top-service__subitem-link">
                             <h3 class="top-service__subitem-title">刑事事件</h3>
                         </a>
                     </li>
                     <li class="top-service__subitem">
-                        <a href="<?php echo esc_url(home_url()); ?>/service/company" class="top-service__subitem-link">
+                        <a href="<?php echo esc_url(home_url('bankruptcy')); ?>" class="top-service__subitem-link">
                             <h3 class="top-service__subitem-title">法人破産・会社解散</h3>
                         </a>
                     </li>
