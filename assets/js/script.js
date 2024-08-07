@@ -54,7 +54,7 @@ if ($(".home").length > 0) {
                     easing: "linear", // イージング関数
                     complete: function () {
                         $(this).hide(); // アニメーション完了後に要素を非表示にする
-                        //$("body").addClass("is-loaded");
+                        $("body").addClass("is-loaded");
                     },
                 }
             );
