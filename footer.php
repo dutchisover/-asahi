@@ -46,7 +46,7 @@
         <div class="footer__nav">
             <ul class="footer__nav-list">
                 <li class="footer__nav-item">
-                    <a href="<?= home_url(); ?>/about#anc-lawyer">弁護士紹介</a>
+                    <a href="<?= home_url(); ?>/about">弁護士紹介</a>
                 </li>
                 <li class="footer__nav-item">
                     <a href="<?= home_url(); ?>/service#anc-flow">ご契約の流れ</a>

@@ -70,7 +70,7 @@
 	                            <a href="<?= home_url(); ?>/" data-subtitle="Top Page" data-current=""><span class="sp-none">ホーム</span><span class="pc-none">トップページ</span></a>
 	                        </li>
 	                        <li class="header__nav-item">
-	                            <a href="<?= home_url(); ?>/about#anc-lawyer" data-subtitle="Lawyer" data-current="about">弁護士紹介</a>
+	                            <a href="<?= home_url(); ?>/about" data-subtitle="Lawyer" data-current="about">弁護士紹介</a>
 	                        </li>
 	                        <li class="header__nav-item">
 	                            <a href="<?= home_url(); ?>/service" data-subtitle="Service" data-current="service"><span>取扱業務<span class="pc-none"> 一覧</span></span></a>

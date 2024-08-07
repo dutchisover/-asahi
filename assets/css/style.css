@@ -492,7 +492,7 @@ template {
 }
 
 :root {
-  --colorBlack: #172b40;
+  --colorBlack: #393939;
   --colorBg: #fff;
   --colorKey: #ef8c37;
   --colorText: #7b594b;
@@ -501,7 +501,7 @@ template {
 }
 
 :root {
-  --fontGothic: "A1ゴシック R", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+  --fontGothic: "A1ゴシック L", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
   --fontMincho: "Hannari Mincho", "HannariMincho", "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
   --fontEnglish: "TT Norms", sans-serif;
 }
@@ -4923,7 +4923,7 @@ a.header__contact-tel em {
 }
 @media (max-width: 820px) {
   .service__copy span {
-    font-size: clamp(8px, 10vw / var(--board) * 10 * 10, 10px);
+    font-size: clamp(10px, 10vw / var(--board) * 10 * 10, 10px);
   }
 }
 

@@ -465,7 +465,7 @@
 
 	span {
 		@include media() {
-			font-size: r(10, 8);
+			font-size: r(10);
 		}
 	}
 }
