@@ -144,10 +144,8 @@ $slug = $post->post_name;
     <section class="section" data-section-title="Flow" id="anc-flow">
         <h2 class="section__title">
             <em>Flow</em>
-            <span>ご相談までの流れ</span>
+            <span>ご契約までの流れ</span>
         </h2>
-
-        <p class="section__copy">総合法律事務所として、法人案件・個人案件を問わず、<br>幅広い案件を取り扱っております。</p>
 
         <div class="service__flow-list">
             <div class="service__flow-item">
@@ -156,7 +154,10 @@ $slug = $post->post_name;
                     <em>まずはお電話にてお問い合わせ下さい</em>
                 </h3>
 
-                <p class="service__flow-text">事務局が電話対応しますので、弁護士に相談したい分野（相続、遺言作成、不動産、企業顧問、その他）及び近日中にお打ち合わせが可能な日程をお伝えください。<br>担当弁護士から相談可能な日程についてご連絡させていただきます。<br>なお、当事務所では、お電話のみでの法律相談は原則として</p>
+                <p class="service__flow-text">当事務所は完全予約制となりますので、まずは面談予約をお願いします。<br>
+                    お電話の初めに「法律相談を希望します」とお伝えくだくとスムーズです。<br>
+                    <span class="service__flow-tel font-english">TEL : 072-627-0101</span>
+                </p>
             </div>
 
             <div class="service__flow-item">
@@ -174,7 +175,17 @@ $slug = $post->post_name;
                     <em>事務所へお越しください</em>
                 </h3>
 
-                <p class="service__flow-text">事務所にてより詳しくお話をお伺いし、法律相談をいたします。<br>当事務所はJR茨木駅より徒歩2分です。</p>
+                <p class="service__flow-text">事務所にてより詳しくお話をお伺いし、法律相談をいたします。<br>
+                    図を書きながら解決方針や弁護士費用について丁寧に説明いたします。<br>当事務所はJR茨木駅より徒歩2分です。</p>
+            </div>
+
+            <div class="service__flow-item">
+                <h3 class="service__flow-title">
+                    <span>Step 04</span>
+                    <em>ご契約</em>
+                </h3>
+
+                <p class="service__flow-text">提案にご納得いただけましたら、委任契約書を締結し、業務開始となります。</p>
             </div>
         </div>
     </section>

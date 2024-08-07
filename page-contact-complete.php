@@ -18,7 +18,7 @@ $slug = $post->post_name;
 
 <div class="page__header">
     <div class="page__mv">
-        <h1 class=" page__title">
+        <h1 class="page__title">
             <em><?= get_the_title(); ?></em>
             <span><?= get_field("page-sub-title") ?></span>
         </h1>
@@ -45,24 +45,18 @@ $slug = $post->post_name;
     ?>
 
     <section class="section" data-section-title="contact">
-
-
-    </section>
-
-    <section class="section" data-section-title="Flow" id="anc-flow">
-        <h2 class="section__title">
-            <em>お問い合わせを受け付けました</em>
+        <h2 class="section__title section__first-title">
+            <em class="font-gothic-medium">お問い合わせ完了</em>
         </h2>
-
         <p class="section__copy">
             お問い合わせいただきありがとうございます。<br>
             ２営業日以内に連絡がない場合、メールがブロックされている恐れがありまので、<br>072-627-0101まで直接お電話をお願いいたします。
         </p>
-
-        <a>TOPへ戻る</a>
+        <div class="contact-form__button-area">
+            <a href="/">TOPへ戻る</a>
+        </div>
 
     </section>
-
     <?php
     echo '</div>';
     ?>

@@ -166,6 +166,13 @@
 	}
 }
 
+.section__first-title {
+
+	@include media() {
+		margin-top: 40rem;
+	}
+}
+
 .section__subtitle {
 	display: block;
 	color: var(--colorKey);
@@ -180,7 +187,7 @@
 	color: var(--colorText);
 	letter-spacing: .02em;
 	font-weight: var(--weightLight);
-	font-size: r(16);
+	font-size: r(16, 14);
 	font-family: var(--fontGothic);
 	line-height: 1.875;
 

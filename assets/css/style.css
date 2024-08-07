@@ -1804,6 +1804,12 @@ a.header__contact-tel em {
   margin-top: 36rem;
 }
 
+@media (max-width: 820px) {
+  .section__first-title {
+    margin-top: 40rem;
+  }
+}
+
 .section__subtitle {
   display: block;
   color: var(--colorKey);
@@ -1818,7 +1824,7 @@ a.header__contact-tel em {
   color: var(--colorText);
   letter-spacing: 0.02em;
   font-weight: var(--weightLight);
-  font-size: clamp(10px, 10vw / var(--board) * 10 * 16, 16px);
+  font-size: clamp(14px, 10vw / var(--board) * 10 * 16, 16px);
   font-family: var(--fontGothic);
   line-height: 1.875;
 }
@@ -4889,6 +4895,11 @@ a.header__contact-tel em {
   }
 }
 
+.service__flow-tel {
+  font-size: clamp(16px, 10vw / var(--board) * 10 * 18, 18px);
+  font-weight: var(--weightMedium);
+}
+
 @media (max-width: 820px) {
   .section[data-section-title=Flow] {
     padding-bottom: 0;
@@ -6025,6 +6036,10 @@ ul.service__price-list li li::before {
     padding-left: 0;
   }
 }
+.contact-form__col-bottom {
+  margin-top: 8px;
+  font-size: 10px;
+}
 .contact-form__privacy {
   background: #fff;
   border: 1px solid #777;
@@ -6034,7 +6049,7 @@ ul.service__price-list li li::before {
   overflow-y: scroll;
 }
 .contact-form__button-area {
-  margin-top: 60px;
+  margin-top: 50rem;
 }
 
 .wpcf7-checkbox,
@@ -6131,6 +6146,173 @@ ul.service__price-list li li::before {
   }
 }
 
+.wpcf7-form-control-wrap[data-name=privacy] {
+  text-align: center;
+}
+
+.confirm-area__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30rem;
+  gap: 20px;
+}
+@media (max-width: 820px) {
+  .confirm-area__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 50rem;
+  }
+}
+
+.confirm-area__button {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 242px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 55px;
+  border-radius: 100px;
+  background-color: var(--colorKey);
+  color: #fff;
+}
+@media (max-width: 820px) {
+  .confirm-area__button {
+    min-width: 202px;
+    height: 45px;
+    font-size: 13px;
+  }
+}
+.confirm-area__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  border: 1px solid;
+  border-top: 0;
+  border-left: 0;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+}
+@media (max-width: 820px) {
+  .confirm-area__button::after {
+    right: 40px;
+  }
+}
+.confirm-area__button.prev {
+  background-color: transparent;
+  color: var(--colorKey);
+  border: 1px solid var(--colorKey);
+}
+.confirm-area__button.prev::after {
+  color: var(--colorKey);
+}
+.confirm-area__button input {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.confirm-area__button .wpcf7-spinner {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 0;
+}
+
+.contact-form__button-area {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 242px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 55px;
+  border-radius: 100px;
+  background-color: var(--colorKey);
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 820px) {
+  .contact-form__button-area {
+    min-width: 202px;
+    height: 45px;
+    font-size: 13px;
+  }
+}
+.contact-form__button-area::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  border: 1px solid;
+  border-top: 0;
+  border-left: 0;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+}
+@media (max-width: 820px) {
+  .contact-form__button-area::after {
+    right: 40px;
+  }
+}
+.contact-form__button-area input,
+.contact-form__button-area a {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.contact-form__button-area .wpcf7-spinner {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 0;
+}
+
 .wpcf7-list-item-label {
   margin-left: 18px;
   font-size: 12px;
@@ -6145,6 +6327,11 @@ ul.service__price-list li li::before {
 .wpcf7-not-valid-tip {
   font-size: 13px;
   margin-top: 6px;
+}
+
+.wpcf7 form .wpcf7-response-output {
+  border: none;
+  text-align: center;
 }
 
 .field-group {
@@ -6183,46 +6370,98 @@ textarea {
   pointer-events: none;
 }
 
-.confirm-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.confirm-area__wrap {
+  width: clamp(10px, 10vw / var(--board) * 10 * 1360, 1360px);
+  margin: 64rem auto 0;
+  padding: 74rem 200rem 160rem;
+  background: #E8DED3;
+  border-radius: 37rem;
+}
+@media screen and (max-width: 1680px) {
+  .confirm-area__wrap {
+    padding-left: 120rem;
+    padding-right: 120rem;
+  }
+}
+@media screen and (max-width: 1360px) {
+  .confirm-area__wrap {
+    width: clamp(10px, 10vw / var(--board) * 10 * 1500, 1500px);
+  }
+}
+@media (max-width: 820px) {
+  .confirm-area__wrap {
+    width: calc(100% + 30px);
+    max-width: unset;
+    margin: 0 -15px;
+    padding: 0px 22px 45px;
+    border-radius: 10px;
+    background: #F8EEE2;
+    margin-top: 50px;
+  }
+}
+
+.confirm-area__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 40px 20px;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: opacity 0.2s ease-out;
-  transition: opacity 0.2s ease-out;
-  z-index: 100;
+  padding: 26px 0;
+  border-bottom: dashed 1px #777;
 }
-.confirm-modal.active {
-  display: block;
-  opacity: 1;
-  pointer-events: auto;
+@media screen and (max-width: 1024px) {
+  .confirm-area__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
-.confirm-modal__wrap {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 80%;
-  background: #E8DED3;
-  border-radius: 10px;
-  padding: 20px;
-  max-height: 80%;
-  overflow-y: scroll;
+.confirm-area__row-head {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 220rem;
+          flex: 1 0 220rem;
+  color: var(--colorText);
+}
+@media screen and (max-width: 1500px) {
+  .confirm-area__row-head {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 340rem;
+            flex: 1 0 340rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .confirm-area__row-head {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+@media (max-width: 820px) {
+  .confirm-area__row-head {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+  }
+}
+.confirm-area__row-body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  padding-left: 80rem;
+}
+@media screen and (max-width: 1024px) {
+  .confirm-area__row-body {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding-left: 0;
+    padding-top: 4rem;
+  }
+}
+.confirm-area__bottom-message {
+  margin-top: 70rem;
+  margin-bottom: 60rem;
+  text-align: center;
+  font-size: 14px;
 }
 
 @media (max-width: 820px) {

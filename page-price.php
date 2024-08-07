@@ -109,7 +109,6 @@ $slug = $post->post_name;
             <h2 class="section__title font-reverse">
                 <em>分野ごとの弁護士費用について</em>
             </h2>
-            <p class="section__copy">安心してご相談・ご依頼いただくため、わかりやすい料金体系にしております。<br class="pc-none">法律相談料も初回３０分は無料です。<br>来所予約の際にも費用の説明をいたします。</p>
             <div class="price-category__container">
                 <ul class="price-category__list">
                     <li class="price-category__item">

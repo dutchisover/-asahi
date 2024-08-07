@@ -162,6 +162,11 @@
 		}
 	}
 
+	&__col-bottom {
+		margin-top: 8px;
+		font-size: 10px;
+	}
+
 	&__privacy {
 		background: #fff;
 		border: 1px solid #777;
@@ -172,7 +177,7 @@
 	}
 
 	&__button-area {
-		margin-top: 60px;
+		margin-top: 50rem;
 	}
 }
 
@@ -246,6 +251,146 @@
 	}
 }
 
+.wpcf7-form-control-wrap[data-name="privacy"] {
+	text-align: center;
+}
+
+.confirm-area__buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30rem;
+	gap: 20px;
+
+	@include media() {
+		flex-direction: column;
+		margin-top: 50rem;
+	}
+}
+
+.confirm-area__button {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	//margin-top: 30rem;
+	min-width: 242px;
+	width: fit-content;
+	height: 55px;
+	border-radius: 100px;
+	background-color: var(--colorKey);
+	color: #fff;
+
+	@include media() {
+		//margin-top: 50rem;
+		min-width: 202px;
+		height: 45px;
+		font-size: 13px;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		display: block;
+		width: .5em;
+		height: .5em;
+		border: 1px solid;
+		border-top: 0;
+		border-left: 0;
+		transform: translateY(-50%) rotate(-45deg);
+
+		@include media() {
+			right: 40px;
+		}
+	}
+
+	&.prev {
+		background-color: transparent;
+		color: var(--colorKey);
+		border: 1px solid var(--colorKey);
+
+		&::after {
+			color: var(--colorKey);
+		}
+	}
+
+	input {
+		width: 100%;
+		height: 100%;
+		text-align: center;
+	}
+
+	.wpcf7-spinner {
+		position: absolute;
+		top: -50%;
+		left: 50%;
+		transform: translateX(-50%);
+		margin: 0;
+	}
+}
+
+.contact-form__button-area {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	//margin-top: 30rem;
+	min-width: 242px;
+	width: fit-content;
+	height: 55px;
+	border-radius: 100px;
+	background-color: var(--colorKey);
+	color: #fff;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	@include media() {
+		//margin-top: 50rem;
+		min-width: 202px;
+		height: 45px;
+		font-size: 13px;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		display: block;
+		width: .5em;
+		height: .5em;
+		border: 1px solid;
+		border-top: 0;
+		border-left: 0;
+		transform: translateY(-50%) rotate(-45deg);
+
+		@include media() {
+			right: 40px;
+		}
+	}
+
+	input,
+	a {
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.wpcf7-spinner {
+		position: absolute;
+		top: -50%;
+		left: 50%;
+		transform: translateX(-50%);
+		margin: 0;
+	}
+}
+
 .wpcf7-list-item-label {
 	margin-left: 18px;
 	font-size: 12px;
@@ -259,6 +404,11 @@
 .wpcf7-not-valid-tip {
 	font-size: 13px;
 	margin-top: 6px;
+}
+
+.wpcf7 form .wpcf7-response-output {
+	border: none;
+	text-align: center;
 }
 
 .field-group {
@@ -300,38 +450,79 @@ textarea {
 	pointer-events: none;
 }
 
-.confirm-modal {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 40px 20px;
-	background: rgba(0, 0, 0, .5);
-	opacity: 0;
-	pointer-events: none;
-	transition: opacity 0.2s ease-out;
-	z-index: 100;
+.confirm-area__wrap {
+	width: r(1360);
+	margin: 64rem auto 0;
+	padding: 74rem 200rem 160rem;
+	background: #E8DED3;
+	border-radius: 37rem;
 
-	&.active {
-		display: block;
-		opacity: 1;
-		pointer-events: auto;
+	@media screen and (max-width: 1680px) {
+		padding-left: 120rem;
+		padding-right: 120rem;
 	}
 
-	&__wrap {
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 80%;
-		background: #E8DED3;
+	@media screen and (max-width: 1360px) {
+		width: r(1500);
+	}
+
+	@include media() {
+		width: calc(100% + 30px);
+		max-width: unset;
+		margin: 0 -15px;
+		padding: 0px 22px 45px;
 		border-radius: 10px;
-		padding: 20px;
-		max-height: 80%;
-		overflow-y: scroll;
+		background: #F8EEE2;
+		margin-top: 50px;
 	}
+}
+
+.confirm-area {
+
+	&__row {
+		display: flex;
+		padding: 26px 0;
+		border-bottom: dashed 1px #777;
+
+		@media screen and (max-width: 1024px) {
+			flex-direction: column;
+		}
+	}
+
+	&__row-head {
+		flex: 1 0 220rem;
+		color: var(--colorText);
+
+		@media screen and (max-width: 1500px) {
+			flex: 1 0 340rem;
+		}
+
+		@media screen and (max-width: 1024px) {
+			flex: 1;
+		}
+
+		@include media() {
+			flex: 1 0 100%;
+		}
+	}
+
+	&__row-body {
+		flex: 1 1 100%;
+		padding-left: 80rem;
+
+		@media screen and (max-width: 1024px) {
+			flex: 1;
+			padding-left: 0;
+			padding-top: 4rem;
+
+		}
+	}
+
+	&__bottom-message {
+		margin-top: 70rem;
+		margin-bottom: 60rem;
+		text-align: center;
+		font-size: 14px;
+	}
+
 }

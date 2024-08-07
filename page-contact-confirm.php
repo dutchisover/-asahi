@@ -45,13 +45,8 @@ $slug = $post->post_name;
     ?>
 
     <section class="section" data-section-title="contact">
-
-
-    </section>
-
-    <section class="section" data-section-title="Flow" id="anc-flow">
-        <h2 class="section__title">
-            <em>ご入力内容のご確認</em>
+        <h2 class="section__title section__first-title">
+            <em class="font-gothic-medium">ご入力内容のご確認</em>
         </h2>
 
         <p class="section__copy">
@@ -62,6 +57,7 @@ $slug = $post->post_name;
         </div>
 
     </section>
+
 
     <?php
     echo '</div>';

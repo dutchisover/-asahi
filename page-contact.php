@@ -47,8 +47,8 @@ $slug = $post->post_name;
     <section class="section" data-section-title="contact">
 
         <div class="contact-top">
-            <h2 class="section__title">
-                <em class="font-gothic">初回30分 相談無料</em>
+            <h2 class="section__title section__first-title">
+                <em class="font-gothic-medium">初回30分 相談無料</em>
                 <span>お気軽にご相談ください！</span>
             </h2>
 

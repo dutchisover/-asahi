@@ -224,3 +224,55 @@ function wpcf7_autop_return_false()
 add_filter('cf7msm_force_session', function () {
     return true;
 });
+
+add_filter('wpcf7_validate_email', 'wpcf7_validate_email_filter_confrim', 11, 2);
+add_filter('wpcf7_validate_email*', 'wpcf7_validate_email_filter_confrim', 11, 2);
+function wpcf7_validate_email_filter_confrim($result, $tag)
+{
+    $type = $tag['type'];
+    $name = $tag['name'];
+    if ('email' == $type || 'email*' == $type) {
+        if (preg_match('/(.*)_confirm$/', $name, $matches)) { //確認用メルアド入力フォーム名を ○○○_confirm としています。
+            $target_name = $matches[1];
+            $posted_value = trim((string) $_POST[$name]); //前後空白の削除
+            $posted_target_value = trim((string) $_POST[$target_name]); //前後空白の削除
+            if ($posted_value != $posted_target_value) {
+                $result->invalidate($tag, "確認用のメールアドレスが一致していません");
+            }
+        }
+    }
+    return $result;
+}
+
+// Contact Form 7でカタカナ・ひらがなのバリデーション追加
+function custom_cf7_kana_validation($result, $tag)
+{
+    $tag       = new WPCF7_Shortcode($tag);
+    $fieldName = $tag->name;
+    $fieldValue = isset($_POST[$fieldName]) ? trim(wp_unslash(strtr((string) $_POST[$fieldName], "\n", " "))) : "";
+
+    // //全角カタカナまたはひらがなの入力チェック
+    // if ($fieldName === "your-kana") {
+    //     if (!preg_match("/^[ア-ヶーぁ-ん]+$/u", $fieldValue)) {
+    //         $result->invalidate($tag, "全角カタカナまたはひらがなで入力してください。");
+    //     }
+    // }
+
+    // //全角カタカナのみ
+    // if ($fieldName === "your-kana") {
+    //     if (!preg_match("/^[ア-ヶー]+$/u", $fieldValue)) {
+    //         $result->invalidate($tag, "全角カタカナで入力してください。");
+    //     }
+    // }
+
+    //ひらがなのみ
+    if ($fieldName === "your_kana") {
+        if (!preg_match("/^[ぁ-ん]+$/u", $fieldValue)) {
+            $result->invalidate($tag, "ひらがなで入力してください。");
+        }
+    }
+
+    return $result;
+}
+add_filter('wpcf7_validate_text', 'custom_cf7_kana_validation', 11, 2);
+add_filter('wpcf7_validate_text*', 'custom_cf7_kana_validation', 11, 2);
