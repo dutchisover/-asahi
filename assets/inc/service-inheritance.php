@@ -381,7 +381,7 @@ $slug = $post->post_name;
             <div class="service__price-box" id="anc-price-04">
                 <?php service_price_title('不当利得返還請求<span>（請求側・被請求側）</span>'); ?>
 
-                <p class="service__price-text">日本弁護士連合会（旧）報酬基準や多くの法律事務所では、着手金が遺産の額に応じて設定されております。<br>そのため、遺産に不動産が含まれる場合などは着手金が非常に高額になる場合や、遺産が確定するまで着手金も確定しない場合があります。<br>そこで、当事務所では着手金の額を固定とすることで、ご依頼いただきやすい料金設定となっております。</p>
+                <p class="service__price-text">遺産分割協議・調停において、相手方との間で預貯金の無断引き出しや使途不明金等について合意が整わない場合は、遺産分割とは別に解決する必要があります。</p>
 
                 <h4 class="service__price-subtitle">着手金</h4>
                 <?php price_table_2col([
@@ -467,7 +467,7 @@ $slug = $post->post_name;
             <!-- 08:遺言執行 -->
             <div class="service__price-box" id="anc-price-08">
                 <?php service_price_title('遺言執行'); ?>
-                <p class="service__price-text">遺言書で当事務所を遺言執行者に指定いただき、実際に遺言執行者に就任した場合、以下の費用を頂戴いたし</p>
+                <p class="service__price-text">遺言書で当事務所を遺言執行者に指定いただき、実際に遺言執行者に就任した場合、以下の費用を頂戴いたします。</p>
                 <?php price_table_2col([
                     ['遺産の価額', '報酬金'],
                     ['300万円以下の場合', '33万円'],
