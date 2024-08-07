@@ -95,6 +95,13 @@
 		}
 	}
 
+	&#anc-price {
+
+		@include media() {
+			background: #e8ded3;
+		}
+	}
+
 	&::before {
 		content: attr(data-section-title);
 		position: absolute;

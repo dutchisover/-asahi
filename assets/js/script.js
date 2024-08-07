@@ -377,7 +377,33 @@ if (priceTitles.length > 0) {
                 2,
                 "0"
             )}`;
-            linkElement.textContent = textContent;
+            // textContentを含むdiv要素を作成
+            const divElement = document.createElement("div");
+
+            // textcontentの「（」から「）」までをspan要素で囲む
+            const match = textContent.match(/（.*?）/);
+            if (match) {
+                const beforeParen = textContent.slice(0, match.index);
+                const inParen = match[0];
+                const afterParen = textContent.slice(
+                    match.index + match[0].length
+                );
+
+                divElement.appendChild(document.createTextNode(beforeParen));
+
+                const spanElement = document.createElement("span");
+                spanElement.textContent = inParen;
+                divElement.appendChild(spanElement);
+
+                if (afterParen) {
+                    divElement.appendChild(document.createTextNode(afterParen));
+                }
+            } else {
+                divElement.textContent = textContent;
+            }
+
+            // divElementをlinkElementに追加
+            linkElement.appendChild(divElement);
 
             // .service__price-nav にa要素を追加
             const navElement = document.querySelector(".service__price-nav");

@@ -123,7 +123,12 @@ $slug = $post->post_name;
                     // アンカーリンクIDを生成
                     $anchor_id = 'anc-' . str_pad($counter, 2, '0', STR_PAD_LEFT);
 
-                    echo '<a href="#' . esc_attr($anchor_id) . '" class="service__sidebar-link">' . get_the_title() . '</a>';
+                    $text = get_the_title();
+                    // 全角のカッコ「（」から「）」をカッコごとSPANで囲む
+                    $text = preg_replace('/（.*?）/', '<span>$0</span>', $text);
+
+
+                    echo '<a href="#' . esc_attr($anchor_id) . '" class="service__sidebar-link">' . $text . '</a>';
 
                     $counter++;
                 }

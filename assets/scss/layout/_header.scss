@@ -7,6 +7,7 @@
 		left: 0;
 		z-index: 20;
 		width: 100%;
+		background: #F8EEE2;
 	}
 }
 
@@ -73,11 +74,11 @@
 		visibility: hidden;
 		align-items: center;
 		flex-direction: column-reverse;
-		justify-content: center;
+		justify-content: flex-end;
 		gap: 43rem;
 		margin-top: 0;
 		padding: 0;
-		padding-top: 100rem;
+		padding-top: 130rem;
 		width: 100vw;
 		height: calc(100vh - 48rem);
 		height: calc(100dvh - 48rem);
@@ -107,7 +108,7 @@
 
 	@include media() {
 		flex-direction: column;
-		gap: 10rem;
+		//gap: 10rem;
 		padding: 0;
 		width: 600rem;
 	}
@@ -124,6 +125,10 @@ a.header__contact-tel {
 	line-height: 1;
 	pointer-events: none;
 
+	strong {
+		font-weight: var(--weightMedium);
+	}
+
 	@include media(sm) {
 		height: 136rem;
 	}
@@ -134,12 +139,13 @@ a.header__contact-tel {
 		align-items: center;
 		justify-content: center;
 		width: 100%;
-		height: 90rem;
+		//height: 90rem;
 		border: 2rem solid;
 		border-radius: 20rem;
 		color: #fff;
 		letter-spacing: .02em;
 		pointer-events: all;
+		//padding: 14rem;
 
 		&::after {
 			content: '';
@@ -193,7 +199,7 @@ a.header__contact-tel {
 
 	@include media() {
 		position: relative;
-		height: 90rem;
+		//height: 90rem;
 		border-radius: 20rem;
 		background-color: #fff;
 		color: var(--colorKey);
@@ -385,7 +391,7 @@ a.header__contact-tel {
 
 .home .header,
 .home .main {
-	background-color: #fff;
+	//background-color: #fff;
 }
 
 .home .main {

@@ -63,7 +63,9 @@
             'order' => 'DESC',   // 降順で最新の投稿から取得
         );
         $topics_query = new WP_Query($args);
+        $has_top_news = 'no-top-news';
         if ($topics_query->have_posts()) : ?>
+            <?php $has_top_news = ''; ?>
             <div class="mv-topics">
                 <p class="mv-topics__title sp-none">new topics</p>
                 <img src="<?= get_template_directory_uri(); ?>/assets/image/text_mv-topics_sp.svg" alt="New" class="pc-none mv-topics__title" width="73" height="89">
@@ -120,7 +122,7 @@
     <!-- /.mv -->
 
     <!-- MESSAGE ご挨拶 -->
-    <section class="top-message">
+    <section class="top-message <?php echo $has_top_news; ?>">
         <div class="top-message__inner">
             <h2 class="section__title">
                 <em>message</em>
@@ -207,7 +209,7 @@
                                 <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_top-service_01.jpg" alt="遺産相続／遺言" width="423" height="236" class="top-service__item-image" />
                             </picture>
 
-                            <h3 class="top-service__item-title"><span class="top-service__item-number pc-none">service #01</span><br class="pc-none">遺産相続／遺言</h3>
+                            <h3 class="top-service__item-title"><span class="top-service__item-number pc-none">service #01</span>遺産相続／遺言</h3>
                             <p class="top-service__item-text sp-none">遺産分割、遺留分侵害額請求、遺言作成、相続放棄など、相続問題に精通した弁護士が一貫してサポートいたします。</p>
                         </a>
                     </li>
@@ -217,7 +219,7 @@
                                 <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_top-service_02_sp.jpg" media="(max-width: 820px)" />
                                 <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_top-service_02.jpg" alt="労働（残業代請求・解雇・労災）" width="423" height="236" class="top-service__item-image" />
                             </picture>
-                            <h3 class="top-service__item-title"><span class="top-service__item-number pc-none">service #02</span><br class="pc-none">労働問題<span>（残業代請求・不当解雇・労災）</span></h3>
+                            <h3 class="top-service__item-title"><span class="top-service__item-number pc-none">service #02</span>労働問題<span>（残業代請求・不当解雇・労災）</span></h3>
                             <p class="top-service__item-text sp-none">労働問題の中でも残業代請求、不当解雇、労災に精通しています。豊富な解決実績に基づきサポートいたします。</p>
                         </a>
                     </li>
@@ -227,7 +229,7 @@
                                 <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_top-service_03_sp.jpg" media="(max-width: 820px)" />
                                 <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_top-service_03.jpg" alt="交通事故（被害者側）" width="423" height="236" class="top-service__item-image" />
                             </picture>
-                            <h3 class="top-service__item-title"><span class="top-service__item-number pc-none">service #03</span><br class="pc-none">交通事故<span>（被害者側）</span></h3>
+                            <h3 class="top-service__item-title"><span class="top-service__item-number pc-none">service #03</span>交通事故<span>（被害者側）</span></h3>
                             <p class="top-service__item-text sp-none">被害者側専門の弁護士として、豊富な解決実績があります。被害に遭われた方を全力でサポートします。</p>
                         </a>
                     </li>
@@ -237,7 +239,7 @@
                                 <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_top-service_04_sp.jpg" media="(max-width: 820px)" />
                                 <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_top-service_04.jpg" alt="離婚・男女問題" width="423" height="236" class="top-service__item-image" />
                             </picture>
-                            <h3 class="top-service__item-title"><span class="top-service__item-number pc-none">service #04</span><br class="pc-none">離婚・男女問題</h3>
+                            <h3 class="top-service__item-title"><span class="top-service__item-number pc-none">service #04</span>離婚・男女問題</h3>
                             <p class="top-service__item-text sp-none">離婚、不貞慰謝料を含む男女問題に幅広く対応しています。前向きな人生に向けてサポートいたします。</p>
                         </a>
                     </li>

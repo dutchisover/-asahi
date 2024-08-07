@@ -40,28 +40,30 @@ $slug = $post->post_name;
                 <em>our office</em>
                 <span>事務所概要</span>
             </h2>
-            <?php /*
-			<div class="swiper" id="office__swiper">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<div class="office__item">
-							<img src="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_01.jpg" alt="茨木あさひ法律事務所" class="office__item-image" width="900" height="374">
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="office__item">
-							<img src="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_02.jpg" alt="茨木あさひ法律事務所" class="office__item-image" width="900" height="374">
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="office__item">
-							<img src="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_03.jpg" alt="茨木あさひ法律事務所" class="office__item-image" width="900" height="374">
-						</div>
-					</div>
-				</div>
-				<div class="swiper-pagination"></div>
-			</div>
-            */ ?>
+
+            <div class="swiper" id="office__swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="office__item">
+                            <picture>
+                                <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_01_sp.jpg" media="(max-width: 820px)" />
+                                <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_01.jpg" alt="" width="900" height="374" />
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="office__item">
+                            <picture>
+                                <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_02_sp.jpg" media="(max-width: 820px)" />
+                                <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_02.jpg" alt="" width="900" height="374" />
+                            </picture>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
             <div class="office__data-list">
                 <dl class="office__data-item">
                     <dt class="office__data-title">名称</dt>
