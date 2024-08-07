@@ -168,10 +168,11 @@
 .archive__item-date {
   color: #8e8e8e;
   letter-spacing: .08em;
-  font-weight: var(--weightMedium);
+  // font-weight: var(--weightMedium);
   font-size: r(12);
-  font-family: var(--fontGothic);
+  // font-family: var(--fontGothic);
 
+  @include font_m;
   @include media() {
     display: flex;
     align-items: center;
@@ -194,9 +195,10 @@
   border-radius: 12rem;
   color: #fff;
   letter-spacing: .05em;
-  font-weight: var(--weightMedium);
-  font-family: var(--fontGothic);
+  // font-weight: var(--weightMedium);
+  // font-family: var(--fontGothic);
 
+  @include font_m;
   @include media() {
     margin-left: 0;
     padding: 7rem 20rem;
@@ -210,10 +212,11 @@
   width: 513rem;
   color: var(--colorText);
   letter-spacing: .08em;
-  font-weight: var(--weightMedium);
   font-size: r(18);
   line-height: 1.3888;
+  // font-weight: var(--weightMedium);
 
+  @include font_m;
   @include media() {
     margin-top: 0;
     width: 100%;

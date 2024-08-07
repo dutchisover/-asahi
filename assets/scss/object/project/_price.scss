@@ -58,10 +58,11 @@
   padding-bottom: 10rem;
   border-bottom: 2px solid;
   color: var(--colorKey);
-  font-weight: var(--weightMedium);
   font-size: r(24);
   line-height: 1.75;
+  // font-weight: var(--weightMedium);
 
+  @include font_m;
   @include media() {
     align-items: baseline;
     margin-bottom: 50rem;
@@ -99,7 +100,9 @@
     background-color: #b5aaa1;
     color: #fff;
     text-align: inherit;
-    font-weight: var(--weightMedium);
+    // font-weight: var(--weightMedium);
+
+    @include font_m;
   }
 
   td {
@@ -122,9 +125,10 @@
   margin-top: 43rem;
   padding-left: 26rem;
   letter-spacing: .02em;
-  font-weight: var(--weightLight);
   font-size: r(14);
+  // font-weight: var(--weightLight);
 
+  @include font_l;
   @include media() {
     margin-top: 40rem;
     font-size: r(22);
@@ -193,10 +197,11 @@
   padding-bottom: 3rem;
   border-bottom: 2px solid var(--colorKey);
   color: var(--colorKey);
-  font-weight: var(--weightMedium);
+  // font-weight: var(--weightMedium);
   font-size: r(18);
-  font-family: var(--fontGothic);
+  // font-family: var(--fontGothic);
 
+  @include font_m;
   @include media() {
     border-bottom: 0;
     font-size: r(30);
@@ -215,10 +220,11 @@
   margin-top: 10rem;
   color: #393939;
   letter-spacing: .02em;
-  font-weight: var(--weightLight);
   font-size: r(16);
   line-height: 1.875;
+  // font-weight: var(--weightLight);
 
+  @include font_l;
   @include media() {
     color: var(--colorText);
     font-size: r(26);
@@ -308,9 +314,10 @@ ul.price-category__list {
   justify-content: flex-start;
   // gap: 34rem;
   color: var(--colorKey);
-  font-weight: var(--weightMedium);
   font-size: r(18);
+  // font-weight: var(--weightMedium);
 
+  @include font_m;
   @include media() {
     display: block;
     color: #fff;

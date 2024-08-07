@@ -43,9 +43,10 @@
   color: #393939;
   letter-spacing: .05em;
   font-size: r(26);
-  font-family: var(--fontGothic);
+  // font-family: var(--fontGothic);
   line-height: 1.538;
 
+  @include font_r;
   @include media() {
     margin: 0 auto;
     width: 630rem;
@@ -74,10 +75,11 @@
   border-radius: 12rem;
   color: #fff;
   letter-spacing: .05em;
-  font-weight: var(--weightMedium);
+  // font-weight: var(--weightMedium);
   font-size: r(10);
-  font-family: var(--fontGothic);
+  // font-family: var(--fontGothic);
 
+  @include font_m;
   @include media() {
     padding: 10rem 20rem;
     border-radius: 20rem;
@@ -173,10 +175,11 @@
 
 .single__editor-name {
   color: #393939;
-  font-weight: var(--weightLight);
+  // font-weight: var(--weightLight);
   font-size: r(14);
-  font-family: var(--fontGothic);
+  // font-family: var(--fontGothic);
 
+  @include font_l;
   @include media() {
     font-size: r(22);
   }
@@ -208,10 +211,12 @@
 
 .single__editor-text {
   letter-spacing: .02em;
-  font-weight: var(--weightLight);
+  // font-weight: var(--weightLight);
   font-size: r(12);
-  font-family: var(--fontGothic);
+  // font-family: var(--fontGothic);
   line-height: 1.8333;
+
+  @include font_l;
 }
 
 
@@ -326,10 +331,11 @@
 
 .inc__profile-name {
   color: #393939;
-  font-weight: var(--weightLight);
+  // font-weight: var(--weightLight);
   font-size: r(14);
-  font-family: var(--fontGothic);
+  // font-family: var(--fontGothic);
 
+  @include font_l;
   @include media() {
     font-size: r(22);
   }
@@ -366,11 +372,12 @@
 .inc__profile-text,
 .inc__profile-certify {
   letter-spacing: .02em;
-  font-weight: var(--weightLight);
+  // font-weight: var(--weightLight);
   font-size: r(16);
-  font-family: var(--fontGothic);
+  // font-family: var(--fontGothic);
   line-height: 1.8333;
 
+  @include font_l;
   @include media() {
     font-size: r(22);
   }

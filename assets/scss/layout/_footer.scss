@@ -17,6 +17,10 @@
     padding-top: 140rem;
     background-image: url(../image/bg_footer-contact_sp.jpg);
   }
+
+  .section__text {
+    @include font_r;
+  }
 }
 
 .footer__contact-label {
@@ -32,6 +36,7 @@
   color: #fff;
   font-style: normal;
 
+  @include font_m;
   @include media() {
     width: 311rem;
     height: 88rem;
@@ -82,9 +87,11 @@
     gap: 19rem;
     color: #fff;
     letter-spacing: .02em;
-    font-weight: var(--weightMedium);
     font-size: r(40, 22);
     line-height: 1;
+    // font-weight: var(--weightMedium);
+
+    @include font_m;
   }
 
   em {
@@ -115,6 +122,7 @@
 
     em,
     p {
+      font-weight: var(--weightMediumE);
       font-family: var(--fontEnglish);
     }
   }
@@ -298,7 +306,7 @@
   small {
     color: var(--colorText);
     letter-spacing: .06em;
-    font-weight: var(--weightLight);
+    font-weight: var(--weightLightE);
     font-size: r(13);
     font-family: var(--fontEnglish);
 

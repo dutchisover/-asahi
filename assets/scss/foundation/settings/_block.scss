@@ -113,10 +113,11 @@
   // 記事本文
   .wp-block-column p {
     margin-top: 25rem;
-    font-weight: var(--weightRegular);
     font-size: 20rem;
     line-height: 2;
+    // font-weight: var(--weightRegular);
 
+    @include font_r;
     @include media() {
       font-size: 13rem;
     }

@@ -16,6 +16,7 @@
   color: #fff;
   font-size: r(16);
 
+  @include font_m;
   place-items: center;
 
   &::after {

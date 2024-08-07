@@ -3,73 +3,73 @@
 @use '../foundation/index' as *;
 
 .pc-none {
-	@include media(pc_only) {
-		display: none !important;
-	}
+  @include media(pc_only) {
+    display: none !important;
+  }
 }
 
 .sp-none {
-	@include media() {
-		display: none !important;
-	}
+  @include media() {
+    display: none !important;
+  }
 }
 
 .is-center {
-	text-align: center !important;
+  text-align: center !important;
 }
 
 // アコーディオン
 .js-accordion__content {
-	overflow: hidden;
-	max-height: 0;
-	transition: max-height .6s;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .6s;
 }
 
 .is-open .js-accordion__content {
-	max-height: var(--max-height);
+  max-height: var(--max-height);
 }
 
 .fw-light {
-	font-weight: var(--weightLight);
+  font-weight: var(--weightLight);
 }
 
 .fw-regular {
-	font-weight: var(--weightRegular);
+  font-weight: var(--weightRegular);
 }
 
 .fw-medium {
-	font-weight: var(--weightMedium);
+  font-weight: var(--weightMedium);
 }
 
 .fw-bold {
-	font-weight: var(--weightBold);
-	font-family: "A1ゴシック B", 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+  font-weight: var(--weightBold);
+  font-family: 'A1ゴシック B', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
 }
 
 .font-english {
-	font-family: var(--fontEnglish);
+  font-family: var(--fontEnglish);
 }
 
 .font-gothic-light {
-	font-family: "A1ゴシック L", 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif !important;
-	font-weight: var(--weightLight);
+  font-weight: var(--weightLight);
+  font-family: 'A1ゴシック L', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif !important;
 }
 
 .font-gothic-regular {
-	font-family: "A1ゴシック R", 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif !important;
-	font-weight: var(--weightRegular);
+  font-weight: var(--weightRegular);
+  font-family: 'A1ゴシック R', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif !important;
 }
 
 .font-gothic-medium {
-	font-family: "A1ゴシック M", 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif !important;
-	font-weight: var(--weightMedium);
+  font-weight: var(--weightMedium);
+  font-family: 'A1ゴシック M', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif !important;
 }
 
 .font-gothic-bold {
-	font-family: "A1ゴシック B", 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif !important;
-	font-weight: var(--weightBold);
+  font-weight: var(--weightBold);
+  font-family: 'A1ゴシック B', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif !important;
 }
 
 .text-sm {
-	font-size: r(14);
+  font-size: r(14);
 }
