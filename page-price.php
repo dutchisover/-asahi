@@ -71,7 +71,7 @@ $slug = $post->post_name;
                 <div class="cost-type__list">
                     <div class="cost-type__item">
                         <picture>
-                            <source media="(max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_price_01_sp.jpg">
+                            <source media="(max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_price_01.jpg">
                             <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_price_01.jpg" alt="着手金" class="cost-type__item-image">
                         </picture>
                         <div class="cost-type__item-content">
@@ -81,7 +81,7 @@ $slug = $post->post_name;
                     </div>
                     <div class="cost-type__item">
                         <picture>
-                            <source media="(max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_price_02_sp.jpg">
+                            <source media="(max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_price_02.jpg">
                             <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_price_02.jpg" alt="報酬金" class="cost-type__item-image">
                         </picture>
                         <div class="cost-type__item-content">
@@ -92,7 +92,7 @@ $slug = $post->post_name;
                     </div>
                     <div class="cost-type__item">
                         <picture>
-                            <source media="(max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_price_03_sp.jpg">
+                            <source media="(max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_price_03.jpg">
                             <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_price_03.jpg" alt="実費・日当・手数料" class="cost-type__item-image">
                         </picture>
                         <div class="cost-type__item-content">

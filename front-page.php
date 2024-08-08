@@ -15,8 +15,8 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <picture>
-                        <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_mv_01_sp.jpg" media="(max-width: 820px)" />
-                        <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_mv_01.jpg" alt="" width="1800" height="823" />
+                        <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_mv_01_sp.jpg?01" media="(max-width: 820px)" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_mv_01.jpg?01" alt="" width="1800" height="823" />
                     </picture>
                 </div>
                 <?php /*
