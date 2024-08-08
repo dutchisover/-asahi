@@ -34,7 +34,7 @@
 	                    <a href="<?= home_url(); ?>">
 	                        <picture>
 	                            <source media=" (max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/logo_sp.svg">
-	                            <img src="<?= get_template_directory_uri(); ?>/assets/image/logo.svg" alt="茨木あさひ法律事務所 - Ibawaki Asahi Law Offices" class="header__logo-image" width="348" height="67">
+	                            <img src="<?= get_template_directory_uri(); ?>/assets/image/logo.svg" alt="茨木市の弁護士  相続・離婚・交通事故・会社顧問の法律相｜談茨木あさひ法律事務所 - Ibawaki Asahi Law Offices" class="header__logo-image" width="348" height="67">
 	                        </picture>
 	                    </a>
 	                </h1>
@@ -43,7 +43,7 @@
 	                    <a href="<?= home_url(); ?>">
 	                        <picture>
 	                            <source media=" (max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/logo_sp.svg">
-	                            <img src="<?= get_template_directory_uri(); ?>/assets/image/logo.svg" alt="茨木あさひ法律事務所 - Ibawaki Asahi Law Offices" class="header__logo-image" width="348" height="67">
+	                            <img src="<?= get_template_directory_uri(); ?>/assets/image/logo.svg" alt="茨木市の弁護士  相続・離婚・交通事故・会社顧問の法律相談｜茨木あさひ法律事務所 - Ibawaki Asahi Law Offices" class="header__logo-image" width="348" height="67">
 	                        </picture>
 	                    </a>
 	                </div>
