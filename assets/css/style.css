@@ -927,6 +927,16 @@ ul.page-numbers {
   width: clamp(200px, 10vw / var(--board) * 10 * 348, 348px);
 }
 
+.header__container-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
 .header__contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1006,6 +1016,17 @@ a.header__contact-tel em {
   color: var(--colorText);
   font-family: "A1ゴシック M", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
   font-weight: 500;
+}
+.header__nav a[data-current=service]::after {
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+}
+.header__nav .is-sub-open > a {
+  border-bottom: 0;
+}
+.header__nav .is-sub-open > a::after {
+  -webkit-transform: translateY(-50%) rotate(225deg);
+          transform: translateY(-50%) rotate(225deg);
 }
 
 .header__nav-list {
@@ -1128,6 +1149,52 @@ a.header__contact-tel em {
 /*IE11対策用バーの線の高さ※対応しなければ削除してください*/
 #splash_text svg {
   height: 2px;
+}
+
+.header__nav-sub {
+  display: none;
+}
+
+.header__nav-sub-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 0 !important;
+  width: 290rem;
+  height: 99rem;
+  border: 1px solid;
+  border-radius: 10rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  font-size: clamp(10px, 10vw / var(--board) * 10 * 24, 24px) !important;
+  font-family: "A1ゴシック M", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+  font-weight: 500;
+}
+.header__nav-sub-item a span {
+  display: block;
+  white-space: nowrap;
+  font-size: clamp(10px, 10vw / var(--board) * 10 * 20, 20px);
+}
+.header__nav-sub-item a::after {
+  display: none !important;
+}
+
+.header__nav-sub-item.is-all {
+  width: 100%;
+}
+.header__nav-sub-item.is-all a {
+  width: 100%;
+  background-color: #fff;
+  color: var(--colorKey);
 }
 
 .section {
@@ -4849,6 +4916,10 @@ ul.price-category__list {
   border-color: #707070;
 }
 
+.is-overflow {
+  overflow: hidden;
+}
+
 .is-center {
   text-align: center !important;
 }
@@ -5256,6 +5327,19 @@ ul.price-category__list {
     opacity: 1;
     pointer-events: all;
   }
+  .header__container-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 43rem;
+    padding-bottom: 100rem;
+  }
   .header__contact {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5388,6 +5472,25 @@ ul.price-category__list {
   }
   .home .main {
     padding-bottom: 0;
+  }
+  .header__nav-sub {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 12rem 10rem;
+    height: 0;
+    opacity: 0;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  .is-sub-open .header__nav-sub {
+    padding-bottom: 45rem;
+    height: auto;
+    border-bottom: 1px solid #fff;
+    opacity: 1;
   }
   .section {
     padding-right: 60rem;

@@ -95,6 +95,20 @@
   }
 }
 
+.header__container-inner {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include media() {
+    display: flex;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    flex-direction: column;
+    gap: 43rem;
+    padding-bottom: 100rem;
+  }
+}
+
 .header__contact {
   display: flex;
   justify-content: flex-end;
@@ -282,6 +296,22 @@ a.header__contact-tel {
         font-size: r(14, 8);
       }
     }
+
+    &[data-current='service'] {
+      &::after {
+        transform: translateY(-50%) rotate(45deg);
+      }
+    }
+  }
+
+  .is-sub-open {
+    & > a {
+      border-bottom: 0;
+
+      &::after {
+        transform: translateY(-50%) rotate(225deg);
+      }
+    }
   }
 }
 
@@ -303,6 +333,9 @@ a.header__contact-tel {
     }
   }
 }
+
+
+
 
 
 
@@ -448,4 +481,64 @@ a.header__contact-tel {
 /*IE11対策用バーの線の高さ※対応しなければ削除してください*/
 #splash_text svg {
   height: 2px;
+}
+
+
+
+// 開閉ナビ（スマホ）
+.header__nav-sub {
+  display: none;
+
+  @include media() {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    gap: 12rem 10rem;
+    height: 0;
+    opacity: 0;
+    transition: .3s ease;
+
+    .is-sub-open & {
+      padding-bottom: 45rem;
+      height: auto;
+      border-bottom: 1px solid #fff;
+      opacity: 1;
+    }
+  }
+}
+
+.header__nav-sub-item a {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0 !important;
+  width: 290rem;
+  height: 99rem;
+  border: 1px solid;
+  border-radius: 10rem;
+  background-color: rgba(255, 255, 255, .08);
+  font-size: r(24) !important;
+
+  @include font_m;
+
+  span {
+    display: block;
+    white-space: nowrap;
+    font-size: r(20, 10);
+  }
+
+  &::after {
+    display: none !important;
+  }
+}
+
+.header__nav-sub-item.is-all {
+  width: 100%;
+
+  a {
+    width: 100%;
+    background-color: #fff;
+    color: var(--colorKey);
+  }
 }
