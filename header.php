@@ -106,7 +106,10 @@
 								<li class="header__nav-item">
 									<a href="<?= home_url(); ?>/about-us" data-subtitle="Lawyer" data-current="about">弁護士紹介</a>
 								</li>
-								<li class="header__nav-item is-sub-nav">
+								<li class="header__nav-item sp-none">
+									<a href="<?= home_url(); ?>/service" data-subtitle="Service" data-current="service"><span>取り扱い業務<span class="pc-none"> 一覧</span></span></a>
+								</li>
+								<li class="header__nav-item is-sub-nav pc-none">
 									<a href="<?= home_url(); ?>/service" data-subtitle="Service" data-current="service"><span>取り扱い業務<span class="pc-none"> 一覧</span></span></a>
 
 									<ul class="header__nav-sub">
