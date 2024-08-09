@@ -435,7 +435,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ////////////////// .is-sub-navのaタグクリック時の挙動を制御 //////////////////
 
-document.querySelectorAll('.is-sub-nav a').forEach(anchor => {
+document.querySelectorAll('.is-sub-nav > a').forEach(anchor => {
   anchor.addEventListener('click', event => {
     event.preventDefault();
     const parent = event.target.closest('.is-sub-nav');
@@ -449,5 +449,22 @@ document.querySelectorAll('.is-sub-nav a').forEach(anchor => {
         behavior: 'auto' // スムーズにスクロールする場合は'smooth'、瞬時にスクロールする場合は'auto'
       });
     }
+  });
+});
+
+////////////////// .service__field-itemを操作 //////////////////
+
+// 全ての .service__field-item 要素を取得
+const serviceItems = document.querySelectorAll('.service__field-item');
+
+// 最初の1つめに .is-open を付与
+if (serviceItems.length > 0) {
+  serviceItems[0].classList.add('is-open');
+}
+
+// 各 .service__field-item 要素にクリックイベントを追加して .is-open をトグル
+serviceItems.forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('is-open');
   });
 });

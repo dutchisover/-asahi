@@ -526,6 +526,8 @@ a.header__contact-tel {
     display: block;
     white-space: nowrap;
     font-size: r(20, 10);
+
+    font-feature-settings: 'palt';
   }
 
   &::after {
