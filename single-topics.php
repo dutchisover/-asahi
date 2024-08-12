@@ -1,3 +1,13 @@
+<?php
+function blog_add_files()
+{
+    $cache = date("Ymd-Gis");
+    wp_enqueue_style('add_blog_style', get_template_directory_uri() . '/assets/css/add.css', "", $cache, 'all');
+}
+
+add_action('wp_enqueue_scripts', 'blog_add_files');
+?>
+
 <?php get_header(); ?>
 <div class="page__header">
     <div class="page__mv">
