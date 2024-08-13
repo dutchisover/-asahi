@@ -468,3 +468,43 @@ serviceItems.forEach(item => {
     item.classList.toggle('is-open');
   });
 });
+
+////////////////// .is-sub-navにマウスオーバーした時の処理 //////////////////
+const subNavElements = document.querySelectorAll('.is-sub-nav');
+
+subNavElements.forEach(subNav => {
+  subNav.addEventListener('mouseover', () => {
+    if (window.innerWidth > 820) {
+      subNav.classList.add('is-sub-open');
+    }
+  });
+});
+
+////////////////// .header__nav-subからマウスアウトした時の処理 //////////////////
+const headerNavSubElements = document.querySelectorAll('.header__nav-sub');
+
+headerNavSubElements.forEach(headerNavSub => {
+  headerNavSub.addEventListener('mouseout', () => {
+    subNavElements.forEach(subNav => {
+      subNav.classList.remove('is-sub-open');
+    });
+  });
+});
+
+////////////////// スクロール方向と位置に応じてクラスを操作 //////////////////
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+  const body = document.querySelector('body');
+  if (!body) return;
+
+  if (window.scrollY <= 300) {
+    body.classList.remove('is-float');
+  } else if (window.scrollY > lastScrollY) {
+    body.classList.remove('is-float');
+  } else {
+    body.classList.add('is-float');
+  }
+
+  lastScrollY = window.scrollY;
+});
