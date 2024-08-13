@@ -1245,6 +1245,11 @@ a.header__contact-tel em {
   display: none;
 }
 
+.is-no-float .is-sub-nav.is-sub-open .header__nav-sub {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 .section {
   position: relative;
   width: 93.75%;

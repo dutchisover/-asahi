@@ -784,3 +784,8 @@ a.header__contact-tel {
     display: none;
   }
 }
+
+.is-no-float .is-sub-nav.is-sub-open .header__nav-sub {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}

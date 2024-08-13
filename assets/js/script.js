@@ -498,12 +498,19 @@ window.addEventListener('scroll', () => {
   const body = document.querySelector('body');
   if (!body) return;
 
-  if (window.scrollY <= 300) {
+  if (window.scrollY < 200) {
     body.classList.remove('is-float');
-  } else if (window.scrollY > lastScrollY) {
-    body.classList.remove('is-float');
+    body.classList.add('is-no-float');
   } else {
-    body.classList.add('is-float');
+    body.classList.remove('is-no-float');
+
+    if (window.scrollY > lastScrollY) {
+      body.classList.remove('is-float');
+      body.classList.add('is-no-float');
+    } else {
+      body.classList.add('is-float');
+      body.classList.remove('is-no-float');
+    }
   }
 
   lastScrollY = window.scrollY;
