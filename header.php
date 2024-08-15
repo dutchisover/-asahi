@@ -116,7 +116,7 @@
 	                                    <li class="header__nav-sub-item is-all">
 	                                        <a href="<?= home_url(); ?>/service">
 	                                            <div class="pc-none">すべてを見る</div>
-	                                            <div class="sp-none">取扱業務一覧ページはこちら</div>
+	                                            <div class="sp-none">すべてを見る</div>
 	                                        </a>
 	                                    </li>
 
@@ -236,7 +236,7 @@
 	                                        <li class="header__nav-sub-item is-all">
 	                                            <a href="<?= home_url(); ?>/service">
 	                                                <div class="pc-none">すべてを見る</div>
-	                                                <div class="sp-none">取扱業務一覧ページはこちら</div>
+	                                                <div class="sp-none">すべてを見る</div>
 	                                            </a>
 	                                        </li>
 
