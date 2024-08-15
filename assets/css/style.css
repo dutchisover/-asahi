@@ -1261,6 +1261,13 @@ ul.page-numbers {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+  /*スクロールバー非表示（IE・Edge）*/
+  -ms-overflow-style: none;
+  /*スクロールバー非表示（Firefox）*/
+  scrollbar-width: none;
+}
+.header__container-inner::-webkit-scrollbar {
+  display: none;
 }
 @media (max-width: 820px) {
   .header__container-inner {
