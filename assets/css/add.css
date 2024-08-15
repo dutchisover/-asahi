@@ -133,9 +133,9 @@
   }
 }
 
-.section h2.wp-block-heading {
+.section h3.wp-block-heading {
   color: #7B594B;
-  font-size: 22px;
+  font-size: 18px;
   font-family: "A1ゴシック M", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
   border-bottom: 1px solid #7B594B;
   margin-top: 60px;
@@ -143,14 +143,14 @@
   letter-spacing: 0.05em;
 }
 @media (max-width: 820px) {
-  .section h2.wp-block-heading {
-    font-size: 16px;
+  .section h3.wp-block-heading {
+    font-size: 14px;
   }
 }
 
-.section h3.wp-block-heading {
+.section h2.wp-block-heading {
   color: #7B594B;
-  font-size: 18px;
+  font-size: 22px;
   font-family: "A1ゴシック M", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
   border-left: 3px solid #7B594B;
   background: #F7F7F7;
@@ -161,8 +161,8 @@
   padding: 4px 0 0 10px;
 }
 @media (max-width: 820px) {
-  .section h3.wp-block-heading {
-    font-size: 14px;
+  .section h2.wp-block-heading {
+    font-size: 16px;
   }
 }
 
@@ -291,5 +291,62 @@
   .wp-block-list li {
     font-size: 15px;
   }
+}
+
+.section .wp-block-table table {
+  width: 100%;
+  table-layout: fixed;
+  text-align: center;
+}
+.section .wp-block-table table.is-text-left {
+  text-align: left;
+}
+.section .wp-block-table table + .section .wp-block-table table {
+  margin-top: 30rem;
+}
+.section .wp-block-table table th,
+.section .wp-block-table table td {
+  padding: 10rem 40rem;
+  border: 2px solid #fff;
+  vertical-align: middle;
+}
+@media (max-width: 820px) {
+  .section .wp-block-table table th,
+  .section .wp-block-table table td {
+    padding: 27rem 20rem;
+    border: 2px solid var(--colorBase);
+    font-size: clamp(10px, 10vw / var(--board) * 10 * 23, 23px);
+  }
+}
+.section .wp-block-table table th {
+  background-color: #b5aaa1;
+  color: #fff;
+  text-align: inherit;
+  font-family: "A1ゴシック M", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+  font-weight: 500;
+}
+.section .wp-block-table table td {
+  background-color: #e6e6e6;
+}
+@media (max-width: 820px) {
+  .section .wp-block-table table td {
+    background-color: #e3dcd8;
+    vertical-align: middle;
+  }
+}
+.section .wp-block-table table td span {
+  display: block;
+  font-size: 0.75em;
+}
+.section .wp-block-table table.is-special tbody th {
+  background-color: #c1c1c1 !important;
+  color: var(--colorBlack);
+}
+.section .wp-block-table table.is-special td {
+  padding: 20rem 10rem;
+  background-color: #e6e6e6;
+}
+.section .wp-block-table table.is-special td[rowspan="2"] {
+  vertical-align: middle;
 }
 /*# sourceMappingURL=add.css.map */

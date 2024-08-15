@@ -46,16 +46,16 @@ $slug = $post->post_name;
                     <div class="swiper-slide">
                         <div class="office__item">
                             <picture>
-                                <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_01_sp.jpg" media="(max-width: 820px)" />
-                                <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_01.jpg" alt="" width="900" height="374" />
+                                <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_01_sp.jpg?01" media="(max-width: 820px)" />
+                                <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_01.jpg?01" alt="" width="900" height="374" />
                             </picture>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="office__item">
                             <picture>
-                                <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_02_sp.jpg" media="(max-width: 820px)" />
-                                <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_02.jpg" alt="" width="900" height="374" />
+                                <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_02_sp.jpg?01" media="(max-width: 820px)" />
+                                <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_02.jpg?01" alt="" width="900" height="374" />
                             </picture>
                         </div>
                     </div>
@@ -139,16 +139,16 @@ $slug = $post->post_name;
                 </div>
                 <div class="access__item">
                     <picture>
-                        <source media="(max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_office-access_04_sp.jpg">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_office-access_04.jpg" alt="" class="access__item-image" width="350" height="251">
+                        <source media="(max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_office-access_04_sp.jpg?01">
+                        <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_office-access_04.jpg?01" alt="" class="access__item-image" width="350" height="251">
                     </picture>
                     <p class="access__item-title">Step 04</p>
                     <p class="access__item-text">階段を下りると目の前に茨木高橋ビルがあります。</p>
                 </div>
                 <div class="access__item">
                     <picture>
-                        <source media="(max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_office-access_05_sp.jpg">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_office-access_05.jpg" alt="" class="access__item-image" width="350" height="251">
+                        <source media="(max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_office-access_05_sp.jpg?01">
+                        <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_office-access_05.jpg?01" alt="" class="access__item-image" width="350" height="251">
                     </picture>
                     <p class="access__item-title">Step 05</p>
                     <p class="access__item-text">当事務所は茨木高橋ビルの８階東です。エレベーターをご利用ください。</p>

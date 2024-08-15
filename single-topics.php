@@ -87,7 +87,7 @@ add_action('wp_enqueue_scripts', 'blog_add_files');
                                 <!-- 記事監修者 アコーディオン -->
                                 <dl class="single__editor js-accordion">
                                     <dt class="single__editor-header js-accordion__header" tabindex="0" aria-expanded="false">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/image/photo_topics-editor.jpg" alt="記事監修者 : 茨木あさひ法律事務所 代表弁護士 谷井 光" class="single__editor-image">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/image/photo_topics-editor.jpg?01" alt="記事監修者 : 茨木あさひ法律事務所 代表弁護士 谷井 光" class="single__editor-image">
                                         <div class="single__editor-name">
                                             <p>記事監修者 : 茨木あさひ法律事務所</p>
                                             <p class="single__editor-name"><span>代表弁護士</span>谷井 光</p>
