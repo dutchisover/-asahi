@@ -95,9 +95,12 @@ add_action('wp_enqueue_scripts', 'blog_add_files');
                                     </dt>
                                     <dd class="single__editor-content js-accordion__content">
                                         <div class="single__editor-inner">
-                                            <p class="single__editor-text">第二東京弁護士会所属。交通事故に遭ってしまったらまず何をすれば良いのか、また今後どうなっていくのかご存じの方は少ないのが現状です。<br>
-                                                「交通事故弁護士アトム」では、交通事故に遭った直後に行うべきことや入院・通院中に起こる出来事、保険会社との示談交渉や慰謝料の解決方法を詳しく解説しています。<br>
-                                                アトム法律事務所では、全国24時間、無料相談窓口を設けておりますので、お困りごとがあればいつでもご連絡ください。</p>
+                                            <p class="single__editor-text">弁護士登録後、都内の総合法律事務所で経験を積み、茨木あさひ法律事務所を創業。相続、交通事故、労働問題が得意分野。趣味は、ゴルフ、サウナ。立命館大学経営学部卒業、神戸大学法科大学院修了。<br>
+                                                <br>
+                                                保有資格<br>
+                                                ・弁護士（大阪弁護士会所属：登録番号62348）<br>
+                                                ・宅地建物取引士
+                                            </p>
 
                                             <div class="button__area">
                                                 <a href="<?php echo esc_url(home_url()); ?>/contact" class="button__link">無料相談はこちら</a>

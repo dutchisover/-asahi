@@ -4547,6 +4547,8 @@ a.header__contact-tel em {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
 }
 .top-topics__item-image .top-topics__item-noimage {
   width: 70%;
