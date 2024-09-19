@@ -52,6 +52,14 @@
 	    <?php get_template_part('inc/inc-tag-head'); ?>
 
 	    <?php wp_head(); ?>
+	    <script type="application/ld+json">
+	        {
+	            "@context": "https://schema.org",
+	            "@type": "WebSite",
+	            "name": "茨木あさひ法律事務所",
+	            "url": "https://ibarakiasahilaw.com/"
+	        }
+	    </script>
 	</head>
 
 	<body <?php body_class(); ?>>

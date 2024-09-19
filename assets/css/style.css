@@ -3295,8 +3295,6 @@ a.header__contact-tel em {
 }
 
 .archive__item-image {
-  display: -ms-grid;
-  display: grid;
   overflow: hidden;
   width: 241rem;
   height: 159rem;
@@ -3316,6 +3314,8 @@ a.header__contact-tel em {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
 }
 .archive__item-image .archive__item-noimage {
   width: 70%;
@@ -4528,8 +4528,6 @@ a.header__contact-tel em {
 }
 
 .top-topics__item-image {
-  display: -ms-grid;
-  display: grid;
   overflow: hidden;
   width: 217rem;
   height: 143rem;
