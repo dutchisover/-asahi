@@ -404,8 +404,8 @@
                                 <span>事務所概要</span>
                             </h2>
                             <picture>
-                                <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/image/photo_top-other_office_sp.jpg" media="(max-width: 820px)">
-                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/image/photo_top-other_office.jpg" alt="事務所概要" class="top-other__item-image" width="364" height="228">
+                                <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/image/photo_top-other_office_sp.jpg?01" media="(max-width: 820px)">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/image/photo_top-other_office.jpg?01" alt="事務所概要" class="top-other__item-image" width="364" height="228">
                             </picture>
                             <div class="button__area sp-none">
                                 <p class="button__link">詳しく見る</p>

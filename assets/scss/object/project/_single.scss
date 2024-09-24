@@ -1,404 +1,410 @@
 @use '../../foundation/index' as *;
 
 .single_main {
-  @extend %block;
+	@extend %block;
 }
 
 .single-topics {
-  .section {
-    padding-top: 10rem;
-    min-height: 1300rem;
+	.section {
+		padding-top: 10rem;
+		min-height: 1300rem;
 
-    @include media() {
-      padding-bottom: 10rem;
-      min-height: auto;
-    }
-  }
+		@include media() {
+			padding-bottom: 10rem;
+			min-height: auto;
+		}
+	}
 }
 
 .single__container {
-  padding: 74rem 0 107rem;
-  width: 1020rem;
-  border-radius: 20rem;
-  background-color: #fff;
+	padding: 74rem 0 107rem;
+	width: 1020rem;
+	border-radius: 20rem;
+	background-color: #fff;
 
-  @include media() {
-    margin: 0 auto;
-    padding: 0;
-    width: 690rem;
-    background-color: transparent;
-  }
+	@include media() {
+		margin: 0 auto;
+		padding: 0;
+		width: 690rem;
+		background-color: transparent;
+	}
 }
 
 .single__inner {
-  margin: 0 auto;
-  width: 780rem;
+	margin: 0 auto;
+	width: 780rem;
 
-  @include media() {
-    width: 100%;
-  }
+	@include media() {
+		width: 100%;
+	}
 }
 
 .single__title {
-  color: #393939;
-  letter-spacing: .05em;
-  font-size: r(26);
-  // font-family: var(--fontGothic);
-  line-height: 1.538;
+	color: #393939;
+	letter-spacing: .05em;
+	font-size: r(26);
+	// font-family: var(--fontGothic);
+	line-height: 1.538;
 
-  @include font_r;
-  @include media() {
-    margin: 0 auto;
-    width: 630rem;
-    color: var(--colorText);
-    letter-spacing: .02em;
-    font-size: r(34);
-    line-height: 1.941;
-  }
+	@include font_r;
+
+	@include media() {
+		margin: 0 auto;
+		width: 630rem;
+		color: var(--colorText);
+		letter-spacing: .02em;
+		font-size: r(34);
+		line-height: 1.941;
+	}
 }
 
 .single__date {
-  margin-top: 20rem;
-  letter-spacing: .08em;
-  font-size: r(12);
+	margin-top: 20rem;
+	letter-spacing: .08em;
+	font-size: r(12);
 
-  @include media() {
-    margin: 30rem auto 0;
-    width: 630rem;
-    font-size: r(22);
-  }
+	@include media() {
+		margin: 30rem auto 0;
+		width: 630rem;
+		font-size: r(22);
+	}
 }
 
 .single__taxonomy {
-  margin-right: 18rem;
-  padding: 3rem 10rem;
-  border-radius: 12rem;
-  color: #fff;
-  letter-spacing: .05em;
-  // font-weight: var(--weightMedium);
-  font-size: r(10);
-  // font-family: var(--fontGothic);
+	margin-right: 18rem;
+	padding: 3rem 10rem;
+	border-radius: 12rem;
+	color: #fff;
+	letter-spacing: .05em;
+	// font-weight: var(--weightMedium);
+	font-size: r(10);
+	// font-family: var(--fontGothic);
 
-  @include font_m;
-  @include media() {
-    padding: 10rem 20rem;
-    border-radius: 20rem;
-    font-size: r(22);
-  }
+	@include font_m;
+
+	@include media() {
+		padding: 10rem 20rem;
+		border-radius: 20rem;
+		font-size: r(22);
+	}
 }
 
 .single__line {
-  display: block;
-  margin-top: 30rem;
-  width: 100%;
-  height: 1px;
-  background-color: #707070;
+	display: block;
+	margin-top: 30rem;
+	width: 100%;
+	height: 1px;
+	background-color: #707070;
 
-  @include media() {
-    margin-left: calc(50% - 50vw + 30rem);
-    max-width: none;
-    width: 690rem;
-  }
+	@include media() {
+		margin-left: calc(50% - 50vw + 30rem);
+		max-width: none;
+		width: 690rem;
+	}
 }
 
 .single__editor {
-  margin-top: 23rem;
+	margin-top: 23rem;
 
-  @include media() {
-    margin-top: 43rem;
-    margin-left: calc(50% - 50vw + 30rem);
-    max-width: none;
-    width: 690rem;
-  }
+	@include media() {
+		margin-top: 43rem;
+		margin-left: calc(50% - 50vw + 30rem);
+		max-width: none;
+		width: 690rem;
+	}
 }
 
 .single__editor-header {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 32rem;
-  padding: 10rem 30rem;
-  border-radius: 10rem;
-  background-color: #f8f8f8;
-  cursor: pointer;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 32rem;
+	padding: 10rem 30rem;
+	border-radius: 10rem;
+	background-color: #f8f8f8;
+	cursor: pointer;
 
-  @include media() {
-    padding: 18rem 30rem 18rem 26rem;
-    border-radius: 20rem;
-  }
+	@include media() {
+		padding: 18rem 30rem 18rem 26rem;
+		border-radius: 20rem;
+	}
 
-  &::after {
-    content: '';
-    position: absolute;
-    right: 30rem;
-    display: block;
-    width: 10rem;
-    height: 10rem;
-    border: 2px solid #393939;
-    border-top: 0;
-    border-left: 0;
-    transition: transform .6s;
-    transform: rotate(45deg) skew(3deg, 3deg);
+	&::after {
+		content: '';
+		position: absolute;
+		right: 30rem;
+		display: block;
+		width: 10rem;
+		height: 10rem;
+		border: 2px solid #393939;
+		border-top: 0;
+		border-left: 0;
+		transition: transform .6s;
+		transform: rotate(45deg) skew(3deg, 3deg);
 
-    @include media() {
-      width: 15rem;
-      height: 15rem;
-      border-width: 1px;
-    }
+		@include media() {
+			width: 15rem;
+			height: 15rem;
+			border-width: 1px;
+		}
 
-    .is-open & {
-      transition: transform .6s;
-      transform: rotate(225deg) skew(3deg, 3deg);
-    }
-  }
+		.is-open & {
+			transition: transform .6s;
+			transform: rotate(225deg) skew(3deg, 3deg);
+		}
+	}
 }
 
 .single__editor-image {
-  width: 56rem;
-  height: 56rem;
-  object-fit: cover;
-  border-radius: 56rem;
+	width: 56rem;
+	height: 56rem;
+	object-fit: cover;
+	border-radius: 56rem;
 
-  @include media() {
-    width: 118rem;
-    height: 118rem;
-    border-radius: 118rem;
-  }
+	@include media() {
+		width: 118rem;
+		height: 118rem;
+		border-radius: 118rem;
+	}
 }
 
 .single__editor-content {
-  margin-top: 20rem;
-  border-radius: 0 0 10rem 10rem;
-  background-color: #f8f8f8;
+	margin-top: 20rem;
+	border-radius: 0 0 10rem 10rem;
+	background-color: #f8f8f8;
 }
 
 .single__editor-name {
-  color: #393939;
-  // font-weight: var(--weightLight);
-  font-size: r(14);
-  // font-family: var(--fontGothic);
+	color: #393939;
+	// font-weight: var(--weightLight);
+	font-size: r(14);
+	// font-family: var(--fontGothic);
 
-  @include font_l;
-  @include media() {
-    font-size: r(22);
-  }
+	@include font_l;
 
-  & span {
-    margin-right: 10rem;
-    font-size: r(10);
+	@include media() {
+		font-size: r(22);
+	}
 
-    @include media() {
-      margin-right: 28rem;
-      font-size: r(20);
-    }
-  }
+	& span {
+		margin-right: 10rem;
+		font-size: r(10);
+
+		@include media() {
+			margin-right: 28rem;
+			font-size: r(20);
+		}
+	}
 }
 
 .single__editor-inner {
-  padding: 30rem;
+	padding: 30rem;
 
-  .button__area {
-    margin-top: 37rem;
-    width: 242rem;
-    height: 55rem;
+	.button__area {
+		margin-top: 37rem;
+		width: 242rem;
+		height: 55rem;
 
-    .button__link {
-      font-size: r(16);
-    }
-  }
+		.button__link {
+			font-size: r(16);
+		}
+	}
 }
 
 .single__editor-text {
-  letter-spacing: .02em;
-  // font-weight: var(--weightLight);
-  font-size: r(12);
-  // font-family: var(--fontGothic);
-  line-height: 1.8333;
+	letter-spacing: .02em;
+	// font-weight: var(--weightLight);
+	font-size: r(12);
+	// font-family: var(--fontGothic);
+	line-height: 1.8333;
 
-  @include font_l;
+	@include font_l;
 }
 
 
 .single__image {
-  overflow: hidden;
-  margin-top: 15rem;
-  height: 430rem;
-  border-radius: 10rem;
+	overflow: hidden;
+	margin-top: 15rem;
+	height: 430rem;
+	border-radius: 10rem;
 
-  @include media() {
-    margin-top: 47rem;
-    margin-left: calc(50% - 50vw + 30rem);
-    max-width: none;
-    width: 690rem;
-    height: 462rem;
-  }
+	@include media() {
+		margin-top: 47rem;
+		margin-left: calc(50% - 50vw + 30rem);
+		max-width: none;
+		width: 690rem;
+		height: 462rem;
+	}
 
-  & img {
-    width: 100%;
-    object-fit: cover;
+	& img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 
-    @include media() {
-      height: 100%;
-    }
-  }
+		@include media() {
+			height: 100%;
+		}
+	}
 
-  .is-open + & {
-    margin-top: 35rem;
-  }
+	.is-open+& {
+		margin-top: 35rem;
+	}
 }
 
 
 // 本文
 .single__content {
-  padding: 60rem 0;
+	padding: 60rem 0;
 }
 
 
 // インクルードファイル
 .inc__profile {
-  margin-top: 23rem;
-  border-radius: 10rem;
-  background-color: #f8f8f8;
+	margin-top: 23rem;
+	border-radius: 10rem;
+	background-color: #f8f8f8;
 
-  @include media() {
-    margin-top: 70rem;
-    margin-left: calc(50% - 50vw + 30rem);
-    max-width: none;
-    width: 690rem;
-    border-radius: 20rem;
-  }
+	@include media() {
+		margin-top: 70rem;
+		margin-left: calc(50% - 50vw + 30rem);
+		max-width: none;
+		width: 690rem;
+		border-radius: 20rem;
+	}
 }
 
 .inc__profile-header {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 30rem;
-  padding: 30rem 40rem 30rem 50rem;
-  border-radius: 10rem;
-  // background-color: #f8f8f8;
-  cursor: pointer;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 30rem;
+	padding: 30rem 40rem 30rem 50rem;
+	border-radius: 10rem;
+	// background-color: #f8f8f8;
+	cursor: pointer;
 
-  @include media() {
-    padding: 18rem 30rem 24rem 26rem;
-    border-radius: 20rem;
-  }
+	@include media() {
+		padding: 18rem 30rem 24rem 26rem;
+		border-radius: 20rem;
+	}
 
-  &::after {
-    content: '';
-    position: absolute;
-    right: 50rem;
-    display: block;
-    width: 10rem;
-    height: 10rem;
-    border: 2px solid #393939;
-    border-top: 0;
-    border-left: 0;
-    transition: transform .6s;
-    transform: rotate(45deg) skew(3deg, 3deg);
+	&::after {
+		content: '';
+		position: absolute;
+		right: 50rem;
+		display: block;
+		width: 10rem;
+		height: 10rem;
+		border: 2px solid #393939;
+		border-top: 0;
+		border-left: 0;
+		transition: transform .6s;
+		transform: rotate(45deg) skew(3deg, 3deg);
 
-    @include media() {
-      width: 15rem;
-      height: 15rem;
-      border-width: 1px;
-    }
+		@include media() {
+			width: 15rem;
+			height: 15rem;
+			border-width: 1px;
+		}
 
-    .is-open & {
-      transition: transform .6s;
-      transform: rotate(225deg) skew(3deg, 3deg);
-    }
-  }
+		.is-open & {
+			transition: transform .6s;
+			transform: rotate(225deg) skew(3deg, 3deg);
+		}
+	}
 }
 
 .inc__profile-image {
-  width: 91rem;
-  height: 91rem;
-  object-fit: cover;
-  border-radius: 56rem;
+	width: 91rem;
+	height: 91rem;
+	object-fit: cover;
+	border-radius: 56rem;
 
-  @include media() {
-    width: 118rem;
-    height: 118rem;
-    border-radius: 118rem;
-  }
+	@include media() {
+		width: 118rem;
+		height: 118rem;
+		border-radius: 118rem;
+	}
 }
 
 .inc__profile-content {
-  border-radius: 0 0 10rem 10rem;
+	border-radius: 0 0 10rem 10rem;
 }
 
 .inc__profile-name {
-  color: #393939;
-  // font-weight: var(--weightLight);
-  font-size: r(14);
-  // font-family: var(--fontGothic);
+	color: #393939;
+	// font-weight: var(--weightLight);
+	font-size: r(14);
+	// font-family: var(--fontGothic);
 
-  @include font_l;
-  @include media() {
-    font-size: r(22);
-  }
+	@include font_l;
 
-  & span {
-    margin-right: 10rem;
-    font-size: r(10);
+	@include media() {
+		font-size: r(22);
+	}
 
-    @include media() {
-      margin-right: 28rem;
-    }
-  }
+	& span {
+		margin-right: 10rem;
+		font-size: r(10);
+
+		@include media() {
+			margin-right: 28rem;
+		}
+	}
 }
 
 .inc__profile {
-  .single__line {
-    margin: 0 auto;
-    width: 688rem;
+	.single__line {
+		margin: 0 auto;
+		width: 688rem;
 
-    @include media() {
-      width: 630rem;
-    }
-  }
+		@include media() {
+			width: 630rem;
+		}
+	}
 }
 
 .inc__profile-inner {
-  padding: 44rem 40rem 70rem 50rem;
+	padding: 44rem 40rem 70rem 50rem;
 
-  @include media() {
-    padding: 55rem 34rem 60rem 34rem;
-  }
+	@include media() {
+		padding: 55rem 34rem 60rem 34rem;
+	}
 }
 
 .inc__profile-text,
 .inc__profile-certify {
-  letter-spacing: .02em;
-  // font-weight: var(--weightLight);
-  font-size: r(16);
-  // font-family: var(--fontGothic);
-  line-height: 1.8333;
+	letter-spacing: .02em;
+	// font-weight: var(--weightLight);
+	font-size: r(16);
+	// font-family: var(--fontGothic);
+	line-height: 1.8333;
 
-  @include font_l;
-  @include media() {
-    font-size: r(22);
-  }
+	@include font_l;
+
+	@include media() {
+		font-size: r(22);
+	}
 }
 
 .inc__profile-certify {
-  @include media() {
-    margin-top: 20rem;
-    padding-left: 3em;
-    text-indent: -3em;
-  }
+	@include media() {
+		margin-top: 20rem;
+		padding-left: 3em;
+		text-indent: -3em;
+	}
 }
 
 .inc__profile-label {
-  display: inline-block;
-  margin-top: 18rem;
-  letter-spacing: .02em;
-  font-size: r(14);
+	display: inline-block;
+	margin-top: 18rem;
+	letter-spacing: .02em;
+	font-size: r(14);
 
-  @include media() {
-    margin-top: 50rem;
-    font-size: r(22);
-  }
+	@include media() {
+		margin-top: 50rem;
+		font-size: r(22);
+	}
 }

@@ -91,8 +91,8 @@
                                 $content = wp_strip_all_tags($content);
 
                                 // 110文字まで切り取る
-                                if (mb_strlen($content) > 110) {
-                                    $content = mb_substr($content, 0, 110) . '...';
+                                if (mb_strlen($content) > 70) {
+                                    $content = mb_substr($content, 0, 70) . '...';
                                 }
                         ?>
                                 <li class="archive__item">

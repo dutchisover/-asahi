@@ -13,7 +13,7 @@ function add_files()
     //キャッシュ無効（開発時はこちらをコメント解除）
     // $cache = date('YmdHis');
     //キャッシュ有効（公開後はこちらをコメント解除）
-    $cache = 1.1;
+    $cache = 1.13;
 
     // WordPress提供のjquery.jsを読み込まない
     wp_deregister_script('jquery');
@@ -276,3 +276,41 @@ function custom_cf7_kana_validation($result, $tag)
 }
 add_filter('wpcf7_validate_text', 'custom_cf7_kana_validation', 11, 2);
 add_filter('wpcf7_validate_text*', 'custom_cf7_kana_validation', 11, 2);
+
+
+function change_custom_post_type_link($link, $post)
+{
+
+    $post_type_arr = array('topics');
+    for ($i = 0; $i < count($post_type_arr); $i++) {
+        if ($post->post_type === $post_type_arr[$i]) {
+            return home_url('/' . $post_type_arr[$i] . '/' . $post->ID);
+        }
+    }
+    return $link;
+}
+add_filter('post_type_link', 'change_custom_post_type_link', 1, 2);
+
+function has_topics_query()
+{
+    //カスタム投稿「topics」の有効な記事が１つでもあるかどうかを返す
+    $args = array(
+        'post_type' => 'topics',
+        'posts_per_page' => 1,
+    );
+    $topics_query = new WP_Query($args);
+    if ($topics_query->have_posts()) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function custome_url_rewrite_rules_array($rules)
+{
+    $new_rewrite_rules = array(
+        'topics/([0-9]+)/?$' => 'index.php?post_type=topics&p=$matches[1]',
+    );
+    return $new_rewrite_rules + $rules;
+}
+add_filter('rewrite_rules_array', 'custome_url_rewrite_rules_array');

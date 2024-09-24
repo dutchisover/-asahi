@@ -54,10 +54,12 @@
                 <li class="footer__nav-item">
                     <a href="<?= home_url(); ?>/service">取扱業務 一覧</a>
                 </li>
+                <?php if (has_topics_query()) : ?>
+                    <li class="footer__nav-item">
+                        <a href="<?= home_url(); ?>/topics">新着情報</a>
+                    </li>
+                <?php endif; ?>
                 <?php /*
-                <li class="footer__nav-item">
-                    <a href="<?= home_url(); ?>/topics">新着情報</a>
-                </li>
                 <li class="footer__nav-item">
                     <a href="<?= home_url(); ?>/privacy#anc-site">サイトポリシー</a>
                 </li>
