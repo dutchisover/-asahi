@@ -192,12 +192,12 @@
     </section>
     <!-- /.top-features -->
 
-    <!-- SERVICE 取り扱い業務 -->
+    <!-- SERVICE 取扱業務 -->
     <section class="top-service">
         <div class="top-service__inner">
             <h2 class="section__title">
                 <em>service</em>
-                <span>取り扱い業務</span>
+                <span>取扱業務</span>
             </h2>
             <p class="section__text">個人のお客様、法人のお客様を問わず、幅広い案件を取り扱っております。</p>
             <div class="top-service__container">

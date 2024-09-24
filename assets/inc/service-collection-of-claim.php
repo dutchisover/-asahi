@@ -39,7 +39,7 @@ $slug = $post->post_name;
     <div class="breadcrumb">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
-            <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取り扱い業務一覧</a>
+            <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取扱業務一覧</a>
             <span class="breadcrumb__current"><?= get_the_title(); ?>について</span>
         </div>
     </div>

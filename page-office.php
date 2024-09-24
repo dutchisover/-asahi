@@ -75,7 +75,7 @@ $slug = $post->post_name;
                 </dl>
                 <dl class="office__data-item">
                     <dt class="office__data-title">代表者</dt>
-                    <dd class="office__data-content">谷井 光</dd>
+                    <dd class="office__data-content">弁護士　谷井 光</dd>
                 </dl>
                 <dl class="office__data-item">
                     <dt class="office__data-title">住所</dt>

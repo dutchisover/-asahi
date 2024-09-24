@@ -39,7 +39,7 @@ $slug = $post->post_name;
     <div class="breadcrumb">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
-            <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取り扱い業務一覧</a>
+            <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取扱業務一覧</a>
             <span class="breadcrumb__current"><?= get_the_title(); ?>について</span>
         </div>
     </div>
@@ -293,7 +293,7 @@ $slug = $post->post_name;
                     ['債権者数', '着手金'],
                     ['1～4', '110万円～'],
                     ['5～14', '143万円～'],
-                    ['15～29', '176万円　'],
+                    ['15～29', '176万円〜'],
                     ['30～49', '220万円～'],
                     ['50～', '308万円～'],
                 ]); ?>

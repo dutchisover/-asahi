@@ -5,10 +5,7 @@
             <span>お問い合わせ</span>
         </h2>
 
-        <p class="section__text is-center">
-            <em class="footer__contact-label">初回30分相談無料</em>
-            お急ぎの方は、お電話でのご相談もお待ちしております。<br>まずはお気軽にお問い合わせください。
-        </p>
+        <p class="section__text is-center">お気軽にお問い合わせ・ご相談ください。</p>
 
         <div class="footer__button-area">
             <a href="tel:072-627-0101" class="footer__button is-tel">

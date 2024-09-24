@@ -39,7 +39,7 @@ $slug = $post->post_name;
     <div class="breadcrumb">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
-            <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取り扱い業務一覧</a>
+            <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取扱業務一覧</a>
             <span class="breadcrumb__current"><?= get_the_title(); ?>について</span>
         </div>
     </div>
@@ -418,12 +418,26 @@ $slug = $post->post_name;
                                 <tr>
                                     <td>交渉</td>
                                     <td>22万円</td>
-                                    <td rowspan="3">・相手方が持分を取得した場合<br>
-                                        　取得した持分の時価額の4.4%<br>
-                                        ・持分を売却した場合<br>
-                                        　不動産売却により得られた額の5.5%<br>
-                                        ・現物分割の場合<br>
-                                        　取得した不動産の時価額の5.5％</td>
+                                    <td rowspan="3" class="is-text-left">
+                                        <span>
+                                            ・相手方が持分を取得した場合
+                                        </span>
+                                        <span>
+                                            　取得した持分の時価額の4.4%
+                                        </span>
+                                        <span>
+                                            ・持分を売却した場合
+                                        </span>
+                                        <span>
+                                            　不動産売却により得られた額の5.5%
+                                        </span>
+                                        <span>
+                                            ・現物分割の場合
+                                        </span>
+                                        <span>
+                                            　取得した不動産の時価額の5.5％
+                                        </span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>調停</td>
@@ -451,7 +465,7 @@ $slug = $post->post_name;
                                 <tbody>
                                     <tr>
                                         <td>22万円</td>
-                                        <td>・相手方が持分を取得した場合<br>
+                                        <td class="is-text-left">・相手方が持分を取得した場合<br>
                                             　取得した持分の時価額の4.4%<br>
                                             ・持分を売却した場合<br>
                                             　不動産売却により得られた額の5.5%<br>
@@ -474,7 +488,7 @@ $slug = $post->post_name;
                                     <tr>
                                         <td>22万円<br>
                                             （交渉から移行する場合は11万円）</td>
-                                        <td>・相手方が持分を取得した場合<br>
+                                        <td class="is-text-left">・相手方が持分を取得した場合<br>
                                             　取得した持分の時価額の4.4%<br>
                                             ・持分を売却した場合<br>
                                             　不動産売却により得られた額の5.5%<br>
@@ -497,12 +511,14 @@ $slug = $post->post_name;
                                     <tr>
                                         <td>33万円<br>
                                             （交渉・調停から移行する場合は22万円）</td>
-                                        <td>・相手方が持分を取得した場合<br>
-                                            　取得した持分の時価額の4.4%<br>
-                                            ・持分を売却した場合<br>
-                                            　不動産売却により得られた額の5.5%<br>
-                                            ・現物分割の場合<br>
-                                            　取得した不動産の時価額の5.5％</td>
+                                        <td class="is-text-left"><span>
+                                                ・相手方が持分を取得した場合<br>
+                                                　取得した持分の時価額の4.4%<br>
+                                                ・持分を売却した場合<br>
+                                                　不動産売却により得られた額の5.5%<br>
+                                                ・現物分割の場合<br>
+                                                　取得した不動産の時価額の5.5％
+                                            </span></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -531,7 +547,7 @@ $slug = $post->post_name;
 
                 <h4 class="service__price-subtitle">報酬金</h4>
                 <?php price_table_2col([
-                    ['賃料増減額の7年分が', '増減額の7年分の17.6％<br>（最低33万円）'],
+                    ['賃料増減額の7年分が', '料金'],
                     ['300万円以下', '増減額の7年分の17.6％<br>（最低33万円）'],
                     ['300万円を超え<br>3000万円以下', '増減額の7年分の11％＋19万8000円'],
                     ['3000万円を超え<br>3億円以下の場合', '増減額の7年分の6.6％＋151万8000円'],
@@ -556,7 +572,7 @@ $slug = $post->post_name;
                 <?php price_table_2col([
                     ['', '料金'],
                     ['借地権譲渡許可が得られた場合', '借地権価格の5.5%<br>(最低44万円)'],
-                    ['増改築許可・借地条件変更許可が得られた場合', '・借地権譲渡許可と同時に申立てをしている場合<br>各22万円<br>・単独で申立てをしている場合<br>　各借地権価格の5.5%（最低44万円）'],
+                    ['増改築許可・借地条件変更許可が得られた場合', '<div class="is-text-left"><span>・借地権譲渡許可と同時に申立てをしている場合<br>各22万円</span><span>・単独で申立てをしている場合<br>各借地権価格の5.5%（最低44万円）</span></div>'],
                     ['介入権を行使され認容された場合', '財産上の給付額の11％（最低44万円）'],
                 ]); ?>
                 <ul class="service__price-list">

@@ -1113,13 +1113,20 @@
   letter-spacing: .02em;
   font-size: r(16);
   line-height: 1.875;
-  // font-weight: var(--weightLight);
 
   @include font_l;
   @include media() {
     margin: 50rem 0;
     color: var(--colorText);
     font-size: r(26);
+  }
+  // font-weight: var(--weightLight);
+
+  em {
+    // font-weight: var(--weightBold);
+    font-style: normal;
+
+    @include font_b;
   }
 }
 
@@ -1229,7 +1236,8 @@
 
   th,
   td {
-    padding: 10rem 40rem;
+    // padding: 10rem 40rem;
+    padding: 10rem 10rem;
     border: 2px solid #fff;
     vertical-align: middle;
 
@@ -1237,6 +1245,28 @@
       padding: 27rem 20rem;
       border: 2px solid var(--colorBase);
       font-size: r(23);
+    }
+
+    &.is-text-left {
+      text-align: left;
+
+      span {
+        display: block;
+        padding-left: 1em;
+        text-indent: -1em;
+        font-size: inherit;
+      }
+    }
+
+    .is-text-left {
+      text-align: left;
+
+      span {
+        display: block;
+        padding-left: 1em;
+        text-indent: -1em;
+        font-size: inherit;
+      }
     }
   }
 

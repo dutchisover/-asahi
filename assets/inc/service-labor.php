@@ -39,7 +39,7 @@ $slug = $post->post_name;
     <div class="breadcrumb">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
-            <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取り扱い業務一覧</a>
+            <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取扱業務一覧</a>
             <span class="breadcrumb__current"><?= get_the_title(); ?>について</span>
         </div>
     </div>
@@ -353,8 +353,8 @@ $slug = $post->post_name;
                 </ul>
                 <?php price_table_1col([
                     '報酬金',
-                    '1, 最後の退職勧奨から半年間退職勧奨がされなかった場合、給与支給月額の1か月分相当額（最低22万円）',
-                    '2, 退職勧奨受け入れ金銭解決をした場合、和解額の19.8%（最低22万円）',
+                    '① 最後の退職勧奨から半年間退職勧奨がされなかった場合、給与支給月額の1か月分相当額（最低22万円）',
+                    '② 退職勧奨受け入れ金銭解決をした場合、和解額の19.8%（最低22万円）',
                 ]); ?>
             </div>
 
@@ -367,9 +367,9 @@ $slug = $post->post_name;
                 ]); ?>
                 <?php price_table_1col([
                     '報酬金',
-                    '1, 退職ができた場合、11万円',
-                    '2, 300万円以下の経済的利益を得た場合、経済的利益の22％',
-                    '3, 300万円を超える経済的利益を得た場合、経済的利益の16.5％＋16万6000円',
+                    '① 退職ができた場合、11万円',
+                    '② 300万円以下の経済的利益を得た場合、経済的利益の22％',
+                    '③ 300万円を超える経済的利益を得た場合、経済的利益の16.5％＋16万6000円',
                 ]); ?>
             </div>
         </div>

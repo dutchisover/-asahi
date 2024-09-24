@@ -39,7 +39,7 @@ $slug = $post->post_name;
     <div class="breadcrumb">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
-            <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取り扱い業務一覧</a>
+            <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取扱業務一覧</a>
             <span class="breadcrumb__current"><?= get_the_title(); ?>について</span>
         </div>
     </div>
@@ -114,7 +114,7 @@ $slug = $post->post_name;
                     <span>Field 02</span>
                     <em>身柄拘束からの解放</em>
                 </h3>
-                <p class="service__field-text">被疑者が身柄拘束を受けると、身体拘束期間中、警察署などで厳しい監視をされ、過酷な環境に置かれます。当事務所では、」このような被疑者、被告人の置かれる過酷な環境を理解し、早期釈放に向けてサポートします。</p>
+                <p class="service__field-text">被疑者が身柄拘束を受けると、身体拘束期間中、警察署などで厳しい監視をされ、過酷な環境に置かれます。当事務所では、このような被疑者、被告人の置かれる過酷な環境を理解し、早期釈放に向けてサポートします。</p>
             </div>
 
             <div class="service__field-item">

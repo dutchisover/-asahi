@@ -39,7 +39,7 @@ $slug = $post->post_name;
     <div class="breadcrumb">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
-            <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取り扱い業務一覧</a>
+            <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取扱業務一覧</a>
             <span class="breadcrumb__current"><?= get_the_title(); ?>について</span>
         </div>
     </div>
@@ -268,8 +268,8 @@ $slug = $post->post_name;
                     </div>
                     <dl class="service__price-faq-body">
                         <dt class="service__price-faq-title">Q.弁護士費用特約とは？</dt>
-                        <dd class="service__price-faq-text">主に自動車保険に付帯しているオプションです。交通事故について弁護士に依頼する際、弁護士費用の全部又は一部の補償を受ける事ができます。</dd>
-                        </di>
+                        <dd class="service__price-faq-text">主に自動車保険に付帯しているオプションです。交通事故について弁護士に依頼する際、弁護士費用の全部又は一部の補償を受けることができます。</dd>
+                    </dl>
                 </div>
                 <p class="service__price-text">弁護士費用特約に加入されている方の料金は以下のとおりとなります。</p>
                 <p class="service__price-text text-sm">※弁護士費用特約から費用の支払いがされるため、補償限度の範囲内であればご自身の負担はございません。</p>
@@ -328,7 +328,7 @@ $slug = $post->post_name;
                 ]); ?>
 
                 <?php service_price_title('着手金', true, false); ?>
-                <p class="service__price-text">当事務所では、弁護士費用特約に加入されていない場合でも、交渉は原則として着手金無料とさせていただいております。</p>
+                <p class="service__price-text">当事務所では、弁護士費用特約に加入されていない場合でも、<em>交渉は原則として着手金無料</em>とさせていただいております。</p>
                 <?php price_table_2col([
                     ['解決手段', '料金'],
                     ['交渉', '0円<span>（相手方に任意保険会社がついている場合）</span>'],

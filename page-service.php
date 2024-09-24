@@ -114,7 +114,7 @@ $slug = $post->post_name;
 
                 // サイドバーリンクを出力
                 echo '<div class="service__sidebar">';
-                echo '<h2 class="service__sidebar-title"><span class="sp-none">取り扱い業務 一覧</span><span class="pc-none">Category</span></h2>';
+                echo '<h2 class="service__sidebar-title"><span class="sp-none">取扱業務 一覧</span><span class="pc-none">Category</span></h2>';
 
                 $counter = 1;
                 while ($child_pages->have_posts()) {

@@ -27,7 +27,7 @@
 <main class="main page__main">
     <div class="archive-topics">
         <section class="archive__section section" data-section-title="News & Column">
-            <p class="section__copy">大阪・JR茨木駅徒歩2分。相続・離婚・交通事故・会社顧問の法律相談<br>
+            <p class="section__copy">大阪・JR茨木駅徒歩2分。<br class="pc-none">相続・離婚・交通事故・会社顧問の法律相談<br>
                 「茨木あさひ法律事務所」のブログです。<br>
                 ニュースや事例など、最新情報をお届けいたします。</p>
             <div class="topics__content">
