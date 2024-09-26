@@ -281,11 +281,11 @@ $slug = $post->post_name;
                                 <tr>
                                     <td>交渉</td>
                                     <td>33万円</td>
-                                    <td rowspan="2">・賃料滞納を理由とする場合<br>　33万円<br>・賃料滞納以外を理由とする場合<br>　55万円</td>
+                                    <td rowspan="2" class="is-text-left"><span>・賃料滞納を理由とする場合、33万円</span><span>・賃料滞納以外を理由とする場合、55万円</span></td>
                                 </tr>
                                 <tr>
                                     <td>訴訟</td>
-                                    <td>33万円<br>（交渉から移行する場合は11万円）</td>
+                                    <td>33万円<span class="is-remark">（交渉から移行する場合は11万円）</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -303,7 +303,7 @@ $slug = $post->post_name;
                                 <tbody>
                                     <tr>
                                         <td>33万円</td>
-                                        <td>・賃料滞納を理由とする場合<br>　33万円<br>・賃料滞納以外を理由とする場合<br>　55万円</td>
+                                        <td class="is-text-left"><span>・賃料滞納を理由とする場合、33万円</span><span>・賃料滞納以外を理由とする場合、55万円</span></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -319,8 +319,8 @@ $slug = $post->post_name;
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>33万円<br>（交渉から移行する場合は11万円）</td>
-                                        <td>・賃料滞納を理由とする場合<br>　33万円<br>・賃料滞納以外を理由とする場合<br>　55万円</td>
+                                        <td>33万円<span class="is-remark">（交渉から移行する場合は11万円）</span></td>
+                                        <td class="is-text-left"><span>・賃料滞納を理由とする場合、33万円</span><span>・賃料滞納以外を理由とする場合、55万円</span></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -349,12 +349,12 @@ $slug = $post->post_name;
                                 <tr>
                                     <td>交渉</td>
                                     <td>0万円</td>
-                                    <td>認容額の22％<br>（最低11万円）</td>
+                                    <td>認容額の22％<span class="is-remark">（最低11万円）</span></td>
                                 </tr>
                                 <tr>
                                     <td>訴訟</td>
                                     <td>5万5000円</td>
-                                    <td>認容額の22％<br>（最低22万円）</td>
+                                    <td>認容額の22％<span class="is-remark">（最低22万円）</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -372,7 +372,7 @@ $slug = $post->post_name;
                                 <tbody>
                                     <tr>
                                         <td>0万円</td>
-                                        <td>認容額の22％<br>（最低11万円）</td>
+                                        <td>認容額の22％<span class="is-remark">（最低11万円）</span></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -389,7 +389,7 @@ $slug = $post->post_name;
                                 <tbody>
                                     <tr>
                                         <td>5万5000円</td>
-                                        <td>認容額の22％<br>（最低22万円）</td>
+                                        <td>認容額の22％<span class="is-remark">（最低22万円）</span></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -420,34 +420,24 @@ $slug = $post->post_name;
                                     <td>22万円</td>
                                     <td rowspan="3" class="is-text-left">
                                         <span>
-                                            ・相手方が持分を取得した場合
+                                            ・相手方が持分を取得した場合、取得した持分の時価額の4.4%
                                         </span>
                                         <span>
-                                            　取得した持分の時価額の4.4%
+                                            ・持分を売却した場合、不動産売却により得られた額の5.5%
                                         </span>
                                         <span>
-                                            ・持分を売却した場合
-                                        </span>
-                                        <span>
-                                            　不動産売却により得られた額の5.5%
-                                        </span>
-                                        <span>
-                                            ・現物分割の場合
-                                        </span>
-                                        <span>
-                                            　取得した不動産の時価額の5.5％
+                                            ・現物分割の場合、取得した不動産の時価額の5.5％
                                         </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>調停</td>
-                                    <td>22万円<br>
-                                        （交渉から移行する場合は11万円）</td>
+                                    <td>22万円<span class="is-remark">（交渉から移行する場合は11万円）</span></td>
                                 </tr>
                                 <tr>
                                     <td>訴訟</td>
-                                    <td>33万円<br>
-                                        （交渉・調停から移行する場合は22万円）</td>
+                                    <td>33万円<span class="is-remark">（交渉・調停から移行する場合は22万円）</span></td>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -465,12 +455,17 @@ $slug = $post->post_name;
                                 <tbody>
                                     <tr>
                                         <td>22万円</td>
-                                        <td class="is-text-left">・相手方が持分を取得した場合<br>
-                                            　取得した持分の時価額の4.4%<br>
-                                            ・持分を売却した場合<br>
-                                            　不動産売却により得られた額の5.5%<br>
-                                            ・現物分割の場合<br>
-                                            　取得した不動産の時価額の5.5％</td>
+                                        <td class="is-text-left">
+                                            <span>
+                                                ・相手方が持分を取得した場合、取得した持分の時価額の4.4%
+                                            </span>
+                                            <span>
+                                                ・持分を売却した場合、不動産売却により得られた額の5.5%
+                                            </span>
+                                            <span>
+                                                ・現物分割の場合、取得した不動産の時価額の5.5％
+                                            </span>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -486,14 +481,19 @@ $slug = $post->post_name;
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>22万円<br>
-                                            （交渉から移行する場合は11万円）</td>
-                                        <td class="is-text-left">・相手方が持分を取得した場合<br>
-                                            　取得した持分の時価額の4.4%<br>
-                                            ・持分を売却した場合<br>
-                                            　不動産売却により得られた額の5.5%<br>
-                                            ・現物分割の場合<br>
-                                            　取得した不動産の時価額の5.5％</td>
+                                        <td>22万円<span class="is-remark">（交渉から移行する場合は11万円）</span></td>
+                                        </td>
+                                        <td class="is-text-left">
+                                            <span>
+                                                ・相手方が持分を取得した場合、取得した持分の時価額の4.4%
+                                            </span>
+                                            <span>
+                                                ・持分を売却した場合、不動産売却により得られた額の5.5%
+                                            </span>
+                                            <span>
+                                                ・現物分割の場合、取得した不動産の時価額の5.5％
+                                            </span>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -509,16 +509,19 @@ $slug = $post->post_name;
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>33万円<br>
-                                            （交渉・調停から移行する場合は22万円）</td>
-                                        <td class="is-text-left"><span>
-                                                ・相手方が持分を取得した場合<br>
-                                                　取得した持分の時価額の4.4%<br>
-                                                ・持分を売却した場合<br>
-                                                　不動産売却により得られた額の5.5%<br>
-                                                ・現物分割の場合<br>
-                                                　取得した不動産の時価額の5.5％
-                                            </span></td>
+                                        <td>33万円<span class="is-remark">（交渉・調停から<br class="pc-none">移行する場合は22万円）</span></td>
+                                        </td>
+                                        <td class="is-text-left">
+                                            <span>
+                                                ・相手方が持分を取得した場合、取得した持分の時価額の4.4%
+                                            </span>
+                                            <span>
+                                                ・持分を売却した場合、不動産売却により得られた額の5.5%
+                                            </span>
+                                            <span>
+                                                ・現物分割の場合、取得した不動産の時価額の5.5％
+                                            </span>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -537,8 +540,8 @@ $slug = $post->post_name;
                 <?php price_table_2col([
                     ['解決手段', '料金'],
                     ['交渉', '33万円'],
-                    ['調停', '33万円<br>（交渉から移行する場合は11万円）'],
-                    ['訴訟', '44万円<br>（調停から移行する場合は11万円）'],
+                    ['調停', '33万円<span class="is-remark">（交渉から移行する場合は11万円）</span>'],
+                    ['訴訟', '44万円<span class="is-remark">（調停から移行する場合は11万円）</span>'],
                 ]); ?>
                 <ul class="service__price-list">
                     <li>着手金は月額5万5000円の分割払プランもご用意しております。</li>
@@ -548,10 +551,10 @@ $slug = $post->post_name;
                 <h4 class="service__price-subtitle">報酬金</h4>
                 <?php price_table_2col([
                     ['賃料増減額の7年分が', '料金'],
-                    ['300万円以下', '増減額の7年分の17.6％<br>（最低33万円）'],
-                    ['300万円を超え<br>3000万円以下', '増減額の7年分の11％＋19万8000円'],
-                    ['3000万円を超え<br>3億円以下の場合', '増減額の7年分の6.6％＋151万8000円'],
-                    ['3億円を超える場合', '増減額の7年分の4.4％＋811万8000円'],
+                    ['300万円以下', '増減額の7年分の17.6％<span class="is-remark">（最低33万円）</span>'],
+                    ['300万円を超え<br>3000万円以下', '増減額の7年分の11％<br class="pc-none">＋19万8000円'],
+                    ['3000万円を超え<br>3億円以下の場合', '増減額の7年分の6.6％<br class="pc-none">＋151万8000円'],
+                    ['3億円を超える場合', '増減額の7年分の4.4％<br class="pc-none">＋811万8000円'],
                 ]); ?>
             </div>
 
@@ -562,7 +565,7 @@ $slug = $post->post_name;
                 <?php price_table_2col([
                     ['解決手段', '着手金'],
                     ['交渉', '33万円'],
-                    ['非訟', '44万円<br>（交渉から移行する場合は22万円）'],
+                    ['非訟', '44万円<span class="is-remark">（交渉から移行する場合は22万円）</span>'],
                 ]); ?>
                 <ul class="service__price-list">
                     <li>着手金は月額5万5000円の分割払プランもご用意しております。</li>
@@ -570,10 +573,10 @@ $slug = $post->post_name;
 
                 <h4 class="service__price-subtitle">報酬金：借地権者側</h4>
                 <?php price_table_2col([
-                    ['', '料金'],
-                    ['借地権譲渡許可が得られた場合', '借地権価格の5.5%<br>(最低44万円)'],
-                    ['増改築許可・借地条件変更許可が得られた場合', '<div class="is-text-left"><span>・借地権譲渡許可と同時に申立てをしている場合<br>各22万円</span><span>・単独で申立てをしている場合<br>各借地権価格の5.5%（最低44万円）</span></div>'],
-                    ['介入権を行使され認容された場合', '財産上の給付額の11％（最低44万円）'],
+                    ['解決結果', '料金'],
+                    ['借地権譲渡許可が<br class="pc-none">得られた場合', '借地権価格の5.5%<span class="is-remark">(最低44万円)</span>'],
+                    ['増改築許可・<br class="pc-none">借地条件変更許可が<br class="pc-none">得られた場合', '<div class="is-text-left"><span>・借地権譲渡許可と同時に申立てをしている場合、各22万円</span><span>・単独で申立てをしている場合、各借地権価格の5.5%<span class="is-remark">（最低44万円）</span></span></div>'],
+                    ['介入権を行使され<br class="pc-none">認容された場合', '財産上の給付額の11％<span class="is-remark">（最低44万円）</span>'],
                 ]); ?>
                 <ul class="service__price-list">
                     <li>借地権価格は時価で算出いたします。</li>
@@ -581,9 +584,9 @@ $slug = $post->post_name;
 
                 <h4 class="service__price-subtitle">報酬金：地主側</h4>
                 <?php price_table_2col([
-                    ['', '料金'],
-                    ['介入権を行使して認容された場合', '借地権価格の5.5%<br>(最低44万円)'],
-                    ['申立てが許可されたが賃料を増額できた場合', '賃料増額請求の報酬基準に準じる'],
+                    ['解決結果', '料金'],
+                    ['介入権を行使して<br class="pc-none">認容された場合', '借地権価格の5.5%<span class="is-remark">(最低44万円)</span>'],
+                    ['申立てが許可されたが<br class="pc-none">賃料を増額できた場合', '賃料増額請求の<br class="pc-none">報酬基準に準じる'],
                 ]); ?>
                 <ul class="service__price-list">
                     <li>借地権価格は時価で算出いたします。</li>

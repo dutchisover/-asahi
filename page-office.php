@@ -46,20 +46,29 @@ $slug = $post->post_name;
                     <div class="swiper-slide">
                         <div class="office__item">
                             <picture>
-                                <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_01_sp.jpg?01" media="(max-width: 820px)" />
-                                <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_01.jpg?01" alt="" width="900" height="374" />
-                            </picture>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="office__item">
-                            <picture>
                                 <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_02_sp.jpg?01" media="(max-width: 820px)" />
                                 <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_02.jpg?01" alt="" width="900" height="374" />
                             </picture>
                         </div>
                     </div>
 
+                    <div class="swiper-slide">
+                        <div class="office__item">
+                            <picture>
+                                <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_01_sp.jpg?01" media="(max-width: 820px)" />
+                                <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_01.jpg?01" alt="" width="900" height="374" />
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="office__item">
+                            <picture>
+                                <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_04_sp.jpg?01" media="(max-width: 820px)" />
+                                <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_office-slide_04.jpg?01" alt="" width="900" height="374" />
+                            </picture>
+                        </div>
+                    </div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>

@@ -273,7 +273,7 @@ $slug = $post->post_name;
                 <?php service_price_title('任意整理<span>（借金の減額・分割払いの交渉）</span>'); ?>
                 <?php price_table_2col([
                     ['着手金', '報酬金'],
-                    ['5万5000円×債権者数', '2万2000円×債権者数＋減額額の11％'],
+                    ['5万5000円×債権者数', '2万2000円<br class="pc-none">×債権者数<br class="pc-none">＋減額額の11％'],
                 ]); ?>
                 <ul class="service__price-list">
                     <li>着手金は月額5万5000円の分割払プランもご用意しております。</li>

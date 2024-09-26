@@ -361,7 +361,7 @@ $slug = $post->post_name;
                         </tr>
                         <tr>
                             <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
+                            <td>33万円<span class="is-remark">（協議から移行する場合は22万円）</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -392,7 +392,7 @@ $slug = $post->post_name;
                         </tr>
                         <tr>
                             <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
+                            <td>33万円<span class="is-remark">（協議から移行する場合は22万円）</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -442,8 +442,8 @@ $slug = $post->post_name;
                                 </tr>
                                 <tr>
                                     <td>調停・審判</td>
-                                    <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                                    <td>33万円<span>（協議から移行する場合は22万円）</span></td>
+                                    <td>33万円<span class="is-remark">（協議から移行する場合は22万円）</span></td>
+                                    <td>33万円<span class="is-remark">（協議から移行する場合は22万円）</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -485,8 +485,8 @@ $slug = $post->post_name;
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>33万円<span>（協議から移行する場合は22万円）</span></td>
-                                        <td>33万円<span>（協議から移行する場合は22万円）</span></td>
+                                        <td>33万円<span class="is-remark">（協議から移行する場合は22万円）</span></td>
+                                        <td>33万円<span class="is-remark">（協議から移行する場合は22万円）</span></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -618,7 +618,7 @@ $slug = $post->post_name;
                         </tr>
                         <tr>
                             <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
+                            <td>33万円<span class="is-remark">（協議から移行する場合は22万円）</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -645,7 +645,7 @@ $slug = $post->post_name;
                         </tr>
                         <tr>
                             <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
+                            <td>33万円<span class="is-remark">（協議から移行する場合は22万円）</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -672,7 +672,7 @@ $slug = $post->post_name;
                         </tr>
                         <tr>
                             <td>調停・審判</td>
-                            <td>33万円<span>（協議から移行する場合は22万円）</span></td>
+                            <td>33万円<span class="is-remark">（協議から移行する場合は22万円）</span></td>
                         </tr>
                     </tbody>
                 </table>

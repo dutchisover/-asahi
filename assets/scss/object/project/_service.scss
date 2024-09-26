@@ -1242,7 +1242,7 @@
     vertical-align: middle;
 
     @include media() {
-      padding: 27rem 20rem;
+      padding: 27rem 10rem;
       border: 2px solid var(--colorBase);
       font-size: r(23);
     }
@@ -1429,4 +1429,9 @@ ul.service__price-list {
 
 .is-middle {
   vertical-align: middle !important;
+}
+
+.is-remark {
+  display: block;
+  font-size: .75em !important;
 }
