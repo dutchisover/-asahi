@@ -1226,9 +1226,9 @@
   table-layout: fixed;
   text-align: center;
 
-  &.is-text-left {
-    text-align: left;
-  }
+  // &.is-text-left {
+  //   text-align: left;
+  // }
 
   & + & {
     margin-top: 30rem;
@@ -1248,7 +1248,7 @@
     }
 
     &.is-text-left {
-      text-align: left;
+      // text-align: left;
 
       span {
         display: block;
@@ -1259,7 +1259,7 @@
     }
 
     .is-text-left {
-      text-align: left;
+      // text-align: left;
 
       span {
         display: block;

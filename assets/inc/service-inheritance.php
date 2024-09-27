@@ -304,8 +304,8 @@ $slug = $post->post_name;
                 <?php price_table_2col([
                     ['遺産取得金額', '料金',],
                     ['300万円以下', '遺産取得額の22％<br class="pc-none price-br"><span class="is-remark">（最低44万円）</span>'],
-                    ['300万円を超え3000万円以下', '遺産取得額の16.5％<br class="pc-none price-br">＋17万6000円'],
-                    ['3000万円を超え3億円以下', '遺産取得額の9.9％<br class="pc-none price-br">＋217万8000円'],
+                    ['300万円を超え<br class="pc-none price-br">3000万円以下', '遺産取得額の16.5％<br class="pc-none price-br">＋17万6000円'],
+                    ['3000万円を超え<br class="pc-none price-br">3億円以下', '遺産取得額の9.9％<br class="pc-none price-br">＋217万8000円'],
                     ['3億円を超える場合', '遺産取得額の6.6％<br class="pc-none price-br">＋1210万円'],
                 ]); ?>
 
@@ -333,9 +333,9 @@ $slug = $post->post_name;
                 <?php price_table_2col([
                     ['認容額', '料金'],
                     ['300万円以下', '認容額の22％<span class="is-remark">（最低44万円）</span>'],
-                    ['300万円を超え3000万円以下', '遺産取得額の16.5％＋17万6000円'],
-                    ['3000万円を超え3億円以下', '遺産取得額の9.9％＋217万8000円'],
-                    ['3億円を超える場合', '遺産取得額の6.6％＋1210万円'],
+                    ['300万円を超え<br class="pc-none price-br">3000万円以下', '遺産取得額の16.5％<br class="pc-none">＋17万6000円'],
+                    ['3000万円を超え<br class="pc-none price-br">3億円以下', '遺産取得額の9.9％<br class="pc-none">＋217万8000円'],
+                    ['3億円を超える場合', '遺産取得額の6.6％<br class="pc-none">＋1210万円'],
                 ]); ?>
                 <ul class="service__price-list">
                     <li>「認容額」とは、和解や認容判決等で最終的に認められた相手方の支払額をいいます。</li>
@@ -346,7 +346,7 @@ $slug = $post->post_name;
                 <?php price_table_2col([
                     ['解決手段', '料金'],
                     ['交渉', '33万円'],
-                    ['調停', '44万円<span class="is-remark">（交渉から移行する場合は33万円）</span>'],
+                    ['調停', '44万円<span class="is-remark">（交渉から移行する場合は<br class="pc-none">33万円）</span>'],
                     ['訴訟', '44万円<span class="is-remark">（交渉・調停から移行する場合は33万円）</span>'],
                 ]); ?>
                 <ul class="service__price-list">
@@ -357,9 +357,9 @@ $slug = $post->post_name;
                 <?php price_table_2col([
                     ['認容額', '料金'],
                     ['300万円以下', '認容額の22％<span class="is-remark">（最低44万円）</span>'],
-                    ['300万円を超え3000万円以下', '遺産取得額の16.5％＋17万6000円'],
-                    ['3000万円を超え3億円以下', '遺産取得額の9.9％＋217万8000円'],
-                    ['3億円を超える場合', '遺産取得額の6.6％＋1210万円'],
+                    ['300万円を超え<br class="pc-none price-br">3000万円以下', '遺産取得額の16.5％<br class="pc-none">＋17万6000円'],
+                    ['3000万円を超え<br class="pc-none price-br">3億円以下', '遺産取得額の9.9％<br class="pc-none">＋217万8000円'],
+                    ['3億円を超える場合', '遺産取得額の6.6％<br class="pc-none">＋1210万円'],
                 ]); ?>
                 <ul class="service__price-list">
                     <li>「認容額」とは、最終的に減額できた財産の合計額をいいます。</li>
@@ -384,7 +384,7 @@ $slug = $post->post_name;
                 <?php price_table_2col([
                     ['解決手段', '料金'],
                     ['交渉', '33万円'],
-                    ['訴訟', '55万円<span class="is-remark">（交渉から移行する場合は33万円）</span>'],
+                    ['訴訟', '55万円<span class="is-remark">（交渉から移行する場合は<br class="pc-none">33万円）</span>'],
                 ]); ?>
                 <ul class="service__price-list">
                     <li>着手金は月額5万5000円の分割払プランもご用意しております。</li>
@@ -393,10 +393,10 @@ $slug = $post->post_name;
                 <h4 class="service__price-subtitle">報酬金</h4>
                 <?php price_table_2col([
                     ['認容額', '料金'],
-                    ['300万円以下', '認容額の22％<span class="is-remark">（交渉は最低44万円、訴訟は最低66万円）</span>'],
-                    ['300万円を超え3000万円以下', '認容額の11％＋33万円'],
-                    ['3000万円を超え3億円以下', '認容額の6.6％＋165万円'],
-                    ['3億円を超える場合', '認容額の4.4％＋825万円'],
+                    ['300万円以下', '認容額の22％<span class="is-remark">（交渉は最低44万円、<br class="pc-none">訴訟は最低66万円）</span>'],
+                    ['300万円を超え<br class="pc-none price-br">3000万円以下', '認容額の11％<br class="pc-none">＋33万円'],
+                    ['3000万円を超え<br class="pc-none price-br">3億円以下', '認容額の6.6％<br class="pc-none">＋165万円'],
+                    ['3億円を超える場合', '認容額の4.4％<br class="pc-none">＋825万円'],
                 ]); ?>
                 <ul class="service__price-list">
                     <li>「認容額」とは、最終的に和解や認容判決等で認められた相手方の支払額（請求側）または請求を減額した額（請求された側）をいいます。</li>
@@ -412,7 +412,7 @@ $slug = $post->post_name;
                 <?php price_table_2col([
                     ['解決手段', '料金'],
                     ['交渉', '確認する側：33万円<br>確認される側：55万円'],
-                    ['訴訟', '55万円<span class="is-remark">（交渉から移行する場合は33万円）</span>'],
+                    ['訴訟', '55万円<span class="is-remark">（交渉から移行する場合は<br class="pc-none">33万円）</span>'],
                 ]); ?>
                 <ul class="service__price-list">
                     <li>着手金は月額5万5000円の分割払プランもご用意しております。</li>
@@ -468,9 +468,9 @@ $slug = $post->post_name;
                 <?php price_table_2col([
                     ['遺産の価額', '報酬金'],
                     ['300万円以下の場合', '33万円'],
-                    ['300万円を超え3000万円以下', '遺産の2.2％＋26万4000円'],
-                    ['3000万円を超え3億円以下', '遺産の1.1％＋59万4000円'],
-                    ['3億円を超える場合', '遺産の0.55％＋224万4000円'],
+                    ['300万円を超え<br class="pc-none price-br">3000万円以下', '遺産の2.2％<br class="pc-none">＋26万4000円'],
+                    ['3000万円を超え<br class="pc-none price-br">3億円以下', '遺産の1.1％<br class="pc-none">＋59万4000円'],
+                    ['3億円を超える場合', '遺産の0.55％<br class="pc-none">＋224万4000円'],
                 ]); ?>
                 <ul class="service__price-list">
                     <li>遺言執行報酬とは別に、裁判手続きを行う場合は、裁判に要する弁護士報酬等は別途必要となる場合がございます。</li>

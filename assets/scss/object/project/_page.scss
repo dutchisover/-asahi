@@ -8,6 +8,7 @@
 
 .page__header {
   position: relative;
+  overflow: hidden;
   padding-bottom: 50rem;
 
   &::before {

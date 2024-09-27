@@ -171,8 +171,7 @@
                             <div class="top-features__item">
                                 <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_top-features_02.jpg" alt="交渉による早期解決に注力" class="top-features__item-image" width="728" height="456">
                                 <h3 class="top-features__item-title"><span>#</span><span class="top-features__item-number">02</span>交渉による早期解決に注力</h3>
-                                <p class="top-features__item-text">高い交渉力を活かし、「揉めずに早く
-                                    問題を解決したい」というニーズに応えています。</p>
+                                <p class="top-features__item-text">高い交渉力を活かし、「揉めずに早く問題を解決したい」というニーズに応えています。</p>
                             </div>
                         </div>
                         <div class="swiper-slide">

@@ -75,9 +75,9 @@
   table-layout: fixed;
   text-align: center;
 
-  &.is-text-left {
-    text-align: left;
-  }
+  // &.is-text-left {
+  //   text-align: left;
+  // }
 
   & + & {
     margin-top: 30rem;
