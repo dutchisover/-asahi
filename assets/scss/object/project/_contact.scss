@@ -149,13 +149,13 @@
     color: var(--colorText);
     font-weight: var(--weightMedium);
     font-size: r(16, 14);
-    font-family: 'A1ゴシック M', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+    font-family: 'HigureGothicB', 'A1ゴシック M', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
 
     .required {
       display: block;
       color: #f26868;
       font-size: r(12, 11);
-      font-family: 'A1ゴシック R', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+      font-family: 'HigureGothicM', 'A1ゴシック R', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
     }
   }
 
@@ -403,7 +403,7 @@
 .wpcf7-list-item-label {
   margin-left: 18px;
   font-size: 12px;
-  font-family: 'A1ゴシック R', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+  font-family: 'HigureGothicM', 'A1ゴシック R', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
 
   @include media() {
     margin-left: 8px;
@@ -430,7 +430,7 @@
   &__title {
     font-weight: var(--weightRegular);
     font-size: 14px;
-    font-family: 'A1ゴシック R', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+    font-family: 'HigureGothicM', 'A1ゴシック R', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
 
     .required {
       color: #f26868;
