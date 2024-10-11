@@ -13,7 +13,7 @@ function add_files()
     //キャッシュ無効（開発時はこちらをコメント解除）
     // $cache = date('YmdHis');
     //キャッシュ有効（公開後はこちらをコメント解除）
-    $cache = 1.2;
+    $cache = 1.21;
 
     // WordPress提供のjquery.jsを読み込まない
     wp_deregister_script('jquery');
