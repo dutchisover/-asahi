@@ -8,7 +8,7 @@ $slug = $post->post_name;
 
 <div class="page__header">
     <div class="page__mv">
-        <h1 class=" page__title">
+        <h1 class="page__title" data-fade="0">
             <em><?= get_the_title(); ?></em>
             <span><?= get_field("page-sub-title") ?></span>
         </h1>
@@ -20,7 +20,7 @@ $slug = $post->post_name;
     </div>
     <!-- /.page__mv -->
 
-    <div class="breadcrumb">
+    <div class="breadcrumb" data-fade="100">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
             <span class="breadcrumb__current"><?= get_field("page-sub-title") ?></span>
@@ -36,7 +36,7 @@ $slug = $post->post_name;
 
     <section class="section" data-section-title="Our Service">
 
-        <p class="section__copy">個人のお客様、法人のお客様を問わず、幅広い案件を取り扱っております。<br class="sp-none">業務分野の詳細については以下の各項目をご覧下さい。</p>
+        <p class="section__copy" data-fade="200">個人のお客様、法人のお客様を問わず、幅広い案件を取り扱っております。<br class="sp-none">業務分野の詳細については以下の各項目をご覧下さい。</p>
 
         <div class="service__content">
             <?php
@@ -60,7 +60,7 @@ $slug = $post->post_name;
 
             // 子ページのタイトル、リンク、画像、説明文を出力
             if ($child_pages->have_posts()) {
-                echo '<div class="service__list">';
+                echo '<div class="service__list" data-fade="300">';
                 $counter = 1; // 連番用カウンター
 
                 while ($child_pages->have_posts()) {
@@ -90,7 +90,7 @@ $slug = $post->post_name;
                     // アンカーリンクIDを生成
                     $anchor_id = 'anc-' . str_pad($counter, 2, '0', STR_PAD_LEFT);
 
-                    echo '<div class="service__item" id="' . esc_attr($anchor_id) . '">';
+                    echo '<div class="service__item" id="' . esc_attr($anchor_id) . '" data-fade="100">';
                     echo '<div class="service__item-photo">';
                     echo '<picture>';
                     echo '<source media="(max-width:820px)" srcset="' . $page_mv_sp . '">';
@@ -113,7 +113,7 @@ $slug = $post->post_name;
                 echo '</div>';
 
                 // サイドバーリンクを出力
-                echo '<div class="service__sidebar">';
+                echo '<div class="service__sidebar" data-fade="300">';
                 echo '<h2 class="service__sidebar-title"><span class="sp-none">取扱業務 一覧</span><span class="pc-none">Category</span></h2>';
 
                 $counter = 1;
@@ -147,13 +147,13 @@ $slug = $post->post_name;
 
 
     <section class="section" data-section-title="Flow" id="anc-flow">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>Flow</em>
             <span>ご契約までの流れ</span>
         </h2>
 
         <div class="service__flow-list">
-            <div class="service__flow-item">
+            <div class="service__flow-item" data-fade="100">
                 <h3 class="service__flow-title">
                     <span>Step 01</span>
                     <em>まずはお電話にてお問い合わせ下さい</em>
@@ -165,7 +165,7 @@ $slug = $post->post_name;
                 </p>
             </div>
 
-            <div class="service__flow-item">
+            <div class="service__flow-item" data-fade="100">
                 <h3 class="service__flow-title">
                     <span>Step 02</span>
                     <em>電話で事案の概要をお伺いします</em>
@@ -174,7 +174,7 @@ $slug = $post->post_name;
                 <p class="service__flow-text">弁護士が事案の概要をお伺いし、面談の日程調整をさせていただきます。<br>※当事務所ではお電話での法律相談はお受けしておらず、正式な法律相談はご来所いただいてからとなります。<br>※利益相反の確認のため、お電話の初めにお問合せいただいた方の氏名と相手方となる方の氏名をお伺いいたします。</p>
             </div>
 
-            <div class="service__flow-item">
+            <div class="service__flow-item" data-fade="100">
                 <h3 class="service__flow-title">
                     <span>Step 03</span>
                     <em>事務所へお越しください</em>
@@ -184,7 +184,7 @@ $slug = $post->post_name;
                     図を書きながら解決方針や弁護士費用について丁寧に説明いたします。<br>当事務所はJR茨木駅より徒歩2分です。</p>
             </div>
 
-            <div class="service__flow-item">
+            <div class="service__flow-item" data-fade="100">
                 <h3 class="service__flow-title">
                     <span>Step 04</span>
                     <em>ご契約</em>

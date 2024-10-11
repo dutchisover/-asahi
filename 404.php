@@ -2,7 +2,7 @@
 
 <div class="page__header">
     <div class="page__mv">
-        <h1 class=" page__title">
+        <h1 class="page__title" data-fade="0">
             <em>404 Not Found</em>
             <span>お探しのページが見つかりません。</span>
         </h1>
@@ -14,7 +14,7 @@
     </div>
     <!-- /.page__mv -->
 
-    <div class="breadcrumb">
+    <div class="breadcrumb" data-fade="100">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
             <span class="breadcrumb__current">お探しのページが見つかりません。</span>
@@ -29,13 +29,13 @@
     ?>
 
     <section class="section about__philosophy" data-section-title="404">
-        <!-- <h2 class="section__title">
+        <!-- <h2 class="section__title" data-fade="100">
 			<em>404 Not Found</em>
 			<span>お探しのページが見つかりません。</span>
 		</h2> -->
 
-        <p class="about__philosophy-copy section__copy">ページが「移動」もしくは「削除」されたか<br class="pc-none">「一時的にアクセスできない」可能性があります。</p>
-        <p class="about__philosophy-copy section__copy">恐れ入りますが、再度トップページから<br class="pc-none">アクセスをお願いいたします。</p>
+        <p class="about__philosophy-copy section__copy" data-fade="200">ページが「移動」もしくは「削除」されたか<br class="pc-none">「一時的にアクセスできない」可能性があります。</p>
+        <p class="about__philosophy-copy section__copy" data-fade="300">恐れ入りますが、再度トップページから<br class="pc-none">アクセスをお願いいたします。</p>
 
     </section>
 

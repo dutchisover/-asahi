@@ -8,7 +8,7 @@ $slug = $post->post_name;
 
 <div class="page__header">
     <div class="page__mv">
-        <h1 class=" page__title">
+        <h1 class="page__title" data-fade="0">
             <em><?= get_the_title(); ?></em>
             <span><?= get_field("page-sub-title") ?></span>
         </h1>
@@ -20,7 +20,7 @@ $slug = $post->post_name;
     </div>
     <!-- /.page__mv -->
 
-    <div class="breadcrumb">
+    <div class="breadcrumb" data-fade="100">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
             <span class="breadcrumb__current"><?= get_field("page-sub-title") ?></span>
@@ -35,29 +35,29 @@ $slug = $post->post_name;
     ?>
 
     <section class="section about__philosophy" data-section-title="Philosophy">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="200">
             <em>Philosophy</em>
             <span>理念</span>
         </h2>
 
-        <p class="about__philosophy-copy section__copy">当事務所はご依頼者様の視点に立った<br class="pc-none">質の高い法的サービスを提供し、<br>「朝日」のようにご依頼者様の未来を照らす存在となることを理念としています。</p>
+        <p class="about__philosophy-copy section__copy" data-fade="300">当事務所はご依頼者様の視点に立った<br class="pc-none">質の高い法的サービスを提供し、<br>「朝日」のようにご依頼者様の未来を照らす存在となることを理念としています。</p>
 
         <picture>
             <source media="(max-width: 768px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_about-01_sp.jpg">
-            <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_about-01.jpg" alt="" class="about__philosophy-image" width="1104" height="379">
+            <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_about-01.jpg" alt="" class="about__philosophy-image" width="1104" height="379" data-fade="400">
         </picture>
 
     </section>
 
 
     <section class="section about__feature" data-section-title="Our Features">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>Features</em>
             <span>当事務所の特徴</span>
         </h2>
 
         <div class="about__feature-container">
-            <div class="about__feature-box">
+            <div class="about__feature-box" data-fade="200">
                 <div class="about__feature-info">
                     <h3 class="about__feature-title">分かりやすく丁寧な対応</h3>
                     <p class="about__feature-text">相談したのに結局何をしてくれるかわからない。<br>そのような思いをお客様にさせないため、当事務所では、法律相談時に図を描きながら解決の流れを分かりやすく説明しています。また、ご依頼後も進捗報告を怠らず、安心いただけるよう丁寧な対応を心がけています。</p>
@@ -68,7 +68,7 @@ $slug = $post->post_name;
                 </div>
             </div>
 
-            <div class="about__feature-box">
+            <div class="about__feature-box" data-fade="300">
                 <div class="about__feature-info">
                     <h3 class="about__feature-title">交渉による早期解決に注力</h3>
                     <p class="about__feature-text">あまり揉めずに早く問題を解決したい。<br>そのようなニーズに応えるため、交渉による早期解決には特に注力しています。実際に、多数の和解による解決実績があります。</p>
@@ -79,7 +79,7 @@ $slug = $post->post_name;
                 </div>
             </div>
 
-            <div class="about__feature-box">
+            <div class="about__feature-box" data-fade="400">
                 <div class="about__feature-info">
                     <h3 class="about__feature-title">安心の料金体系</h3>
                     <p class="about__feature-text">安心してご相談・ご依頼いただくため、わかりやすい料金体系にしております。法律相談料も<em>初回３０分は無料</em>です。来所予約の際にも費用の説明をいたします。</p>
@@ -91,7 +91,7 @@ $slug = $post->post_name;
                 </div>
             </div>
 
-            <div class="about__feature-box">
+            <div class="about__feature-box" data-fade="500">
                 <div class="about__feature-info">
                     <h3 class="about__feature-title">JR茨木駅から徒歩２分</h3>
                     <p class="about__feature-text">当事務所はJR茨木駅から徒歩２分に位置しています。茨木市以外からでもなるべく少ないご負担でご来所いただけます。</p>
@@ -108,17 +108,17 @@ $slug = $post->post_name;
 
 
     <section class="section about__lawyer" data-section-title="lawyer" id="anc-lawyer">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>lawyer</em>
             <span>弁護士のご紹介</span>
         </h2>
 
         <div class="about__lawyer-container">
-            <div class="about__lawyer-photo">
+            <div class="about__lawyer-photo" data-fade="200">
                 <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_about-lawyer-01.jpg" alt="" class="about__lawyer-image" width="385" height="483">
             </div>
 
-            <div class="about__lawyer-info">
+            <div class="about__lawyer-info" data-fade="300">
                 <h3 class="about__lawyer-name">
                     <strong>代表弁護士</strong>
                     <em>谷井 光<span>Hikaru Tanii</span></em>
@@ -132,8 +132,8 @@ $slug = $post->post_name;
             </div>
 
             <div class="about__lawyer-history">
-                <h3 class="about__lawyer-title"><em>HISTORY</em><span>経歴</span></h3>
-                <div class="about__lawyer-data">
+                <h3 class="about__lawyer-title" data-fade="100"><em>HISTORY</em><span>経歴</span></h3>
+                <div class="about__lawyer-data" data-fade="200">
                     <dl>
                         <dt>出身地</dt>
                         <dd>滋賀県</dd>

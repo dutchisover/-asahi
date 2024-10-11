@@ -4,7 +4,7 @@
 <main class="main page__main">
 	<p class="page__title"><?php echo get_post_type_object(get_post_type())->label; ?></p>
 
-	<div class="breadcrumb">
+	<div class="breadcrumb" data-fade="100">
 		<div class="breadcrumb__inner">
 			<a href="<?php echo home_url(); ?>" class="breadcrumb__link">TOP</a> &gt;
 			<a href="<?php echo get_post_type_archive_link(get_post_type()); ?>" class="breadcrumb__link breadcrumb__category">

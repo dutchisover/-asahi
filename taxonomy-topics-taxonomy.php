@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="page__header">
 	<div class="page__mv">
-		<h1 class=" page__title">
+		<h1 class="page__title" data-fade="0">
 			<em>topics</em>
 			<span>新着情報 一覧</span>
 		</h1>
@@ -13,7 +13,7 @@
 	</div>
 	<!-- /.page__mv -->
 
-	<div class="breadcrumb">
+	<div class="breadcrumb" data-fade="100">
 		<div class="breadcrumb__inner">
 			<a href="https://sm-04.logic-test.group" class="breadcrumb__link">トップ</a>
 			<span class="breadcrumb__current">新着情報 一覧</span>
@@ -24,12 +24,12 @@
 <main class="main page__main">
 	<div class="archive-topics">
 		<section class="section" data-section-title="News & Column">
-			<p class="section__copy">大阪・鶴見区のフォトスタジオ「ECRU（エクリュ）」のスタッフブログです。<br>
+			<p class="section__copy" data-fade="200">大阪・鶴見区のフォトスタジオ「ECRU（エクリュ）」のスタッフブログです。<br>
 				ECRUの最新情報をお届けいたします。</p>
 			<div class="topics__content">
 				<?php get_sidebar('topics'); ?>
 
-				<ul class="archive__list">
+				<ul class="archive__list" data-fade="100">
 					<?php
 					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 					$args = array(

@@ -17,7 +17,7 @@ $slug = $post->post_name;
 
 <div class="page__header">
     <div class="page__mv">
-        <h1 class=" page__title">
+        <h1 class="page__title" data-fade="0">
             <?php
             /**
              * タイトルを取得して、「（」以降を除去
@@ -36,7 +36,7 @@ $slug = $post->post_name;
     </div>
     <!-- /.page__mv -->
 
-    <div class="breadcrumb">
+    <div class="breadcrumb" data-fade="100">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
             <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取扱業務一覧</a>
@@ -53,17 +53,17 @@ $slug = $post->post_name;
 
     <section class="section" data-section-title="Service 06">
 
-        <p class="service__copy"><em>不動産トラブル</em>に<br class="pc-none">精通した弁護士が、<br>全力でサポートいたします。</p>
+        <p class="service__copy" data-fade="200"><em>不動産トラブル</em>に<br class="pc-none">精通した弁護士が、<br>全力でサポートいたします。</p>
 
         <div class="service__example">
-            <div class="service__example-photo">
+            <div class="service__example-photo" data-fade="300">
                 <picture>
                     <source media=" (max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-realestate-01_sp.jpg">
                     <img src="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-realestate-01.jpg" alt="" width="519" height="335">
                 </picture>
             </div>
 
-            <div class="service__example-info">
+            <div class="service__example-info" data-fade="400">
                 <h2 class="service__example-title">
                     <em>Examples</em>
                     <span>お悩み事例</span>
@@ -79,7 +79,7 @@ $slug = $post->post_name;
                 <a href="#anc-price" class="service__example-button">料金表はこちら</a>
             </div>
 
-            <div class="service__example-desc">
+            <div class="service__example-desc" data-fade="100">
                 <p>当事務所は、滞納賃料の回収、建物・土地明渡請求、借地トラブル、共有物分割請求、賃料増減額請求、強制執行等、不動産に関する問題に幅広く対応しております。
                     ご依頼者様の状況を詳しくお伺いし、密に連絡をとりご要望をお伺いしながら、丁寧・スピーディに対応いたします。</p>
             </div>
@@ -88,15 +88,15 @@ $slug = $post->post_name;
     </section>
 
     <section class="section" data-section-title="field of Service">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>Field</em>
             <span>不動産の取扱い業務</span>
         </h2>
 
-        <p class="section__copy">当事務所では、不動産に関する各種問題を取り扱っております。<br>下記に列挙した取扱業務はその一例となります。</p>
+        <p class="section__copy" data-fade="200">当事務所では、不動産に関する各種問題を取り扱っております。<br>下記に列挙した取扱業務はその一例となります。</p>
 
         <div class="service__field-list">
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 01</span>
                     <em>賃貸経営に関する<br>トラブル</em>
@@ -104,7 +104,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">賃貸経営においてオーナーを最も悩ませる問題が、賃料不払い問題です。また、老朽化した建物を建て替えたい場合、入居者の数が多ければ多いほど、立退交渉のハードルは上がります。当事務所では、未払賃料回収、明渡請求、立退交渉など、賃貸経営に関するトラブルに幅広く対応しています。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 02</span>
                     <em>借地に関するトラブル</em>
@@ -112,7 +112,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">借地契約には、更新料、建替承諾料、譲渡承諾料、名義変更料などといった、借地以外の不動産取引では一般的ではない商慣習もあり、知識不足から想定外のトラブルとなってしまうこともあります。<br>借地に関するトラブルは、まずは交渉を行い、必要に応じて借地非訟手続などを利用して解決を行います。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 03</span>
                     <em>共有物の分割</em>
@@ -120,7 +120,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">共有とは、1つの物を複数人が共同で所有することをいい、各共有者は、共有物全体を他の共有者の同意なく勝手に売却することはできません。<br>他の共有者が売却に同意しない場合は、他の共有者を相手方として共有物分割訴訟を提起することにより、共有物全体を処分等して持分権を換価することができます。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 04</span>
                     <em>各種不動産契約書の<br>チェック・作成</em>
@@ -156,14 +156,14 @@ $slug = $post->post_name;
     $topics_query = new WP_Query($args);
     if ($topics_query->have_posts()) : ?>
         <section class="section" data-section-title="case study">
-            <h2 class="section__title">
+            <h2 class="section__title" data-fade="100">
                 <em>case study</em>
                 <span>不動産に関する事例や記事</span>
             </h2>
 
             <div class="service__case">
                 <div class="archive__container">
-                    <ul class="archive__list">
+                    <ul class="archive__list" data-fade="100">
                         <?php
                         while ($topics_query->have_posts()) : $topics_query->the_post();
 
@@ -233,7 +233,7 @@ $slug = $post->post_name;
             $taxonomy_link = get_term_link($slug, 'topics_taxonomy');
             if (!is_wp_error($taxonomy_link)) :
             ?>
-                <div class="service__case-button">
+                <div class="service__case-button" data-fade="100">
                     <a href="<?php echo esc_url($taxonomy_link); ?>">関連記事を見る</a>
                 </div>
             <?php
@@ -245,17 +245,17 @@ $slug = $post->post_name;
     <?php endif; ?>
 
     <section class="section" data-section-title="Price of Service" id="anc-price">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>price</em>
             <span>不動産の弁護士費用 (全て税込表記)</span>
         </h2>
 
-        <div class="service__price-nav">
+        <div class="service__price-nav" data-fade="100">
             <!-- <a href="" class="service__price-nav-link"></a> -->
         </div>
 
         <div class="service__price-container">
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('相談料'); ?>
                 <?php price_table_2col([
                     ['時間', '相談料'],
@@ -265,7 +265,7 @@ $slug = $post->post_name;
             </div>
 
 
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('不動産明渡請求'); ?>
                 <div class="service__price-switch">
                     <div class="service__price-switch-pc">
@@ -402,7 +402,7 @@ $slug = $post->post_name;
             </div>
 
 
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('共有物分割請求'); ?>
                 <div class="service__price-switch">
                     <div class="service__price-switch-pc">
@@ -535,7 +535,7 @@ $slug = $post->post_name;
             </div>
 
 
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('賃料増減額請求'); ?>
                 <?php price_table_2col([
                     ['解決手段', '料金'],
@@ -559,7 +559,7 @@ $slug = $post->post_name;
             </div>
 
 
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('借地非訟<span>（借地権者側・地主側）</span>'); ?>
                 <h4 class="service__price-subtitle">着手金</h4>
                 <?php price_table_2col([

@@ -17,7 +17,7 @@ $slug = $post->post_name;
 
 <div class="page__header">
     <div class="page__mv">
-        <h1 class=" page__title">
+        <h1 class="page__title" data-fade="0">
             <?php
             /**
              * タイトルを取得して、全角「（」以降を除去
@@ -36,7 +36,7 @@ $slug = $post->post_name;
     </div>
     <!-- /.page__mv -->
 
-    <div class="breadcrumb">
+    <div class="breadcrumb" data-fade="100">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
             <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取扱業務一覧</a>
@@ -53,17 +53,17 @@ $slug = $post->post_name;
 
     <section class="section" data-section-title="Service 01">
 
-        <p class="service__copy"><em>労務問題</em>にまつわる問題は<br class="pc-none">当事務所へお任せ下さい。<br><span>多数の解決実績に基づき、全力でサポートいたします。</span></p>
+        <p class="service__copy" data-fade="200"><em>労務問題</em>にまつわる問題は<br class="pc-none">当事務所へお任せ下さい。<br><span>多数の解決実績に基づき、全力でサポートいたします。</span></p>
 
         <div class="service__example">
-            <div class="service__example-photo">
+            <div class="service__example-photo" data-fade="300">
                 <picture>
                     <source media=" (max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-labor-01_sp.jpg">
                     <img src="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-labor-01.jpg" alt="" width="519" height="335">
                 </picture>
             </div>
 
-            <div class="service__example-info">
+            <div class="service__example-info" data-fade="400">
                 <h2 class="service__example-title">
                     <em>Examples</em>
                     <span>お悩み事例</span>
@@ -79,7 +79,7 @@ $slug = $post->post_name;
                 <a href="#anc-price" class="service__example-button">料金表はこちら</a>
             </div>
 
-            <div class="service__example-desc">
+            <div class="service__example-desc" data-fade="100">
                 <p>都内の総合法津事務所で多数の労働問題を解決した経験から、当事務所は特に<b class="fw-bold">残業代請求・不当解雇・労災</b>に注力しております。<br>ご依頼者様の状況を詳しくお伺いし、密に連絡をとりご要望をお伺いしながら、丁寧・スピーディに対応いたします。</p>
             </div>
         </div>
@@ -87,16 +87,16 @@ $slug = $post->post_name;
     </section>
 
     <section class="section" data-section-title="field of Service">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>Field</em>
             <span>労働問題の取扱業務</span>
         </h2>
 
-        <p class="section__copy">当事務所では、労働に関する各種問題を取り扱っております。<br>
+        <p class="section__copy" data-fade="200">当事務所では、労働に関する各種問題を取り扱っております。<br>
             下記に列挙した取扱業務はその一例となります。</p>
 
         <div class="service__field-list">
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 01</span>
                     <em>残業代請求</em>
@@ -104,7 +104,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">「1日8時間、1週40時間」（法定労働時間）を超える労働、法定休日における労働（休日労働）、22時から5時までの深夜労働時間帯の労働（深夜労働）には残業代（割増賃金）を請求することができます。この残業代を適切に計算し、会社に請求を行います。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 02</span>
                     <em>不当解雇・雇止め</em>
@@ -112,7 +112,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">解雇されてしまった場合は、解雇理由に応じて取るべき対応が異なります。解雇が無効であれば原則として職場復帰を前提とした交渉を行いますが、実際には会社に解雇を撤回してもらった上で、金銭の補償を受けて合意退職するという解決もあり、ご希望に応じた対応が可能です。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 03</span>
                     <em>労災</em>
@@ -150,14 +150,14 @@ $slug = $post->post_name;
     $topics_query = new WP_Query($args);
     if ($topics_query->have_posts()) : ?>
         <section class="section" data-section-title="case study">
-            <h2 class="section__title">
+            <h2 class="section__title" data-fade="100">
                 <em>case study</em>
                 <span>労働問題に関する事例や記事</span>
             </h2>
 
             <div class="service__case">
                 <div class="archive__container">
-                    <ul class="archive__list">
+                    <ul class="archive__list" data-fade="100">
                         <?php
                         while ($topics_query->have_posts()) : $topics_query->the_post();
 
@@ -227,7 +227,7 @@ $slug = $post->post_name;
             $taxonomy_link = get_term_link($slug, 'topics_taxonomy');
             if (!is_wp_error($taxonomy_link)) :
             ?>
-                <div class="service__case-button">
+                <div class="service__case-button" data-fade="100">
                     <a href="<?php echo esc_url($taxonomy_link); ?>">関連記事を見る</a>
                 </div>
             <?php
@@ -240,19 +240,19 @@ $slug = $post->post_name;
     <?php endif; ?>
 
     <section class="section" data-section-title="Price of Service" id="anc-price">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>price</em>
             <span>労働問題の弁護士費用 (全て税込表記)</span>
         </h2>
 
-        <div class="service__price-nav">
+        <div class="service__price-nav" data-fade="100">
             <!-- <a href="" class="service__price-nav-link"></a> -->
         </div>
 
         <div class="service__price-container">
 
             <!-- 01:相談料 -->
-            <div class="service__price-box" id="anc-price-01">
+            <div class="service__price-box" data-fade="100" id="anc-price-01">
                 <?php service_price_title('相談料'); ?>
                 <?php price_table_2col([
                     ['時間', '相談料'],
@@ -262,7 +262,7 @@ $slug = $post->post_name;
             </div>
 
             <!-- 02:残業代請求 -->
-            <div class="service__price-box" id="anc-price-02">
+            <div class="service__price-box" data-fade="100" id="anc-price-02">
                 <?php service_price_title('残業代請求'); ?>
                 <?php price_table_3col([
                     ['解決手段', '着手金', '報酬金'],
@@ -277,7 +277,7 @@ $slug = $post->post_name;
             </div>
 
             <!-- 03:解雇・雇止め -->
-            <div class="service__price-box" id="anc-price-03">
+            <div class="service__price-box" data-fade="100" id="anc-price-03">
                 <?php service_price_title('解雇・雇止め'); ?>
                 <?php price_table_3col([
                     ['解決手段', '着手金', '報酬金'],
@@ -306,7 +306,7 @@ $slug = $post->post_name;
             </div>
 
             <!-- 04:労働災害 -->
-            <div class="service__price-box" id="anc-price-04">
+            <div class="service__price-box" data-fade="100" id="anc-price-04">
                 <?php service_price_title('労働災害'); ?>
                 <h4 class="service__price-subtitle">着手金</h4>
                 <?php price_table_2col([
@@ -342,7 +342,7 @@ $slug = $post->post_name;
             </div>
 
             <!-- 退職勧奨への対応 -->
-            <div class="service__price-box" id="anc-price-05">
+            <div class="service__price-box" data-fade="100" id="anc-price-05">
                 <?php service_price_title('退職勧奨への対応'); ?>
                 <?php price_table_1col([
                     '着手金',
@@ -359,7 +359,7 @@ $slug = $post->post_name;
             </div>
 
             <!-- 退職代行（代理） -->
-            <div class="service__price-box" id="anc-price-06">
+            <div class="service__price-box" data-fade="100" id="anc-price-06">
                 <?php service_price_title('退職代行（代理）'); ?>
                 <?php price_table_1col([
                     '着手金',

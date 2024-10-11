@@ -11,7 +11,7 @@ add_action('wp_enqueue_scripts', 'blog_add_files');
 <?php get_header(); ?>
 <div class="page__header">
     <div class="page__mv">
-        <h1 class=" page__title">
+        <h1 class="page__title" data-fade="0">
             <em>topics</em>
             <span>新着情報 一覧</span>
         </h1>
@@ -23,7 +23,7 @@ add_action('wp_enqueue_scripts', 'blog_add_files');
     </div>
     <!-- /.page__mv -->
 
-    <div class="breadcrumb">
+    <div class="breadcrumb" data-fade="100">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
             <a href="<?php echo home_url(); ?>/topics/" class="breadcrumb__link">新着情報 一覧</a>
@@ -38,12 +38,12 @@ add_action('wp_enqueue_scripts', 'blog_add_files');
         <section class="section" data-section-title="News & Column">
             <div class="topics__content">
                 <!-- sidebar -->
-                <section class="topics__sidebar sp-none">
+                <section class="topics__sidebar sp-none" data-fade="200">
                     <?php get_sidebar('topics'); ?>
                 </section>
                 <!-- メインコンテンツ -->
                 <article class="single__container">
-                    <div class="single__inner">
+                    <div class="single__inner" data-fade="300">
                         <?php
                         if (have_posts()) {
                             while (have_posts()) : the_post();
@@ -112,7 +112,7 @@ add_action('wp_enqueue_scripts', 'blog_add_files');
 
                                 <!-- アイキャッチ画像 -->
                                 <?php if ($single_image) : ?>
-                                    <div class="single__image">
+                                    <div class="single__image" data-fade="100">
                                         <?php echo $single_image; ?>
                                     </div>
                                 <?php endif; ?>

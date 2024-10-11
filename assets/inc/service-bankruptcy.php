@@ -17,7 +17,7 @@ $slug = $post->post_name;
 
 <div class="page__header">
     <div class="page__mv">
-        <h1 class=" page__title">
+        <h1 class="page__title" data-fade="0">
             <?php
             /**
              * タイトルを取得して、「（」以降を除去
@@ -36,7 +36,7 @@ $slug = $post->post_name;
     </div>
     <!-- /.page__mv -->
 
-    <div class="breadcrumb">
+    <div class="breadcrumb" data-fade="100">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
             <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取扱業務一覧</a>
@@ -53,17 +53,17 @@ $slug = $post->post_name;
 
     <section class="section" data-section-title="Service 10">
 
-        <p class="service__copy"><em>法人破産・会社解散</em>に<br class="pc-none">まつわる問題は<br class="pc-none">当事務所へお任せ下さい。<br><span>多数の解決実績に基づき、全力でサポートいたします。</span></p>
+        <p class="service__copy" data-fade="200"><em>法人破産・会社解散</em>に<br class="pc-none">まつわる問題は<br class="pc-none">当事務所へお任せ下さい。<br><span>多数の解決実績に基づき、全力でサポートいたします。</span></p>
 
         <div class="service__example">
-            <div class="service__example-photo">
+            <div class="service__example-photo" data-fade="300">
                 <picture>
                     <source media=" (max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-bankruptcy-01_sp.jpg">
                     <img src="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-bankruptcy-01.jpg" alt="" width="519" height="335">
                 </picture>
             </div>
 
-            <div class="service__example-info">
+            <div class="service__example-info" data-fade="400">
                 <h2 class="service__example-title">
                     <em>Examples</em>
                     <span>お悩み事例</span>
@@ -78,7 +78,7 @@ $slug = $post->post_name;
                 <a href="#anc-price" class="service__example-button">料金表はこちら</a>
             </div>
 
-            <div class="service__example-desc">
+            <div class="service__example-desc" data-fade="100">
                 <p>当事務所は、法人破産／経営者の自己破産／経営者保証ガイドラインによる債務整理／会社解散等、法人・経営者の債務整理に対応しております。ご依頼者様の状況を詳しくお伺いし、それぞれの解決手段のメリット・デメリットを踏まえて、丁寧・スピーディに対応いたします。</p>
             </div>
         </div>
@@ -86,15 +86,15 @@ $slug = $post->post_name;
     </section>
 
     <section class="section" data-section-title="field of Service">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>Field</em>
             <span>法人破産・会社解散の取扱い業務</span>
         </h2>
 
-        <p class="section__copy">当事務所では、法人破産・会社解散に関する各種問題を取り扱っております。<br>些細なことでも結構ですので、お気軽にお問合せいただければと思います。</p>
+        <p class="section__copy" data-fade="200">当事務所では、法人破産・会社解散に関する各種問題を取り扱っております。<br>些細なことでも結構ですので、お気軽にお問合せいただければと思います。</p>
 
         <div class="service__field-list">
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 01</span>
                     <em>法人破産</em>
@@ -102,7 +102,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">負債が会社の資産を上回っている場合（債務超過）や支払不能の場合に、裁判所を通じて事業を清算する手続です。<br>法人破産の大きな流れは、①申立て準備、②申立て、③財産の換価処分・配当、④終了となります。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 02</span>
                     <em>会社解散</em>
@@ -110,7 +110,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">裁判所を通さない廃業手続で、資産と負債を整理し会社を解散・清算する制度です。会社の資産が負債を上回っている場合に利用できます。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 03</span>
                     <em>経営者保証ガイドラインに<br>基づく任意整理</em>
@@ -146,14 +146,14 @@ $slug = $post->post_name;
     $topics_query = new WP_Query($args);
     if ($topics_query->have_posts()) : ?>
         <section class="section" data-section-title="case study">
-            <h2 class="section__title">
+            <h2 class="section__title" data-fade="100">
                 <em>case study</em>
                 <span>法人破産・会社解散に関する事例や記事</span>
             </h2>
 
             <div class="service__case">
                 <div class="archive__container">
-                    <ul class="archive__list">
+                    <ul class="archive__list" data-fade="100">
                         <?php
                         while ($topics_query->have_posts()) : $topics_query->the_post();
 
@@ -223,7 +223,7 @@ $slug = $post->post_name;
             $taxonomy_link = get_term_link($slug, 'topics_taxonomy');
             if (!is_wp_error($taxonomy_link)) :
             ?>
-                <div class="service__case-button">
+                <div class="service__case-button" data-fade="100">
                     <a href="<?php echo esc_url($taxonomy_link); ?>">関連記事を見る</a>
                 </div>
             <?php
@@ -236,18 +236,18 @@ $slug = $post->post_name;
     <?php endif; ?>
 
     <section class="section" data-section-title="Price of Service" id="anc-price">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>price</em>
             <span>法人破産・会社解散の弁護士費用 (全て税込表記)</span>
         </h2>
 
-        <div class="service__price-nav">
+        <div class="service__price-nav" data-fade="100">
             <!-- <a href="" class="service__price-nav-link"></a> -->
         </div>
 
         <div class="service__price-container">
             <!-- 01:相談料 -->
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('相談料'); ?>
                 <?php price_table_2col([
                     ['時間', '相談料'],
@@ -258,7 +258,7 @@ $slug = $post->post_name;
 
 
             <!-- 02:法人破産 -->
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('法人破産'); ?>
 
                 <h4 class="service__price-subtitle">負債額が3000万円以下の場合：着手金</h4>
@@ -316,7 +316,7 @@ $slug = $post->post_name;
 
 
             <!-- 03:会社解散 -->
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('会社解散'); ?>
                 <h4 class="service__price-subtitle">着手金</h4>
 

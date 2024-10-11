@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
 <main class="main page__main">
-	<h1 class="page__title"><?php post_type_archive_title(); ?></h1>
+	<h1 class="page__title" data-fade="0"><?php post_type_archive_title(); ?></h1>
 
-	<div class="breadcrumb">
+	<div class="breadcrumb" data-fade="100">
 		<div class="breadcrumb__inner">
 			<a href="<?php echo home_url(); ?>" class="breadcrumb__link">TOP</a> &gt; <span class="breadcrumb__current"><?php post_type_archive_title(); ?></span>
 		</div>
@@ -13,7 +13,7 @@
 	<!-- /.breadcrumb -->
 
 	<article class="archive__inner">
-		<ul class="archive__list">
+		<ul class="archive__list" data-fade="100">
 			<?php
 			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 			$args = array(

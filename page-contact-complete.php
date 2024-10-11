@@ -18,7 +18,7 @@ $slug = $post->post_name;
 
 <div class="page__header">
     <div class="page__mv">
-        <h1 class="page__title">
+        <h1 class="page__title" data-fade="0">
             <em><?= get_the_title(); ?></em>
             <span><?= get_field("page-sub-title") ?></span>
         </h1>
@@ -30,7 +30,7 @@ $slug = $post->post_name;
     </div>
     <!-- /.page__mv -->
 
-    <div class="breadcrumb">
+    <div class="breadcrumb" data-fade="100">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
             <span class="breadcrumb__current"><?= get_field("page-sub-title") ?></span>
@@ -45,14 +45,14 @@ $slug = $post->post_name;
     ?>
 
     <section class="section" data-section-title="contact">
-        <h2 class="section__title section__first-title">
+        <h2 class="section__title section__first-title" data-fade="200">
             <em class="font-gothic-medium">お問い合わせ完了</em>
         </h2>
-        <p class="section__copy">
+        <p class="section__copy" data-fade="300">
             お問い合わせいただきありがとうございます。<br>
             ２営業日以内に連絡がない場合、メールがブロックされている恐れがありまので、<br>072-627-0101まで直接お電話をお願いいたします。
         </p>
-        <div class="contact-form__button-area">
+        <div class="contact-form__button-area" data-fade="400">
             <a href="/">TOPへ戻る</a>
         </div>
 

@@ -48,9 +48,9 @@
             </div>
             <div class="swiper-pagination sp-none"></div>
             <div class="mv__container">
-                <h2 class="mv__title">SHINE ON<br>YOUR FUTURE.</h2>
-                <p class="mv__copy">「朝日」のように<br class="pc-none">あなたの一歩を照らし出す</p>
-                <a class="mv__text" href="<?php echo esc_url(home_url()); ?>/contact">初回30分 相談無料</a>
+                <h2 class="mv__title" data-fade="0">SHINE ON<br>YOUR FUTURE.</h2>
+                <p class="mv__copy" data-fade="100">「朝日」のように<br class="pc-none">あなたの一歩を照らし出す</p>
+                <a class="mv__text" data-fade="200" href="<?php echo esc_url(home_url()); ?>/contact">初回30分 相談無料</a>
             </div>
         </div>
         <?php
@@ -66,7 +66,7 @@
         $has_top_news = 'no-top-news';
         if ($topics_query->have_posts()) : ?>
             <?php $has_top_news = ''; ?>
-            <div class="mv-topics">
+            <div class="mv-topics" data-fade="200">
                 <p class="mv-topics__title sp-none">new topics</p>
                 <img src="<?= get_template_directory_uri(); ?>/assets/image/text_mv-topics_sp.svg" alt="New" class="pc-none mv-topics__title" width="73" height="89">
                 <div class="mv-topics__container">
@@ -124,12 +124,12 @@
     <!-- MESSAGE ご挨拶 -->
     <section class="top-message <?php echo $has_top_news; ?>">
         <div class="top-message__inner">
-            <h2 class="section__title">
+            <h2 class="section__title" data-fade="100">
                 <em>message</em>
                 <span>ご挨拶</span>
             </h2>
             <div class="top-message__container">
-                <div class="top-message__photo">
+                <div class="top-message__photo" data-fade="100">
                     <picture>
                         <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_top-message_sp.jpg" media="(max-width: 820px)" />
                         <img src="<?= get_template_directory_uri(); ?>/assets/image/photo_top-message.jpg" class="top-message__photo-image" alt="代表弁護士 谷井 光" width="420" height="477" />
@@ -153,11 +153,11 @@
     <!-- OUR FEATURES 当事務所の特徴 -->
     <section class="top-features">
         <div class="top-features__inner">
-            <h2 class="section__title">
+            <h2 class="section__title" data-fade="100">
                 <em>our features</em>
                 <span>当事務所の特徴</span>
             </h2>
-            <div class="top-features__container">
+            <div class="top-features__container" data-fade="100">
                 <div class="swiper" id="features__swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -194,14 +194,14 @@
     <!-- SERVICE 取扱業務 -->
     <section class="top-service">
         <div class="top-service__inner">
-            <h2 class="section__title">
+            <h2 class="section__title" data-fade="100">
                 <em>service</em>
                 <span>取扱業務</span>
             </h2>
             <p class="section__text">個人のお客様、法人のお客様を問わず、幅広い案件を取り扱っております。</p>
             <div class="top-service__container">
                 <ul class="top-service__list">
-                    <li class="top-service__item">
+                    <li class="top-service__item" data-fade="100">
                         <a href="<?php echo esc_url(home_url('inheritance')); ?>" class="top-service__item-link">
                             <picture>
                                 <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_top-service_01_sp.jpg" media="(max-width: 820px)" />
@@ -212,7 +212,7 @@
                             <p class="top-service__item-text sp-none">遺産分割、遺留分侵害額請求、遺言作成、相続放棄など、相続問題に精通した弁護士が一貫してサポートいたします。</p>
                         </a>
                     </li>
-                    <li class="top-service__item">
+                    <li class="top-service__item" data-fade="200">
                         <a href="<?php echo esc_url(home_url('labor')); ?>" class="top-service__item-link">
                             <picture>
                                 <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_top-service_02_sp.jpg" media="(max-width: 820px)" />
@@ -222,7 +222,7 @@
                             <p class="top-service__item-text sp-none">労働問題の中でも残業代請求、不当解雇、労災に精通しています。豊富な解決実績に基づきサポートいたします。</p>
                         </a>
                     </li>
-                    <li class="top-service__item">
+                    <li class="top-service__item" data-fade="100">
                         <a href="<?php echo esc_url(home_url('trafficaccident')); ?>" class="top-service__item-link">
                             <picture>
                                 <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_top-service_03_sp.jpg" media="(max-width: 820px)" />
@@ -232,7 +232,7 @@
                             <p class="top-service__item-text sp-none">被害者側専門の弁護士として、豊富な解決実績があります。被害に遭われた方を全力でサポートします。</p>
                         </a>
                     </li>
-                    <li class="top-service__item">
+                    <li class="top-service__item" data-fade="200">
                         <a href="<?php echo esc_url(home_url('divorce')); ?>" class="top-service__item-link">
                             <picture>
                                 <source srcset="<?= get_template_directory_uri(); ?>/assets/image/photo_top-service_04_sp.jpg" media="(max-width: 820px)" />
@@ -244,38 +244,38 @@
                     </li>
                 </ul>
                 <ul class="top-service__sublist">
-                    <li class="top-service__subitem">
+                    <li class="top-service__subitem" data-fade="100">
                         <a href="<?php echo esc_url(home_url('corporate')); ?>" class="top-service__subitem-link">
                             <h3 class="top-service__subitem-title">企業法務・顧問</h3>
                         </a>
                     </li>
-                    <li class="top-service__subitem">
+                    <li class="top-service__subitem" data-fade="200">
                         <a href="<?php echo esc_url(home_url('realestate')); ?>" class="top-service__subitem-link">
                             <h3 class="top-service__subitem-title">不動産</h3>
                         </a>
                     </li>
-                    <li class="top-service__subitem">
+                    <li class="top-service__subitem" data-fade="100">
                         <a href="<?php echo esc_url(home_url('debt-consolidation')); ?>" class="top-service__subitem-link">
                             <h3 class="top-service__subitem-title">借金・債務整理</h3>
                         </a>
                     </li>
-                    <li class="top-service__subitem">
+                    <li class="top-service__subitem" data-fade="200">
                         <a href="<?php echo esc_url(home_url('collection-of-claim')); ?>" class="top-service__subitem-link">
                             <h3 class="top-service__subitem-title">金銭トラブル（請求側／被請求側）</h3>
                         </a>
                     </li>
-                    <li class="top-service__subitem">
+                    <li class="top-service__subitem" data-fade="100">
                         <a href="<?php echo esc_url(home_url('criminal-case')); ?>" class="top-service__subitem-link">
                             <h3 class="top-service__subitem-title">刑事事件</h3>
                         </a>
                     </li>
-                    <li class="top-service__subitem">
+                    <li class="top-service__subitem" data-fade="200">
                         <a href="<?php echo esc_url(home_url('bankruptcy')); ?>" class="top-service__subitem-link">
                             <h3 class="top-service__subitem-title">法人破産・会社解散</h3>
                         </a>
                     </li>
                 </ul>
-                <div class="button__area"><a href="<?php echo esc_url(home_url()); ?>/service" class="button__link">取扱業務 一覧へ</a></div>
+                <div class="button__area" data-fade="100"><a href="<?php echo esc_url(home_url()); ?>/service" class="button__link">取扱業務 一覧へ</a></div>
             </div>
         </div>
     </section>
@@ -295,12 +295,12 @@
     if ($topics_query->have_posts()) : ?>
         <section class="top-topics">
             <div class="top-topics__inner">
-                <h2 class="section__title">
+                <h2 class="section__title" data-fade="100">
                     <em>topics</em>
                     <span>新着情報</span>
                 </h2>
                 <div class="top-topics__container">
-                    <ul class="top-topics__list">
+                    <ul class="top-topics__list" data-fade="100">
                         <?php
                         while ($topics_query->have_posts()) : $topics_query->the_post();
 
@@ -372,7 +372,7 @@
         <div class="top-other__inner">
             <div class="top-other__container">
                 <div class="top-other__list">
-                    <div class="top-other__item">
+                    <div class="top-other__item" data-fade="100">
                         <a href="<?php echo esc_url(home_url()); ?>/price">
                             <h2 class="top-other__item-title">
                                 <em>price</em>
@@ -384,7 +384,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="top-other__item">
+                    <div class="top-other__item" data-fade="200">
                         <a href="<?php echo esc_url(home_url()); ?>/service#anc-flow">
                             <h2 class="top-other__item-title">
                                 <em>flow</em>
@@ -396,7 +396,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="top-other__item">
+                    <div class="top-other__item" data-fade="300">
                         <a href="<?php echo esc_url(home_url()); ?>/office">
                             <h2 class="top-other__item-title">
                                 <em>office</em>

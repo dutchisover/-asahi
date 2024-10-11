@@ -17,7 +17,7 @@ $slug = $post->post_name;
 
 <div class="page__header">
     <div class="page__mv">
-        <h1 class=" page__title">
+        <h1 class="page__title" data-fade="0">
             <?php
             /**
              * タイトルを取得して、「（」以降を除去
@@ -36,7 +36,7 @@ $slug = $post->post_name;
     </div>
     <!-- /.page__mv -->
 
-    <div class="breadcrumb">
+    <div class="breadcrumb" data-fade="100">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
             <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取扱業務一覧</a>
@@ -53,17 +53,17 @@ $slug = $post->post_name;
 
     <section class="section" data-section-title="Service 08">
 
-        <p class="service__copy"><em>金銭トラブル</em>にまつわる問題は<br class="pc-none">当事務所へお任せ下さい。<br><span>多数の解決実績に基づき、全力でサポートいたします。</span></p>
+        <p class="service__copy" data-fade="200"><em>金銭トラブル</em>にまつわる問題は<br class="pc-none">当事務所へお任せ下さい。<br><span>多数の解決実績に基づき、全力でサポートいたします。</span></p>
 
         <div class="service__example">
-            <div class="service__example-photo">
+            <div class="service__example-photo" data-fade="300">
                 <picture>
                     <source media=" (max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-collection-of-claim-01_sp.jpg">
                     <img src="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-collection-of-claim-01.jpg" alt="" width="519" height="335">
                 </picture>
             </div>
 
-            <div class="service__example-info">
+            <div class="service__example-info" data-fade="400">
                 <h2 class="service__example-title">
                     <em>Examples</em>
                     <span>お悩み事例</span>
@@ -83,7 +83,7 @@ $slug = $post->post_name;
                 <a href="#anc-price" class="service__example-button">料金表はこちら</a>
             </div>
 
-            <div class="service__example-desc">
+            <div class="service__example-desc" data-fade="100">
                 <p>当事務所は、貸金返還請求、売掛金回収、損害賠償請求を受けた場合の対応、民事保全（仮差押え・仮処分）、強制執行等、債権回収（金銭トラブル）に幅広く対応しております。ご依頼者様の状況を詳しくお伺いし、密に連絡をとりご要望をお伺いしながら、丁寧・スピーディに対応いたします。</p>
             </div>
         </div>
@@ -91,15 +91,15 @@ $slug = $post->post_name;
     </section>
 
     <section class="section" data-section-title="field of Service">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>Field</em>
             <span>金銭トラブルの取扱い業務</span>
         </h2>
 
-        <p class="section__copy">当事務所では、金銭トラブルに関する各種問題を取り扱っております。<br>下記に列挙した取扱業務はその一例となります。</p>
+        <p class="section__copy" data-fade="200">当事務所では、金銭トラブルに関する各種問題を取り扱っております。<br>下記に列挙した取扱業務はその一例となります。</p>
 
         <div class="service__field-list">
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 01</span>
                     <em>債権回収</em>
@@ -107,7 +107,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">代金の支払いをしない取引先や貸金の返還しない債務者等に対する債権回収の交渉、訴訟の代理等を行います。弁護士名で内容証明郵便等を送るだけで支払いがされることも少なくないため、弁護士を利用するメリットが大きな分野です。<br>相手方との紛争が訴訟に発展した場合にも、迅速な解決、円満な解決、徹底抗戦など、ご要望に応じて対応します。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 02</span>
                     <em>強制執行</em>
@@ -115,7 +115,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">強制執行は、勝訴判決を得たり、相手方との間で裁判上の和解が成立したにもかかわらず、相手方が任意の履行をしない場合に、裁判所を通じて権利を強制的に実現する手続です。<br>相手方の財産調査から実際の強制執行まで一貫してサポートが可能です。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 03</span>
                     <em>民事保全</em>
@@ -123,7 +123,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">訴訟は、その訴えの提起から判決の確定まで早くても数か月以上かかり、相当の時間を要します。その間に債務者の財産状態等が変化し、せっかく勝訴判決を得ても強制執行をすることができないという事態が生じます。<br>そこで、将来の強制執行をするための準備として、訴訟を提起する前などに、相手方の財産を予め確保する手続が仮差押えや仮処分などの民事保全です。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 04</span>
                     <em>請求された側にも対応</em>
@@ -159,14 +159,14 @@ $slug = $post->post_name;
     $topics_query = new WP_Query($args);
     if ($topics_query->have_posts()) : ?>
         <section class="section" data-section-title="case study">
-            <h2 class="section__title">
+            <h2 class="section__title" data-fade="100">
                 <em>case study</em>
                 <span>金銭トラブルに関する事例や記事</span>
             </h2>
 
             <div class="service__case">
                 <div class="archive__container">
-                    <ul class="archive__list">
+                    <ul class="archive__list" data-fade="100">
                         <?php
                         while ($topics_query->have_posts()) : $topics_query->the_post();
 
@@ -236,7 +236,7 @@ $slug = $post->post_name;
             $taxonomy_link = get_term_link($slug, 'topics_taxonomy');
             if (!is_wp_error($taxonomy_link)) :
             ?>
-                <div class="service__case-button">
+                <div class="service__case-button" data-fade="100">
                     <a href="<?php echo esc_url($taxonomy_link); ?>">関連記事を見る</a>
                 </div>
             <?php
@@ -248,17 +248,17 @@ $slug = $post->post_name;
     <?php endif; ?>
 
     <section class="section" data-section-title="Price of Service" id="anc-price">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>price</em>
             <span>金銭トラブルの弁護士費用 (全て税込表記)</span>
         </h2>
 
-        <div class="service__price-nav">
+        <div class="service__price-nav" data-fade="100">
             <!-- <a href="" class="service__price-nav-link"></a> -->
         </div>
 
         <div class="service__price-container">
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('相談料'); ?>
                 <?php price_table_2col([
                     ['時間', '相談料'],
@@ -268,7 +268,7 @@ $slug = $post->post_name;
             </div>
 
 
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('和解交渉<span>（請求側・被請求側）</span>'); ?>
 
                 <h4 class="service__price-subtitle">着手金</h4>
@@ -298,7 +298,7 @@ $slug = $post->post_name;
             </div>
 
 
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('訴訟<span>（請求側・被請求側）</span>'); ?>
 
                 <h4 class="service__price-subtitle">着手金</h4>
@@ -328,7 +328,7 @@ $slug = $post->post_name;
             </div>
 
 
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('支払督促<span>（請求側・被請求側）</span>'); ?>
 
                 <h4 class="service__price-subtitle">着手金</h4>
@@ -350,7 +350,7 @@ $slug = $post->post_name;
             </div>
 
 
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('民事保全<span>（仮差押え・仮処分）</span>'); ?>
 
                 <?php price_table_2col([
@@ -360,7 +360,7 @@ $slug = $post->post_name;
             </div>
 
 
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('強制執行'); ?>
 
                 <h4 class="service__price-subtitle">着手金</h4>

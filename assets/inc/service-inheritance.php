@@ -16,7 +16,7 @@ $slug = $post->post_name;
 
 <div class="page__header">
     <div class="page__mv">
-        <h1 class="page__title">
+        <h1 class="page__title" data-fade="0">
             <?php
             /**
              * タイトルを取得して、「（」以降を除去
@@ -35,7 +35,7 @@ $slug = $post->post_name;
     </div>
     <!-- /.page__mv -->
 
-    <div class="breadcrumb">
+    <div class="breadcrumb" data-fade="100">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
             <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取扱業務一覧</a>
@@ -52,17 +52,17 @@ $slug = $post->post_name;
 
     <section class="section" data-section-title="Service 02">
 
-        <p class="service__copy"><em>遺産相続・遺言</em>にまつわる問題は<br class="pc-none">当事務所へお任せ下さい。<br><span>多数の解決実績に基づき、全力でサポートいたします。</span></p>
+        <p class="service__copy" data-fade="200"><em>遺産相続・遺言</em>にまつわる問題は<br class="pc-none">当事務所へお任せ下さい。<br><span>多数の解決実績に基づき、全力でサポートいたします。</span></p>
 
         <div class="service__example">
-            <div class="service__example-photo">
+            <div class="service__example-photo" data-fade="300">
                 <picture>
                     <source media=" (max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-inheritance-01_sp.jpg">
                     <img src="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-inheritance-01.jpg" alt="" width="519" height="335">
                 </picture>
             </div>
 
-            <div class="service__example-info">
+            <div class="service__example-info" data-fade="400">
                 <h2 class="service__example-title">
                     <em>Examples</em>
                     <span>お悩み事例</span>
@@ -78,7 +78,7 @@ $slug = $post->post_name;
                 <a href="#anc-price" class="service__example-button">料金表はこちら</a>
             </div>
 
-            <div class="service__example-desc">
+            <div class="service__example-desc" data-fade="100">
                 <p>かつて所属していた都内の法律事務所は、都内２３区内で高齢者人口が上位の葛飾区に位置しており、遺産相続問題に注力しておりました。一癖も二つ癖もある遺産分割協議・調停、遺留分の請求／減額交渉、遺言書の作成、遺言執行等、多数の遺産相続問題を解決してきました。ご依頼者様の状況を詳しくお伺いし、密に連絡をとりご要望をお伺いしながら、丁寧・スピーディに対応いたします。</p>
             </div>
         </div>
@@ -86,15 +86,15 @@ $slug = $post->post_name;
     </section>
 
     <section class="section" data-section-title="field of Service">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>Field</em>
             <span>遺産相続・遺言の取扱業務</span>
         </h2>
 
-        <p class="section__copy">当事務所では、遺産相続・遺言に関する各種問題を取り扱っております。<br>下記に列挙した取扱業務はその一例となります。</p>
+        <p class="section__copy" data-fade="200">当事務所では、遺産相続・遺言に関する各種問題を取り扱っております。<br>下記に列挙した取扱業務はその一例となります。</p>
 
         <div class="service__field-list">
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 01</span>
                     <em>遺産分割手続</em>
@@ -102,7 +102,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">当事者同士だけでは話し合いがまとまらない場合に、弁護士が代理人となり、<br>他の相続人と任意交渉・調停・審判・裁判などを行います。<br>どの手続を選択すべき方は遺産の内容や他の相続人の態度などを踏まえて個別に判断します。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 02</span>
                     <em>遺留分侵害額請求</em>
@@ -110,7 +110,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">特定の相続人にすべての財産を相続させる旨の遺言がある場合であっても､他の相続人は､民法所定の最低限の取分が保障されています。これを遺留分といい、侵害された遺留分に相当する金額を請求することができます。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 03</span>
                     <em>公正証書遺言作成</em>
@@ -118,7 +118,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">自らの死後、遺された相続人が遺産を巡って揉めることを防止したり、自らが希望する人に財産を遺すためには遺言書を作成することが一番の解決策です。当事務所は、遺言書の中でも遺言無効のリスクが低い公正証書遺言をお勧めしています。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 04</span>
                     <em>相続放棄</em>
@@ -126,7 +126,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">被相続人のプラスの財産よりもマイナスの財産の方が多いような場合には、相続放棄を行うべきです。相続放棄は、自らが相続人になったことを知ったときから３か月以内に、家庭裁判所において相続放棄の申述を行う必要があります。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 05</span>
                     <em>成年後見の申立て</em>
@@ -134,7 +134,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">認知症などで判断能力が不十分な方が、契約を行ったり、遺産分割協議を行ったりする場合には、本人の代わりとなる成年後見人を選任する必要があります。成年後見人の選任の申立ては家庭裁判所に行います。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 06</span>
                     <em>不在者財産管理人の選任</em>
@@ -171,7 +171,7 @@ $slug = $post->post_name;
     $topics_query = new WP_Query($args);
     if ($topics_query->have_posts()) : ?>
         <section class="section" data-section-title="case study">
-            <h2 class="section__title">
+            <h2 class="section__title" data-fade="100">
                 <em>case study</em>
                 <span>遺産相続・遺言に関する事例や記事</span>
             </h2>
@@ -179,7 +179,7 @@ $slug = $post->post_name;
 
             <div class="service__case">
                 <div class="archive__container">
-                    <ul class="archive__list">
+                    <ul class="archive__list" data-fade="100">
                         <?php
                         while ($topics_query->have_posts()) : $topics_query->the_post();
 
@@ -216,7 +216,7 @@ $slug = $post->post_name;
                                 $content = mb_substr($content, 0, 110) . '...';
                             }
                         ?>
-                            <li class="archive__item">
+                            <li class="archive__item" data-fade="100">
                                 <a href="<?php the_permalink(); ?>" class="archive__item-link no-arrow">
                                     <div class="archive__item-image">
                                         <?php echo $archive_image; ?>
@@ -249,7 +249,7 @@ $slug = $post->post_name;
             $taxonomy_link = get_term_link($slug, 'topics_taxonomy');
             if (!is_wp_error($taxonomy_link)) :
             ?>
-                <div class="service__case-button">
+                <div class="service__case-button" data-fade="100">
                     <a href="<?php echo esc_url($taxonomy_link); ?>">関連記事を見る</a>
                 </div>
             <?php
@@ -261,19 +261,19 @@ $slug = $post->post_name;
     <?php endif; ?>
 
     <section class="section" data-section-title="Price of Service" id="anc-price">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>price</em>
             <span>遺産相続・遺言の弁護士費用 (全て税込表記)</span>
         </h2>
 
-        <div class="service__price-nav">
+        <div class="service__price-nav" data-fade="100">
             <!-- <a href="" class="service__price-nav-link"></a> -->
         </div>
 
         <div class="service__price-container">
 
             <!-- 01:相談料 -->
-            <div class="service__price-box" id="anc-price-01">
+            <div class="service__price-box" data-fade="100" id="anc-price-01">
                 <?php service_price_title('相談料'); ?>
                 <?php price_table_2col([
                     ['時間', '相談料'],
@@ -283,7 +283,7 @@ $slug = $post->post_name;
             </div>
 
             <!-- 02:遺産分割 -->
-            <div class="service__price-box" id="anc-price-02">
+            <div class="service__price-box" data-fade="100" id="anc-price-02">
                 <?php service_price_title('遺産分割'); ?>
 
                 <p class="service__price-text">日本弁護士連合会（旧）報酬基準や多くの法律事務所では、着手金が遺産の額に応じて設定されております。<br>そのため、遺産に不動産が含まれる場合などは着手金が非常に高額になる場合や、遺産が確定するまで着手金も確定しない場合があります。<br>そこで、<em>当事務所では着手金の額を固定とすることで、ご依頼いただきやすい料金設定となっております。</em></p>
@@ -316,7 +316,7 @@ $slug = $post->post_name;
             </div>
 
             <!-- 03:遺留分侵害額請求（遺留分減殺請求） -->
-            <div class="service__price-box" id="anc-price-03">
+            <div class="service__price-box" data-fade="100" id="anc-price-03">
                 <?php service_price_title('遺留分侵害額請求<span>（遺留分減殺請求）</span>'); ?>
                 <h4 class="service__price-subtitle">請求側 : 着手金</h4>
                 <?php price_table_2col([
@@ -375,7 +375,7 @@ $slug = $post->post_name;
             </div>
 
             <!-- 04:不当利得返還請求（請求側・被請求側） -->
-            <div class="service__price-box" id="anc-price-04">
+            <div class="service__price-box" data-fade="100" id="anc-price-04">
                 <?php service_price_title('不当利得返還請求<span>（請求側・被請求側）</span>'); ?>
 
                 <p class="service__price-text">遺産分割協議・調停において、相手方との間で預貯金の無断引き出しや使途不明金等について合意が整わない場合は、遺産分割とは別に解決する必要があります。</p>
@@ -405,7 +405,7 @@ $slug = $post->post_name;
             </div>
 
             <!-- 05:遺言無効確認（確認する側・確認される側） -->
-            <div class="service__price-box" id="anc-price-05">
+            <div class="service__price-box" data-fade="100" id="anc-price-05">
                 <?php service_price_title('遺言無効確認<span>（確認する側・確認される側）</span>'); ?>
 
                 <h4 class="service__price-subtitle">着手金</h4>
@@ -434,7 +434,7 @@ $slug = $post->post_name;
             </div>
 
             <!-- 06:相続放棄 -->
-            <div class="service__price-box" id="anc-price-06">
+            <div class="service__price-box" data-fade="100" id="anc-price-06">
                 <?php service_price_title('相続放棄'); ?>
 
                 <?php price_table_3col([
@@ -452,7 +452,7 @@ $slug = $post->post_name;
             </div>
 
             <!-- 07:公正証書遺言の作成 -->
-            <div class="service__price-box" id="anc-price-07">
+            <div class="service__price-box" data-fade="100" id="anc-price-07">
                 <?php service_price_title('公正証書遺言の作成'); ?>
                 <?php price_table_3col([
                     ['遺言の種類', '着手金', '報酬金'],
@@ -462,7 +462,7 @@ $slug = $post->post_name;
             </div>
 
             <!-- 08:遺言執行 -->
-            <div class="service__price-box" id="anc-price-08">
+            <div class="service__price-box" data-fade="100" id="anc-price-08">
                 <?php service_price_title('遺言執行'); ?>
                 <p class="service__price-text">遺言書で当事務所を遺言執行者に指定いただき、実際に遺言執行者に就任した場合、以下の費用を頂戴いたします。</p>
                 <?php price_table_2col([
@@ -478,7 +478,7 @@ $slug = $post->post_name;
             </div>
 
             <!-- 09:遺言の検認の申立て -->
-            <div class="service__price-box" id="anc-price-09">
+            <div class="service__price-box" data-fade="100" id="anc-price-09">
                 <?php service_price_title('遺言の検認の申立て'); ?>
                 <?php price_table_2col([
                     ['着手金', '報酬金'],
@@ -487,7 +487,7 @@ $slug = $post->post_name;
             </div>
 
             <!-- 10:成年後見等申立て -->
-            <div class="service__price-box" id="anc-price-10">
+            <div class="service__price-box" data-fade="100" id="anc-price-10">
                 <?php service_price_title('成年後見等申立て'); ?>
                 <?php price_table_2col([
                     ['着手金', '報酬金'],
@@ -496,7 +496,7 @@ $slug = $post->post_name;
             </div>
 
             <!-- 11:相続財産管理人・遺産管理人選任申立て -->
-            <div class="service__price-box" id="anc-price-11">
+            <div class="service__price-box" data-fade="100" id="anc-price-11">
                 <?php service_price_title('相続財産管理人・遺産管理人選任申立て'); ?>
                 <?php price_table_2col([
                     ['着手金', '報酬金'],

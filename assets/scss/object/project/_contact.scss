@@ -101,18 +101,6 @@
     border-radius: 37rem;
     background: #e8ded3;
 
-    @include media() {
-      margin: 0 -15px;
-      margin-top: 50px;
-      padding: 0 22px 45px;
-      max-width: unset;
-      width: calc(100% + 30px);
-      border-radius: 10px;
-      background: #f8eee2;
-    }
-
-
-
     @media screen and (max-width: 1680px) {
       padding-right: 120rem;
       padding-left: 120rem;
@@ -120,6 +108,18 @@
 
     @media screen and (max-width: 1360px) {
       width: r(1500);
+    }
+
+    & {
+      @include media() {
+        margin: 0 -15px;
+        margin-top: 50px;
+        padding: 0 22px 45px;
+        max-width: unset;
+        width: calc(100% + 30px);
+        border-radius: 10px;
+        background: #f8eee2;
+      }
     }
   }
 
@@ -163,13 +163,15 @@
     flex: 1 1 100%;
     padding-left: 80rem;
 
-    @include media() {
-      padding-left: 0;
-    }
-
     @media screen and (max-width: 1024px) {
       padding-top: 26px;
       padding-left: 0;
+    }
+
+    & {
+      @include media() {
+        padding-left: 0;
+      }
     }
   }
 
@@ -229,12 +231,14 @@
   flex: 0 0 220px;
   margin: 0;
 
-  @include media() {
-    flex: 0 0 calc(50% - 7px);
-  }
-
   @media screen and (max-width: 1024px) {
     flex: 0 0 calc(50% - 10px);
+  }
+
+  & {
+    @include media() {
+      flex: 0 0 calc(50% - 7px);
+    }
   }
 
   label {
@@ -245,12 +249,14 @@
     background: #fff;
     cursor: pointer;
 
-    @include media() {
+    @media screen and (max-width: 1024px) {
       width: 100%;
     }
 
-    @media screen and (max-width: 1024px) {
-      width: 100%;
+    & {
+      @include media() {
+        width: 100%;
+      }
     }
   }
 
@@ -469,16 +475,6 @@ textarea {
   border-radius: 37rem;
   background: #e8ded3;
 
-  @include media() {
-    margin: 0 -15px;
-    margin-top: 50px;
-    padding: 0 22px 45px;
-    max-width: unset;
-    width: calc(100% + 30px);
-    border-radius: 10px;
-    background: #f8eee2;
-  }
-
   @media screen and (max-width: 1680px) {
     padding-right: 120rem;
     padding-left: 120rem;
@@ -486,6 +482,18 @@ textarea {
 
   @media screen and (max-width: 1360px) {
     width: r(1500);
+  }
+
+  & {
+    @include media() {
+      margin: 0 -15px;
+      margin-top: 50px;
+      padding: 0 22px 45px;
+      max-width: unset;
+      width: calc(100% + 30px);
+      border-radius: 10px;
+      background: #f8eee2;
+    }
   }
 }
 
@@ -504,16 +512,18 @@ textarea {
     flex: 1 0 220rem;
     color: var(--colorText);
 
-    @include media() {
-      flex: 1 0 100%;
-    }
-
     @media screen and (max-width: 1500px) {
       flex: 1 0 340rem;
     }
 
     @media screen and (max-width: 1024px) {
       flex: 1;
+    }
+
+    & {
+      @include media() {
+        flex: 1 0 100%;
+      }
     }
   }
 
@@ -542,5 +552,19 @@ textarea {
 .page-contact-complete {
   .section__title {
     padding-top: .1em;
+  }
+}
+
+
+// 追加
+.page-contact {
+  @include media() {
+    margin-bottom: calc(r(120) * -1);
+
+    .section:nth-of-type(2n) {
+      padding-bottom: r(40);
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
   }
 }

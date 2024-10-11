@@ -1,4 +1,4 @@
-<dl class="inc__profile js-accordion is-open">
+<dl class="inc__profile js-accordion is-open" data-fade="100">
     <dt class="inc__profile-header js-accordion__header" tabindex="0" aria-expanded="false">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/image/photo_topics-editor.jpg?01" alt="記事監修者 : 茨木あさひ法律事務所 代表弁護士 谷井 光" class="inc__profile-image">
         <div class="inc__profile-name">

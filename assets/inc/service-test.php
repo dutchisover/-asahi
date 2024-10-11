@@ -16,7 +16,7 @@ $slug = $post->post_name;
 
 <div class="page__header">
     <div class="page__mv">
-        <h1 class=" page__title">
+        <h1 class="page__title" data-fade="0">
             <?php
             /**
              * タイトルを取得して、「（」以降を除去
@@ -35,7 +35,7 @@ $slug = $post->post_name;
     </div>
     <!-- /.page__mv -->
 
-    <div class="breadcrumb">
+    <div class="breadcrumb" data-fade="100">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
             <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取扱業務一覧</a>
@@ -52,17 +52,17 @@ $slug = $post->post_name;
 
     <section class="section" data-section-title="Service 01">
 
-        <p class="service__copy"><em>遺産相続</em>にまつわる問題は<br class="pc-none">当事務所へお任せ下さい。<br><span>多数の解決実績に基づき、全力でサポートいたします。</span></p>
+        <p class="service__copy" data-fade="200"><em>遺産相続</em>にまつわる問題は<br class="pc-none">当事務所へお任せ下さい。<br><span>多数の解決実績に基づき、全力でサポートいたします。</span></p>
 
         <div class="service__example">
-            <div class="service__example-photo">
+            <div class="service__example-photo" data-fade="300">
                 <picture>
                     <source media=" (max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-01_sp.jpg">
                     <img src="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-01.jpg" alt="" width="519" height="335">
                 </picture>
             </div>
 
-            <div class="service__example-info">
+            <div class="service__example-info" data-fade="400">
                 <h2 class="service__example-title">
                     <em>Examples</em>
                     <span>お悩み事例</span>
@@ -78,7 +78,7 @@ $slug = $post->post_name;
                 <a href="#anc-price" class="service__example-button">料金表はこちら</a>
             </div>
 
-            <div class="service__example-desc">
+            <div class="service__example-desc" data-fade="100">
                 <p>かつて所属していた葛飾総合法律事務所は、都内２３区内で高齢者人口が上位の葛飾区に位置しており、遺産相続問題に注力しておりました。一癖も二つ癖もある遺産分割協議・調停、遺留分の請求／減額交渉、遺言書の作成、遺言執行等、多数の遺産相続問題を解決してきました。ご依頼者様の状況を詳しくお伺いし、密に連絡をとりご要望をお伺いしながら、丁寧・スピーディに対応いたします。</p>
             </div>
         </div>
@@ -86,15 +86,15 @@ $slug = $post->post_name;
     </section>
 
     <section class="section" data-section-title="field of Service">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>Field</em>
             <span>遺産相続・遺言の取扱い業務</span>
         </h2>
 
-        <p class="section__copy">当事務所では、遺言、遺産分割、遺留分侵害額請求のほか、相続に関する各種問題を取り扱っております。<br>些細なことでも結構ですので、お気軽にお問い合わせ頂ければと思います。</p>
+        <p class="section__copy" data-fade="200">当事務所では、遺言、遺産分割、遺留分侵害額請求のほか、相続に関する各種問題を取り扱っております。<br>些細なことでも結構ですので、お気軽にお問い合わせ頂ければと思います。</p>
 
         <div class="service__field-list">
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 01</span>
                     <em>遺産分割手続</em>
@@ -102,7 +102,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 02</span>
                     <em>遺産分割手続</em>
@@ -110,7 +110,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 03</span>
                     <em>遺産分割手続</em>
@@ -118,7 +118,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 04</span>
                     <em>遺産分割手続</em>
@@ -126,7 +126,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 05</span>
                     <em>遺産分割手続</em>
@@ -134,7 +134,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">特定の相続人の方に全ての財産を相続させる旨の遺言がある場合であっても、他の相続人の方は、本来の相続分の2分の1まで、遺留分として財産を取得することができます。 遺産分割の場合と同じように、任意交渉で話がまとまらない場合には、裁判所における調停・裁判の手続を行います。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 06</span>
                     <em>遺産分割手続</em>
@@ -145,14 +145,14 @@ $slug = $post->post_name;
     </section>
 
     <section class="section" data-section-title="case study">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>case study</em>
             <span>遺産相続・遺言に関する事例や記事</span>
         </h2>
 
         <div class="service__case">
             <div class="archive__container">
-                <ul class="archive__list">
+                <ul class="archive__list" data-fade="100">
                     <?php
                     if (wp_is_mobile()) {
                         //スマホ・タブレットの時
@@ -315,7 +315,7 @@ $slug = $post->post_name;
         $taxonomy_link = get_term_link($slug, 'topics_taxonomy');
         if (!is_wp_error($taxonomy_link)) :
         ?>
-            <div class="service__case-button">
+            <div class="service__case-button" data-fade="100">
                 <a href="<?php echo esc_url($taxonomy_link); ?>">関連記事を見る</a>
             </div>
         <?php
@@ -325,12 +325,12 @@ $slug = $post->post_name;
     </section>
 
     <section class="section" data-section-title="Price of Service">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>price</em>
             <span>遺産相続・遺言の弁護士費用 (全て税込表記)</span>
         </h2>
 
-        <div class="service__price-nav">
+        <div class="service__price-nav" data-fade="100">
             <!-- <a href="" class="service__price-nav-link"></a> -->
         </div>
 
@@ -340,7 +340,7 @@ $slug = $post->post_name;
         </div>
 
         <div class="service__price-container">
-            <div class="service__price-box" id="anc-price-01">
+            <div class="service__price-box" data-fade="100" id="anc-price-01">
                 <h3 class="service__price-title">
                     <span class="sp-none">Price - </span>
                     <span class="pc-none">#</span>
@@ -367,7 +367,7 @@ $slug = $post->post_name;
                 </table>
             </div>
 
-            <div class="service__price-box" id="anc-price-02">
+            <div class="service__price-box" data-fade="100" id="anc-price-02">
                 <h3 class="service__price-title">
                     <span class="sp-none">Price - </span>
                     <span class="pc-none">#</span>
@@ -597,7 +597,7 @@ $slug = $post->post_name;
                 ]); ?>
             </div>
 
-            <div class="service__price-box" id="anc-price-03">
+            <div class="service__price-box" data-fade="100" id="anc-price-03">
                 <h3 class="service__price-title">
                     <span class="sp-none">Price - </span>
                     <span class="pc-none">#</span>
@@ -624,7 +624,7 @@ $slug = $post->post_name;
                 </table>
             </div>
 
-            <div class="service__price-box" id="anc-price-04">
+            <div class="service__price-box" data-fade="100" id="anc-price-04">
                 <h3 class="service__price-title">
                     <span class="sp-none">Price - </span>
                     <span class="pc-none">#</span>
@@ -651,7 +651,7 @@ $slug = $post->post_name;
                 </table>
             </div>
 
-            <div class="service__price-box" id="anc-price-05">
+            <div class="service__price-box" data-fade="100" id="anc-price-05">
                 <h3 class="service__price-title">
                     <span class="sp-none">Price - </span>
                     <span class="pc-none">#</span>

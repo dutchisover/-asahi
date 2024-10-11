@@ -17,7 +17,7 @@ $slug = $post->post_name;
 
 <div class="page__header">
     <div class="page__mv">
-        <h1 class=" page__title">
+        <h1 class=" page__title" data-fade="0">
             <?php
             /**
              * タイトルを取得して、「（」以降を除去
@@ -36,7 +36,7 @@ $slug = $post->post_name;
     </div>
     <!-- /.page__mv -->
 
-    <div class="breadcrumb">
+    <div class="breadcrumb" data-fade="100">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
             <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取扱業務一覧</a>
@@ -53,17 +53,17 @@ $slug = $post->post_name;
 
     <section class="section" data-section-title="Service 03">
 
-        <p class="service__copy"><em>交通事故</em>にまつわる問題は当事務所にお任せ下さい。<br><span>「被害者側専門」の弁護士として、全力でサポートいたします。</span></p>
+        <p class="service__copy" data-fade="200"><em>交通事故</em>にまつわる問題は当事務所にお任せ下さい。<br><span>「被害者側専門」の弁護士として、全力でサポートいたします。</span></p>
 
         <div class="service__example">
-            <div class="service__example-photo">
+            <div class="service__example-photo" data-fade="300">
                 <picture>
                     <source media=" (max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-trafficaccident-01_sp.jpg">
                     <img src="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-trafficaccident-01.jpg" alt="" width="519" height="335">
                 </picture>
             </div>
 
-            <div class="service__example-info">
+            <div class="service__example-info" data-fade="400">
                 <h2 class="service__example-title">
                     <em>Examples</em>
                     <span>お悩み事例</span>
@@ -79,7 +79,7 @@ $slug = $post->post_name;
                 <a href="#anc-price" class="service__example-button">料金表はこちら</a>
             </div>
 
-            <div class="service__example-desc">
+            <div class="service__example-desc" data-fade="100">
                 <p>交通事故を豊富に取扱う都内の総合法律事務所に所属し、被害者側を中心に数多くの交通事故トラブルを解決してきた実績があります。特に交渉による早期解決には自信があります。ご依頼者様の状況を詳しくお伺いし、密に連絡をとりご要望をお伺いしながら、丁寧・スピーディに対応いたします。</p>
             </div>
         </div>
@@ -87,15 +87,15 @@ $slug = $post->post_name;
     </section>
 
     <section class="section" data-section-title="field of Service">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>Field</em>
             <span>交通事故の取扱業務</span>
         </h2>
 
-        <p class="section__copy">当事務所では、交通事故に関する各種問題を取り扱っております。<br>下記に列挙した取扱業務はその一例となります。</p>
+        <p class="section__copy" data-fade="200">当事務所では、交通事故に関する各種問題を取り扱っております。<br>下記に列挙した取扱業務はその一例となります。</p>
 
         <div class="service__field-list">
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 01</span>
                     <em>示談交渉による慰謝料増額</em>
@@ -103,7 +103,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">交通事故の慰謝料額には3つの基準がありますが、保険会社が提示する額のほとんどは、最も低額な自賠責保険基準を基に計算されています。これを最も高額な基準である裁判基準で計算するよう交渉を行っていきます。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 02</span>
                     <em>適切な過失割合の獲得</em>
@@ -111,7 +111,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">過失割合とは、事故が発生した責任が、当事者双方にどのくらいあるかを表す割合です。事故状況を詳しくお伺いし、場合によっては実況見分調書などを取り寄せ、適切な過失割合を主張していきます。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 03</span>
                     <em>適切な後遺障害等級の獲得</em>
@@ -119,7 +119,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">もし治療が終了しても後遺症が残ってしまった場合は、「後遺障害等級認定」の申請をすることになります。認定時には専門機関による審査が行われるため、後遺障害等級の認定基準や審査の仕組みを踏まえ、適切な対策をする必要があります。通院方法や頻度、受けておくべき検査のアドバイスをいたします。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 04</span>
                     <em>休業補償の獲得</em>
@@ -155,14 +155,14 @@ $slug = $post->post_name;
     $topics_query = new WP_Query($args);
     if ($topics_query->have_posts()) : ?>
         <section class="section" data-section-title="case study">
-            <h2 class="section__title">
+            <h2 class="section__title" data-fade="100">
                 <em>case study</em>
                 <span>交通事故に関する事例や記事</span>
             </h2>
 
             <div class="service__case">
                 <div class="archive__container">
-                    <ul class="archive__list">
+                    <ul class="archive__list" data-fade="100">
                         <?php
                         while ($topics_query->have_posts()) : $topics_query->the_post();
 
@@ -232,7 +232,7 @@ $slug = $post->post_name;
             $taxonomy_link = get_term_link($slug, 'topics_taxonomy');
             if (!is_wp_error($taxonomy_link)) :
             ?>
-                <div class="service__case-button">
+                <div class="service__case-button" data-fade="100">
                     <a href="<?php echo esc_url($taxonomy_link); ?>">関連記事を見る</a>
                 </div>
             <?php
@@ -244,13 +244,13 @@ $slug = $post->post_name;
     <?php endif; ?>
 
     <section class="section" data-section-title="Price of Service" id="anc-price">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>price</em>
             <span>交通事故の弁護士費用 (全て税込表記)</span>
         </h2>
 
-        <!-- <div class="service__price-nav"></div> -->
-        <div class="service__price-tab">
+        <!-- <div class="service__price-nav" data-fade="100"></div> -->
+        <div class="service__price-tab" data-fade="100">
             <a href="#anc-price-01" class="service__price-tab-primary">弁護士費用特約に加入されている方</a>
             <a href="#anc-price-02" class="service__price-tab-secondary">弁護士費用特約に加入されていない方</a>
         </div>
@@ -258,7 +258,7 @@ $slug = $post->post_name;
         <div class="service__price-container">
 
             <!-- 弁護士費用特約に加入されている方 -->
-            <div class="service__price-box" id="anc-price-01">
+            <div class="service__price-box" data-fade="100" id="anc-price-01">
                 <?php service_price_title('弁護士費用特約に加入されている方', false); ?>
                 <p class="service__price-text">弁護士費用特約に加入されている方は、<b class="fw-bold">ほとんどの場合、自己負担なく</b>ご相談・ご依頼が可能です。</p>
 
@@ -317,7 +317,7 @@ $slug = $post->post_name;
             </div>
 
             <!-- 弁護士費用特約に加入されていない方 -->
-            <div class="service__price-box" id="anc-price-02">
+            <div class="service__price-box" data-fade="100" id="anc-price-02">
                 <?php service_price_title('弁護士費用特約に加入されていない方', false); ?>
 
                 <?php service_price_title('相談料', true, false); ?>

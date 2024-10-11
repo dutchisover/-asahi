@@ -515,3 +515,66 @@ window.addEventListener('scroll', () => {
 
   lastScrollY = window.scrollY;
 });
+
+////////////////// splash終了後にdata-fade要素をフェードイン //////////////////
+
+document.addEventListener('DOMContentLoaded', () => {
+  // オプション設定: Y軸の移動距離とアニメーション速度
+  const options = {
+    translateY: '50rem', // 初期値: 50rem
+    animationSpeed: 0.6 // 初期値: 1秒
+  };
+
+  // 全てのdata-fade要素を取得して、初期スタイルを設定
+  const fadeElements = document.querySelectorAll('[data-fade]');
+
+  // 初期状態: 透明度0、指定されたY方向の移動を全要素に設定
+  fadeElements.forEach(element => {
+    element.style.opacity = 0;
+    element.style.transform = `translateY(${options.translateY})`;
+  });
+
+  // data-fade要素のアニメーション処理
+  const initFadeAnimations = () => {
+    fadeElements.forEach(element => {
+      // data-fade属性の値を取得（遅延時間として使用）
+      const delay = element.dataset.fade
+        ? parseInt(element.dataset.fade, 10)
+        : 0;
+
+      // GSAPのScrollTriggerを使って、要素が画面内に入ったらアニメーション
+      gsap.to(element, {
+        opacity: 1,
+        y: 0,
+        duration: options.animationSpeed, // オプションで指定された速度
+        delay: delay / 1000, // msを秒に変換
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: element, // アニメーションをトリガーする要素
+          start: 'top 80%', // 画面の80%の位置で発火
+          toggleActions: 'play none none none' // 再生のみ
+        }
+      });
+    });
+  };
+
+  // splashが存在する場合の処理
+  const splash = document.querySelector('#splash');
+  if (splash) {
+    // MutationObserverでdisplayがnoneになるまで待機
+    const observer = new MutationObserver(mutations => {
+      mutations.forEach(() => {
+        if (getComputedStyle(splash).display === 'none') {
+          observer.disconnect(); // オブザーバーを停止
+          initFadeAnimations(); // splashが消えた後にdata-fade処理を開始
+        }
+      });
+    });
+
+    // splash要素のスタイル変更を監視
+    observer.observe(splash, { attributes: true, attributeFilter: ['style'] });
+  } else {
+    // splashが存在しない場合、すぐにdata-fade処理を開始
+    initFadeAnimations();
+  }
+});

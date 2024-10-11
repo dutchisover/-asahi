@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="page__header">
     <div class="page__mv">
-        <h1 class=" page__title">
+        <h1 class="page__title" data-fade="0">
             <em>topics</em>
             <span>新着情報 一覧</span>
         </h1>
@@ -14,7 +14,7 @@
     <!-- /.page__mv -->
 
     <!-- breadcrumb -->
-    <div class="breadcrumb">
+    <div class="breadcrumb" data-fade="100">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
             <span class="breadcrumb__current">新着情報 一覧</span>
@@ -27,19 +27,19 @@
 <main class="main page__main">
     <div class="archive-topics">
         <section class="archive__section section" data-section-title="News & Column">
-            <p class="section__copy">大阪・JR茨木駅徒歩2分。<br class="pc-none">相続・離婚・交通事故・会社顧問の法律相談<br>
+            <p class="section__copy" data-fade="200">大阪・JR茨木駅徒歩2分。<br class="pc-none">相続・離婚・交通事故・会社顧問の法律相談<br>
                 「茨木あさひ法律事務所」のブログです。<br>
                 ニュースや事例など、最新情報をお届けいたします。</p>
             <div class="topics__content">
 
                 <!-- sidebar -->
-                <section class="topics__sidebar">
+                <section class="topics__sidebar" data-fade="300">
                     <?php get_sidebar('topics'); ?>
                 </section>
 
                 <!-- 記事一覧 -->
-                <div class="archive__container">
-                    <ul class="archive__list">
+                <div class="archive__container" data-fade="400">
+                    <ul class="archive__list" data-fade="100">
                         <?php
                         if (wp_is_mobile()) {
                             //スマホ・タブレットの時
@@ -95,7 +95,7 @@
                                     $content = mb_substr($content, 0, 70) . '...';
                                 }
                         ?>
-                                <li class="archive__item">
+                                <li class="archive__item" data-fade="100">
                                     <a href="<?php the_permalink(); ?>" class="archive__item-link">
                                         <div class="archive__item-image">
                                             <?php echo $archive_image; ?>
@@ -121,7 +121,7 @@
                     <!-- /.archive__list -->
 
                     <!-- .pagination -->
-                    <div class="pagination">
+                    <div class="pagination" data-fade="100">
                         <?php
                             // ページネーションの表示
                             $big = 999999999; // need an unlikely integer

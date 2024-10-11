@@ -18,7 +18,7 @@ $slug = $post->post_name;
 
 <div class="page__header">
     <div class="page__mv">
-        <h1 class=" page__title">
+        <h1 class="page__title" data-fade="0">
             <?php
             /**
              * タイトルを取得して、「（」以降を除去
@@ -37,7 +37,7 @@ $slug = $post->post_name;
     </div>
     <!-- /.page__mv -->
 
-    <div class="breadcrumb">
+    <div class="breadcrumb" data-fade="100">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
             <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取扱業務一覧</a>
@@ -54,17 +54,17 @@ $slug = $post->post_name;
 
     <section class="section" data-section-title="Service 07">
 
-        <p class="service__copy"><em>借金・債務整理</em>にまつわる問題は<br class="pc-none">当事務所へお任せ下さい。<br><span>多数の解決実績に基づき、全力でサポートいたします。</span></p>
+        <p class="service__copy" data-fade="200"><em>借金・債務整理</em>にまつわる問題は<br class="pc-none">当事務所へお任せ下さい。<br><span>多数の解決実績に基づき、全力でサポートいたします。</span></p>
 
         <div class="service__example">
-            <div class="service__example-photo">
+            <div class="service__example-photo" data-fade="300">
                 <picture>
                     <source media=" (max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-debt-consolidation-01_sp.jpg">
                     <img src="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-debt-consolidation-01.jpg" alt="" width="519" height="335">
                 </picture>
             </div>
 
-            <div class="service__example-info">
+            <div class="service__example-info" data-fade="400">
                 <h2 class="service__example-title">
                     <em>Examples</em>
                     <span>お悩み事例</span>
@@ -80,7 +80,7 @@ $slug = $post->post_name;
                 <a href="#anc-price" class="service__example-button">料金表はこちら</a>
             </div>
 
-            <div class="service__example-desc">
+            <div class="service__example-desc" data-fade="100">
                 <p>当事務所は、自己破産／任意整理（借金の減額・分割払いの交渉）／個人再生（家を残したまま借金を減額）／過払金請求／消滅時効の援用／に精通しております。
                     ご依頼者様の状況を詳しくお伺いし、それぞれの解決手段のメリット・デメリットを踏まえて、丁寧・スピーディに対応いたします。</p>
             </div>
@@ -89,15 +89,15 @@ $slug = $post->post_name;
     </section>
 
     <section class="section" data-section-title="field of Service">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>Field</em>
             <span>借金・債務整理の取扱い業務</span>
         </h2>
 
-        <p class="section__copy">当事務所では、借金・債務整理に関する各種問題を取り扱っております。<br>下記に列挙した取扱業務はその一例となります。</p>
+        <p class="section__copy" data-fade="200">当事務所では、借金・債務整理に関する各種問題を取り扱っております。<br>下記に列挙した取扱業務はその一例となります。</p>
 
         <div class="service__field-list">
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 01</span>
                     <em>任意整理</em>
@@ -105,7 +105,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">任意整理とは、裁判所における手続を利用せずに、債権者との話合いによって債務を整理する方法です。交渉によって、債務の支払期限を延期したり、支払額を調整するなどのリスケジュールを行ったり、将来利息をカットしてもらったりすることで、無理なく支払えるよう調整をします。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 02</span>
                     <em>自己破産</em>
@@ -113,7 +113,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">自己破産とは、支払不能となってしまった債務者が、手元にある資産で支払い切れない債務について、裁判所に免責（免除）を求める手続です。自己破産では、手元にある資産は一定のものを除いて弁済に充てる必要がありますが、非免責債権を除いて全ての債務を０にすることができます。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 03</span>
                     <em>個人再生<span>（住宅資金特別条項）</span></em>
@@ -121,7 +121,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">個人再生とは、支払不能になってしまった債務者が、法律の定める要件を満たす金額を３～５年程度で支払う計画を立て、裁判所に認可してもらうことで債務を減免してもらう制度です。<br>個人再生を選択すべきケースは、住宅ローン付の不動産があり、住宅ローンを支払い続けてその不動産に住み続けたいため自己破産を選択できないような場合です。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 04</span>
                     <em>時効援用</em>
@@ -157,14 +157,14 @@ $slug = $post->post_name;
     $topics_query = new WP_Query($args);
     if ($topics_query->have_posts()) : ?>
         <section class="section" data-section-title="case study">
-            <h2 class="section__title">
+            <h2 class="section__title" data-fade="100">
                 <em>case study</em>
                 <span>借金・債務整理に関する事例や記事</span>
             </h2>
 
             <div class="service__case">
                 <div class="archive__container">
-                    <ul class="archive__list">
+                    <ul class="archive__list" data-fade="100">
                         <?php
                         while ($topics_query->have_posts()) : $topics_query->the_post();
 
@@ -234,7 +234,7 @@ $slug = $post->post_name;
             $taxonomy_link = get_term_link($slug, 'topics_taxonomy');
             if (!is_wp_error($taxonomy_link)) :
             ?>
-                <div class="service__case-button">
+                <div class="service__case-button" data-fade="100">
                     <a href="<?php echo esc_url($taxonomy_link); ?>">関連記事を見る</a>
                 </div>
             <?php
@@ -246,17 +246,17 @@ $slug = $post->post_name;
     <?php endif; ?>
 
     <section class="section" data-section-title="Price of Service" id="anc-price">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>price</em>
             <span>借金・債務整理の弁護士費用 (全て税込表記)</span>
         </h2>
 
-        <div class="service__price-nav">
+        <div class="service__price-nav" data-fade="100">
             <!-- <a href="" class="service__price-nav-link"></a> -->
         </div>
 
         <div class="service__price-container">
-            <div class="service__price-box" id="anc-price-01">
+            <div class="service__price-box" data-fade="100" id="anc-price-01">
                 <?php service_price_title('相談料'); ?>
 
                 <?php price_table_1col([
@@ -269,7 +269,7 @@ $slug = $post->post_name;
             </div>
 
 
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('任意整理<span>（借金の減額・分割払いの交渉）</span>'); ?>
                 <?php price_table_2col([
                     ['着手金', '報酬金'],
@@ -281,7 +281,7 @@ $slug = $post->post_name;
             </div>
 
 
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('自己破産<span>（個人）</span>'); ?>
                 <?php price_table_3col([
                     ['', '着手金', '報酬金'],
@@ -296,7 +296,7 @@ $slug = $post->post_name;
             </div>
 
 
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('個人再生'); ?>
                 <?php price_table_2col([
                     ['着手金', '報酬金'],
@@ -309,7 +309,7 @@ $slug = $post->post_name;
             </div>
 
 
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('過払金請求'); ?>
                 <?php price_table_2col([
                     ['着手金', '報酬金'],
@@ -321,7 +321,7 @@ $slug = $post->post_name;
             </div>
 
 
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('消滅時効の援用'); ?>
                 <?php price_table_2col([
                     ['着手金', '報酬金'],

@@ -7,9 +7,9 @@ $slug = $post->post_name;
 ?>
 
 <main class="main page__main">
-	<h1 class=" page__title">404 Not Found<span>お探しのページが見つかりません。</span></h1>
+	<h1 class="page__title" data-fade="0">404 Not Found<span>お探しのページが見つかりません。</span></h1>
 
-	<div class="breadcrumb">
+	<div class="breadcrumb" data-fade="100">
 		<div class="breadcrumb__inner">
 			<a href="<?php echo home_url(); ?>" class="breadcrumb__link">TOP</a> &gt;
 			<span class="breadcrumb__current">404 Not Found<span>お探しのページが見つかりません。</span></span>

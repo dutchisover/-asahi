@@ -1,1 +1,10 @@
 @use '../index';
+
+@keyframes mv-fade {
+  0% {
+    opacity: .8;
+  }
+  100% {
+    opacity: 1;
+  }
+}

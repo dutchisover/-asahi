@@ -69,7 +69,7 @@
   height: 131rem;
   border-radius: 20rem;
   background-color: #7e6d66;
-  transition: .4s;
+  transition: background-color .4s;
 
   @include hover {
     // filter: brightness(1.2);

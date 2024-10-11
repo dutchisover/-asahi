@@ -1,22 +1,22 @@
 <footer class="footer">
     <div class="footer__contact">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>Contact</em>
             <span>お問い合わせ</span>
         </h2>
 
-        <p class="section__text is-center">
+        <p class="section__text is-center" data-fade="100">
             <em class="footer__contact-label">初回30分相談無料</em>
             お気軽にお問い合わせ・ご相談ください。
         </p>
 
         <div class="footer__button-area">
-            <a href="tel:072-627-0101" class="footer__button is-tel">
+            <a href="tel:072-627-0101" class="footer__button is-tel" data-fade="100">
                 <p><em>TEL</em>072-627-0101</p>
                 <span>受付時間 9 : 00 - 18:00 (土日祝休)</span>
             </a>
 
-            <a href="<?= home_url(); ?>/contact" class="footer__button is-mail">
+            <a href="<?= home_url(); ?>/contact" class="footer__button is-mail" data-fade="200">
                 <p><em>メールでのお問い合わせはこちら</em></p>
             </a>
         </div>

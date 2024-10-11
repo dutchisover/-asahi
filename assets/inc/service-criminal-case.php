@@ -17,7 +17,7 @@ $slug = $post->post_name;
 
 <div class="page__header">
     <div class="page__mv">
-        <h1 class=" page__title">
+        <h1 class="page__title" data-fade="0">
             <?php
             /**
              * タイトルを取得して、「（」以降を除去
@@ -36,7 +36,7 @@ $slug = $post->post_name;
     </div>
     <!-- /.page__mv -->
 
-    <div class="breadcrumb">
+    <div class="breadcrumb" data-fade="100">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
             <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取扱業務一覧</a>
@@ -53,19 +53,19 @@ $slug = $post->post_name;
 
     <section class="section" data-section-title="Service 09">
 
-        <p class="service__copy"><em>刑事事件</em>は当事務所へ<br class="pc-none">お任せ下さい。<br>
+        <p class="service__copy" data-fade="200"><em>刑事事件</em>は当事務所へ<br class="pc-none">お任せ下さい。<br>
             <span>多数の解決実績に基づき、全力でサポートいたします。</span>
         </p>
 
         <div class="service__example">
-            <div class="service__example-photo">
+            <div class="service__example-photo" data-fade="300">
                 <picture>
                     <source media=" (max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-criminal-case-01_sp.jpg">
                     <img src="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-criminal-case-01.jpg" alt="" width="519" height="335">
                 </picture>
             </div>
 
-            <div class="service__example-info">
+            <div class="service__example-info" data-fade="400">
                 <h2 class="service__example-title">
                     <em>Examples</em>
                     <span>お悩み事例</span>
@@ -81,7 +81,7 @@ $slug = $post->post_name;
                 <a href="#anc-price" class="service__example-button">料金表はこちら</a>
             </div>
 
-            <div class="service__example-desc">
+            <div class="service__example-desc" data-fade="100">
                 <p>当事務所は、不起訴を目指す弁護活動を得意としております。
                     窃盗事件、傷害事件、性犯罪など多数の事件で示談を成功させ、不起訴を獲得してきた実績があります。
                     刑事弁護はスピードが命になりますので、一人で悩まずにまずはご相談ください。
@@ -92,15 +92,15 @@ $slug = $post->post_name;
     </section>
 
     <section class="section" data-section-title="field of Service">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>Field</em>
             <span>刑事事件の取扱い業務</span>
         </h2>
 
-        <p class="section__copy">当事務所では、刑事事件に関する各種問題を取り扱っております。<br>下記に列挙した取扱業務はその一例となります。</p>
+        <p class="section__copy" data-fade="200">当事務所では、刑事事件に関する各種問題を取り扱っております。<br>下記に列挙した取扱業務はその一例となります。</p>
 
         <div class="service__field-list">
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 01</span>
                     <em>接見（面会）</em>
@@ -109,7 +109,7 @@ $slug = $post->post_name;
                     当事務所では、依頼を受けたら即座に接見を行い、被疑者とともに、親身になって弁護活動の方針を決め、速やかに弁護活動に着手します。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 02</span>
                     <em>身柄拘束からの解放</em>
@@ -117,7 +117,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">被疑者が身柄拘束を受けると、身体拘束期間中、警察署などで厳しい監視をされ、過酷な環境に置かれます。当事務所では、このような被疑者、被告人の置かれる過酷な環境を理解し、早期釈放に向けてサポートします。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 03</span>
                     <em>示談活動</em>
@@ -125,7 +125,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">当事務所が最も得意としているのは示談活動です。被害者との示談活動は、早期の身柄釈放に有用であることはもちろん、不起訴となって刑事罰を受ける可能性をなくしたり、仮に起訴されてしまったとしてもより軽微な罰にとどめるために非常に重要です。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 04</span>
                     <em>保釈</em>
@@ -133,7 +133,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">保釈とは、起訴後に認められている身体拘束からの解放の手続です。当事務所では、裁判所に起訴状が受理されたら、直ちに保釈請求をできるよう準備を進めます。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 05</span>
                     <em>少年事件</em>
@@ -169,14 +169,14 @@ $slug = $post->post_name;
     $topics_query = new WP_Query($args);
     if ($topics_query->have_posts()) : ?>
         <section class="section" data-section-title="case study">
-            <h2 class="section__title">
+            <h2 class="section__title" data-fade="100">
                 <em>case study</em>
                 <span>刑事事件に関する事例や記事</span>
             </h2>
 
             <div class="service__case">
                 <div class="archive__container">
-                    <ul class="archive__list">
+                    <ul class="archive__list" data-fade="100">
                         <?php
                         while ($topics_query->have_posts()) : $topics_query->the_post();
 
@@ -246,7 +246,7 @@ $slug = $post->post_name;
             $taxonomy_link = get_term_link($slug, 'topics_taxonomy');
             if (!is_wp_error($taxonomy_link)) :
             ?>
-                <div class="service__case-button">
+                <div class="service__case-button" data-fade="100">
                     <a href="<?php echo esc_url($taxonomy_link); ?>">関連記事を見る</a>
                 </div>
             <?php
@@ -258,18 +258,18 @@ $slug = $post->post_name;
     <?php endif; ?>
 
     <section class="section" data-section-title="Price of Service" id="anc-price">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>price</em>
             <span>刑事事件の弁護士費用 (全て税込表記)</span>
         </h2>
 
-        <div class="service__price-nav">
+        <div class="service__price-nav" data-fade="100">
             <!-- <a href="" class="service__price-nav-link"></a> -->
         </div>
 
         <div class="service__price-container">
 
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('相談料'); ?>
                 <?php price_table_2col([
                     ['時間', '相談料'],
@@ -279,7 +279,7 @@ $slug = $post->post_name;
             </div>
 
 
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('初回接見料'); ?>
                 <?php price_table_2col([
                     ['通常時の接見', '午後6時以降の接見'],
@@ -288,7 +288,7 @@ $slug = $post->post_name;
             </div>
 
 
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('成年刑事事件<span>（捜査弁護・公判弁護）</span>'); ?>
 
                 <h4 class="service__price-subtitle">捜査弁護<span>（起訴されるまでの弁護活動）</span>：着手金</h4>
@@ -336,7 +336,7 @@ $slug = $post->post_name;
             </div>
 
 
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('少年事件<span>（家庭裁判所送致前・送致後）</span>'); ?>
 
                 <h4 class="service__price-subtitle">家庭裁判所送致前：着手金</h4>
@@ -384,7 +384,7 @@ $slug = $post->post_name;
             </div>
 
 
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('上訴する場合'); ?>
                 <h4 class="service__price-subtitle">着手金</h4>
                 <?php price_table_1col([
@@ -404,7 +404,7 @@ $slug = $post->post_name;
             </div>
 
 
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('捜査・逮捕前契約'); ?>
 
                 <p class="service__price-text">捜査・逮捕前契約とは、まだ事件化していない状態で、今後捜査が開始し、あるいは逮捕される可能性がある場合に、ご契約後期間中（3か月間）必要に応じてアドバイスを行う契約です。<br>ご契約いただくことで捜査開始後に迅速な対応が可能となり、ご契約期間中に万が一逮捕されてしまった場合は、弁護士が警察署に急行し、接見をいたします。</p>

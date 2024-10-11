@@ -8,7 +8,7 @@ $slug = $post->post_name;
 
 <div class="page__header">
     <div class="page__mv">
-        <h1 class=" page__title">
+        <h1 class="page__title" data-fade="0">
             <em><?= get_the_title(); ?></em>
             <span><?= get_field("page-sub-title") ?></span>
         </h1>
@@ -20,7 +20,7 @@ $slug = $post->post_name;
     </div>
     <!-- /.page__mv -->
 
-    <div class="breadcrumb">
+    <div class="breadcrumb" data-fade="100">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
             <span class="breadcrumb__current"><?= get_field("page-sub-title") ?></span>
@@ -36,12 +36,12 @@ $slug = $post->post_name;
 
     <section class="section" data-section-title="Our policy">
         <div class="section__privacy">
-            <h2 class="section__title" id="anc-privacy">
+            <h2 class="section__title" id="anc-privacy" data-fade="200">
                 <em>privacy policy</em>
                 <span>プライバシーポリシー</span>
             </h2>
 
-            <div class="section__privacy-inner">
+            <div class="section__privacy-inner" data-fade="300">
                 <p>茨木あさひ法律事務所（以下「当事務所」といいます。）は、個人情報保護の重要性を認識し、個人情報を取り扱うにあたって、個人情報の保護に関する法律をはじめ、関係法令を遵守し、以下の通り定め、個人情報の適切な取扱いに努めます。</p>
 
                 <hr class="hr-main">

@@ -5,13 +5,13 @@ function service_price_title($title, $count = true, $nav = true)
     $nav_class = $nav ? '' : 'no-navi';
 
     if ($count) {
-        echo '<h3 class="service__price-title ' . $count_class . ' ' . $nav_class . '">';
+        echo '<h3 class="service__price-title ' . $count_class . ' ' . $nav_class . '" data-fade="100">';
         echo '<span class="sp-none">Price - </span>';
         echo '<span class="pc-none">#</span>';
         echo '<em>' . $title . '</em>';
         echo '</h3>';
     } else {
-        echo '<h3 class="service__price-title' . $count_class . ' ' . $nav_class . '">';
+        echo '<h3 class="service__price-title' . $count_class . ' ' . $nav_class . '" data-fade="100">';
         echo '<em>' . $title . '</em>';
         echo '</h3>';
     }
@@ -19,7 +19,7 @@ function service_price_title($title, $count = true, $nav = true)
 
 function price_table_1col($array)
 {
-    echo '<table class="service__price-table is-text-left">';
+    echo '<table class="service__price-table is-text-left" data-fade="100">';
     foreach ($array as $i => $item) {
         if ($i == 0) {
             echo '<thead>';
@@ -42,7 +42,7 @@ function price_table_1col($array)
 
 function price_table_2col($array)
 {
-    echo '<table class="service__price-table">';
+    echo '<table class="service__price-table" data-fade="100">';
     foreach ($array as $i => $item) {
         if ($i == 0) {
             echo '<thead>';
@@ -73,7 +73,7 @@ function price_table_3col($data)
 
     // PC版テーブル
     $output .= '<div class="service__price-switch-pc">';
-    $output .= '<table class="service__price-table"><thead><tr>';
+    $output .= '<table class="service__price-table" data-fade="100"><thead><tr>';
     $output .= '<th>' . $data[0][0] . '</th><th>' . $data[0][1] . '</th><th>' . $data[0][2] . '</th>';
     $output .= '</tr></thead><tbody>';
 
@@ -104,7 +104,7 @@ function price_table_3col($data)
         $output .= '<span>' . $data[0][0] . '</span>';
         $output .= '<em>' . $row[0] . '</em>';
         $output .= '</p>';
-        $output .= '<table class="service__price-table"><thead><tr>';
+        $output .= '<table class="service__price-table" data-fade="100"><thead><tr>';
         $output .= '<th>' . $data[0][1] . '</th><th>' . $data[0][2] . '</th>';
         $output .= '</tr></thead><tbody><tr>';
         $output .= '<td>' . $row[1] . '</td>';
@@ -124,7 +124,7 @@ function price_table_5col($data)
 
     // PC版テーブル
     $output .= '<div class="service__price-switch-pc">';
-    $output .= '<table class="service__price-table is-special"><thead><tr>';
+    $output .= '<table class="service__price-table is-special" data-fade="100"><thead><tr>';
     $output .= '<th>' . $data[0][0] . '</th><th colspan="2">' . $data[0][1] . '</th>';
     $output .= '</tr></thead><tbody>';
 
@@ -150,7 +150,7 @@ function price_table_5col($data)
         $output .= '<span>' . $data[0][0] . '</span>';
         $output .= '<em>' . $row[0] . '</em>';
         $output .= '</p>';
-        $output .= '<table class="service__price-table is-special"><thead><tr>';
+        $output .= '<table class="service__price-table is-special" data-fade="100"><thead><tr>';
         $output .= '<th colspan="2">' . $data[0][1] . '</th>';
         $output .= '</tr></thead><tbody><tr>';
         $output .= '<th>' . $row[1] . '</th>';

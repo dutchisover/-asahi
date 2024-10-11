@@ -18,7 +18,7 @@ $slug = $post->post_name;
 
 <div class="page__header">
     <div class="page__mv">
-        <h1 class=" page__title">
+        <h1 class="page__title" data-fade="0">
             <em><?= get_the_title(); ?></em>
             <span><?= get_field("page-sub-title") ?></span>
         </h1>
@@ -30,7 +30,7 @@ $slug = $post->post_name;
     </div>
     <!-- /.page__mv -->
 
-    <div class="breadcrumb">
+    <div class="breadcrumb" data-fade="100">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
             <span class="breadcrumb__current"><?= get_field("page-sub-title") ?></span>
@@ -45,14 +45,14 @@ $slug = $post->post_name;
     ?>
 
     <section class="section" data-section-title="contact">
-        <h2 class="section__title section__first-title">
+        <h2 class="section__title section__first-title" data-fade="200">
             <em class="font-gothic-medium">ご入力内容のご確認</em>
         </h2>
 
-        <p class="section__copy">
+        <p class="section__copy" data-fade="300">
             以下の内容でお間違いがなければ、「送信する」ボタンを押してください。
         </p>
-        <div class="contact-confirm">
+        <div class="contact-confirm" data-fade="400">
             <?php echo do_shortcode('[contact-form-7 id="a6e1bb6" title="確認画面"]'); ?>
         </div>
 

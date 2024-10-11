@@ -8,7 +8,7 @@ $slug = $post->post_name;
 
 <div class="page__header">
     <div class="page__mv">
-        <h1 class=" page__title">
+        <h1 class="page__title" data-fade="0">
             <em><?= get_the_title(); ?></em>
             <span><?= get_field("page-sub-title") ?></span>
         </h1>
@@ -20,7 +20,7 @@ $slug = $post->post_name;
     </div>
     <!-- /.page__mv -->
 
-    <div class="breadcrumb">
+    <div class="breadcrumb" data-fade="100">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
             <span class="breadcrumb__current"><?= get_field("page-sub-title") ?></span>
@@ -35,17 +35,17 @@ $slug = $post->post_name;
     ?>
 
     <section class="section">
-        <p class="section__copy">安心してご相談・ご依頼いただくため、わかりやすい料金体系にしております。法律相談料も初回３０分は無料です。<br class="sp-none">来所予約の際にも費用の説明をいたします。</p>
+        <p class="section__copy" data-fade="200">安心してご相談・ご依頼いただくため、わかりやすい料金体系にしております。法律相談料も初回３０分は無料です。<br class="sp-none">来所予約の際にも費用の説明をいたします。</p>
     </section>
 
 
     <section class="section" data-section-title="cost type">
         <div class="cost-type">
-            <h2 class="section__title font-reverse">
+            <h2 class="section__title font-reverse" data-fade="300">
                 <em>弁護士費用の種類</em>
                 <span>Cost type</span>
             </h2>
-            <div class="cost-type__container">
+            <div class="cost-type__container" data-fade="400">
                 <h3 class="cost-type__title">法律相談料</h3>
                 <table class="cost-type__table">
                     <thead>
@@ -106,10 +106,10 @@ $slug = $post->post_name;
         </div>
 
         <div class="price-category">
-            <h2 class="section__title font-reverse">
+            <h2 class="section__title font-reverse" data-fade="100">
                 <em>分野ごとの弁護士費用について</em>
             </h2>
-            <div class="price-category__container">
+            <div class="price-category__container" data-fade="200">
                 <ul class="price-category__list">
                     <li class="price-category__item">
                         <a href="<?php echo esc_url(home_url('inheritance')); ?>#anc-price" class="price-category__item-link">

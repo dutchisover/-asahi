@@ -17,7 +17,7 @@ $slug = $post->post_name;
 
 <div class="page__header">
     <div class="page__mv">
-        <h1 class=" page__title">
+        <h1 class="page__title" data-fade="0">
             <?php
             /**
              * タイトルを取得して、「（」以降を除去
@@ -36,7 +36,7 @@ $slug = $post->post_name;
     </div>
     <!-- /.page__mv -->
 
-    <div class="breadcrumb">
+    <div class="breadcrumb" data-fade="100">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
             <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取扱業務一覧</a>
@@ -53,17 +53,17 @@ $slug = $post->post_name;
 
     <section class="section" data-section-title="Service 04">
 
-        <p class="service__copy"><em>離婚・男女問題</em>は<br class="pc-none">当事務所にお任せ下さい。<br><span>有利な条件で解決できるよう全力でサポートいたします。</span></p>
+        <p class="service__copy" data-fade="200"><em>離婚・男女問題</em>は<br class="pc-none">当事務所にお任せ下さい。<br><span>有利な条件で解決できるよう全力でサポートいたします。</span></p>
 
         <div class="service__example">
-            <div class="service__example-photo">
+            <div class="service__example-photo" data-fade="300">
                 <picture>
                     <source media=" (max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-divorce-01_sp.jpg">
                     <img src="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-divorce-01.jpg" alt="" width="519" height="335">
                 </picture>
             </div>
 
-            <div class="service__example-info">
+            <div class="service__example-info" data-fade="400">
                 <h2 class="service__example-title">
                     <em>Examples</em>
                     <span>お悩み事例</span>
@@ -79,7 +79,7 @@ $slug = $post->post_name;
                 <a href="#anc-price" class="service__example-button">料金表はこちら</a>
             </div>
 
-            <div class="service__example-desc">
+            <div class="service__example-desc" data-fade="100">
                 <p>当事務所は、離婚・不貞慰謝料（請求側／被請求側）・婚姻費用・養育費・財産分与・面会交流・養育費等の不払いによる給与の差押え等、男女問題に幅広く対応しております。ご依頼者様の状況を詳しくお伺いし、密に連絡をとりご要望をお伺いしながら、丁寧・スピーディに対応いたします。</p>
             </div>
         </div>
@@ -87,14 +87,14 @@ $slug = $post->post_name;
     </section>
 
     <section class="section" data-section-title="field of Service">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>Field</em>
             <span>離婚・男女問題の取扱業務</span>
         </h2>
 
-        <p class="section__copy">当事務所では、離婚・男女問題を取り扱っております。<br>下記に列挙した取扱業務はその一例となります。</p>
+        <p class="section__copy" data-fade="200">当事務所では、離婚・男女問題を取り扱っております。<br>下記に列挙した取扱業務はその一例となります。</p>
         <div class="service__field-list">
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 01</span>
                     <em>不貞慰謝料<br><span>（請求側／被請求側）</span></em>
@@ -102,7 +102,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">不貞とは、夫婦関係にある男女が、その貞操義務に違反して他の男女と性的行為に及ぶことです。不貞によって配偶者の被った精神的苦痛は、慰謝料請求の対象となります。<br>不貞慰謝料のご相談は、請求側からはもちろんのこと、請求をされた側（被請求側）にも対応しています。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 02</span>
                     <em>離婚手続の代理</em>
@@ -110,7 +110,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">離婚をする方法には、主に、協議離婚、調停離婚、裁判離婚の３種類があります。離婚手続は、「調停前置主義」という考え方がとられているため、離婚訴訟をする前に必ず離婚調停の申立てをしなければなりません。つまり、離婚の争いは「協議→調停→訴訟」という流れで進みます。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 03</span>
                     <em>子どもに関する争い<br><span>（親権・養育費・面会交流）</span></em>
@@ -118,7 +118,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">夫婦間に未成年の子がいる場合、子どもに関する争いがとても重要となります。主要な争点は、親権・育費・面会交流です。全ての争点についてサポート可能です。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 04</span>
                     <em>財産分与</em>
@@ -155,14 +155,14 @@ $slug = $post->post_name;
     $topics_query = new WP_Query($args);
     if ($topics_query->have_posts()) : ?>
         <section class="section" data-section-title="case study">
-            <h2 class="section__title">
+            <h2 class="section__title" data-fade="100">
                 <em>case study</em>
                 <span>離婚・男女問題に関する事例や記事</span>
             </h2>
 
             <div class="service__case">
                 <div class="archive__container">
-                    <ul class="archive__list">
+                    <ul class="archive__list" data-fade="100">
                         <?php
                         while ($topics_query->have_posts()) : $topics_query->the_post();
 
@@ -232,7 +232,7 @@ $slug = $post->post_name;
             $taxonomy_link = get_term_link($slug, 'topics_taxonomy');
             if (!is_wp_error($taxonomy_link)) :
             ?>
-                <div class="service__case-button">
+                <div class="service__case-button" data-fade="100">
                     <a href="<?php echo esc_url($taxonomy_link); ?>">関連記事を見る</a>
                 </div>
             <?php
@@ -244,19 +244,19 @@ $slug = $post->post_name;
     <?php endif; ?>
 
     <section class="section" data-section-title="Price of Service" id="anc-price">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>price</em>
             <span>離婚・男女問題の弁護士費用 (全て税込表記)</span>
         </h2>
 
-        <div class="service__price-nav">
+        <div class="service__price-nav" data-fade="100">
             <!-- <a href="" class="service__price-nav-link"></a> -->
         </div>
 
         <div class="service__price-container">
 
             <!-- 01:相談料 -->
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('相談料'); ?>
                 <?php price_table_2col([
                     ['時間', '相談料'],
@@ -266,7 +266,7 @@ $slug = $post->post_name;
             </div>
 
             <!-- 02:離婚 -->
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('離婚'); ?>
                 <?php price_table_3col([
                     ['解決手段', '着出金', '基礎報酬金'],
@@ -283,7 +283,7 @@ $slug = $post->post_name;
             </div>
 
             <!-- 03:離婚問題のオプション -->
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('離婚問題のオプション'); ?>
                 <?php price_table_5col([
                     ['オプション', '報酬金'],
@@ -301,7 +301,7 @@ $slug = $post->post_name;
             </div>
 
             <!-- 04:不貞慰謝料 -->
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('不貞慰謝料'); ?>
                 <h4 class="service__price-subtitle">請求側</h4>
                 <?php price_table_3col([
@@ -336,7 +336,7 @@ $slug = $post->post_name;
             </div>
 
             <!-- 05:監護者指定・子の引渡し・審判前の保全処分 -->
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('監護者指定・子の引渡し・審判前の保全処分'); ?>
 
                 <?php price_table_2col([
@@ -368,7 +368,7 @@ $slug = $post->post_name;
             </div>
 
             <!-- 06:強制執行 -->
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('強制執行'); ?>
                 <h4 class="service__price-subtitle">履行勧告（内容証明郵便）</h4>
                 <?php price_table_2col([
@@ -402,7 +402,7 @@ $slug = $post->post_name;
 
 
 
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('離婚協議書の作成'); ?>
 
                 <table class="service__price-table">

@@ -17,7 +17,7 @@ $slug = $post->post_name;
 
 <div class="page__header">
     <div class="page__mv">
-        <h1 class=" page__title">
+        <h1 class="page__title" data-fade="0">
             <?php
             /**
              * タイトルを取得して、「（」以降を除去
@@ -36,7 +36,7 @@ $slug = $post->post_name;
     </div>
     <!-- /.page__mv -->
 
-    <div class="breadcrumb">
+    <div class="breadcrumb" data-fade="100">
         <div class="breadcrumb__inner">
             <a href="<?php echo home_url(); ?>" class="breadcrumb__link">トップ</a>
             <a href="<?php echo home_url(); ?>/service" class="breadcrumb__link">取扱業務一覧</a>
@@ -54,18 +54,18 @@ $slug = $post->post_name;
     <section class="section" data-section-title="Service 05">
 
 
-        <p class="service__copy"><em>企業法務・顧問</em>は<br class="pc-none">当事務所にお任せ下さい。<br><span>素早いレスポンスと丁寧な対応でサポートいたします。</span>
+        <p class="service__copy" data-fade="200"><em>企業法務・顧問</em>は<br class="pc-none">当事務所にお任せ下さい。<br><span>素早いレスポンスと丁寧な対応でサポートいたします。</span>
         </p>
 
         <div class="service__example">
-            <div class="service__example-photo">
+            <div class="service__example-photo" data-fade="300">
                 <picture>
                     <source media=" (max-width:820px)" srcset="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-corporate-01_sp.jpg">
                     <img src="<?= get_template_directory_uri(); ?>/assets/image/image_service-example-corporate-01.jpg" alt="" width="519" height="335">
                 </picture>
             </div>
 
-            <div class="service__example-info">
+            <div class="service__example-info" data-fade="400">
                 <h2 class="service__example-title">
                     <em>Examples</em>
                     <span>お悩み事例</span>
@@ -80,7 +80,7 @@ $slug = $post->post_name;
                 <a href="#anc-price" class="service__example-button">料金表はこちら</a>
             </div>
 
-            <div class="service__example-desc">
+            <div class="service__example-desc" data-fade="100">
                 <p>当事務所では、契約書の作成・チェック、債権回収、就業規則の改定、労務問題、株主総会対応など、企業が直面する様々な法律問題について、丁寧・迅速に対応しています。</p>
             </div>
         </div>
@@ -88,15 +88,15 @@ $slug = $post->post_name;
     </section>
 
     <section class="section" data-section-title="field of Service">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>Field</em>
             <span>企業法務・顧問の取扱い業務</span>
         </h2>
 
-        <p class="section__copy">当事務所では、企業に関する各種法律問題を取り扱っております。<br>些細なことでも結構ですので、お気軽にお問合せいただければと思います。</p>
+        <p class="section__copy" data-fade="200">当事務所では、企業に関する各種法律問題を取り扱っております。<br>些細なことでも結構ですので、お気軽にお問合せいただければと思います。</p>
 
         <div class="service__field-list">
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 01</span>
                     <em>契約書のチェック・確認</em>
@@ -104,7 +104,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">契約書はビジネスの根幹をなすものです。ビジネスを成功に導くためには、潜在化したリスクに注意しながら、自らの希望に沿った契約をすることが重要です。<br>当事務所は、単なる契約文言の分析や修正に留まらず、ご依頼者様の経営目的に合致した結果が実現されるよう、きめ細かなサービスを提供しています。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 02</span>
                     <em>人事労務</em>
@@ -112,7 +112,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">残業代請求や解雇無効請求等、紛争化してしまった案件の処理のみならず、予防法務にも力をいれています。就業規則、雇用契約書等の作成・チェック、労務管理の方法など経営全般に関するサポートが可能です。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 03</span>
                     <em>取引関係紛争</em>
@@ -120,7 +120,7 @@ $slug = $post->post_name;
                 <p class="service__field-text">代金の支払いをしない取引先等に対する債権回収の交渉、訴訟の代理等を行います。<br>相手方との紛争が訴訟に発展した場合にも、迅速な解決、円満な解決、徹底抗戦など、ご要望に応じて対応します。</p>
             </div>
 
-            <div class="service__field-item">
+            <div class="service__field-item" data-fade="100">
                 <h3 class="service__field-title">
                     <span>Field 04</span>
                     <em>会社組織の運営<br><span>（株主総会、取締役会）</span></em>
@@ -156,14 +156,14 @@ $slug = $post->post_name;
     $topics_query = new WP_Query($args);
     if ($topics_query->have_posts()) : ?>
         <section class="section" data-section-title="case study">
-            <h2 class="section__title">
+            <h2 class="section__title" data-fade="100">
                 <em>case study</em>
                 <span>企業法務・顧問に関する事例や記事</span>
             </h2>
 
             <div class="service__case">
                 <div class="archive__container">
-                    <ul class="archive__list">
+                    <ul class="archive__list" data-fade="100">
                         <?php
                         while ($topics_query->have_posts()) : $topics_query->the_post();
 
@@ -234,7 +234,7 @@ $slug = $post->post_name;
             $taxonomy_link = get_term_link($slug, 'topics_taxonomy');
             if (!is_wp_error($taxonomy_link)) :
             ?>
-                <div class="service__case-button">
+                <div class="service__case-button" data-fade="100">
                     <a href="<?php echo esc_url($taxonomy_link); ?>">関連記事を見る</a>
                 </div>
             <?php
@@ -247,17 +247,17 @@ $slug = $post->post_name;
     <?php endif; ?>
 
     <section class="section" data-section-title="Price of Service" id="anc-price">
-        <h2 class="section__title">
+        <h2 class="section__title" data-fade="100">
             <em>price</em>
             <span>企業法務・顧問の弁護士費用 (全て税込表記)</span>
         </h2>
 
-        <div class="service__price-nav">
+        <div class="service__price-nav" data-fade="100">
             <!-- <a href="" class="service__price-nav-link"></a> -->
         </div>
 
         <div class="service__price-container">
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('顧問契約'); ?>
                 <?php price_table_1col([
                     '月額',
@@ -266,7 +266,7 @@ $slug = $post->post_name;
             </div>
 
 
-            <div class="service__price-box">
+            <div class="service__price-box" data-fade="100">
                 <?php service_price_title('顧問契約の内容'); ?>
                 <?php price_table_3col([
                     ['業務内容', '料金', '通常料金（参考）'],
