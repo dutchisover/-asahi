@@ -79,9 +79,9 @@ $slug = $post->post_name;
         <p class="section__copy" data-fade="200">
             ２営業日以内に連絡がない場合、メールがブロックされている恐れがありまので、<br>072-627-0101まで直接お電話をお願いいたします。
         </p>
-        <div class="contact__form" data-fade="300"
+        <div class="contact__form" data-fade="300">
             <?php echo do_shortcode('[contact-form-7 id="8bbf352" title="お問い合わせフォーム"]'); ?>
-            </div>
+        </div>
 
     </section>
 
