@@ -134,14 +134,29 @@ $line_height: var(--lineHeight);
 // フォント
 :root {
   --board: 1920;
+  --board: 1;
+  --min: 10;
+
+  @include media(mx) {
+    --board: 1360;
+    // --board: 1;
+    --min: 14;
+  }
+
+  @include media(xl) {
+    --board: 1000;
+    // --board: 1;
+    --min: 14;
+  }
 
   @include media() {
     --board: 750;
+    --min: 10;
   }
 }
 
 // $f = フォントサイズ数、$m = 最小値
-@function r($f: 1, $m: 10) {
+@function r($f: 1, $m: var(--min)) {
   @return clamp(1px * $m, 10vw / var(--board) * 10 * $f, 1px * $f);
   // @return 1px * $f;
 }
@@ -166,4 +181,31 @@ $line_height: var(--lineHeight);
 @mixin font_b {
   font-family: 'HigureGothicB', 'A1ゴシック B', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
   font-weight: 700;
+}
+
+
+// MV専用の単位
+:root {
+  --mv: 1920;
+  // --mv: 1;
+
+  @include media(mx) {
+    --mv: 1360;
+    // --mv: 1;
+  }
+
+  @include media(xl) {
+    --mv: 1000;
+    // --mv: 1;
+  }
+
+  @include media() {
+    --mv: 750;
+  }
+}
+
+// $f = フォントサイズ数、$m = 最小値
+@function mvr($f: 1, $m: 1) {
+  @return clamp(1px * $m, 10vw / var(--mv) * 10 * $f, 1px * $f);
+  // @return 1px * $f;
 }

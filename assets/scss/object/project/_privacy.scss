@@ -2,6 +2,11 @@
 
 .page-privacy {
   .section {
+    @include media(mx) {
+      &:first-of-type::before {
+        top: 130rem;
+      }
+    }
     @include media() {
       padding-bottom: 0;
     }
@@ -12,10 +17,18 @@
   margin-right: auto;
   margin-left: auto;
   padding: 90rem 142rem;
+  max-width: 86%;
   width: 1360rem;
   border-radius: 37rem;
   background-color: #e8ded3;
 
+  @include media(xl) {
+    margin-bottom: 0;
+    padding-right: 42rem;
+    padding-bottom: 42rem;
+    padding-left: 42rem;
+    width: 85.62783661%;
+  }
   @include media() {
     margin-bottom: -120rem;
     padding: 90rem 0 0;
@@ -30,7 +43,15 @@
   border-radius: 20rem;
   background-color: #f8eee2;
 
+  @include media(xl) {
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    // width: 852rem;
+    width: 100%;
+  }
   @include media() {
+    margin-bottom: 90rem;
     padding: 70rem 0;
   }
 

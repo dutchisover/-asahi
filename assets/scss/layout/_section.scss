@@ -1,5 +1,10 @@
 @use '../foundation/index' as *;
 
+.main {
+  overflow: hidden;
+  width: 100%;
+}
+
 .section {
   position: relative;
   width: 93.75%;
@@ -13,8 +18,22 @@
   & {
     margin-right: auto;
     margin-left: auto;
-    width: 1680rem;
+    // width: 1680rem;
+    max-width: 1680rem;
+    width: 90%;
 
+    @include media(mx) {
+      // overflow: hidden;
+      margin-left: 0;
+      padding-bottom: 8%;
+      max-width: 100%;
+      // width: 1322rem;
+      width: 97.20588235%;
+    }
+    // @include media(xl) {
+    //   max-width: 100%;
+    //   width: 97.20588235%;
+    // }
     @include media() {
       padding-right: 60rem;
       padding-left: 60rem;
@@ -47,6 +66,11 @@
     &::before {
       top: 0;
     }
+
+    .section__title {
+      // padding-left: calc(100vw - 100%);
+      width: 100%;
+    }
   }
 
   & + & {
@@ -54,6 +78,9 @@
     padding-top: 80rem;
     padding-bottom: 160rem;
 
+    @include media(mx) {
+      padding-bottom: 8%;
+    }
     & {
       @include media() {
         padding-top: 100rem;
@@ -68,12 +95,24 @@
     & {
       margin-right: auto;
       margin-left: auto;
-      width: 1680rem;
+      // width: 1680rem;
+      max-width: 1680rem;
+      width: 90%;
       border-radius: 50rem;
 
+      @include media(mx) {
+        // overflow: hidden;
+        max-width: 100%;
+        width: 1280rem;
+      }
+      @include media(xl) {
+        // width: 1000rem;
+        width: 94.11764706%;
+      }
       @include media() {
         margin-top: -30rem;
         padding-bottom: 140rem;
+        width: 100%;
         background-color: #e8ded3;
       }
     }
@@ -81,7 +120,11 @@
     &::before {
       right: auto;
       left: 0;
-      transform: translateX(-50%);
+      transform: translateX(-40%);
+
+      // @include media(mx) {
+      //   transform: translateX(0%);
+      // }
     }
 
     &::after {
@@ -115,10 +158,17 @@
     font-size: r(120);
     font-family: var(--fontEnglish);
     line-height: 1;
-    transform: translateX(50%);
+    transform: translateX(40%);
 
     writing-mode: vertical-rl; // 縦書きに設定
     text-orientation: sideways; // 文字の向きを適切に調整
+    @include media(mx) {
+      top: 130rem;
+      // transform: translateX(0%);
+    }
+    @include media(xl) {
+      display: none;
+    }
     @include media() {
       content: none;
     }

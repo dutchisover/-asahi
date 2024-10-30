@@ -8,12 +8,22 @@
   margin-top: 40rem;
   margin-right: auto;
   margin-left: auto;
-  width: 1548rem;
+  // width: 1548rem;
+  // max-width: 1548rem;
+  width: 87%;
   color: var(--colorKey);
   font-size: r(12, 12);
   line-height: 1.45454545;
 
   @extend %wrapper;
+  @include media(mx) {
+    margin-left: 86rem;
+    width: 1136rem;
+  }
+  @include media(xl) {
+    margin-left: 89rem;
+    width: 852rem;
+  }
   @include media() {
     order: 999;
     margin-top: 30rem;

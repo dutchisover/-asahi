@@ -23,9 +23,10 @@ $slug = $post->post_name;
              * タイトルを取得して、「（」以降を除去
              */
             $title = get_the_title();
-            $title = preg_replace('/\s\(.+?\)/', '', $title);
+            // $title = preg_replace('/\s\).+?\)/', '', $title);
+            $title = preg_replace('/\s[\)）].+?[\)）]/u', '', $title);
             ?>
-            <em class="font-gothic-medium"><?= $title; ?></em>
+            <em class="font-gothic-medium">金銭トラブル</em>
             <span class="font-gothic-medium"><?= get_field("page-sub-title") ?></span>
         </h1>
 

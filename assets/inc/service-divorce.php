@@ -373,7 +373,7 @@ $slug = $post->post_name;
                 <h4 class="service__price-subtitle">履行勧告（内容証明郵便）</h4>
                 <?php price_table_2col([
                     ['着手金', '報酬金'],
-                    ['5万5000円', '0万円'],
+                    ['5万5000円', '0円'],
                 ]); ?>
 
                 <h4 class="service__price-subtitle">強制執行（給与差押え等） : 着手金</h4>

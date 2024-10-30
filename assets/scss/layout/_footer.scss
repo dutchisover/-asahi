@@ -13,6 +13,9 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  @include media(xl) {
+    padding-top: 34rem;
+  }
   @include media() {
     padding-top: 140rem;
     background-image: url(../image/bg_footer-contact_sp.jpg);
@@ -52,6 +55,12 @@
   width: 1190rem;
   transform: translateY(50%);
 
+  @include media(xl) {
+    flex-direction: column;
+    gap: 24rem;
+    width: 583rem;
+    transform: translateY(20rem);
+  }
   @include media() {
     flex-direction: column;
     gap: 30rem;
@@ -75,6 +84,9 @@
     // filter: brightness(1.2);
     background-color: #b69f96;
     opacity: 1;
+  }
+  @include media(xl) {
+    height: 118rem;
   }
   @include media() {
     height: 154rem;
@@ -160,6 +172,11 @@
   // max-width: 1300px;
   // width: 94%;
 
+  @include media(xl) {
+    gap: 96rem;
+    padding-top: 120rem;
+    padding-bottom: 54rem;
+  }
   @include media() {
     gap: 0;
     padding-top: 170rem;
@@ -265,6 +282,9 @@
 .footer__nav-item {
   width: 33.333%;
 
+  @include media(xl) {
+    width: 50%;
+  }
   @include media() {
     width: 50%;
   }

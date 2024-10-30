@@ -193,7 +193,7 @@ a.header__contact-tel {
   em {
     color: #a7927d;
     font-style: normal;
-    font-size: r(12, 10);
+    font-size: r(12, 12);
 
     @include media() {
       color: inherit;
@@ -258,6 +258,7 @@ a.header__contact-tel {
   a {
     color: var(--colorText);
     // font-weight: var(--weightBold);
+    white-space: nowrap;
 
     @include font_m;
     @include media() {
@@ -388,7 +389,7 @@ a.header__contact-tel {
       font-size: r(20);
     }
     @include media() {
-      font-size: r(12);
+      font-size: r(12, 12);
     }
   }
 
@@ -399,7 +400,7 @@ a.header__contact-tel {
       font-size: r(22);
     }
     @include media() {
-      font-size: r(12);
+      font-size: r(12, 12);
     }
   }
 
@@ -411,7 +412,7 @@ a.header__contact-tel {
       font-size: r(20);
     }
     @include media() {
-      font-size: r(12);
+      font-size: r(12, 12);
     }
   }
 }
@@ -428,12 +429,13 @@ a.header__contact-tel {
   }
 }
 
-.home .header,
-.home .main {
-  //background-color: #fff;
-}
+// .home .header,
+// .home .main {
+//background-color: #fff;
+// }
 
 .home .main {
+  overflow: hidden;
   padding-bottom: 120rem;
 
   @include media() {
@@ -567,8 +569,10 @@ a.header__contact-tel {
       display: flex;
       flex-wrap: wrap;
       gap: 12rem 10rem;
-      padding: 54rem;
-      width: 674rem;
+      // padding: 54rem;
+      padding: 54rem 32rem;
+      // width: 674rem;
+      width: 630rem;
       height: auto;
       border-bottom: 1px solid #fff;
       border-radius: 13rem;
@@ -576,6 +580,12 @@ a.header__contact-tel {
       color: #fff;
       opacity: 1;
       transform: translateY(100%) translateX(-50%);
+
+      @include media(mx) {
+        padding-right: 22rem;
+        padding-left: 22rem;
+        width: 610rem;
+      }
 
       &::before {
         content: '';

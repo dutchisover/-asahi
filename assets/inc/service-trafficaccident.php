@@ -53,7 +53,7 @@ $slug = $post->post_name;
 
     <section class="section" data-section-title="Service 03">
 
-        <p class="service__copy" data-fade="200"><em>交通事故</em>にまつわる問題は当事務所にお任せ下さい。<br><span>「被害者側専門」の弁護士として、全力でサポートいたします。</span></p>
+        <p class="service__copy" data-fade="200"><em>交通事故</em>にまつわる問題は<br class="pc-none">当事務所にお任せ下さい。<br><span>「被害者側専門」の弁護士として、<br class="pc-none">全力でサポートいたします。</span></p>
 
         <div class="service__example">
             <div class="service__example-photo" data-fade="300">

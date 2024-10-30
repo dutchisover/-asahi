@@ -3,12 +3,14 @@
 .topics__sidebar {
   position: sticky;
   top: 100rem;
+  max-width: 17.94117647%;
   width: 244rem;
 
   @include media() {
     position: relative;
     top: auto;
     margin: 0 auto;
+    max-width: 100%;
     width: 690rem;
   }
 }
@@ -18,7 +20,7 @@
   flex-direction: column;
   color: var(--colorKey);
   // font-weight: var(--weightMedium);
-  font-size: r(12);
+  font-size: r(12, 12);
   // font-family: var(--fontGothic);
 
   @include font_m;
@@ -136,7 +138,8 @@
     align-items: center;
     // flex-direction: column;
     justify-content: space-between;
-    padding: 0 60rem 0 40rem;
+    // padding: 0 40rem 0 40rem;
+    padding: 0 0 0 30rem;
     width: 337rem;
     height: 97rem;
     border: 1px solid var(--colorKey);
@@ -169,6 +172,21 @@
       border-top: 0;
       border-left: 0;
       transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+}
+
+.subtext {
+  @media (max-width: 1640px) {
+    display: block;
+  }
+
+  & {
+    @include media() {
+      display: initial;
+      margin-left: -.5em;
+      white-space: nowrap;
+      font-size: .85em;
     }
   }
 }

@@ -8,11 +8,23 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  // gap: 96rem;
+  gap: 7.05882353%;
   margin: 40rem auto 0;
+  // width: 1360rem;
+  max-width: 86%;
   width: 1360rem;
 
+  @include media(mx) {
+    width: 1136rem;
+  }
+  @include media(xl) {
+    gap: 20rem;
+    max-width: 96%;
+  }
   @include media() {
     flex-direction: column;
+    max-width: 100%;
   }
 }
 
@@ -39,14 +51,22 @@
 
 .archive__section {
   @include media() {
+    margin-top: 0 !important;
     padding-right: 30rem;
     padding-left: 30rem;
   }
 }
 
 .archive__container {
+  max-width: 75%;
   width: 1020rem;
 
+  @include media(mx) {
+    width: 852rem;
+  }
+  @include media(xl) {
+    width: 70%;
+  }
   @include media() {
     margin-top: 90rem;
     margin-left: calc(50% - 50vw);
@@ -93,6 +113,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  gap: 40rem;
   padding: 23rem 80rem 25rem 30rem;
   background-color: #fff;
 
@@ -128,13 +149,23 @@
 
 .archive__item-image {
   overflow: hidden;
+  min-width: 241rem;
+  min-height: 159rem;
   width: 241rem;
   height: 159rem;
   object-fit: cover;
   border-radius: 10rem;
 
   place-items: center;
+  @include media(xl) {
+    min-width: 241rem;
+    min-height: 159rem;
+    width: 241rem;
+    height: 159rem;
+  }
   @include media() {
+    min-width: 172rem;
+    min-height: 160rem;
     width: 172rem;
     height: 160rem;
   }
@@ -163,8 +194,15 @@
 .archive__item-content {
   display: flex;
   flex-direction: column;
+  max-width: 60.78431373%;
   width: 620rem;
 
+  @include media(mx) {
+    width: 480rem;
+  }
+  @include media(xl) {
+    width: 55%;
+  }
   @include media() {
     flex-direction: column-reverse;
     justify-content: space-between;
@@ -173,17 +211,18 @@
 }
 
 .archive__item-date {
+  // font-family: var(--fontGothic);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   color: #8e8e8e;
   letter-spacing: .08em;
   // font-weight: var(--weightMedium);
-  font-size: r(12);
-  // font-family: var(--fontGothic);
+  font-size: r(12, 12);
+  column-gap: 20rem;
 
   @include font_m;
   @include media() {
-    display: flex;
-    align-items: center;
-    gap: 20rem;
     font-size: r(20);
   }
 }
@@ -197,8 +236,10 @@
 }
 
 .archive__item-taxonomy {
-  margin-left: 20rem;
+  // margin-left: 20rem;
+  display: flex;
   padding: 3rem 10rem;
+  width: fit-content;
   border-radius: 12rem;
   color: #fff;
   letter-spacing: .05em;
@@ -236,6 +277,6 @@
   margin-top: 18rem;
   color: #333;
   letter-spacing: .03em;
-  font-size: r(12);
+  font-size: r(12, 12);
   line-height: 1.666;
 }

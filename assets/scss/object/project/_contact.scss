@@ -41,9 +41,15 @@
     // font-weight: var(--weightLight);
 
     @include font_l;
+    @include media(xl) {
+      margin-right: auto;
+      margin-left: auto;
+      width: 852rem;
+    }
     @include media() {
       flex-direction: column;
       padding: 25px 0;
+      width: 100%;
     }
   }
 
@@ -96,19 +102,35 @@
 .contact-form {
   &__wrap {
     margin: 64rem auto 0;
-    padding: 74rem 200rem 160rem;
-    width: r(1360);
+    // padding: 74rem 200rem 160rem;
+    padding: 74rem 11.9047619% 160rem;
+    // padding: 74rem 0 160rem;
+    max-width: 86%;
+    width: 1360rem;
     border-radius: 37rem;
     background: #e8ded3;
 
-    @media screen and (max-width: 1680px) {
-      padding-right: 120rem;
-      padding-left: 120rem;
+    @include media(mx) {
+      padding-right: 60rem;
+      padding-left: 60rem;
+      max-width: 100%;
+      width: 1132rem;
     }
+    @include media(xl) {
+      padding-top: 20rem;
+      padding-right: 60rem;
+      padding-bottom: 60rem;
+      padding-left: 60rem;
+      width: 852rem;
+    }
+    // @media screen and (max-width: 1680px) {
+    //   padding-right: 120rem;
+    //   padding-left: 120rem;
+    // }
 
-    @media screen and (max-width: 1360px) {
-      width: r(1500);
-    }
+    // @media screen and (max-width: 1360px) {
+    //   width: r(1500);
+    // }
 
     & {
       @include media() {
@@ -154,7 +176,7 @@
     .required {
       display: block;
       color: #f26868;
-      font-size: r(12, 11);
+      font-size: r(12, 12);
       font-family: 'HigureGothicM', 'A1ゴシック R', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
     }
   }
@@ -201,7 +223,9 @@
   gap: 12px 20px;
 
   @include media() {
-    gap: 11px 14px;
+    justify-content: space-between;
+    gap: 11rem 14rem;
+    width: 100%;
   }
 
   &.no-wrap {
@@ -210,6 +234,7 @@
     .wpcf7-list-item {
       flex: 0 0 auto;
       margin-top: 35px;
+      width: 100%;
 
       label {
         display: flex;
@@ -230,6 +255,8 @@
 .wpcf7-list-item {
   flex: 0 0 220px;
   margin: 0;
+  max-width: calc(50% - 20px);
+  width: 220rem;
 
   @media screen and (max-width: 1024px) {
     flex: 0 0 calc(50% - 10px);
@@ -237,14 +264,18 @@
 
   & {
     @include media() {
-      flex: 0 0 calc(50% - 7px);
+      // flex: 0 0 calc(50% - 7px);
+      flex: initial;
+      max-width: none;
+      width: calc(50% - 7rem);
     }
   }
 
   label {
     display: inline-block;
     padding: 8px 16px;
-    width: 220px;
+    // width: 220px;
+    width: 100%;
     border: 1px solid #777;
     background: #fff;
     cursor: pointer;
@@ -552,6 +583,12 @@ textarea {
 .page-contact-complete {
   .section__title {
     padding-top: .1em;
+  }
+
+  .section {
+    @include media(xl) {
+      padding-bottom: 80rem;
+    }
   }
 }
 

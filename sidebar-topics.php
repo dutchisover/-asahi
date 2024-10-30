@@ -58,7 +58,20 @@ if ($current_taxonomy == 'topics_taxonomy' && $current_term_slug != 'news') {
                 ?>
                     <?php $active_class = ($current_taxonomy == 'topics_taxonomy' && $current_term_slug == $term->slug) ? 'current' : ''; ?>
 
-                    <a class="topics__sidebar-link <?php echo $active_class; ?>" href="<?php echo esc_url(get_term_link($term)); ?>"><span class="sp-none">#</span><?php echo esc_html($term->name); ?></a>
+                    <?php
+                    $term_name = esc_html($term->name);
+
+                    // 全角かっこで囲まれた部分を <span class="subtext"> で囲う
+                    $term_name_modified = preg_replace('/（.*?）/u', '<span class="subtext">$0</span>', $term_name);
+                    ?>
+
+
+                    <a class="topics__sidebar-link <?php echo $active_class; ?>" href="<?php echo esc_url(get_term_link($term)); ?>">
+                        <p class="topics__sidebar-text">
+                            <span class="sp-none">#</span>
+                            <?php echo $term_name_modified; ?>
+                        </p>
+                    </a>
 
                 <?php endif; ?>
             <?php endforeach; ?>
