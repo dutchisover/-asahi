@@ -158,9 +158,9 @@
   &__col-head {
     flex: 1 0 180rem;
 
-    @media screen and (max-width: 1500px) {
-      flex: 1 0 300rem;
-    }
+    // @media screen and (max-width: 1500px) {
+    //   flex: 1 0 300rem;
+    // }
 
     @media screen and (max-width: 1024px) {
       flex: 1;

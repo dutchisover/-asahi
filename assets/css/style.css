@@ -5492,7 +5492,7 @@ a.header__contact-tel em {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  min-width: 200px;
+  min-width: 244px;
   max-width: 17.94117647%;
   width: 244rem;
 }
@@ -7464,13 +7464,6 @@ ul.service__price-list li li::before {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 180rem;
           flex: 1 0 180rem;
-}
-@media screen and (max-width: 1500px) {
-  .contact-form__col-head {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 300rem;
-            flex: 1 0 300rem;
-  }
 }
 @media screen and (max-width: 1024px) {
   .contact-form__col-head {

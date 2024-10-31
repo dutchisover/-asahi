@@ -70,7 +70,7 @@ $slug = $post->post_name;
         </div>
     </section>
 
-    <section class="section" data-section-title="Flow" id="anc-flow">
+    <section class="section" data-section-title="contact form" id="anc-flow">
         <h2 class="section__title" data-fade="100">
             <em>contact form</em>
             <span>お問い合わせフォームはこちら</span>
