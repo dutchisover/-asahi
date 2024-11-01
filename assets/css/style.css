@@ -5741,6 +5741,7 @@ a.header__contact-tel em {
 }
 @media (max-width: 1000px) {
   .service__item {
+    gap: 20rem;
     padding-right: 40rem;
     padding-left: 40rem;
   }

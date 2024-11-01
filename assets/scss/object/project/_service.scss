@@ -269,6 +269,7 @@
     padding-right: 45rem;
   }
   @include media(xl) {
+    gap: 20rem;
     padding-right: 40rem;
     padding-left: 40rem;
   }
