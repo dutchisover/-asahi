@@ -2129,6 +2129,7 @@ a.header__contact-tel em {
 
 .main {
   overflow: hidden;
+  overflow: clip;
   width: 100%;
 }
 
@@ -5466,11 +5467,13 @@ a.header__contact-tel em {
 }
 @media (max-width: 1360px) {
   .service__content {
+    margin-left: 40rem;
     width: 1200rem;
   }
 }
 @media (max-width: 1000px) {
   .service__content {
+    margin-left: auto;
     max-width: none;
     width: 94%;
   }
@@ -6656,12 +6659,6 @@ a.header__contact-tel em {
           transform: translateY(-50%) rotate(-45deg);
 }
 
-@media (max-width: 1360px) {
-  .section[data-section-title="Price of Service"]::before {
-    display: none;
-  }
-}
-
 .service__price-nav {
   counter-reset: price 0;
   display: -webkit-box;
@@ -6882,11 +6879,6 @@ a.header__contact-tel em {
   margin-left: auto;
   max-width: 86%;
   width: 1200rem;
-}
-@media (max-width: 1360px) {
-  .service__price-container {
-    max-width: 100%;
-  }
 }
 @media (max-width: 1000px) {
   .service__price-container {

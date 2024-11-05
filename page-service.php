@@ -160,7 +160,7 @@ $slug = $post->post_name;
                 </h3>
 
                 <p class="service__flow-text">当事務所は完全予約制となりますので、まずは面談予約をお願いします。<br>
-                    お電話の初めに「法律相談を希望します」とお伝えくだくとスムーズです。<br>
+                    お電話の初めに「法律相談を希望します」とお伝えいただくとスムーズです。<br>
                     <span class="service__flow-tel font-english">TEL : 072-627-0101</span>
                 </p>
             </div>

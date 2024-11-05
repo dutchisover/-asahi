@@ -43,9 +43,11 @@
   width: 1360rem;
 
   @include media(mx) {
+    margin-left: 40rem;
     width: 1200rem;
   }
   @include media(xl) {
+    margin-left: auto;
     max-width: none;
     width: 94%;
   }
@@ -1040,13 +1042,13 @@
   }
 }
 
-.section[data-section-title='Price of Service'] {
-  &::before {
-    @include media(mx) {
-      display: none;
-    }
-  }
-}
+// .section[data-section-title='Price of Service'] {
+//   &::before {
+//     @include media(mx) {
+//       display: none;
+//     }
+//   }
+// }
 
 .service__price-nav {
   counter-reset: price 0;
@@ -1229,10 +1231,10 @@
   margin-left: auto;
   max-width: 86%;
   width: 1200rem;
+  // @include media(mx) {
+  //   max-width: 100%;
+  // }
 
-  @include media(mx) {
-    max-width: 100%;
-  }
   @include media(xl) {
     width: 94%;
   }
