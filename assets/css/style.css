@@ -1024,7 +1024,6 @@ ul.page-numbers {
 }
 
 .topics__sidebar {
-  position: sticky;
   top: 100rem;
   max-width: 17.94117647%;
   width: 244rem;
@@ -1437,7 +1436,7 @@ a.header__contact-tel {
   line-height: 1;
   pointer-events: none;
 }
-@media (max-width: 520px) {
+@media (max-width: 820px) {
   a.header__contact-tel {
     height: 136rem;
   }
@@ -1515,7 +1514,7 @@ a.header__contact-tel em {
   color: #fff;
   line-height: 1;
 }
-@media (max-width: 520px) {
+@media (max-width: 820px) {
   .header__contact-button {
     height: 136rem;
   }
@@ -1632,10 +1631,16 @@ a.header__contact-tel em {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 55rem;
 }
 @media (max-width: 820px) {
   .header__nav-list {
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2113,13 +2118,48 @@ a.header__contact-tel em {
   height: 98rem;
 }
 .floating-header .header__inner {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30rem;
   width: 100%;
+}
+@media (max-width: 1360px) {
+  .floating-header .header__inner {
+    padding-left: 2vw;
+  }
 }
 .floating-header .header__logo {
   padding-top: 0;
 }
+@media (max-width: 1360px) {
+  .floating-header .header__logo {
+    width: 23vw;
+  }
+}
+@media (max-width: 1000px) {
+  .floating-header .header__logo {
+    width: 250rem;
+  }
+}
 .floating-header .header__contact {
   display: none;
+}
+@media (max-width: 1360px) {
+  .floating-header .header__nav {
+    padding-right: 2vw;
+  }
+}
+@media (max-width: 1000px) {
+  .floating-header .header__nav-list {
+    gap: 20rem;
+  }
+  .floating-header .header__nav-list a {
+    font-size: clamp(1px * var(--min), 10vw / var(--board) * 10 * 14, 14px);
+  }
+}
+.floating-header .header__contact-button {
+  color: #fff;
 }
 
 .is-no-float .floating-header .is-sub-nav.is-sub-open .header__nav-sub {
@@ -5491,7 +5531,7 @@ a.header__contact-tel em {
 
 .service__sidebar {
   position: sticky;
-  top: 100rem;
+  top: 20rem;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -5630,7 +5670,7 @@ a.header__contact-tel em {
   }
 }
 .service__sidebar-link + .service__sidebar-link {
-  margin-top: 30px;
+  margin-top: 15rem;
 }
 @media (max-width: 820px) {
   .service__sidebar-link + .service__sidebar-link {

@@ -152,9 +152,9 @@
 								<li class="header__nav-item">
 									<a href="<?= home_url(); ?>/office" data-subtitle="Office & Access" data-current="office">事務所概要</a>
 								</li>
-								<?php /*<li class="header__nav-item">
-								<a href="<?= home_url(); ?>/topics" data-subtitle="Topicks" data-current="topics"><span>新着情報<span class="pc-none"> 一覧</span></span></a>
-							</li> */ ?>
+								<li class="header__nav-item">
+									<a href="<?= home_url(); ?>/topics" data-subtitle="Topicks" data-current="topics"><span>新着情報<span class="pc-none"> 一覧</span></span></a>
+								</li>
 							</ul>
 						</nav>
 
@@ -270,10 +270,14 @@
 									<li class="header__nav-item">
 										<a href="<?= home_url(); ?>/office" data-subtitle="Office & Access" data-current="office">事務所概要</a>
 									</li>
-									<?php /*<li class="header__nav-item">
-								<a href="<?= home_url(); ?>/topics" data-subtitle="Topicks" data-current="topics"><span>新着情報<span class="pc-none"> 一覧</span></span></a>
-							</li> */ ?>
+									<li class="header__nav-item">
+										<a href="<?= home_url(); ?>/topics" data-subtitle="Topicks" data-current="topics"><span>新着情報<span class="pc-none"> 一覧</span></span></a>
+									</li>
+									<li>
+										<a href="<?= home_url(); ?>/contact" class="header__contact-button"><span class="pc-none">メールで</span>お問い合わせ</a>
+									</li>
 								</ul>
+
 							</nav>
 
 							<div class="header__contact">

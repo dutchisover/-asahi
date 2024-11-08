@@ -64,7 +64,8 @@
 
 .service__sidebar {
   position: sticky;
-  top: 100rem;
+  // top: 100rem;
+  top: 20rem;
   order: 1;
   min-width: 244px;
   max-width: 17.94117647%;
@@ -175,7 +176,7 @@
   }
 
   & + & {
-    margin-top: 30px;
+    margin-top: 15rem;
 
     @include media() {
       margin-top: 0;

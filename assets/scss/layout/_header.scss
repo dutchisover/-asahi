@@ -146,7 +146,7 @@ a.header__contact-tel {
   line-height: 1;
   pointer-events: none;
 
-  @include media(sm) {
+  @include media() {
     height: 136rem;
   }
   @include media() {
@@ -215,7 +215,7 @@ a.header__contact-tel {
   color: #fff;
   line-height: 1;
 
-  @include media(sm) {
+  @include media() {
     height: 136rem;
   }
   @include media() {
@@ -326,9 +326,11 @@ a.header__contact-tel {
 
 .header__nav-list {
   display: flex;
+  align-items: center;
   gap: 55rem;
 
   @include media() {
+    align-items: stretch;
     flex-direction: column;
     gap: 0;
     width: 590rem;
@@ -791,15 +793,48 @@ a.header__contact-tel {
   }
 
   .header__inner {
+    align-items: center;
+    gap: 30rem;
     width: 100%;
+
+    @include media(mx) {
+      padding-left: 2vw;
+    }
   }
 
   .header__logo {
     padding-top: 0;
+
+    @include media(mx) {
+      width: 23vw;
+    }
+    @include media(xl) {
+      width: 250rem;
+    }
   }
 
   .header__contact {
     display: none;
+  }
+
+  .header__nav {
+    @include media(mx) {
+      padding-right: 2vw;
+    }
+  }
+
+  .header__nav-list {
+    @include media(xl) {
+      gap: 20rem;
+
+      a {
+        font-size: r(14);
+      }
+    }
+  }
+
+  .header__contact-button {
+    color: #fff;
   }
 }
 

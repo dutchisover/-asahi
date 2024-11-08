@@ -50,7 +50,7 @@ $slug = $post->post_name;
     echo '<div class="page-' . esc_attr($slug) . '">';
     ?>
 
-    <section class="section" data-section-title="Service 02">
+    <section class="section" data-section-title="Service 01">
 
         <p class="service__copy" data-fade="200"><em>遺産相続・遺言</em>にまつわる問題は<br class="pc-none">当事務所へお任せ下さい。<br><span>多数の解決実績に基づき、全力でサポートいたします。</span></p>
 
